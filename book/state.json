@@ -2,7 +2,7 @@
   "schema_version": 2,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "title": "母亲的遗嘱，要我扮演坏女儿",
-  "revision": 7,
+  "revision": 8,
   "config": {
     "target_chapters": 100,
     "target_han": 900000,
@@ -56,9 +56,58 @@
       "record_path": "records/CH004_3cb1ab27845290be00eef91a33c56eba3b80c3172c43a983b90208394071259b.json",
       "record_sha256": "3cb1ab27845290be00eef91a33c56eba3b80c3172c43a983b90208394071259b",
       "han_count": 9143
+    },
+    "5": {
+      "title": "她要我站到她对面",
+      "stage": "S01",
+      "text_path": "chapters/CH005_1929a76e44cde18a68c6ee3631f5299659847f7e019047e5352714cfef072765.txt",
+      "text_sha256": "1929a76e44cde18a68c6ee3631f5299659847f7e019047e5352714cfef072765",
+      "record_path": "records/CH005_a2aa0b2ecac81f9e0ce9177f80b6b9ac98286ab47f1c986b1b1010d2b86c47a8.json",
+      "record_sha256": "a2aa0b2ecac81f9e0ce9177f80b6b9ac98286ab47f1c986b1b1010d2b86c47a8",
+      "han_count": 9039
     }
   },
-  "checkpoints": [],
+  "checkpoints": [
+    {
+      "kind": "window",
+      "from": 1,
+      "to": 5,
+      "base_revision": 7,
+      "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+      "read_mode": "full_text_batches",
+      "decision": "continue",
+      "coverage": {
+        "1": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+        "2": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "3": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+        "4": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+        "5": "1929a76e44cde18a68c6ee3631f5299659847f7e019047e5352714cfef072765"
+      },
+      "record_coverage": {
+        "1": "02229a6597fcb8913f052ac31908aee4545a3b507dc4325c8a203796fcb2080e",
+        "2": "7df232768db5874ed6c55a21ccb212a1e89e46e2cb29ad871c86736bb31a4dc3",
+        "3": "6c5dbfd447da8ec58b2d67b99dccb0376862420ee3d1f56ab5b144728b4bd3b8",
+        "4": "3cb1ab27845290be00eef91a33c56eba3b80c3172c43a983b90208394071259b",
+        "5": "a2aa0b2ecac81f9e0ce9177f80b6b9ac98286ab47f1c986b1b1010d2b86c47a8"
+      },
+      "findings": [
+        "CH001：私人录音的任免指令不具公司权力；邱沅只陈述其查过的账户未到账，角色未虚构银行全貌。",
+        "CH002：母亲音频从保管受领到副本交付链已兑现P01A；6400元内部已清退与银行执行未确认分开。",
+        "CH003：蒋素琴自主选择见孙女，另一项陪同外出确实未执行且未补偿；没有凭空增加护工。",
+        "CH004：朗和1800元只是待核服务申请，不等于已付；旧设备组件信息未同步属行政履约风险，林遥总经理职位仍在。",
+        "CH005：三天真实排班首轮交接兑现P03短期目标；十月投诉被姐姐写轻有明确主动选择，股东监督仅收件不等于董事表决；母亲周转讨论仅目录级线索。",
+        "文风风险：连续五章有较多表格、会议与‘已处理’主题重复。CH006–CH008须转为独立人物行动、治理资源压力和外部实际后果，不再连续用读表/改表作为章节高潮。",
+        "期限核验：P02第10章须完成首笔资金双源结论，P04第20章有程序真实人事结果，P05第50章回答母亲责任。P08与新P09不能被P03关闭覆盖。"
+      ],
+      "conclusion": "五章正文与事实记录版本逐一核对：关键资金、照护与权力事实未发现必须阻断的硬冲突，允许继续S01第6章；文本层面并非可保证平台签约的质量认证。",
+      "causal_progress": "CH001客户异议进入管理记录→CH002核账纠正状态→CH003实际护理变更产生未履约损失→CH004供应商维修服务证据缺口促实名限定核查→CH005安全接续首次执行、姐姐披露旧投诉、妹妹以股东身份发起有限监督请求并承担亲情裂缝。",
+      "repetition_comparison": "五章分别以拒绝签字、核来源及付款、老人现场自主服务、合同履约核查、主动披露旧错和合法治理请求为主要行动。程序类场景已偏密，后续需避免连续会议改表。",
+      "character_changes": "林葭由躲在母亲私录之后变为实名承担监督后果的股东；林遥由回避不利运营事实转为承认自己曾写轻投诉；庞念青作为护理督导与员工代表董事主动设边界，蒋素琴保留不同意权，许致远不承诺站队。",
+      "promise_payoffs": "P01A已在CH002兑现交付链；P03于CH005按实际人员完成短期安全接续，关闭但保留持续护理P09到CH095（CH030中期）和客户赔补P08到CH100；P02@CH010等原期限不重置。",
+      "ending_runway": "第6章治理请求受理与岗位资料保全受资源考验，第7章引入独立核对周转目录的合法方式，第8章给经营班次与现金信息的现实选择。第10章必须完成首笔退款双源核实，不能反复在已处理标签打转。",
+      "next_action": "进入CH006前重读CP与全部开放承诺；将关键动作从单纯翻表转到具体员工与董事的独立选择。冻结CH001–CH005正文不修改，旧瑕疵只登记前向事件。"
+    }
+  ],
   "needs_revalidation": [],
   "inputs": {
     "canon": {
@@ -152,6 +201,22 @@
       ],
       "candidate_sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
       "candidate_path": "candidates/CH004_f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee.txt"
+    },
+    "5": {
+      "task_id": "a73cb701-44d8-4f0b-b148-3e6ff533927e",
+      "chapter": 5,
+      "mode": "write",
+      "phase": "adopted",
+      "repairs": 0,
+      "history": [
+        {
+          "sha256": "1929a76e44cde18a68c6ee3631f5299659847f7e019047e5352714cfef072765",
+          "reason": "初稿",
+          "repairs": 0
+        }
+      ],
+      "candidate_sha256": "1929a76e44cde18a68c6ee3631f5299659847f7e019047e5352714cfef072765",
+      "candidate_path": "candidates/CH005_1929a76e44cde18a68c6ee3631f5299659847f7e019047e5352714cfef072765.txt"
     }
   },
   "completion": null,
@@ -174,6 +239,10 @@
       "4": {
         "text_sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
         "record_sha256": "3cb1ab27845290be00eef91a33c56eba3b80c3172c43a983b90208394071259b"
+      },
+      "5": {
+        "text_sha256": "1929a76e44cde18a68c6ee3631f5299659847f7e019047e5352714cfef072765",
+        "record_sha256": "a2aa0b2ecac81f9e0ce9177f80b6b9ac98286ab47f1c986b1b1010d2b86c47a8"
       }
     },
     "published": {},
@@ -197,6 +266,11 @@
         "path": "releases/CH004_5dd368115255887f65e3b105012c9ad3da304fe1106e6f922d7503c92f315392.json",
         "sha256": "5dd368115255887f65e3b105012c9ad3da304fe1106e6f922d7503c92f315392",
         "used": true
+      },
+      "5": {
+        "path": "releases/CH005_61f64e23150c3fc67247c58bb0a43e0dc9ebc196b8004185f06116a16e11263e.json",
+        "sha256": "61f64e23150c3fc67247c58bb0a43e0dc9ebc196b8004185f06116a16e11263e",
+        "used": true
       }
     },
     "promises": {
@@ -217,7 +291,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 4
+        "last_reviewed_chapter": 5
       },
       "P01A": {
         "history": [
@@ -267,7 +341,7 @@
         ],
         "deadline_chapter": 10,
         "status": "open",
-        "last_reviewed_chapter": 4
+        "last_reviewed_chapter": 5
       },
       "P03": {
         "history": [
@@ -282,11 +356,23 @@
               "quote": "还在确认。"
             },
             "chapter": 1
+          },
+          {
+            "id": "P03",
+            "action": "complete",
+            "deadline_chapter": 5,
+            "reason": "停用设备期间的首个滚动安全照护接续机制已在CH005实际部署并完成第一轮交班，兑现短期目标；长期服务、设备风险转入P09及赔补P08。",
+            "evidence": {
+              "chapter": 5,
+              "sha256": "1929a76e44cde18a68c6ee3631f5299659847f7e019047e5352714cfef072765",
+              "quote": "明川按这份方案完成第一轮交接"
+            },
+            "chapter": 5
           }
         ],
         "deadline_chapter": 5,
-        "status": "open",
-        "last_reviewed_chapter": 4
+        "status": "closed",
+        "last_reviewed_chapter": 5
       },
       "P04": {
         "history": [
@@ -305,7 +391,7 @@
         ],
         "deadline_chapter": 20,
         "status": "open",
-        "last_reviewed_chapter": 4
+        "last_reviewed_chapter": 5
       },
       "P05": {
         "history": [
@@ -324,7 +410,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 4
+        "last_reviewed_chapter": 5
       },
       "P07": {
         "history": [
@@ -343,7 +429,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 4
+        "last_reviewed_chapter": 5
       },
       "P08": {
         "history": [
@@ -362,7 +448,26 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 4
+        "last_reviewed_chapter": 5
+      },
+      "P09": {
+        "history": [
+          {
+            "id": "P09",
+            "action": "set",
+            "deadline_chapter": 95,
+            "reason": "新增长期护理安全持续责任：设备修复或合规替代、人员服务能力和剩余缺口必须持续核实，CH030先中期复核，CH095最终清楚交代。",
+            "evidence": {
+              "chapter": 5,
+              "sha256": "1929a76e44cde18a68c6ee3631f5299659847f7e019047e5352714cfef072765",
+              "quote": "不是保证三天里机器一定修好"
+            },
+            "chapter": 5
+          }
+        ],
+        "deadline_chapter": 95,
+        "status": "open",
+        "last_reviewed_chapter": 5
       }
     },
     "incidents": {}

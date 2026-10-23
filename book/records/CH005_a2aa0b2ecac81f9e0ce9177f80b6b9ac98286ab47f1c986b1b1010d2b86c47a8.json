@@ -1,0 +1,217 @@
+{
+  "chapter": 5,
+  "title": "她要我站到她对面",
+  "stage": "S01",
+  "base_revision": 7,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "1929a76e44cde18a68c6ee3631f5299659847f7e019047e5352714cfef072765",
+  "complete": true,
+  "story_time_end": 6420,
+  "summary": "D4（11月16日），明川在护理督导与人事核对实际到岗、岗位能力和休息限制后启动为期三天的滚动安全照护接续安排，中午完成首轮交班；设备仍停用，14日漏履的陪同外出仍未处理。林遥在老宅主动承认曾将10月7日夜间护理投诉在送董事风险汇总中写轻并遗漏家属续查原话，为避免迅速缩人手却剥夺应有披露；当日她补交岗位说明。林葭15:46以18%股东名义实名递交有限董事监督请求并获得程序受理，未产生议案表决。许致远只提到早期有周转方案讨论目录，母亲是否批准或实际调拨未核。姐妹承认私人关系暂时无法恢复。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [
+      {
+        "chapter": 1,
+        "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+        "quote": "你要亲手让林遥下台。"
+      },
+      {
+        "chapter": 2,
+        "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "quote": "未匹配到该编号对应的有效银行付款确认凭证。"
+      },
+      {
+        "chapter": 3,
+        "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+        "quote": "原计划陪同外出一项未执行"
+      },
+      {
+        "chapter": 4,
+        "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+        "quote": "签收时间是下午五点十六分。"
+      }
+    ],
+    "conclusion": "实读CH001–CH004和CH005全文。五章均沿已冻结事实展开：CH001拒签，CH002退款对账，CH003护理现场，CH004合同与履约，CH005实际安全接续、姐姐承认管理过错及独立股东程序，动作性质与代价升级。P03首次安全接续在本章落地，长期机器与护理能力P09跟踪；P08未执行外出不虚报补偿。没有母亲私人录音秒撤姐，也没有擅自判资金划拨。"
+  },
+  "facts": [
+    {
+      "kind": "state",
+      "key": "care:roll_plan",
+      "value": "明川D4实际启动停用设备前提下三天滚动安全照护接续，核班和人事资格，设异常上报与专业替代措施。",
+      "holder": "",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "做三天滚动接续方案。"
+    },
+    {
+      "kind": "fact",
+      "key": "care:roster_truth",
+      "value": "邻近点位拟支援者尚未实际到岗，不算可用人力；乔雨不以连续超时加班补空。",
+      "holder": "",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "那现在不能算到岗。"
+    },
+    {
+      "kind": "state",
+      "key": "care:first_handoff",
+      "value": "D4中午前明川依滚动安排完成首轮实际交接，设备保持停用。",
+      "holder": "",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "明川按这份方案完成第一轮交接"
+    },
+    {
+      "kind": "state",
+      "key": "care:unfulfilled_outing",
+      "value": "D2未执行的陪同外出仍未完成补偿/补做，当事人要求先核合同后选后续处理。",
+      "holder": "",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "要求先看原合同怎样写"
+    },
+    {
+      "kind": "fact",
+      "key": "linyao:oct_complaint_omission",
+      "value": "林遥自述将10月7日仍待核的家属夜间照护投诉在董事风险汇总中写为沟通已处理，没有附要求继续核查的原话，理由是担心床位缩减。",
+      "holder": "",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "我在送出去的汇总里把那件事写成‘沟通已处理’"
+    },
+    {
+      "kind": "state",
+      "key": "linyao:formal_disclosure",
+      "value": "姐姐在正式渠道补交10月投诉处理的岗位说明，原件仍须由有权限部门核实。",
+      "holder": "",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "我已经提交十月那次投诉处理的岗位说明"
+    },
+    {
+      "kind": "state",
+      "key": "governance:formal_request",
+      "value": "林葭11月16日15:46实名提出有关风险报告披露与有限监督的股东书面请求，受理不等于议案/票决。",
+      "holder": "",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "申请递交的时刻是下午三点四十六分。"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:board_no_vote",
+      "value": "林葭明确知晓许致远个人电话及程音收件均不等于董事会同意审查或立即免职。",
+      "holder": "林葭",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "董事个人听你陈述，也不能代替一个有效的议案。"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:mother_finance_clue",
+      "value": "许致远提及治理早期目录中有短期周转方案讨论，未见原件、不认定母亲同意或实际款项流转。",
+      "holder": "林葭",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "周转方案讨论"
+    },
+    {
+      "kind": "state",
+      "key": "pang:worker_director_independent",
+      "value": "庞念青以员工代表董事身份划清独立履职和一线安全资源边界。",
+      "holder": "",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "我不是你安排到董事会里的那个人。"
+    },
+    {
+      "kind": "state",
+      "key": "sisters:rift_ch5",
+      "value": "姐妹承认私人关系暂时不能如昔，仍按各自职责沟通未彻底断绝。",
+      "holder": "",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "今晚站不到。"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:audio_not_authority",
+      "value": "林葭拒把母亲私人录音当管理授权或人事指令，依证据及程序行动。",
+      "holder": "林葭",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "她没有打开。"
+    },
+    {
+      "kind": "state",
+      "key": "finance:two_claims_separate",
+      "value": "邱沅6400元预收退款仍未确认到账，供应商1800元待核费用不能与其等同。",
+      "holder": "",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "这笔退款与明川设备的供应商费用是两件事。"
+    },
+    {
+      "kind": "state",
+      "key": "role:linyao",
+      "value": "林遥仍在总经理岗位，新的监督请求尚无董事决议。",
+      "holder": "",
+      "valid_from": 5760,
+      "valid_until": null,
+      "quote": "尚未形成董事会决议。"
+    }
+  ],
+  "progression": {
+    "goal": "在截止章实际落地明川停用设备情况下的可检查接续方案，同时使姐姐自认未披露投诉，妹妹据事实请求正式治理监督。",
+    "obstacle": "护理合格人手紧缺且有休假限制；姐姐曾怕董事缩床位而写轻投诉；妹妹无单方撤职权，员工与投资董事各有独立责任。",
+    "method": "由点位督导和运营人事核班、落实交接与失效上报；老宅姐妹面对面核对十月风险报告；公司走股东书面请求、删去无证据结论、保留原件及权限边界。",
+    "choice": "林葭不听母亲私人撤职录音，不替姐姐隐瞒投诉，实名提交请求承担亲情成本；姐姐提交自己的岗位说明，不把客户隐私交妹妹私用。",
+    "result": "三天滚动方案第一轮按岗执行，短期接续P03兑现；监督书面受理而非票决；母亲周转讨论仍仅目录级线索；姐妹暂时不再像从前吃饭。",
+    "consequence": "员工担心审查伤及工资与轮休，姐姐家庭信任受损，妹妹不能撤回已交请求，母亲被纳入待核风险讨论，未来须凭真实文件。",
+    "next_options": "CH006处理董事程序审查与经营方书面应对；CH007从有权限渠道核早期周转讨论；CH010对邱沅退款进行双源结论。",
+    "scene_function": "开篇养老点合格照护安排的实做，中段老宅姐妹有代价的旧错真话，下午治理请求受理与员工董事独立质询，夜里旧钥匙及无法恢复的家庭晚餐。"
+  },
+  "thread_events": [
+    {
+      "id": "P03",
+      "action": "payoff",
+      "description": "在CH005截止前实施三天滚动安全照护方案且首轮交班落地，P03首次接续兑现，不宣称机器已修或失约服务已赔。",
+      "quote": "明川按这份方案完成第一轮交接"
+    },
+    {
+      "id": "P09",
+      "action": "plant",
+      "description": "长程设备恢复、替代安全服务与护理能力达标仍待执行，CH030必须阶段评估、CH095最终验收或明确未完成义务。",
+      "quote": "不是保证三天里机器一定修好"
+    },
+    {
+      "id": "P08",
+      "action": "develop",
+      "description": "11月14日未执行陪同外出仍待本人依合同选择补做/补偿。",
+      "quote": "要求先看原合同怎样写"
+    },
+    {
+      "id": "P04",
+      "action": "develop",
+      "description": "正式向公司请求董事监督，但未产生合法审议结果，总经理未变。",
+      "quote": "收件不代表有权机关已经批准审查议题。"
+    },
+    {
+      "id": "P05",
+      "action": "develop",
+      "description": "有早期资金周转方案讨论目录线索，不得据此定母亲批准、签署或调拨。",
+      "quote": "周转方案讨论"
+    },
+    {
+      "id": "P07",
+      "action": "develop",
+      "description": "姐妹互信裂缝明确，仍未失去各自责任与通信空间。",
+      "quote": "今晚站不到。"
+    }
+  ],
+  "stage_closing": false,
+  "measured_han": 9039
+}

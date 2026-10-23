@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 13,
+  "revision": 16,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "phase": "WAITING_NEXT",
   "platform": "qidian",
@@ -23,7 +23,7 @@
   },
   "research_path": "research/platform_6be8e3dcc722535c92ab8700a59443ad957ba34b1287affc13e6372b08ba4e67.json",
   "topics_path": "research/topics_7e38d6fa745c83141f0fa27ffbef2a6823e5a67ca43d956c18deccaff754de05.json",
-  "chapter": 5,
+  "chapter": 6,
   "history": [
     {
       "at": "2026-10-23T02:03:07+00:00",
@@ -108,9 +108,27 @@
       "phase": "WAITING_NEXT",
       "label": "等待下一章",
       "detail": "CH004《这笔钱到底算谁的》9143汉字已审核并冻结；无起点发布回执。"
+    },
+    {
+      "at": "2026-10-23T11:24:15+00:00",
+      "phase": "WRITING",
+      "label": "撰写正文",
+      "detail": "作者授权CH005，正文9039汉字已创作，正执行五章全文回看。"
+    },
+    {
+      "at": "2026-10-23T11:24:16+00:00",
+      "phase": "CHECKPOINT",
+      "label": "阶段回看",
+      "detail": "五章全文阅读与CH005发布前回看证据已检查，覆盖各章正文和事实记录的准确哈希。"
+    },
+    {
+      "at": "2026-10-23T11:24:17+00:00",
+      "phase": "WAITING_NEXT",
+      "label": "等待下一章",
+      "detail": "CH005《她要我站到她对面》9039汉字正式定稿冻结；首次CH001–CH005全文窗口回看通过；未登记起点发布。"
     }
   ],
-  "detail": "CH004《这笔钱到底算谁的》9143汉字已审核并冻结；无起点发布回执。",
-  "next_action": "等待作者下达下一章。CH005《她要我站到她对面》需实际全文阅读CH001–CH005并完成首次五章审查，核验P03截止和申请正式监督。",
-  "updated_at": "2026-10-23T10:58:43+00:00"
+  "detail": "CH005《她要我站到她对面》9039汉字正式定稿冻结；首次CH001–CH005全文窗口回看通过；未登记起点发布。",
+  "next_action": "等作者下一次“继续下一章”。CH006先读已冻结五章、五章checkpoint与P02@10/P04@20/P08@100/P09@95；主场景不能再重复会议改表。",
+  "updated_at": "2026-10-23T11:24:17+00:00"
 }
