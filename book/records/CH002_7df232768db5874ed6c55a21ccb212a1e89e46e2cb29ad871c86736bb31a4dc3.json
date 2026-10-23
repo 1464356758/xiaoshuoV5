@@ -1,0 +1,172 @@
+{
+  "chapter": 2,
+  "title": "她不是不肯解释",
+  "stage": "S01",
+  "base_revision": 4,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+  "complete": true,
+  "story_time_end": 2040,
+  "summary": "2026年11月13日，林葭核查母亲11月1日私人音频的保管和交付链，能证明何屿受领与副本同版本，不证明母亲动机。公司对邱沅6400元从申请审批、内部核算到付款执行分段核查，旧系统已清退只是内部结算状态，已查批次缺少有效银行确认，其他支付渠道仍待核实。林遥亲签对外更正、承担投资董事问询，客户获得不再否认其感受的正式书面答复但没有确认到账。庞念青揭示明川夜间设备未到、照护顺序受影响，CH003赴现场。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [
+      {
+        "chapter": 1,
+        "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+        "quote": "你可以把这份作为我的说明。不能把它换成那份模板。"
+      }
+    ],
+    "conclusion": "连读CH001和CH002，第二章采用原件交付来源核对、脱敏分段付款核查和管理更正推进；与第一章拒签动作不同。未越权获得银行流水，未把没有匹配付款凭证当作确定挪用，未将母亲私录当任免书。姐姐职位不变，客户仍未确认实际退款，前向承诺保持。"
+  },
+  "facts": [
+    {
+      "kind": "fact",
+      "key": "audio:transfer_chain",
+      "value": "11月1日母亲音频交付在何屿处有编号、见证、签收和同版本交付记录；录制前历史不明。",
+      "holder": "",
+      "valid_from": 1520,
+      "valid_until": null,
+      "quote": "你昨天拿到的副本与我这里登记的版本，校验值一致。"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:audio_scope",
+      "value": "林葭知道保管链与确认母亲真正动机、音频录制前绝对未改动不是一回事。",
+      "holder": "林葭",
+      "valid_from": 1525,
+      "valid_until": null,
+      "quote": "接收之前发生了什么，凭这些材料不能下结论。"
+    },
+    {
+      "kind": "state",
+      "key": "finance:QY_refund_internal",
+      "value": "内部QY一一一二记载6400元预收余额，9月29日离院、10月12日申请、10月24日批准、10月31日显示已清退；仅内部资料待核。",
+      "holder": "",
+      "valid_from": 1665,
+      "valid_until": null,
+      "quote": "金额是六千四百元。"
+    },
+    {
+      "kind": "fact",
+      "key": "finance:QY_bank_search",
+      "value": "已检索批次未匹配到银行付款有效确认，不能排除其他渠道或编号变化。",
+      "holder": "",
+      "valid_from": 1675,
+      "valid_until": null,
+      "quote": "未匹配到该编号对应的有效银行付款确认凭证。"
+    },
+    {
+      "kind": "fact",
+      "key": "finance:state_label",
+      "value": "旧系统将内部结算完成显示为已清退，不等于银行执行。",
+      "holder": "",
+      "valid_from": 1850,
+      "valid_until": null,
+      "quote": "它并不直接连接银行付款结果。"
+    },
+    {
+      "kind": "state",
+      "key": "complaint:QY_formal_response",
+      "value": "公司给邱沅正式更正书，尚未证明到账；家属没有确认收到钱或满意。",
+      "holder": "",
+      "valid_from": 1940,
+      "valid_until": null,
+      "quote": "这次没有说我记错。"
+    },
+    {
+      "kind": "state",
+      "key": "proof:QY_original",
+      "value": "邱沅保留收费凭据原件，通过正式渠道送复印件。",
+      "holder": "",
+      "valid_from": 1940,
+      "valid_until": null,
+      "quote": "原件自己保管。"
+    },
+    {
+      "kind": "state",
+      "key": "role:linyao",
+      "value": "林遥仍为总经理，亲签清退更正；未发生免职。",
+      "holder": "",
+      "valid_from": 1920,
+      "valid_until": null,
+      "quote": "今天这张更正，我自己签。"
+    },
+    {
+      "kind": "fact",
+      "key": "finance:status_correction",
+      "value": "公司保留旧显示记录、增加核验标记与更正说明。",
+      "holder": "",
+      "valid_from": 1820,
+      "valid_until": null,
+      "quote": "不能把昨天的‘已清退’直接覆盖掉，当作以前没发生过。"
+    },
+    {
+      "kind": "state",
+      "key": "care:mingchuan_risk",
+      "value": "夜间护理设备未到场而临时调班，暂未报告事故但仍造成老人等待。",
+      "holder": "",
+      "valid_from": 1930,
+      "valid_until": null,
+      "quote": "昨晚没人伤着。"
+    },
+    {
+      "kind": "state",
+      "key": "care:workorder_label",
+      "value": "维修工单也显示已处理，但不代表现场完工，计划D2核验。",
+      "holder": "",
+      "valid_from": 2005,
+      "valid_until": null,
+      "quote": "别把它解释成现场已经修复。"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:site_access",
+      "value": "林葭获准D2到点位接待区了解流程，无权获私人护理记录。",
+      "holder": "林葭",
+      "valid_from": 1995,
+      "valid_until": null,
+      "quote": "不会给你任何护理人员的私人记录。"
+    }
+  ],
+  "progression": {
+    "goal": "核母亲录音来源，并兑现家属中午退款核查进展。",
+    "obstacle": "内部结算状态与付款混淆、授权查询范围有限、姐妹信任不足、投资问询施压。",
+    "method": "律师保管链核验、四段脱敏对账、银行有效付款确认检索范围标注、对外正式更正。",
+    "choice": "妹妹不凭持股越权查私人流水或许诺到账；姐姐自己签署汇总更正并负管理责任。",
+    "result": "音频交付链承诺兑现，确认6400元是内部清退而非已确认支付。",
+    "consequence": "投资董事质疑汇总可靠性、家属仍等真实退款但得到纠正说法、明川护工与长者受维修延误影响。",
+    "next_options": "CH003去明川核护理安排、设备安全和长者意愿；CH004按授权核合同；P02@CH010。",
+    "scene_function": "律所界定来源证据、会议室四栏核对、家属电话承受延期、姐姐签更正、督导将矛盾引向真实养老现场。"
+  },
+  "thread_events": [
+    {
+      "id": "P01A",
+      "action": "payoff",
+      "description": "音频交付来源链和版本完成核验，母亲动机仍未知。",
+      "quote": "你昨天拿到的副本与我这里登记的版本，校验值一致。"
+    },
+    {
+      "id": "P02",
+      "action": "partial",
+      "description": "退款内部核算已确认，银行付款事实仍待核。",
+      "quote": "未匹配到该编号对应的有效银行付款确认凭证。"
+    },
+    {
+      "id": "P03",
+      "action": "develop",
+      "description": "前夜设备未到而调整班次，下一章查真实照护。",
+      "quote": "昨晚没人伤着。"
+    },
+    {
+      "id": "P07",
+      "action": "develop",
+      "description": "姐姐承认过去信任承诺说错，签更正不等于亲情已和解。",
+      "quote": "以前有时候说错了。"
+    }
+  ],
+  "stage_closing": false,
+  "measured_han": 9418
+}

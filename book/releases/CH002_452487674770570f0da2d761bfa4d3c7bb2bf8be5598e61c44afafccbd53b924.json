@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
+  "chapter": 2,
+  "base_revision": 4,
+  "task_id": "f773ecc6-0d35-4c36-93c2-602d2842cd54",
+  "repairs": 0,
+  "text_sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+  "record_sha256": "7df232768db5874ed6c55a21ccb212a1e89e46e2cb29ad871c86736bb31a4dc3",
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "roadmap_sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+  "decision": "release",
+  "read_full_text": true,
+  "blocking_issues": [],
+  "read_coverage": {
+    "1": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+    "2": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4"
+  },
+  "reader_reason_to_continue": "内部记账与实际付款的缺口尚未查完，下一章类似的已处理状态又关联真实老人护理，必须看现场。",
+  "consequence": "林遥承担管理更正与投资问询，邱沅正式得到如实书面答复，录音交付链能被独立核对但动机仍存悬念。",
+  "ending_runway": "CH003实查明川护理和蒋素琴意愿，CH004核朗和配服实际履约，CH005举行合法监督提出及姐妹真实信息交流。",
+  "checks": {
+    "timeline": {
+      "decision": "pass",
+      "conclusion": "故事按D1从07:12到18:00推进，章末时间T2040，未倒退前章T525。",
+      "evidence": [
+        {
+          "chapter": 2,
+          "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+          "quote": "十一月十三日早上七点十二分，林葭收到一张照片。"
+        }
+      ]
+    },
+    "knowledge": {
+      "decision": "pass",
+      "conclusion": "保管链与母亲动机分离，妹妹没有得知更早录制历史或银行全部信息。",
+      "evidence": [
+        {
+          "chapter": 2,
+          "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+          "quote": "接收之前发生了什么，凭这些材料不能下结论。"
+        }
+      ]
+    },
+    "props_resources": {
+      "decision": "pass",
+      "conclusion": "邱沅保留个人凭据，付款仍未确认，资料没有在不同人物手中凭空移动。",
+      "evidence": [
+        {
+          "chapter": 2,
+          "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+          "quote": "原件自己保管。"
+        }
+      ]
+    },
+    "causality": {
+      "decision": "pass",
+      "conclusion": "退款核验促成更正和投资问询，而不是靠新录音解决公司矛盾。",
+      "evidence": [
+        {
+          "chapter": 2,
+          "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+          "quote": "今天这张更正，我自己签。"
+        }
+      ]
+    },
+    "power_rules": {
+      "decision": "pass",
+      "conclusion": "股东旁听不等于总经理、董事或银行账户访问权，未有任何合法撤职动作。",
+      "evidence": [
+        {
+          "chapter": 2,
+          "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+          "quote": "但不代替处理人作决定。"
+        }
+      ]
+    },
+    "promises": {
+      "decision": "pass",
+      "conclusion": "P01A交付链及时兑付，P02款项仍开口，P03护理风险尚有实体后果。",
+      "evidence": [
+        {
+          "chapter": 2,
+          "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+          "quote": "你昨天拿到的副本与我这里登记的版本，校验值一致。"
+        }
+      ]
+    },
+    "anti_repeat": {
+      "decision": "pass",
+      "conclusion": "上一章拒签异议，本章四段核对与客户更正，下一章现场护理，主要行动机制不重复。",
+      "evidence": [
+        {
+          "chapter": 2,
+          "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+          "quote": "四个方框：受理、批准、账面处理、付款执行。"
+        }
+      ]
+    },
+    "character_agency": {
+      "decision": "pass",
+      "conclusion": "家属坚持自己定认可标准，姐姐自己签更正，财务主动提出预算压力，员工督导坚持现场安全。",
+      "evidence": [
+        {
+          "chapter": 2,
+          "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+          "quote": "别替我说我满意了。"
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "chapter": 1,
+      "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+      "quote": "你可以把这份作为我的说明。不能把它换成那份模板。",
+      "difference": "CH001主角拒签并保全异议；CH002采取保管链核验、四栏对账与正式更正，证据可信度、客户回复及经营问责产生新的不可逆变化。"
+    }
+  ],
+  "future_window": [
+    {
+      "chapter": 3,
+      "goal": "到明川核护理设备现场、庞念青工作安排和蒋素琴老人意愿。",
+      "change": "形成真实且有记录的照护调整并处理具体成本，不重复公司对账。",
+      "ending_question": "服务暂时维持的代价究竟落在谁身上？"
+    },
+    {
+      "chapter": 4,
+      "goal": "核朗和配服约定、报修工单、验收及实际到场，保持授权与个人资料边界。",
+      "change": "完成一项合法的非单方履约核对，识别已处理记录是否可靠。",
+      "ending_question": "若实际没到场，谁为什么认为能写完成？"
+    },
+    {
+      "chapter": 5,
+      "goal": "完成姐姐经营权限下的正式监督请求与临时照护安排。",
+      "change": "让姐妹各自公开一次有代价的事实与错误选择。",
+      "ending_question": "怎样合法推动调查而不复演母亲遗嘱的互害？"
+    }
+  ],
+  "promise_reviews": [
+    {
+      "id": "P01",
+      "action": "keep",
+      "deadline_chapter": 50,
+      "reason": "撤姐动机尚未知，保持CH050的原承诺，不借音频来源盖棺定论。",
+      "evidence": {
+        "chapter": 2,
+        "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "quote": "她当天在我面前确认过这段私人陈述是她交付的"
+      }
+    },
+    {
+      "id": "P01A",
+      "action": "complete",
+      "deadline_chapter": 2,
+      "reason": "11月1日受领、见证与交付版本可追踪，来源链已兑现，不代表母亲动机成立。",
+      "evidence": {
+        "chapter": 2,
+        "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "quote": "你昨天拿到的副本与我这里登记的版本，校验值一致。"
+      }
+    },
+    {
+      "id": "P02",
+      "action": "keep",
+      "deadline_chapter": 10,
+      "reason": "6400元仅完成内部核算，列明批次无银行确认；完整支付去向CH010继续核实。",
+      "evidence": {
+        "chapter": 2,
+        "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "quote": "未匹配到该编号对应的有效银行付款确认凭证。"
+      }
+    },
+    {
+      "id": "P03",
+      "action": "keep",
+      "deadline_chapter": 5,
+      "reason": "明川设备未按约维修，护理班次重排，CH003实查和CH005前补救。",
+      "evidence": {
+        "chapter": 2,
+        "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "quote": "昨晚没人伤着。"
+      }
+    },
+    {
+      "id": "P04",
+      "action": "keep",
+      "deadline_chapter": 20,
+      "reason": "姐姐尚在总经理任上，CH020前依法完成真实经营权处置。",
+      "evidence": {
+        "chapter": 2,
+        "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "quote": "今天这张更正，我自己签。"
+      }
+    },
+    {
+      "id": "P05",
+      "action": "keep",
+      "deadline_chapter": 50,
+      "reason": "母亲旧档案未依法核取，其早年行为未实证，CH050期限不变。",
+      "evidence": {
+        "chapter": 2,
+        "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "quote": "接收之前发生了什么，凭这些材料不能下结论。"
+      }
+    },
+    {
+      "id": "P07",
+      "action": "keep",
+      "deadline_chapter": 100,
+      "reason": "姐妹言语坦承和签字并非和解，CH100人物关系走向期限不变。",
+      "evidence": {
+        "chapter": 2,
+        "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "quote": "以前有时候说错了。"
+      }
+    }
+  ],
+  "incident_actions": []
+}
