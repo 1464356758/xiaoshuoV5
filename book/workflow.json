@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 18,
+  "revision": 21,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "phase": "WAITING_NEXT",
   "platform": "qidian",
@@ -23,7 +23,7 @@
   },
   "research_path": "research/platform_6be8e3dcc722535c92ab8700a59443ad957ba34b1287affc13e6372b08ba4e67.json",
   "topics_path": "research/topics_7e38d6fa745c83141f0fa27ffbef2a6823e5a67ca43d956c18deccaff754de05.json",
-  "chapter": 6,
+  "chapter": 7,
   "history": [
     {
       "at": "2026-10-23T02:03:07+00:00",
@@ -138,9 +138,27 @@
       "phase": "WAITING_NEXT",
       "label": "等待下一章",
       "detail": "CH005《她要我站到她对面》9039汉字，已修正错误哈希和五章窗口记录，正文一字未改；下一任务CH006。"
+    },
+    {
+      "at": "2026-10-23T12:06:51+00:00",
+      "phase": "WRITING",
+      "label": "撰写正文",
+      "detail": "CH006海棠现场实写8929汉字完成；进入八项门槛复核。"
+    },
+    {
+      "at": "2026-10-23T12:06:52+00:00",
+      "phase": "REVIEWING",
+      "label": "检查本章",
+      "detail": "CH006反重复、人物权力、已发生费用及家属利益八项审核已形成报告。"
+    },
+    {
+      "at": "2026-10-23T12:06:53+00:00",
+      "phase": "WAITING_NEXT",
+      "label": "等待下一章",
+      "detail": "CH006《空着的蓝马甲》8929汉字已完成审核并定稿冻结，累计55934汉字；起点无实际发布回执。"
     }
   ],
-  "detail": "CH005《她要我站到她对面》9039汉字，已修正错误哈希和五章窗口记录，正文一字未改；下一任务CH006。",
-  "next_action": "进入CH006前读取五章定稿和有效checkpoint；控制重复程序戏；平台发布无真实回执仍记0。",
-  "updated_at": "2026-10-23T11:33:33+00:00"
+  "detail": "CH006《空着的蓝马甲》8929汉字已完成审核并定稿冻结，累计55934汉字；起点无实际发布回执。",
+  "next_action": "CH007从正式五章回看与CH006事实开始，围绕资料保全和早期周转讨论合法双来源，避免回到纯会议改表；P10@CH008、P02@CH010不延期。",
+  "updated_at": "2026-10-23T12:06:53+00:00"
 }

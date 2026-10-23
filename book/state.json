@@ -2,7 +2,7 @@
   "schema_version": 2,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "title": "母亲的遗嘱，要我扮演坏女儿",
-  "revision": 9,
+  "revision": 10,
   "config": {
     "target_chapters": 100,
     "target_han": 900000,
@@ -65,6 +65,15 @@
       "record_path": "records/CH005_296a2b4c6e5a355efebbdfa15dc490934f09cf6053435c2ff322c19bcd98288c.json",
       "record_sha256": "296a2b4c6e5a355efebbdfa15dc490934f09cf6053435c2ff322c19bcd98288c",
       "han_count": 9039
+    },
+    "6": {
+      "title": "空着的蓝马甲",
+      "stage": "S01",
+      "text_path": "chapters/CH006_92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99.txt",
+      "text_sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+      "record_path": "records/CH006_4a8d5b884ec3ef6053554bfe6d2586394f5848ef9eac282abe4d7f20f16a710e.json",
+      "record_sha256": "4a8d5b884ec3ef6053554bfe6d2586394f5848ef9eac282abe4d7f20f16a710e",
+      "han_count": 8929
     }
   },
   "checkpoints": [
@@ -217,6 +226,22 @@
       ],
       "candidate_sha256": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
       "candidate_path": "candidates/CH005_677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b.txt"
+    },
+    "6": {
+      "task_id": "52e782b6-5147-47d9-ad09-a218cc1f94b0",
+      "chapter": 6,
+      "mode": "write",
+      "phase": "adopted",
+      "repairs": 0,
+      "history": [
+        {
+          "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+          "reason": "初稿",
+          "repairs": 0
+        }
+      ],
+      "candidate_sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+      "candidate_path": "candidates/CH006_92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99.txt"
     }
   },
   "completion": null,
@@ -243,6 +268,10 @@
       "5": {
         "text_sha256": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
         "record_sha256": "296a2b4c6e5a355efebbdfa15dc490934f09cf6053435c2ff322c19bcd98288c"
+      },
+      "6": {
+        "text_sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+        "record_sha256": "4a8d5b884ec3ef6053554bfe6d2586394f5848ef9eac282abe4d7f20f16a710e"
       }
     },
     "published": {},
@@ -271,6 +300,11 @@
         "path": "releases/CH005_8628183694b94fba067637f735b168f860ef6fd174ac94c50b5ab97e4479acf3.json",
         "sha256": "8628183694b94fba067637f735b168f860ef6fd174ac94c50b5ab97e4479acf3",
         "used": true
+      },
+      "6": {
+        "path": "releases/CH006_238e949fbb843b082fd8487c1d5ca0bbe27741eb8b02274927b0b1860f69d3f3.json",
+        "sha256": "238e949fbb843b082fd8487c1d5ca0bbe27741eb8b02274927b0b1860f69d3f3",
+        "used": true
       }
     },
     "promises": {
@@ -291,7 +325,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 5
+        "last_reviewed_chapter": 6
       },
       "P01A": {
         "history": [
@@ -341,7 +375,7 @@
         ],
         "deadline_chapter": 10,
         "status": "open",
-        "last_reviewed_chapter": 5
+        "last_reviewed_chapter": 6
       },
       "P03": {
         "history": [
@@ -391,7 +425,7 @@
         ],
         "deadline_chapter": 20,
         "status": "open",
-        "last_reviewed_chapter": 5
+        "last_reviewed_chapter": 6
       },
       "P05": {
         "history": [
@@ -410,7 +444,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 5
+        "last_reviewed_chapter": 6
       },
       "P07": {
         "history": [
@@ -429,7 +463,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 5
+        "last_reviewed_chapter": 6
       },
       "P08": {
         "history": [
@@ -448,7 +482,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 5
+        "last_reviewed_chapter": 6
       },
       "P09": {
         "history": [
@@ -467,7 +501,26 @@
         ],
         "deadline_chapter": 95,
         "status": "open",
-        "last_reviewed_chapter": 5
+        "last_reviewed_chapter": 6
+      },
+      "P10": {
+        "history": [
+          {
+            "id": "P10",
+            "action": "set",
+            "deadline_chapter": 8,
+            "reason": "韩立川及宣传合作方的取消活动损失、联系回应仍未完结，新承诺须于CH008给出真实善后阶段结果。",
+            "evidence": {
+              "chapter": 6,
+              "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+              "quote": "保留依约提出意见的权利"
+            },
+            "chapter": 6
+          }
+        ],
+        "deadline_chapter": 8,
+        "status": "open",
+        "last_reviewed_chapter": 6
       }
     },
     "incidents": {}

@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
+  "chapter": 6,
+  "base_revision": 9,
+  "task_id": "52e782b6-5147-47d9-ad09-a218cc1f94b0",
+  "repairs": 0,
+  "text_sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+  "record_sha256": "4a8d5b884ec3ef6053554bfe6d2586394f5848ef9eac282abe4d7f20f16a710e",
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "roadmap_sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+  "decision": "release",
+  "read_full_text": true,
+  "blocking_issues": [],
+  "read_coverage": {
+    "3": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+    "4": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+    "5": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+    "6": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99"
+  },
+  "reader_reason_to_continue": "宣传展示已取消却有真实失约者与供货费用，员工要求独立投诉反馈渠道，许致远有意不带摄影到现场看运营真实性；监督程序与十月被删弱的原始投诉版本仍待实证，姐妹仍须面对可信的资源后果。",
+  "consequence": "海棠取消体验日无宣传照片与新增预约数，合作成本与韩立川等候损失真实存在；贺敏有独立职位责任，林遥经营角色需解释且未卸任，林葭不取得额外审批权。",
+  "ending_runway": "CH007转入适格保存渠道和历史周转讨论的双源核验，减少办公室纯问话；CH008实际兑现海棠活动取消善后P10，CH010必须推进并回答邱沅6400元首笔银行双源事实。",
+  "checks": {
+    "timeline": {
+      "decision": "pass",
+      "conclusion": "D5从17日上午7:24至19时，保持上章16日19时之后，韩立川上午等候、取消活动、下午资料范围核实和晚上归家顺序连贯。",
+      "evidence": [
+        {
+          "chapter": 6,
+          "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+          "quote": "十一月十七日早晨七点二十四分"
+        }
+      ]
+    },
+    "knowledge": {
+      "decision": "pass",
+      "conclusion": "贺敏知自己筹备责任但不虚构谁提出实习生穿马甲的全过程，股东不私拿资料，投资董事探访尚是意向，章内无人先知未来资金或历史投诉细节。",
+      "evidence": [
+        {
+          "chapter": 6,
+          "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+          "quote": "我现在说不清具体来回经过"
+        }
+      ]
+    },
+    "props_resources": {
+      "decision": "pass",
+      "conclusion": "没有凭空转移护理人员或制造宣传到场；既有签约服务继续，未举办的新增展示无预约成交统计，已发生摄影物料和劳务必须按合同审核。",
+      "evidence": [
+        {
+          "chapter": 6,
+          "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+          "quote": "今天没有新预约数量可以填，就别填。"
+        }
+      ]
+    },
+    "causality": {
+      "decision": "pass",
+      "conclusion": "前一天真实照护资源核验暴露海棠新增展示能力不足，取消使韩立川误工、合作方成本可见，经营与监督的矛盾改变具体家属和员工的下一步决定。",
+      "evidence": [
+        {
+          "chapter": 6,
+          "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+          "quote": "下次叫你们老板亲自站在这儿看看"
+        }
+      ]
+    },
+    "power_rules": {
+      "decision": "pass",
+      "conclusion": "林葭仅18%股东，无权自行取消点位活动、调员工或批合同；贺敏提出，经营授权岗位决定；许致远个人电话不构成董事会决定。",
+      "evidence": [
+        {
+          "chapter": 6,
+          "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+          "quote": "申请不等于通过。"
+        }
+      ]
+    },
+    "promises": {
+      "decision": "pass",
+      "conclusion": "新增海棠失约P10@CH008跟踪，P09长期安全及P08旧陪同失约继续，P02@CH010仍未结清，绝不拿活动取消代替账务兑现。",
+      "evidence": [
+        {
+          "chapter": 6,
+          "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+          "quote": "保留依约提出意见的权利"
+        }
+      ]
+    },
+    "anti_repeat": {
+      "decision": "pass",
+      "conclusion": "前三章CH003实地照护自主、CH004维保合同核证、CH005姐妹坦承/提出监督与CH006海棠陌生家属等候/活动实际取消/员工自主拒演手法均不同。",
+      "evidence": [
+        {
+          "chapter": 6,
+          "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+          "quote": "我们不是为了证明你对，才决定不用实习生当背景板。"
+        }
+      ]
+    },
+    "character_agency": {
+      "decision": "pass",
+      "conclusion": "贺敏以岗位判断拒假照护形象，韩立川保留投诉和是否再来的决定，合作方要求已发生工作费，林葭不能强抢功劳，姐姐承担经营取消责任。",
+      "evidence": [
+        {
+          "chapter": 6,
+          "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+          "quote": "你要帮，就帮我给韩先生发一条明确的联系方式"
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "chapter": 3,
+      "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+      "quote": "原计划陪同外出一项未执行",
+      "difference": "CH003蒋素琴的即时照护选择与一项原有服务失约；CH006陌生新客在另一日间中心受到展示取消通知影响，展示是否可办与其时间损失的决策不同，未重复床旁行动。"
+    },
+    {
+      "chapter": 4,
+      "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+      "quote": "签收时间是下午五点十六分。",
+      "difference": "CH004办公室供应商1800元与实体设备履约调查，CH006宣传合作已到场、未发生影像和实际已发生成本的现场取舍；主角不拿银行原件或无端调查新合同。"
+    },
+    {
+      "chapter": 5,
+      "sha256": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+      "quote": "今晚站不到。",
+      "difference": "CH005姐妹自述十月被隐瞒投诉并以股东身份递交书面监督，CH006无新的和解或受理结果，主要冲突转为海棠筹备负责人贺敏与外部家属、宣传供货方的独立实际选择。"
+    }
+  ],
+  "future_window": [
+    {
+      "chapter": 7,
+      "goal": "取得相互独立的历史周转方案目录来源与合法保管路径，核真实性而不替母亲定责。",
+      "change": "以受权限约束的真实证人或经办材料可追溯路径推进，产生新的阻碍或可核事实，避免重开一次泛泛会议。",
+      "ending_question": "那份早期周转讨论是否进入正式决议或实际支付，是谁能依法出具对应来源？"
+    },
+    {
+      "chapter": 8,
+      "goal": "真实处理海棠开放日取消后预约家属回应与合作方已发生费用的成本，并做护理资源一次实质选择。",
+      "change": "P10不靠一句重新预约自动结案，现场经营代价和家庭实际选择要交付可查结果。",
+      "ending_question": "保住真实服务能力，能否同时收回被失约的客户信任？"
+    },
+    {
+      "chapter": 9,
+      "goal": "调整人员与经营风险披露的取证路线，为CH010邱沅首笔6400元退款多来源确证做前置准备。",
+      "change": "从合同表述进入有权限的外部资金或客户权利证据通道，不预先宣称真实钱款去向。",
+      "ending_question": "CH010将以哪些互相独立的来源交代第一笔款的真实状态？"
+    }
+  ],
+  "promise_reviews": [
+    {
+      "id": "P01",
+      "action": "keep",
+      "deadline_chapter": 50,
+      "reason": "母亲为何撤姐仍未揭示，何屿仅确认私人音频不能自动作为公司资料，CH050期限不变。",
+      "evidence": {
+        "chapter": 6,
+        "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+        "quote": "它不负责回答所有问题。"
+      }
+    },
+    {
+      "id": "P02",
+      "action": "keep",
+      "deadline_chapter": 10,
+      "reason": "邱沅6400元实际支付与银行双源仍须在CH010完成，本章未获取新付款凭证且不以活动损失代替。",
+      "evidence": {
+        "chapter": 2,
+        "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "quote": "未匹配到该编号对应的有效银行付款确认凭证。"
+      }
+    },
+    {
+      "id": "P04",
+      "action": "keep",
+      "deadline_chapter": 20,
+      "reason": "仍为股东监督请求范围审核，董事会没有人事结果，CH020期限不变。",
+      "evidence": {
+        "chapter": 6,
+        "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+        "quote": "申请不等于通过。"
+      }
+    },
+    {
+      "id": "P05",
+      "action": "keep",
+      "deadline_chapter": 50,
+      "reason": "母亲早期周转讨论仍仅目录线索，何屿私人资料与公司调阅不自动相通，CH050期限不变。",
+      "evidence": {
+        "chapter": 5,
+        "sha256": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+        "quote": "周转方案讨论"
+      }
+    },
+    {
+      "id": "P07",
+      "action": "keep",
+      "deadline_chapter": 100,
+      "reason": "姐妹D5公事公办但并未恢复家中亲密或免除姐姐历史披露责任，最终关系方向CH100不重置。",
+      "evidence": {
+        "chapter": 6,
+        "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+        "quote": "担心不等于你不能查。"
+      }
+    },
+    {
+      "id": "P08",
+      "action": "keep",
+      "deadline_chapter": 100,
+      "reason": "11月14日原定陪同外出仍未补偿且当事人要求先核合同，本章另一客户咨询失约不是这项兑现。",
+      "evidence": {
+        "chapter": 5,
+        "sha256": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+        "quote": "要求先看原合同怎样写"
+      }
+    },
+    {
+      "id": "P09",
+      "action": "keep",
+      "deadline_chapter": 95,
+      "reason": "设备长期安全与服务资源持续核验，海棠取消展会以免挤占已有护理岗位，CH030中期CH095最终安排不改。",
+      "evidence": {
+        "chapter": 6,
+        "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+        "quote": "不能拿他们去给参观做讲解"
+      }
+    },
+    {
+      "id": "P10",
+      "action": "set",
+      "deadline_chapter": 8,
+      "reason": "韩立川及宣传合作方的取消活动损失、联系回应仍未完结，新承诺须于CH008给出真实善后阶段结果。",
+      "evidence": {
+        "chapter": 6,
+        "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+        "quote": "保留依约提出意见的权利"
+      }
+    }
+  ],
+  "incident_actions": []
+}

@@ -1,0 +1,191 @@
+{
+  "chapter": 6,
+  "title": "空着的蓝马甲",
+  "stage": "S01",
+  "base_revision": 9,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+  "complete": true,
+  "story_time_end": 7860,
+  "summary": "2026年11月17日D5，海棠日间中心因新增体验展示的真实在岗、资格、休息安排不满足要求取消原定活动，韩立川请假等候后保留失约意见。贺敏主动拒绝让实习生穿蓝马甲冒充照护人员并拒绝补拍不存在的活动。合作方已投入到场、物料、运输成本，费用需据实核，不得让摄影师承担不存在交付的错误。林遥到点位承担取消活动的经营责任，原有签约照护按可用资源继续；林葭不以股东监督为自己邀功也不由此断定姐姐无责。许致远提出未来无摄制组实地观察的意愿，不是董事会决议。正式监督请求仍在范围审查，员工单独报告旧投诉的渠道尚处建议阶段；私人音频与公司证据不能混用。韩立川仍未签约，善后设P10@CH008，P09继续长期护理资源管理。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [
+      {
+        "chapter": 3,
+        "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+        "quote": "原计划陪同外出一项未执行"
+      },
+      {
+        "chapter": 4,
+        "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+        "quote": "签收时间是下午五点十六分。"
+      },
+      {
+        "chapter": 5,
+        "sha256": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+        "quote": "今晚站不到。"
+      }
+    ],
+    "conclusion": "CH006全文8929汉字已检查，并对CH001–CH005五章checkpoint与近三章进行核验。CH006以海棠开放日实际失约、家属请假损失、宣传供应商实际履约、员工独立选择取代前五章高频会议及改表；未新增股东超权解任、已付不明资金或自动恢复的护理设备。CH005已完成短期P03，不因本章活动取消重开；长程P09和赔补P08保持开放。"
+  },
+  "facts": [
+    {
+      "kind": "state",
+      "key": "haitang:cancelled",
+      "value": "11月17日海棠主动取消人手条件不足的新增体验活动，已签约正常照护没有自动停摆。",
+      "holder": "",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "今天体验活动要调整。"
+    },
+    {
+      "kind": "state",
+      "key": "haitang:waiter_han",
+      "value": "咨询者韩立川白请假、早到等候而未获准确通知，他选择不立即签约，后续是否再来由其本人决定。",
+      "holder": "",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "我今天不是来讨便宜的。"
+    },
+    {
+      "kind": "fact",
+      "key": "haitang:real_staff",
+      "value": "海棠原有服务与新增展示人员必须分开核实际在岗、休息和资格，不能凭宣传画或临时借来人手替代。",
+      "holder": "",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "正常已签约服务按原计划安排"
+    },
+    {
+      "kind": "state",
+      "key": "haitang:blue_vest",
+      "value": "贺敏反对让未具服务资格的实习生穿展示马甲拍照暗示有相应护理岗位，活动未举办且未造活动影像。",
+      "holder": "",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "我昨晚差点也点头了。"
+    },
+    {
+      "kind": "state",
+      "key": "haitang:incurred_cost",
+      "value": "现场广告合作方已到货、人力到场、物料形成实际费用；未发生的展示不冒充已举办，已履行工作应依合同核。",
+      "holder": "",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "已经发生的合规费用我们不会凭活动取消就当没发生。"
+    },
+    {
+      "kind": "state",
+      "key": "linyao:accept_cancellation",
+      "value": "林遥亲自到点位核通知家属与取消成本，确认不假拍不虚构新增预约人数。",
+      "holder": "",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "今天没有新预约数量可以填，就别填。"
+    },
+    {
+      "kind": "state",
+      "key": "haitang:own_decision",
+      "value": "贺敏以运营负责人身份主动拒绝不真实展示并要求林葭不得把海棠选择归功于股东监督。",
+      "holder": "",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "我们不是为了证明你对，才决定不用实习生当背景板。"
+    },
+    {
+      "kind": "state",
+      "key": "governance:still_scope_review",
+      "value": "CH005正式监督请求处于章程与资料保管范围审核，未召开董事会或更改林遥职务。",
+      "holder": "",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "申请不等于通过。"
+    },
+    {
+      "kind": "state",
+      "key": "staff:independent_reporting_idea",
+      "value": "员工希望旧投诉补充资料走不经直属领导的接件渠道；截至章末仅建议正在审核，不代表渠道已正式设立。",
+      "holder": "",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "有员工提出，希望对过去的服务投诉提供补充说明时有单独接件方式"
+    },
+    {
+      "kind": "state",
+      "key": "director:authentic_visit_intent",
+      "value": "许致远表示希望未来在有权点位许可下查看正常服务时段、不拍摄老人，不等于已安排或完成到访。",
+      "holder": "",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "不用安排摄影师"
+    },
+    {
+      "kind": "state",
+      "key": "haitang:followup_due",
+      "value": "海棠联系过韩立川，家属保留失约意见，是否参加下一次咨询未确定；合作费用与预约恢复仍待执行。",
+      "holder": "",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "保留依约提出意见的权利"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:private_custody_boundary",
+      "value": "林葭听何屿再次强调母亲私人录音保管不等于公司资料可自动被其取得。",
+      "holder": "林葭",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "私人保管与公司适当调阅路径不能混在一起。"
+    },
+    {
+      "kind": "state",
+      "key": "sisters:independent_positions",
+      "value": "姐妹在海棠公事公办，未因取消体验日恢复亲密，也未抹除姐姐十月投诉披露责任。",
+      "holder": "",
+      "valid_from": 7860,
+      "valid_until": null,
+      "quote": "担心不等于你不能查。"
+    }
+  ],
+  "progression": {
+    "goal": "把五章回看提出的程序戏密度问题转化为现场行动、客户信任和运营损失，同时使治理请求继续依法处理。",
+    "obstacle": "新增开放日岗位资源与实际能力不符，家属请假与合作方合同成本已发生，传播方有动机伪造已举办照片，员工担忧监督影响日常服务。",
+    "method": "林葭实地倾听韩立川、贺敏、合作方，观察取消事件的真实代价，拒绝替代任何运营岗位；借正式渠道确认监督资料保全边界。",
+    "choice": "贺敏拒绝展示未具资格的马甲人员并承担取消活动；林遥确认运营成本和正常服务都不能抹账；林葭放弃将现场选择归功自己或逼合作者认错。",
+    "result": "体验活动未办、无新成交及影像，合作方已交付部分须核真实成本，韩立川保留失约意见；下一次董事现场观察仍需许可，投诉审查未启动有效表决。",
+    "consequence": "取消展示造成实际商誉和费用损失，运营岗位必须对筹备与通知承担责任，股东监督无法让普通人凭空承担亏空；姐妹继续在职责边界相遇。",
+    "next_options": "CH007通过独立材料保管与适格渠道核早期周转方案讨论真伪；CH008核海棠善后P10与实际服务资源；CH010完成邱沅6400元双源核查。",
+    "scene_function": "折叠凳、卷帘门、蓝色马甲、宣传物料到场与真正照护在场形成两个层次的承诺，贺敏获得独立人物选择，林葭在一线不再靠新的表格赢。"
+  },
+  "thread_events": [
+    {
+      "id": "P04",
+      "action": "develop",
+      "description": "监督请求仍进行范围核查，经营实际取消展示出现新成本，但没有董事会任免或其他结论。",
+      "quote": "申请不等于通过。"
+    },
+    {
+      "id": "P07",
+      "action": "develop",
+      "description": "姐妹职责独立，互相信任尚未恢复，现场事实不抵销十月的掩饰性报告。",
+      "quote": "担心不等于你不能查。"
+    },
+    {
+      "id": "P09",
+      "action": "develop",
+      "description": "点位优先满足已签服务，不为商业展示占用适格照护人员，长期设备与资源安全仍待跟进。",
+      "quote": "不能拿他们去给参观做讲解"
+    },
+    {
+      "id": "P10",
+      "action": "plant",
+      "description": "海棠体验活动取消已造成合作方真实成本和韩立川实际损失，到CH008须取得实际善后进度。",
+      "quote": "今天没有新预约数量可以填，就别填。"
+    }
+  ],
+  "stage_closing": false,
+  "measured_han": 8929
+}
