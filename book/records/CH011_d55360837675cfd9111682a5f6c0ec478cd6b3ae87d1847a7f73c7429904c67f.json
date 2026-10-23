@@ -1,0 +1,173 @@
+{
+  "chapter": 11,
+  "title": "他们不是给董事看的",
+  "stage": "S02",
+  "base_revision": 14,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+  "complete": true,
+  "story_time_end": 15150,
+  "summary": "D10（2026-11-22）总部魏函未经确认拟抽两名明川当班持证护理员接待许致远董事，庞念青反对、林遥撤销，合格双人起身及已预约康复陪同按原排班执行。董事仅在有权公共场所访问，无擅自拿老人健康信息。秦奶奶助行器卡地砖缝，未受伤，设备停用检查，与此前仍停用的起身辅助器不同。护理员苏荷正常交班离开去看孩子展示。总部未经确认提前通知搬运商到场，演示未搭建，合同核实后680元取消出车费按授权支付，合作方确认收到，不从明川护理预算扣。运营总监梁谨提出下月潜在续约机会压力，尚无真实已签合同。许致远经公司董事事务途径提出正式监督议题并获受理编号，但还需按章程核查资料和权限，尚无董事会人事决定。林葭坚持边界，林遥未自动免责，姐妹仍未和解。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [
+      {
+        "chapter": 8,
+        "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+        "quote": "韩立川亲自确认三百元到账并限定处理范围"
+      },
+      {
+        "chapter": 9,
+        "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+        "quote": "原支付状态没定"
+      },
+      {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "她们没有拥抱"
+      }
+    ],
+    "conclusion": "阅读全文8803汉字及前十章阶段审查与S02路线，对照CH008—CH010实际冻结正文。不可逆变化为护工真实守班与家长权利、秦奶奶独立设备停用、总部680元经本人确认付出以及董事合法受理编号，不是重复客户退款填表。没有取得董事正式人事决议、没有探明母亲三年前资金，不把未签合作收入算作损失。"
+  },
+  "facts": [
+    {
+      "kind": "state",
+      "key": "visit:staff_no_pull",
+      "value": "魏函拟抽两名持证护理员为董事演示，庞念青拒绝、林遥撤销未经确认排班，正常服务不断档。",
+      "holder": "",
+      "valid_from": 15150,
+      "valid_until": null,
+      "quote": "总部为了接待把两个人从常规轮岗里预留了二十分钟，没有取得现场岗位负责人确认。"
+    },
+    {
+      "kind": "state",
+      "key": "visit:bounded_right",
+      "value": "董事本人只经有权范围在公共区观察，不拍老人或要求护理员工脱岗演示。",
+      "holder": "",
+      "valid_from": 15150,
+      "valid_until": null,
+      "quote": "单个董事不能绕开公司程序把某位老人当证据"
+    },
+    {
+      "kind": "state",
+      "key": "care:qin_walker_event",
+      "value": "秦奶奶助行器卡在地砖缝，老人没有受伤，设备已停用待查且备用器具经检查安排。",
+      "holder": "",
+      "valid_from": 15150,
+      "valid_until": null,
+      "quote": "老人没有受伤，也没被人硬推着走。"
+    },
+    {
+      "kind": "state",
+      "key": "care:old_device_stopped",
+      "value": "明川此前坏的起身辅助设备仍旧停用，与秦奶奶助行器事件不是同一设备。",
+      "holder": "",
+      "valid_from": 15150,
+      "valid_until": null,
+      "quote": "我们上次遇到起身辅助设备问题以后已经停止使用不可靠的那台"
+    },
+    {
+      "kind": "state",
+      "key": "work:suhe_time",
+      "value": "苏荷依实际岗位完成交班、按排班离开赴儿子学校，没有因董事来访无偿加班。",
+      "holder": "",
+      "valid_from": 15150,
+      "valid_until": null,
+      "quote": "下午两点零三分，苏荷交接完成"
+    },
+    {
+      "kind": "state",
+      "key": "cost:cancelled_setup_paid",
+      "value": "总部取消未经场地安全核验的展示，原合同确认680元出车人工费用已由合资格经办支付、合作方确认到账，不抵扣护理预算。",
+      "holder": "",
+      "valid_from": 15150,
+      "valid_until": null,
+      "quote": "负责人按正式结算渠道确认到账。"
+    },
+    {
+      "kind": "state",
+      "key": "governance:agenda_received",
+      "value": "许致远申请的董事监督议题在董事事务岗位正式受理有编号，尚无实际表决及人事更替。",
+      "holder": "",
+      "valid_from": 15150,
+      "valid_until": null,
+      "quote": "监督议题申请已被登记受理"
+    },
+    {
+      "kind": "state",
+      "key": "governance:visiting_limits",
+      "value": "正式受理说明要求涉及老人、健康记录与护理操作须合法授权与安全条件。",
+      "holder": "",
+      "valid_from": 15150,
+      "valid_until": null,
+      "quote": "对涉及在住老人、个人健康信息和护理操作的现场了解，须取得合法授权"
+    },
+    {
+      "kind": "state",
+      "key": "business:liang_jin",
+      "value": "运营总监梁谨担忧现场展示限制会影响尚未达成的下月续约机会，林遥要求真实预算与权限。",
+      "holder": "",
+      "valid_from": 15150,
+      "valid_until": null,
+      "quote": "那就是放弃一份可能的收入。"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:board_not_voted",
+      "value": "林葭清楚监督申请受理并非董事表决或解除林遥总经理职位，母亲私人遗言不能替公司决议。",
+      "holder": "林葭",
+      "valid_from": 15150,
+      "valid_until": null,
+      "quote": "不意味着董事会已经召开"
+    },
+    {
+      "kind": "state",
+      "key": "sisters:still_conflict",
+      "value": "姐妹对经营与岗位责任有务实对话，但没有全面和解。",
+      "holder": "",
+      "valid_from": 15150,
+      "valid_until": null,
+      "quote": "没有请求自己的理解"
+    }
+  ],
+  "progression": {
+    "goal": "用真实现场检验正式董事监督与照护安全相冲突，开辟第二阶段治理主线。",
+    "obstacle": "总部未经确认安排当班护理员讲解会空置双人起身及康复陪同，经营方还担忧续约机会，取消准备产生有价成本。",
+    "method": "庞念青拒脱班、林遥撤销违规安排，许致远限定公共访查，魏函按合同结算取消实际费用，正式董事事务渠道受理监督议题。",
+    "choice": "苏荷正常交班下班看孩子，庞念青不牺牲老人安全迎董事，许致远不擅取老人隐私，林葭不把自我监督欲望当职工义务。",
+    "result": "680元由总部按约支付并获供应商确认，真实护理班次未被抽走，董事监督议题有正式接件编号但没有会议表决。",
+    "consequence": "总部承担成本，梁谨认为机会与成本矛盾，真正的治理监督必须面对七处照护点资源而不是表面合规，林遥职位依旧。",
+    "next_options": "CH012通过有权独立经办核对十月7日客户投诉原始版本和董事接收到的风险摘要，制造新披露证据与真实承担；CH013选择经营与人手预算；CH015兑现P11有界核银行状态；CH020兑现P04合法人事结果。",
+    "scene_function": "晨间当班守岗、秦奶奶自主设备意见、苏荷接孩子、魏函付680元与正式董事受理五种不同实际行动，明显避开近期客户退款复核模式。"
+  },
+  "thread_events": [
+    {
+      "id": "P04",
+      "action": "develop",
+      "description": "董事监督议题正式受理有编号，无正式表决；CH020仍需人事程序及结果。",
+      "quote": "监督议题申请已被登记受理"
+    },
+    {
+      "id": "P07",
+      "action": "develop",
+      "description": "姐妹仍有真实分歧，但林遥承认妹妹站在护理岗位一边，不等于和解。",
+      "quote": "今天站在护理站那边"
+    },
+    {
+      "id": "P09",
+      "action": "develop",
+      "description": "一线合资格护理未抽班，旧起身设备仍停用，新助行器故障另记实；长期配件未解决。",
+      "quote": "已经停止使用不可靠的那台"
+    },
+    {
+      "id": "P11",
+      "action": "develop",
+      "description": "有权董事监督材料拟包含经合法核实的客户付款控制缺陷，CH015旧状态实证核查承诺期限不变。",
+      "quote": "已经经授权核验的客户退款控制缺陷"
+    }
+  ],
+  "stage_closing": false,
+  "measured_han": 8803
+}

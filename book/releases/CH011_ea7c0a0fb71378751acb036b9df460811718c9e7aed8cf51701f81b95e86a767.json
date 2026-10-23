@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
+  "chapter": 11,
+  "base_revision": 14,
+  "task_id": "4f07b21b-844e-45a6-bc11-e61d30c3310f",
+  "repairs": 0,
+  "text_sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+  "record_sha256": "d55360837675cfd9111682a5f6c0ec478cd6b3ae87d1847a7f73c7429904c67f",
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "roadmap_sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+  "decision": "release",
+  "read_full_text": true,
+  "blocking_issues": [],
+  "read_coverage": {
+    "8": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+    "9": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+    "10": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+    "11": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322"
+  },
+  "reader_reason_to_continue": "董事议题受理却没有合法人事结果，梁谨反对过度牺牲未签续约机会；CH012必须查过去十月投诉原版与董事实际收到的信息差。",
+  "consequence": "明川两护理员原班不抽，苏荷按时下班，搬运商经合同确认680元收款；董事事务正式受理监督议题，但公司尚未开会、没有人事变更。",
+  "ending_runway": "CH012进入有权核投诉原版与董事收到的风险摘要，CH013转前线经营人力代价，CH015兑现P11，CH020兑现P04。",
+  "checks": {
+    "timeline": {
+      "decision": "pass",
+      "conclusion": "11月22日D10凌晨到晚上，承接11月21日退款真正到账，未倒转故事。",
+      "evidence": [
+        {
+          "chapter": 11,
+          "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+          "quote": "十一月二十二日早上六点四十八分"
+        }
+      ]
+    },
+    "knowledge": {
+      "decision": "pass",
+      "conclusion": "个别董事的接件编号不是董事会正式议决，也没有越权读取老人个人健康资料。",
+      "evidence": [
+        {
+          "chapter": 11,
+          "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+          "quote": "不意味着董事会已经召开"
+        }
+      ]
+    },
+    "props_resources": {
+      "decision": "pass",
+      "conclusion": "总部经营预算承担680元实际取消费，原合资格护理岗位不抽、正常老人服务不停，不把两类设备混成一台。",
+      "evidence": [
+        {
+          "chapter": 11,
+          "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+          "quote": "六百八十元取消出车与到场人工费用"
+        }
+      ]
+    },
+    "causality": {
+      "decision": "pass",
+      "conclusion": "前十章经营披露风险→许致远实地调查→护理岗位拒为接待抽班→正式监督议题有权接件，各环节改变真实利益。",
+      "evidence": [
+        {
+          "chapter": 11,
+          "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+          "quote": "监督议题申请已被登记受理"
+        }
+      ]
+    },
+    "power_rules": {
+      "decision": "pass",
+      "conclusion": "董事本人不替公司章程表决，护理负责人有权保障客户隐私，持股18%的林葭没有人事任命权。",
+      "evidence": [
+        {
+          "chapter": 11,
+          "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+          "quote": "单个董事不能绕开公司程序把某位老人当证据"
+        }
+      ]
+    },
+    "promises": {
+      "decision": "pass",
+      "conclusion": "P04@20人事结果尚未发生，P11@15同类退款抽核仍到期，P08/P09的护理服务不被董事访问抹除。",
+      "evidence": [
+        {
+          "chapter": 11,
+          "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+          "quote": "监督议题申请已被登记受理"
+        }
+      ]
+    },
+    "anti_repeat": {
+      "decision": "pass",
+      "conclusion": "CH008外部客诉赔付、CH009个人银行核账、CH010实付后职业责任、CH011现场员工时间权益与公司680元损失，行动机制不同。",
+      "evidence": [
+        {
+          "chapter": 11,
+          "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+          "quote": "下午两点零三分，苏荷交接完成"
+        }
+      ]
+    },
+    "character_agency": {
+      "decision": "pass",
+      "conclusion": "庞念青拒抽班，苏荷选择按时交接看儿子，魏函承担失误费用，许致远选择按正式流程监督。",
+      "evidence": [
+        {
+          "chapter": 11,
+          "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+          "quote": "你今天站在护理站那边"
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "chapter": 8,
+      "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+      "quote": "韩立川亲自确认三百元到账并限定处理范围",
+      "difference": "第八章完成失约家属及供应商补偿，第十一章是董事真实现场权限、护理岗位不抽班、总部另付680成本，未把韩立川的选择当经营样板。"
+    },
+    {
+      "chapter": 9,
+      "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+      "quote": "原支付状态没定",
+      "difference": "第九章个人银行与企业准备批次仍未结清，而十一章不查旧退款，转向照护员自主下班与正式董事程序。"
+    },
+    {
+      "chapter": 10,
+      "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+      "quote": "她们没有拥抱",
+      "difference": "第十章银行拒绝后真实补款闭环，第十一章董事和现场护理冲突开启新阶段，姐妹仍有关系代价却没有人事结果。"
+    }
+  ],
+  "future_window": [
+    {
+      "chapter": 12,
+      "goal": "核2026年十月初投诉原始文本和董事实际获报版本，揭示合法责任。",
+      "change": "不再问银行6400，进入真实信息接收与加工职责，有非姐妹立场人物承受代价。",
+      "ending_question": "谁知道被写轻的投诉、谁没看过原始内容？"
+    },
+    {
+      "chapter": 13,
+      "goal": "七个点位中一处员工人力与合同扩展进行真实预算选择。",
+      "change": "一项经营机会受限，但长者基础服务不冒险，一线人员有选择权。",
+      "ending_question": "不牺牲护理员的前提下，那份续约还能不能接？"
+    },
+    {
+      "chapter": 14,
+      "goal": "限定抽查同类结算完成与银行付款状态，将样本分实付/失败/待核。",
+      "change": "进入有边界、有权限的第二笔客户调查，P11在CH015结清。",
+      "ending_question": "旧系统有多少绿色勾能拿出真的银行回执？"
+    }
+  ],
+  "promise_reviews": [
+    {
+      "id": "P01",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "母亲撤姐遗言动机不因为董事受理得到解释。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "母亲的录音依旧存在，私人档案仍受交付条件限制"
+      }
+    },
+    {
+      "id": "P04",
+      "deadline_chapter": 20,
+      "action": "keep",
+      "reason": "监督议题受理非董事会议表决或合法人事结果，CH020期限不变。",
+      "evidence": {
+        "chapter": 11,
+        "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+        "quote": "监督议题申请已被登记受理"
+      }
+    },
+    {
+      "id": "P05",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "2023年母亲周转讨论仍缺本人参加与真实付款证据。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "三年前的讨论发生过，谁作过决定尚未知道"
+      }
+    },
+    {
+      "id": "P07",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "姐妹站队不同、仍未和解，后续还需真正共同承担代价。",
+      "evidence": {
+        "chapter": 11,
+        "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+        "quote": "你今天站在护理站那边"
+      }
+    },
+    {
+      "id": "P08",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "蒋素琴11月14日未履行陪同外出仍须依据合同与本人决定另案补救。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "蒋姨那次没去成的外出"
+      }
+    },
+    {
+      "id": "P09",
+      "deadline_chapter": 95,
+      "action": "keep",
+      "reason": "明川旧起身辅助设备仍停用，护理原排班保持安全，不能视为长期设备已修。",
+      "evidence": {
+        "chapter": 11,
+        "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+        "quote": "已经停止使用不可靠的那台"
+      }
+    },
+    {
+      "id": "P11",
+      "deadline_chapter": 15,
+      "action": "keep",
+      "reason": "其他同类旧退款状态仍要银行凭证分类实证，董事合法受理不等于已完成同类抽核。",
+      "evidence": {
+        "chapter": 11,
+        "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+        "quote": "已经经授权核验的客户退款控制缺陷"
+      }
+    }
+  ],
+  "incident_actions": []
+}
