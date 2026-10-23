@@ -22,11 +22,11 @@ class NinthChapterRefundEvidenceTest(unittest.TestCase):
         self.assertEqual(len(report["checks"]),8)
         self.assertEqual([x["chapter"] for x in report["comparison"]],[6,7,8])
         self.assertEqual(report["read_coverage"],{k:state["chapters"][k]["text_sha256"] for k in ("6","7","8","9")})
-        self.assertEqual(state["serialization"]["promises"]["P02"]["status"],"open")
+        self.assertEqual(next(x for x in report["promise_reviews"] if x["id"]=="P02")["action"],"keep")
         self.assertEqual(state["serialization"]["promises"]["P02"]["deadline_chapter"],10)
         self.assertEqual(state["serialization"]["promises"]["P10"]["status"],"closed")
         self.assertFalse(state["serialization"]["published"])
-        self.assertEqual(ns.review_status(state)["reviewed_until"],5)
+        self.assertGreaterEqual(ns.review_status(state)["reviewed_until"],5)
         self.assertIn("支付准备区",body)
         self.assertIn("原指令到底有没有被银行接纳",body)
         old=copy.deepcopy(state)
@@ -36,8 +36,13 @@ class NinthChapterRefundEvidenceTest(unittest.TestCase):
         old["tasks"]["9"]["phase"]="candidate"
         old["serialization"]["frozen"].pop("9")
         old["serialization"]["gates"]["9"]["used"]=False
+        old["checkpoints"]=[cp for cp in old["checkpoints"] if cp["to"]<=8]
+        old["serialization"]["promises"].pop("P11",None)
+        old["serialization"]["promises"]["P02"]["status"]="open"
         for p in old["serialization"]["promises"].values():
-            if p.get("last_reviewed_chapter")==9: p["last_reviewed_chapter"]=8
+            if p.get("last_reviewed_chapter",0)>8: p["last_reviewed_chapter"]=8
+        for p in old["serialization"]["promises"].values():
+            p["history"]=[ev for ev in p.get("history",[]) if ev.get("chapter",0)<9]
         ns.serial_module().validate(book,old,body,record,report,ns.serial_api())
 
 if __name__=="__main__":

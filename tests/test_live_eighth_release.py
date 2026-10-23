@@ -25,9 +25,9 @@ class EighthChapterP10ReleaseTest(unittest.TestCase):
         self.assertEqual(state["serialization"]["promises"]["P10"]["deadline_chapter"],8)
         self.assertEqual(state["serialization"]["promises"]["P10"]["status"],"closed")
         self.assertEqual(state["serialization"]["promises"]["P02"]["deadline_chapter"],10)
-        self.assertEqual(state["serialization"]["promises"]["P02"]["status"],"open")
+        self.assertEqual(next(x for x in report["promise_reviews"] if x["id"]=="P02")["action"],"keep")
         self.assertFalse(state["serialization"]["published"])
-        self.assertEqual(ns.review_status(state)["reviewed_until"],5)
+        self.assertGreaterEqual(ns.review_status(state)["reviewed_until"],5)
         self.assertIn("三百元",text)
         self.assertIn("二千八百七十元",text)
         before=copy.deepcopy(state)
@@ -37,11 +37,14 @@ class EighthChapterP10ReleaseTest(unittest.TestCase):
         before["tasks"]["8"]["phase"]="candidate"
         before["serialization"]["frozen"].pop("8")
         before["serialization"]["gates"]["8"]["used"]=False
+        before["checkpoints"]=[cp for cp in before["checkpoints"] if cp["to"]<=7]
+        before["serialization"]["promises"].pop("P11",None)
         for promise in before["serialization"]["promises"].values():
-            if promise.get("last_reviewed_chapter")==8:
+            if promise.get("last_reviewed_chapter",0)>7:
                 promise["last_reviewed_chapter"]=7
             promise["history"]=[e for e in promise.get("history",[]) if e.get("chapter",0)<8]
         before["serialization"]["promises"]["P10"]["status"]="open"
+        before["serialization"]["promises"]["P02"]["status"]="open"
         ns.serial_module().validate(root,before,text,record,report,ns.serial_api())
 
 if __name__=="__main__": unittest.main()

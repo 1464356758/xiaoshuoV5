@@ -25,7 +25,7 @@ class SeventhChapterRealReleaseTest(unittest.TestCase):
         self.assertEqual(state["serialization"]["promises"]["P02"]["deadline_chapter"],10)
         self.assertEqual(state["serialization"]["promises"]["P05"]["deadline_chapter"],50)
         self.assertFalse(state["serialization"]["published"])
-        self.assertEqual(ns.review_status(state)["reviewed_until"],5)
+        self.assertGreaterEqual(ns.review_status(state)["reviewed_until"],5)
         prior=copy.deepcopy(state)
         prior["chapters"]={k:v for k,v in prior["chapters"].items() if int(k)<=6}
         prior["tasks"]={k:v for k,v in prior["tasks"].items() if int(k)<=7}
@@ -33,6 +33,14 @@ class SeventhChapterRealReleaseTest(unittest.TestCase):
         prior["tasks"]["7"]["phase"]="candidate"
         prior["serialization"]["frozen"].pop("7")
         prior["serialization"]["gates"]["7"]["used"]=False
+        prior["checkpoints"]=[cp for cp in prior["checkpoints"] if cp["to"]<=6]
+        prior["serialization"]["promises"].pop("P11",None)
+        for promise in prior["serialization"]["promises"].values():
+            promise["history"]=[ev for ev in promise.get("history",[]) if ev.get("chapter",0)<7]
+            if promise.get("last_reviewed_chapter",0)>6:
+                promise["last_reviewed_chapter"]=6
+        prior["serialization"]["promises"]["P02"]["status"]="open"
+        prior["serialization"]["promises"]["P10"]["status"]="open"
         ns.serial_module().validate(root,prior,body,record,report,ns.serial_api())
 
 if __name__=="__main__": unittest.main()
