@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
+  "chapter": 7,
+  "base_revision": 10,
+  "task_id": "a5a78a96-7c2d-4eb5-9a59-04a1a2c30b0a",
+  "repairs": 0,
+  "text_sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+  "record_sha256": "4be5f12623f8a72beb245671b87a9fddb403aa10f2591f0f6621bb48b4e4d689",
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "roadmap_sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+  "decision": "release",
+  "read_full_text": true,
+  "blocking_issues": [],
+  "read_coverage": {
+    "4": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+    "5": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+    "6": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+    "7": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085"
+  },
+  "reader_reason_to_continue": "内外独立材料证明相应时间场地实际有人活动，但母亲在场、合法会议及资金执行尚未得到核证。保全费用真实发生，周柏衡与林遥的经营选择将持续影响下一步，海棠善后P10下一章到期。",
+  "consequence": "旧档保全暂缓清场并产生正式搬运仓储费用，搬运人员拒替箱内内容承担不该承担的责任；林葭对母亲的旧讨论怀疑变成有可核范围、仍需查决议和银行的真实方向。亲情并未因此自动修复。",
+  "ending_runway": "CH008必须真实处理海棠取消活动的家属与合同成本P10，CH009把邱沅6400元退款推进独立付款信息，CH010完成首笔资金双源结论；历史议事取证只能按资料授权前行。",
+  "checks": {
+    "timeline": {
+      "decision": "pass",
+      "conclusion": "D6从11月18日06:40保管地漏水到晚上9点以后，时间晚于D5 11月17日第六章。旧活动2023年9月18日不是故事当日。",
+      "evidence": [
+        {
+          "chapter": 7,
+          "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+          "quote": "十一月十八日凌晨六点四十分"
+        }
+      ]
+    },
+    "knowledge": {
+      "decision": "pass",
+      "conclusion": "公司仅旧讨论准备草稿、场地实际使用日志；不能知道母亲是否到场或周柏衡后来资金路径；馆方不知道客户内部决议。",
+      "evidence": [
+        {
+          "chapter": 7,
+          "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+          "quote": "拟邀阅示不等于本人到场"
+        }
+      ]
+    },
+    "props_resources": {
+      "decision": "pass",
+      "conclusion": "原始公司纸档由适格岗位保存，外部场地另保管原产生日志；漏水、搬运、除湿增加实际预算负担，无账户凭空恢复或非法查看。",
+      "evidence": [
+        {
+          "chapter": 7,
+          "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+          "quote": "原有清场处理被暂缓"
+        }
+      ]
+    },
+    "causality": {
+      "decision": "pass",
+      "conclusion": "许致远前章目录级周转线索→旧档渗水紧急依法保存→内部备忘草稿真实存在→独立场地实际使用记录使讨论活动有场地发生证据；仍无法跳过议事或资金执行核证。",
+      "evidence": [
+        {
+          "chapter": 7,
+          "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+          "quote": "二〇二三年九月十八日"
+        }
+      ]
+    },
+    "power_rules": {
+      "decision": "pass",
+      "conclusion": "股东不自行拿公司受限原件，外部场地不泄露个人资料或证明客户会议决议；保管岗位和董事会职责独立。",
+      "evidence": [
+        {
+          "chapter": 7,
+          "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+          "quote": "场地方不是替客户开董事会"
+        }
+      ]
+    },
+    "promises": {
+      "decision": "pass",
+      "conclusion": "P10海棠失约须CH008补救，P02@10不延期；P05@50母亲责任仍需原始议事与资金链证明，P08与P09开放。",
+      "evidence": [
+        {
+          "chapter": 7,
+          "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+          "quote": "没有接受把重新预约直接当作失约补偿"
+        }
+      ]
+    },
+    "anti_repeat": {
+      "decision": "pass",
+      "conclusion": "近三章各有不同机制：CH004修理费履约核对、CH005股东申请与姐妹冲突、CH006海棠取消宣传与真实损失、CH007漏水原件保全和外部发生源，两源并非同一草稿复印。",
+      "evidence": [
+        {
+          "chapter": 7,
+          "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+          "quote": "我只能说几车箱子搬到了哪里"
+        }
+      ]
+    },
+    "character_agency": {
+      "decision": "pass",
+      "conclusion": "林葭主动控制取证范围，方师傅拒越权签箱内完整，张雯守独立场地记录，林遥承担公司保管资源，周柏衡公开成本担忧而非被神定罪。",
+      "evidence": [
+        {
+          "chapter": 7,
+          "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+          "quote": "你申请核的是事实"
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "chapter": 4,
+      "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+      "quote": "签收时间是下午五点十六分。",
+      "difference": "CH004围绕朗和维修实际到场和待付1800元；CH007以公司档案和外部场地独立管理人证实旧讨论活动的发生事实，保全成本与怀疑母亲产生新责任。"
+    },
+    {
+      "chapter": 5,
+      "sha256": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+      "quote": "周转方案讨论",
+      "difference": "CH005只有许致远口头报告的目录线索及姐妹坦诚投诉；CH007两条来源在实际库房漏水和外部会务维护记录中落地，仍无有效公司决议。"
+    },
+    {
+      "chapter": 6,
+      "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+      "quote": "我们不是为了证明你对，才决定不用实习生当背景板。",
+      "difference": "CH006取消未能真实履行的公开宣传活动，面向新客户和合作方；CH007保护旧公司文件与自成体系的场地服务日志，两章人物、行动和经济风险不同。"
+    }
+  ],
+  "future_window": [
+    {
+      "chapter": 8,
+      "goal": "落实海棠活动取消带来的实际到场劳务费用、韩立川失约权益与可提供服务的真实承诺，完成P10当期责任。",
+      "change": "对家属和宣传合作方的实际经济代价产生有权签收或仍未解决成本的明确信息；不能一句补约清债。",
+      "ending_question": "韩立川是否还愿意带母亲回来，哪一笔真实取消成本由谁依合同承担？"
+    },
+    {
+      "chapter": 9,
+      "goal": "回到邱沅6400元退款证据的外部来源及合法银行核验窗口，为第10章承诺兑现积累真正独立资料。",
+      "change": "从企业内部汇总转为客户持有的银行事实与授权确认，防止跨账户猜测为事实。",
+      "ending_question": "银行实付或未付状态与企业账务状态怎样对应，谁需要依法纠正？"
+    },
+    {
+      "chapter": 10,
+      "goal": "完整兑付P02首笔6400元双源资金核验并完成第二次五章全文回看和第一阶段10章审查。",
+      "change": "客户实际到账或未到账、企业应负责的程序有新结论，且人物资源权责发生不可逆变化。",
+      "ending_question": "第一笔费用背后的错误究竟只是沟通、延迟还是更大制度破口？"
+    }
+  ],
+  "promise_reviews": [
+    {
+      "id": "P01",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "母亲为什么要撤姐仍未知，旧讨论材料不能证明其真实动机，CH050保持。",
+      "evidence": {
+        "chapter": 7,
+        "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+        "quote": "钱有没有动，仍然未知"
+      }
+    },
+    {
+      "id": "P02",
+      "deadline_chapter": 10,
+      "action": "keep",
+      "reason": "邱沅6400元独立款项尚待CH010双源资金核验，本章发现旧周转讨论不等于证明邱沅钱已流走。",
+      "evidence": {
+        "chapter": 2,
+        "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "quote": "未匹配到该编号对应的有效银行付款确认凭证。"
+      }
+    },
+    {
+      "id": "P04",
+      "deadline_chapter": 20,
+      "action": "keep",
+      "reason": "未发生有效董事会撤姐决议，保管旧档与股东监督范围审核不自动带来人事权，CH020不变。",
+      "evidence": {
+        "chapter": 7,
+        "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+        "quote": "你的申请中已经补充了要核同日是否真的举行讨论"
+      }
+    },
+    {
+      "id": "P05",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "真正新增内部草稿和外部独立场地使用纪录仅证实活动，母亲是否批准调拨仍未证明，CH050不改。",
+      "evidence": {
+        "chapter": 7,
+        "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+        "quote": "拟邀阅示不等于本人到场"
+      }
+    },
+    {
+      "id": "P07",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "姐妹有限公事支持和晚餐问候不等于和解，继续承担各自责任，期限不变。",
+      "evidence": {
+        "chapter": 7,
+        "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+        "quote": "这不是和好。"
+      }
+    },
+    {
+      "id": "P08",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "11月14日原定陪同外出仍缺服务合同补救，本章不伪报执行。",
+      "evidence": {
+        "chapter": 5,
+        "sha256": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+        "quote": "要求先看原合同怎样写"
+      }
+    },
+    {
+      "id": "P09",
+      "deadline_chapter": 95,
+      "action": "keep",
+      "reason": "明川设备与持续安全照护责任仍开放，保管费不得挪用老人预收款，CH030中期CH095期满仍在。",
+      "evidence": {
+        "chapter": 7,
+        "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+        "quote": "不能擅自转嫁到客户预收服务账户"
+      }
+    },
+    {
+      "id": "P10",
+      "deadline_chapter": 8,
+      "action": "keep",
+      "reason": "韩立川与宣传合作方真实损失仍待可核善后，11月19日CH008到期。",
+      "evidence": {
+        "chapter": 7,
+        "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+        "quote": "没有接受把重新预约直接当作失约补偿"
+      }
+    }
+  ],
+  "incident_actions": []
+}

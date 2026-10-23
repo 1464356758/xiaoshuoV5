@@ -1,0 +1,182 @@
+{
+  "chapter": 7,
+  "title": "那天确实有人来过",
+  "stage": "S01",
+  "base_revision": 10,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+  "complete": true,
+  "story_time_end": 9420,
+  "summary": "D6（11月18日）旧扩张项目纸档库因漏水紧急转移、原普通清场暂缓、保存费用走公司授权预算。内部真实保管链核到2023年9月18日‘资金周转备选路径及照护预收保障’讨论材料草稿，其创始人办公室拟邀阅示不代表沈清禾本人签批。与之独立的西岸场地运营方保留当日三号会议室实际使用和投影维修记录，证实现场有人使用，与内部拟议材料在时间地点可对应，但并不能推断实际议题内容、法定董事会议、谁到场、任何有效决议或银行划拨。方师傅拒替未看内容的箱子作完整性保证，周柏衡担忧保存成本，林遥以总经理岗位协调资源；姐妹没有重归于好。海棠活动P10善后明章到期。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [
+      {
+        "chapter": 4,
+        "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+        "quote": "签收时间是下午五点十六分。"
+      },
+      {
+        "chapter": 5,
+        "sha256": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+        "quote": "周转方案讨论"
+      },
+      {
+        "chapter": 6,
+        "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+        "quote": "我们不是为了证明你对，才决定不用实习生当背景板。"
+      }
+    ],
+    "conclusion": "实读8605汉字第七章及最新冻结事实与五章全文回看报告；对比三章，CH007的水损保存、员工拒越权签字与独立场地物流核验不同于CH004供应商项目核查、CH005姐妹坦承、CH006宣传现场取消。两条来源分属不同生成主体，场地预订标题本身不可当独立话题证据，独立的是现场服务使用日志。未把母亲私人录音当表决权、未提前给母亲定罪、未隐去归档真实成本。"
+  },
+  "facts": [
+    {
+      "kind": "fact",
+      "key": "archive:leak",
+      "value": "2026-11-18旧项目资料库房发生漏水，保管人员依据权限转移区分受损与未受损纸件。",
+      "holder": "",
+      "valid_from": 9420,
+      "valid_until": null,
+      "quote": "公司旧档案的临时保管点进了水"
+    },
+    {
+      "kind": "state",
+      "key": "archive:freeze_disposal",
+      "value": "原普通清场处理暂缓，搬运、除湿、仓储费用须经授权审核，不得挪用老人预收款。",
+      "holder": "",
+      "valid_from": 9420,
+      "valid_until": null,
+      "quote": "原有清场处理被暂缓"
+    },
+    {
+      "kind": "fact",
+      "key": "archive:draft_sep2023",
+      "value": "澄岚保管链发现2023-09-18资金周转备选路径与照护预收保障的讨论材料草稿，无批准、出席或付款证明。",
+      "holder": "",
+      "valid_from": 9420,
+      "valid_until": null,
+      "quote": "讨论材料草稿"
+    },
+    {
+      "kind": "fact",
+      "key": "archive:founder_proposed_only",
+      "value": "草稿有创始人办公室拟邀阅示，不证明沈清禾本人接收、在场、签署或同意。",
+      "holder": "",
+      "valid_from": 9420,
+      "valid_until": null,
+      "quote": "拟邀阅示不等于本人到场"
+    },
+    {
+      "kind": "fact",
+      "key": "venue:independent_usage",
+      "value": "独立外部场地方保存9月18日三号会议室实际使用及投影维修记录，源于本单位会务员工而非澄岚复印材料。",
+      "holder": "",
+      "valid_from": 9420,
+      "valid_until": null,
+      "quote": "这个情况是我们当时负责会务的员工记的"
+    },
+    {
+      "kind": "fact",
+      "key": "venue:reservation_derived_topic",
+      "value": "外部预订表的主题是客户申报而不是外部亲历议题，不能拿双方一致的客户文案冒充双份独立证词。",
+      "holder": "",
+      "valid_from": 9420,
+      "valid_until": null,
+      "quote": "预订上的题目是客户自己填写的"
+    },
+    {
+      "kind": "state",
+      "key": "sources:discussion_activity",
+      "value": "双保存主体材料印证曾筹备相应议题且日期地点有人实际活动；未认定董事会会议、实际参与名单、批准或划款。",
+      "holder": "",
+      "valid_from": 9420,
+      "valid_until": null,
+      "quote": "那天有人来过"
+    },
+    {
+      "kind": "state",
+      "key": "porter:scope",
+      "value": "方师傅只承担实际转运交接，不承认未知内容原件完整或文件处置完成。",
+      "holder": "",
+      "valid_from": 9420,
+      "valid_until": null,
+      "quote": "我只能说几车箱子搬到了哪里"
+    },
+    {
+      "kind": "state",
+      "key": "finance:cost",
+      "value": "周柏衡指出保全费用真实存在，仍须以合法权限保障保存与业务费用边界。",
+      "holder": "",
+      "valid_from": 9420,
+      "valid_until": null,
+      "quote": "仓储费也不是假的"
+    },
+    {
+      "kind": "state",
+      "key": "linyao:resources",
+      "value": "林遥以总经理职责协调旧档案保存费用和经营资源，未因此和妹妹和解或离岗。",
+      "holder": "",
+      "valid_from": 9420,
+      "valid_until": null,
+      "quote": "你申请核的是事实"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:mother_unknown",
+      "value": "林葭已知讨论草稿及场地实际使用，但母亲是否参与批准、或钱是否从预收款转出均不清楚。",
+      "holder": "林葭",
+      "valid_from": 9420,
+      "valid_until": null,
+      "quote": "钱有没有动，仍然未知"
+    },
+    {
+      "kind": "state",
+      "key": "haitang:deadline_pending",
+      "value": "韩立川及宣传合作方的活动取消善后尚未完成，P10截止CH008。",
+      "holder": "",
+      "valid_from": 9420,
+      "valid_until": null,
+      "quote": "明天你按实际处理"
+    }
+  ],
+  "progression": {
+    "goal": "把CH005目录级线索推进到有两条不同生成与保管主体的实证，并使企业为真实保全负担成本。",
+    "obstacle": "旧档受水损、月底清场风险和档案管理成本；预订文案与公司议题可能同源，外部日志只能证明实际使用。",
+    "method": "程音按公司授权清旧议题准备稿，场地方独立核保存的实际使用及维修日志；林葭通过合法渠道收核验摘要而非私自拿纸。",
+    "choice": "主角拒直接开箱、拒让搬运人替未知材料背书，接受需有预算承担保全成本，承认母亲到场及资金执行仍不可证明。",
+    "result": "公司发现2023-09-18讨论草稿，外部三号室当天实际有人使用，有两条不同主体记录；正式决议、人员及银行执行无证据。",
+    "consequence": "旧档案保全暂缓清场并增加合规费用；周柏衡对开支提出实质异议，姐妹公事配合但没有和好；后续调查可具体化原始议事和资金执行两道门。",
+    "next_options": "CH008兑现海棠P10真实善后并保持护理资源保障，后续再核正式召集与付款依据；CH009为CH010客户6400元双源支付路径做前置。",
+    "scene_function": "漏水仓库与独立场地现场日志产生物理真实和权限代价，不靠新录音或第三方口头神证据，章末把‘场地有人来过’和‘谁决定用钱’清楚分开。"
+  },
+  "thread_events": [
+    {
+      "id": "P05",
+      "action": "develop",
+      "description": "内部草稿与外部服务使用日志证实相应讨论活动存在，母亲参与和执行尚未证实，期限CH050不变。",
+      "quote": "钱有没有动，仍然未知"
+    },
+    {
+      "id": "P04",
+      "action": "develop",
+      "description": "股东监督仍在范围审核，材料保全不等于董事会表决与人事变动。",
+      "quote": "你的申请中已经补充了要核同日是否真的举行讨论"
+    },
+    {
+      "id": "P07",
+      "action": "develop",
+      "description": "姐妹有有限工作配合和晚餐关切，未恢复旧日关系。",
+      "quote": "这不是和好。"
+    },
+    {
+      "id": "P10",
+      "action": "develop",
+      "description": "海棠家属失约与推广合作方费用善后尚未结清，CH008到期。",
+      "quote": "没有接受把重新预约直接当作失约补偿"
+    }
+  ],
+  "stage_closing": false,
+  "measured_han": 8605
+}

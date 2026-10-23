@@ -11,26 +11,26 @@
   "source": {
     "repository_url": "https://github.com/1464356758/xiaoshuoV5",
     "branch": "main",
-    "generated_at": "2026-10-23T12:06:53+00:00",
-    "state_revision": 10,
-    "workflow_revision": 21,
-    "state_sha256": "6dd89a3a36babcd931b137d768c0ca81a9efe45203e00a0fc7ffb69479bf8214",
-    "workflow_sha256": "ca72f5efa5b6051fc31486c122535dff4fb5dd8e12ba041d8674a2c7d17d810c",
+    "generated_at": "2026-10-23T12:45:18+00:00",
+    "state_revision": 11,
+    "workflow_revision": 24,
+    "state_sha256": "3172966787ff020e172744dcd07c6c91bcaf4ba269f559a78b433e42abee0909",
+    "workflow_sha256": "20632064dddf718e1d366138856a957611ed9ea6262ed7699b3c369cc21d88c8",
     "manuscript_storage": "plain_files_v1",
     "requires_reader_key": false
   },
   "progress": {
     "target_chapters": 100,
-    "adopted_chapters": 6,
+    "adopted_chapters": 7,
     "target_han": 900000,
-    "actual_han": 55934,
+    "actual_han": 64539,
     "completed": false,
     "needs_revalidation": [],
     "reviewed_until": 5,
     "window_review_due": false,
     "unresolved_reviews": [],
     "serial_mode": true,
-    "frozen_chapters": 6,
+    "frozen_chapters": 7,
     "published_chapters": 0,
     "publication_status": "只统计真实回执；无回执不等于未发布",
     "open_incidents": 0,
@@ -39,10 +39,10 @@
   "task": {
     "phase": "WAITING_NEXT",
     "label": "等待下一章",
-    "chapter": 7,
-    "detail": "CH006《空着的蓝马甲》8929汉字已完成审核并定稿冻结，累计55934汉字；起点无实际发布回执。",
-    "next_action": "CH007从正式五章回看与CH006事实开始，围绕资料保全和早期周转讨论合法双来源，避免回到纯会议改表；P10@CH008、P02@CH010不延期。",
-    "updated_at": "2026-10-23T12:06:53+00:00"
+    "chapter": 8,
+    "detail": "CH007《那天确实有人来过》8605汉字正式冻结；全书累计64539汉字。",
+    "next_action": "CH008落实P10海棠取消活动的家属与供应商成本后续；P02第十章资金双源核实不得延期。",
+    "updated_at": "2026-10-23T12:45:18+00:00"
   },
   "chapters": [
     {
@@ -112,6 +112,18 @@
       "han_count": 8929,
       "text_path": "book/chapters/CH006_92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99.txt",
       "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+      "needs_revalidation": false,
+      "frozen": true,
+      "publication_status": "unreported",
+      "published_at": null
+    },
+    {
+      "number": 7,
+      "title": "那天确实有人来过",
+      "stage": "S01",
+      "han_count": 8605,
+      "text_path": "book/chapters/CH007_309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085.txt",
+      "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
       "needs_revalidation": false,
       "frozen": true,
       "publication_status": "unreported",
@@ -525,24 +537,6 @@
   },
   "history": [
     {
-      "at": "2026-10-23T03:56:36+00:00",
-      "phase": "WAITING_NEXT",
-      "label": "等待下一章",
-      "detail": "CH001《遗言让我撤掉姐姐》实测9751汉字，完成发布前检查并登记定稿冻结；尚无平台发布回执。"
-    },
-    {
-      "at": "2026-10-23T04:20:28+00:00",
-      "phase": "WRITING",
-      "label": "撰写正文",
-      "detail": "作者授权继续CH002《她不是不肯解释》，完成正文后逐项检查。"
-    },
-    {
-      "at": "2026-10-23T04:20:29+00:00",
-      "phase": "WAITING_NEXT",
-      "label": "等待下一章",
-      "detail": "CH002《她不是不肯解释》9418汉字，已通过发布前检查并定稿冻结；起点发布未登记。"
-    },
-    {
       "at": "2026-10-23T10:02:59+00:00",
       "phase": "WRITING",
       "label": "撰写正文",
@@ -613,6 +607,24 @@
       "phase": "WAITING_NEXT",
       "label": "等待下一章",
       "detail": "CH006《空着的蓝马甲》8929汉字已完成审核并定稿冻结，累计55934汉字；起点无实际发布回执。"
+    },
+    {
+      "at": "2026-10-23T12:45:16+00:00",
+      "phase": "WRITING",
+      "label": "撰写正文",
+      "detail": "CH007实稿8605汉字形成，审核材料完成。"
+    },
+    {
+      "at": "2026-10-23T12:45:17+00:00",
+      "phase": "REVIEWING",
+      "label": "审核正文",
+      "detail": "CH007八项审查和三章反重复对照通过。"
+    },
+    {
+      "at": "2026-10-23T12:45:18+00:00",
+      "phase": "WAITING_NEXT",
+      "label": "等待下一章",
+      "detail": "CH007《那天确实有人来过》8605汉字正式冻结；全书累计64539汉字。"
     }
   ]
 }

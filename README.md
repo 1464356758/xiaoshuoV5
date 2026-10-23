@@ -1,12 +1,9 @@
-# GPT小说系统 V5｜《母亲的遗嘱，要我扮演坏女儿》
-
-正式起点选题T05。**CH001–CH006已采用并冻结，累计55934实测汉字**。没有起点发布回执，登记已发布0章。
-当前`WAITING_NEXT / CH007`。第一次CH001–005五章全文回看有效，下一次定期全文回看CH010。
-
-- 最新正文：`book/chapters/CH006_92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99.txt`
-- 最新章后事实：`book/records/CH006_4a8d5b884ec3ef6053554bfe6d2586394f5848ef9eac282abe4d7f20f16a710e.json`
-- 最新八项审核：`book/releases/CH006_238e949fbb843b082fd8487c1d5ca0bbe27741eb8b02274927b0b1860f69d3f3.json`
-- 正式来源：`book/state.json`；工作流`book/workflow.json`；阅读索引`online/index.json`；`book/接管记录.md`；五章回看`book/五章全文回看_CH001-CH005.md`。
-- CANON和ROADMAP绑定源以 `book/state.json` 的 `inputs` 为准。
-
-**CH006反重复实践**：不再以修改报表作为高潮，改为海棠体验活动取消对陌生家属、工作人员和供应商的实际损失；贺敏自主拒绝虚假展示。新承诺P10@CH008，P02@CH010未改期。已经定稿的章不得改写，未有真实起点回执不登记已发布。
+# V5《母亲的遗嘱，要我扮演坏女儿》
+起点T05｜CH001–CH007正式冻结｜累计 **64539汉字**｜没有真实发布回执，起点登记0章。
+状态：`WAITING_NEXT / CH008`。第五章首次五章全文回看已完成，第十章执行下次窗口及阶段审核。
+- 第七章正文：`book/chapters/CH007_309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085.txt`
+- 第七章事实：`book/records/CH007_4be5f12623f8a72beb245671b87a9fddb403aa10f2591f0f6621bb48b4e4d689.json`
+- 第七章八项审核：`book/releases/CH007_eea395d3a03e97cc2a40cb0f06f97a91df3d014d101a254f52c6def72ccdeafe.json`
+- 唯一事实源：`book/state.json`；流程：`book/workflow.json`；在线索引：`online/index.json`；接管：`book/接管记录.md`
+- CANON、ROADMAP路径锁定于state.inputs，不得因新章回写旧文件。
+第八章**P10到期**，处理海棠客户等待和供应商实际成本；第十章**P02退款双源**不得拖延。第七章合法双来源仅确认历史讨论草稿和场地真实使用，不能给沈清禾定责。
