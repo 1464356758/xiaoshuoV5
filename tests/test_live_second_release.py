@@ -7,7 +7,7 @@ class RealSecondReleaseTest(unittest.TestCase):
  def test_release_and_provenance(self):
   book=ROOT/"book"
   st=ns.load_state(book);ns.verify_files(book,st)
-  self.assertEqual(len(st["chapters"]),2)
+  self.assertGreaterEqual(len(st["chapters"]),2)
   item=st["chapters"]["2"]
   body=(book/item["text_path"]).read_text(encoding="utf-8")
   record=ns.read_json(book/item["record_path"])
@@ -19,7 +19,11 @@ class RealSecondReleaseTest(unittest.TestCase):
   self.assertEqual(st["serialization"]["promises"]["P01A"]["status"],"closed")
   self.assertEqual(len(st["serialization"]["published"]),0)
   old=copy.deepcopy(st)
-  del old["chapters"]["2"]
+  old["chapters"]={"1":old["chapters"]["1"]}
+  old["tasks"]={k:v for k,v in old["tasks"].items() if int(k)<=2}
+  old["serialization"]["frozen"]={k:v for k,v in old["serialization"]["frozen"].items() if int(k)<=2}
+  old["serialization"]["gates"]={k:v for k,v in old["serialization"]["gates"].items() if int(k)<=2}
+  old["serialization"]["promises"].pop("P08",None)
   old["revision"]=record["base_revision"]
   old["tasks"]["2"]["phase"]="candidate"
   old["serialization"]["frozen"].pop("2")

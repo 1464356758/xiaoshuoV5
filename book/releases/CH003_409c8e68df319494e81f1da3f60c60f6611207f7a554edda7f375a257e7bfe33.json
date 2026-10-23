@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
+  "chapter": 3,
+  "base_revision": 5,
+  "task_id": "541d3594-2e5f-43af-a52f-01fa169ad6d1",
+  "repairs": 0,
+  "text_sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+  "record_sha256": "6c5dbfd447da8ec58b2d67b99dccb0376862420ee3d1f56ab5b144728b4bd3b8",
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "roadmap_sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+  "decision": "release",
+  "read_full_text": true,
+  "blocking_issues": [],
+  "read_coverage": {
+    "1": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+    "2": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+    "3": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b"
+  },
+  "reader_reason_to_continue": "朗和配服的设备维修迟迟未到场却存在已处理标签，养老点已有无法追回的当日外出损失，下一章必须核查合同、派单和验收真实情况。",
+  "consequence": "蒋素琴本人选择安全起身和见孙女，一项陪同外出当天未实施；林遥承担服务变更与后续告知责任，不能标记全部服务完成。",
+  "ending_runway": "CH004核供应商合同和工单；CH005在正式继续照护方案、服务损失补救和姐妹对质中形成S01实质升级，并实读CH001-005窗口。CH006根据真实问题收窄取证，避免重复账务会议。",
+  "checks": {
+    "timeline": {
+      "decision": "pass",
+      "conclusion": "故事D2上午08:40至当日傍晚，章末时间3480分钟不逆转CH002章末2040分钟。",
+      "evidence": [
+        {
+          "chapter": 3,
+          "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+          "quote": "十一月十四日早上八点四十，蒋素琴拒绝从床上起来。"
+        }
+      ]
+    },
+    "knowledge": {
+      "decision": "pass",
+      "conclusion": "林葭由本人同意进入可见场景，未获取内部敏感评估、财务银行资料和供应商签署记录。",
+      "evidence": [
+        {
+          "chapter": 3,
+          "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+          "quote": "名单、隐私记录、评估细节，留给本岗位和本人家属核对。"
+        }
+      ]
+    },
+    "props_resources": {
+      "decision": "pass",
+      "conclusion": "安全照护仅用实际在岗且具技能的员工，不强制叫回请假者，设备仍停用，部分活动资源被占用。",
+      "evidence": [
+        {
+          "chapter": 3,
+          "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+          "quote": "没有来的，不写已到岗。"
+        }
+      ]
+    },
+    "causality": {
+      "decision": "pass",
+      "conclusion": "设备停用→需更多辅助人手→部分活动缩短、原定陪同外出落空，后果不可通过一张完成表追溯抹除。",
+      "evidence": [
+        {
+          "chapter": 3,
+          "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+          "quote": "原计划陪同外出一项未执行"
+        }
+      ]
+    },
+    "power_rules": {
+      "decision": "pass",
+      "conclusion": "林遥经营层签字而不替老人签同意或越权承诺赔付，林葭也没有护理决定权。",
+      "evidence": [
+        {
+          "chapter": 3,
+          "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+          "quote": "我签我有权承担的部分。"
+        }
+      ]
+    },
+    "promises": {
+      "decision": "pass",
+      "conclusion": "P03部分兑现，P08新增补救承诺；保留时限且不把未执行的事虚报为完成。",
+      "evidence": [
+        {
+          "chapter": 3,
+          "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+          "quote": "以后怎么补，要有一个能追的安排。"
+        }
+      ]
+    },
+    "anti_repeat": {
+      "decision": "pass",
+      "conclusion": "前三章主要方法分别为拒签留档、分段退款核验、现场征求同意与实际调配，避免会场问话原地打转。",
+      "evidence": [
+        {
+          "chapter": 3,
+          "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+          "quote": "那你先给我找张椅子。"
+        }
+      ]
+    },
+    "character_agency": {
+      "decision": "pass",
+      "conclusion": "老人自己决定并能拒绝，另一位家属尚未同意，护理督导与姐姐都有独立承担后果的选择。",
+      "evidence": [
+        {
+          "chapter": 3,
+          "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+          "quote": "我同意起身，不等于我喜欢等着。"
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "chapter": 1,
+      "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+      "quote": "你可以把这份作为我的说明。不能把它换成那份模板。",
+      "difference": "CH001以正式书面异议阻断草率签字；CH003让老人自主选择并牺牲实际陪同活动，主角角色、后果与决策机制不同。"
+    },
+    {
+      "chapter": 2,
+      "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+      "quote": "四个方框：受理、批准、账面处理、付款执行。",
+      "difference": "CH002四段核资金流与录音交付链；CH003在养老点解决临时照护并记入无法追回的实际服务缺口，不重复账户审批核查。"
+    }
+  ],
+  "future_window": [
+    {
+      "chapter": 4,
+      "goal": "核验朗和配服合同、维修派单、到场和验收之间的证据差异。",
+      "change": "形成可独立核实的履约缺口，作出有限项目核查而不靠片面公开指控。",
+      "ending_question": "谁能把已派单当成已到场，签名和实际维修凭据在哪？"
+    },
+    {
+      "chapter": 5,
+      "goal": "形成持续护理临时安排，给未执行陪同服务留下本人可追的处理渠道，姐妹真实提交合理监督请求。",
+      "change": "主角承担公开的组织责任、姐姐面对曾隐瞒的投诉，完成CH001-005实际全文回看。",
+      "ending_question": "不听母亲录音指挥互害，姐妹能否仍合法调查？"
+    },
+    {
+      "chapter": 6,
+      "goal": "从个别项目纠偏进入有限授权核查供应商与照护交付的逻辑链。",
+      "change": "外部关联方主动反应并限制证据权限，令主角调整方法。",
+      "ending_question": "谁会为真实服务差异承担短期成本，主角如何不再越权？"
+    }
+  ],
+  "promise_reviews": [
+    {
+      "id": "P01",
+      "action": "keep",
+      "deadline_chapter": 50,
+      "reason": "母亲撤姐原因仍未知且CH003未收到新证据，保留CH050期限不重置。",
+      "evidence": {
+        "chapter": 3,
+        "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+        "quote": "我签我有权承担的部分。"
+      }
+    },
+    {
+      "id": "P02",
+      "action": "keep",
+      "deadline_chapter": 10,
+      "reason": "退款6400元完整银行去向仍未知；本章供应商费用争议不是邱沅退款，不可混并，CH010期限不变。",
+      "evidence": {
+        "chapter": 3,
+        "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+        "quote": "财务意见是先查清供应商账款再追加任何支出。"
+      }
+    },
+    {
+      "id": "P03",
+      "action": "keep",
+      "deadline_chapter": 5,
+      "reason": "短期安全照护有实际执行，但设备停用、原定外出服务损失未补；CH005前落实持续措施，期限不变。",
+      "evidence": {
+        "chapter": 3,
+        "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+        "quote": "原计划陪同外出一项未执行"
+      }
+    },
+    {
+      "id": "P04",
+      "action": "keep",
+      "deadline_chapter": 20,
+      "reason": "林遥经营职位未变，母亲私人录音依然不能撤职，CH020治理结果期限不变。",
+      "evidence": {
+        "chapter": 3,
+        "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+        "quote": "我签我有权承担的部分。"
+      }
+    },
+    {
+      "id": "P05",
+      "action": "keep",
+      "deadline_chapter": 50,
+      "reason": "母亲旧项目责任仍需独立证据，本章不新增母亲旧账事实，CH050期限不变。",
+      "evidence": {
+        "chapter": 3,
+        "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+        "quote": "不要让任何人按那个状态恢复使用。"
+      }
+    },
+    {
+      "id": "P07",
+      "action": "keep",
+      "deadline_chapter": 100,
+      "reason": "姐妹保留独立立场与家族裂痕，仅能协调实际服务，CH100关系决定期限不变。",
+      "evidence": {
+        "chapter": 3,
+        "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+        "quote": "她不是这里的负责人。"
+      }
+    },
+    {
+      "id": "P08",
+      "action": "set",
+      "deadline_chapter": 100,
+      "reason": "当日未执行的一项陪同外出形成应依合同及长者意愿处理的义务，CH080方案、CH100执行说明。",
+      "evidence": {
+        "chapter": 3,
+        "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+        "quote": "以后怎么补，要有一个能追的安排。"
+      }
+    }
+  ],
+  "incident_actions": []
+}

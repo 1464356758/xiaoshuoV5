@@ -2,7 +2,7 @@
   "schema_version": 2,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "title": "母亲的遗嘱，要我扮演坏女儿",
-  "revision": 5,
+  "revision": 6,
   "config": {
     "target_chapters": 100,
     "target_han": 900000,
@@ -38,6 +38,15 @@
       "record_path": "records/CH002_7df232768db5874ed6c55a21ccb212a1e89e46e2cb29ad871c86736bb31a4dc3.json",
       "record_sha256": "7df232768db5874ed6c55a21ccb212a1e89e46e2cb29ad871c86736bb31a4dc3",
       "han_count": 9418
+    },
+    "3": {
+      "title": "护理床不能等开完会",
+      "stage": "S01",
+      "text_path": "chapters/CH003_0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b.txt",
+      "text_sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+      "record_path": "records/CH003_6c5dbfd447da8ec58b2d67b99dccb0376862420ee3d1f56ab5b144728b4bd3b8.json",
+      "record_sha256": "6c5dbfd447da8ec58b2d67b99dccb0376862420ee3d1f56ab5b144728b4bd3b8",
+      "han_count": 9654
     }
   },
   "checkpoints": [],
@@ -102,6 +111,22 @@
       ],
       "candidate_sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
       "candidate_path": "candidates/CH002_d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4.txt"
+    },
+    "3": {
+      "task_id": "541d3594-2e5f-43af-a52f-01fa169ad6d1",
+      "chapter": 3,
+      "mode": "write",
+      "phase": "adopted",
+      "repairs": 0,
+      "history": [
+        {
+          "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+          "reason": "初稿",
+          "repairs": 0
+        }
+      ],
+      "candidate_sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+      "candidate_path": "candidates/CH003_0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b.txt"
     }
   },
   "completion": null,
@@ -116,6 +141,10 @@
       "2": {
         "text_sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
         "record_sha256": "7df232768db5874ed6c55a21ccb212a1e89e46e2cb29ad871c86736bb31a4dc3"
+      },
+      "3": {
+        "text_sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+        "record_sha256": "6c5dbfd447da8ec58b2d67b99dccb0376862420ee3d1f56ab5b144728b4bd3b8"
       }
     },
     "published": {},
@@ -128,6 +157,11 @@
       "2": {
         "path": "releases/CH002_452487674770570f0da2d761bfa4d3c7bb2bf8be5598e61c44afafccbd53b924.json",
         "sha256": "452487674770570f0da2d761bfa4d3c7bb2bf8be5598e61c44afafccbd53b924",
+        "used": true
+      },
+      "3": {
+        "path": "releases/CH003_409c8e68df319494e81f1da3f60c60f6611207f7a554edda7f375a257e7bfe33.json",
+        "sha256": "409c8e68df319494e81f1da3f60c60f6611207f7a554edda7f375a257e7bfe33",
         "used": true
       }
     },
@@ -149,7 +183,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 2
+        "last_reviewed_chapter": 3
       },
       "P01A": {
         "history": [
@@ -199,7 +233,7 @@
         ],
         "deadline_chapter": 10,
         "status": "open",
-        "last_reviewed_chapter": 2
+        "last_reviewed_chapter": 3
       },
       "P03": {
         "history": [
@@ -218,7 +252,7 @@
         ],
         "deadline_chapter": 5,
         "status": "open",
-        "last_reviewed_chapter": 2
+        "last_reviewed_chapter": 3
       },
       "P04": {
         "history": [
@@ -237,7 +271,7 @@
         ],
         "deadline_chapter": 20,
         "status": "open",
-        "last_reviewed_chapter": 2
+        "last_reviewed_chapter": 3
       },
       "P05": {
         "history": [
@@ -256,7 +290,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 2
+        "last_reviewed_chapter": 3
       },
       "P07": {
         "history": [
@@ -275,7 +309,26 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 2
+        "last_reviewed_chapter": 3
+      },
+      "P08": {
+        "history": [
+          {
+            "id": "P08",
+            "action": "set",
+            "deadline_chapter": 100,
+            "reason": "当日未执行的一项陪同外出形成应依合同及长者意愿处理的义务，CH080方案、CH100执行说明。",
+            "evidence": {
+              "chapter": 3,
+              "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+              "quote": "以后怎么补，要有一个能追的安排。"
+            },
+            "chapter": 3
+          }
+        ],
+        "deadline_chapter": 100,
+        "status": "open",
+        "last_reviewed_chapter": 3
       }
     },
     "incidents": {}

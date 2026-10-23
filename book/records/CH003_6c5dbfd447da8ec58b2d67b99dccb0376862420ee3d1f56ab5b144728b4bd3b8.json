@@ -1,0 +1,153 @@
+{
+  "chapter": 3,
+  "title": "护理床不能等开完会",
+  "stage": "S01",
+  "base_revision": 5,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+  "complete": true,
+  "story_time_end": 3480,
+  "summary": "2026年11月14日，林葭按访问权限来到明川养老点，核床旁起身辅助架停用及现场服务。蒋素琴要求尊重自己的起身、活动与探访意愿；庞念青汇总有限护理人手下的安全方案和其他老人不同意见。经本人选择及安全协助，蒋素琴下午与孙女在靠窗桌看照片，另有一项既定陪同外出未能履行，不能倒写完成。林遥作为总经理承担排班调整、如实记录和后续沟通责任，未越权宣布补偿或恢复设备使用；维修商工单已处理字样和实际到场仍不相符，CH004核合同与执行。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [
+      {
+        "chapter": 1,
+        "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+        "quote": "明川今晚的床边辅助设备维修还没定下供应商"
+      },
+      {
+        "chapter": 2,
+        "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "quote": "别把它解释成现场已经修复。"
+      }
+    ],
+    "conclusion": "全文检查CH003 9654汉字，连读前两章历史：新办法是走点位访谈实际资源与长者选择，CH001拒签、CH002查账均未重复；无角色越权查看私人护理档案和使用停用设备。姐姐继续为总经理，未临时获得其他点位人员。老人成功会面与外出取消的真实损失分开，设备状态与维修商责任尚未定性。P03部分兑现，P08补救承诺新植入。"
+  },
+  "facts": [
+    {
+      "kind": "fact",
+      "key": "care:equipment_suspended",
+      "value": "明川三楼起身辅助架因异响松动11月12日起停用，14日仍待现场核验。",
+      "valid_from": 2950,
+      "valid_until": null,
+      "quote": "暂不使用，待现场复核。",
+      "holder": ""
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:site_privacy",
+      "value": "林葭依访客规则观察公共与获准场景，知晓无权查私人护理记录，老人自行决定是否见她。",
+      "valid_from": 2970,
+      "valid_until": null,
+      "quote": "老人愿不愿意见你，另一回事。",
+      "holder": "林葭"
+    },
+    {
+      "kind": "fact",
+      "key": "elder:jiang_choice",
+      "value": "蒋素琴72岁，自己决定安全协助起身和下午靠窗见孙女，明确拒绝把同意起身理解为同意久等。",
+      "valid_from": 3300,
+      "valid_until": null,
+      "quote": "我同意起身，不等于我喜欢等着。",
+      "holder": ""
+    },
+    {
+      "kind": "state",
+      "key": "care:staff_shortfall",
+      "value": "设备停用后暂调现有合格护理人员，外部员工支援未落实，不得把未到岗的人记为在岗。",
+      "valid_from": 3210,
+      "valid_until": null,
+      "quote": "没有来的，不写已到岗。",
+      "holder": ""
+    },
+    {
+      "kind": "fact",
+      "key": "care:unanswered_choices",
+      "value": "服务变更必须按每名长者选择，未答复不能登记默许。",
+      "valid_from": 3170,
+      "valid_until": null,
+      "quote": "这些还没答复的人，不是默许。",
+      "holder": ""
+    },
+    {
+      "kind": "state",
+      "key": "care:missed_outing",
+      "value": "11月14日一项原计划陪同外出未执行，当日服务损失无法倒回，须记录并按合同与本人意见处理。",
+      "valid_from": 3350,
+      "valid_until": null,
+      "quote": "原计划陪同外出一项未执行",
+      "holder": ""
+    },
+    {
+      "kind": "state",
+      "key": "care:manager_signed",
+      "value": "林遥仍是总经理，署名承担其权限内临时安排和后续对接责任，不代替长者同意。",
+      "valid_from": 3420,
+      "valid_until": null,
+      "quote": "我签我有权承担的部分。",
+      "holder": ""
+    },
+    {
+      "kind": "state",
+      "key": "care:repair_pending",
+      "value": "床边辅助架傍晚仍停用，朗和配服工单已处理标记的含义与到场验收待CH004查证。",
+      "valid_from": 3470,
+      "valid_until": null,
+      "quote": "设备仍停用。",
+      "holder": ""
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:service_mixed_outcome",
+      "value": "林葭知道蒋素琴见孙女并不等于所有人服务圆满或没有其他老人损失。",
+      "valid_from": 3440,
+      "valid_until": null,
+      "quote": "今天做得还行，也不算全好。",
+      "holder": "林葭"
+    },
+    {
+      "kind": "fact",
+      "key": "care:granddaughter_visit",
+      "value": "蒋素琴经同意和安全协助与孙女在选定位置看照片，当天选出四张照片。",
+      "valid_from": 3360,
+      "valid_until": null,
+      "quote": "蒋素琴倒是选出了四张照片",
+      "holder": ""
+    }
+  ],
+  "progression": {
+    "goal": "查看护理设备暂不可用如何影响具名长者需求，确保现场临时安全方案不越权、不拿家属默许换账面完成。",
+    "obstacle": "设备暂停使用、朗和无法确认维修到场、合资格护理人手有限，不同长者对起身和活动有不同意愿。",
+    "method": "由庞念青安排访客范围、征求蒋素琴同意、在活动室听当事人自主反馈、用实际到岗人员排出临时服务并交给有权限者批准和记录。",
+    "choice": "不让请假员工被召回或家属冒充护工，优先安全照护，承认一项陪同外出无法实现，林遥以经营负责人签署有异议渠道的暂行安排。",
+    "result": "蒋素琴选定场所见孙女并留个性反馈，辅助设备仍停用，实际外出服务未执行且留痕、下一处理责任待合同核对。",
+    "consequence": "一次无法追回的当日服务损失形成后续履约问题，部分老人有权不接受变动；姐姐承担点位管理和对家属的解释责任。",
+    "next_options": "CH004独立核朗和配服工单、派单、现场到达、验收与付款链的差异；CH005前核护理持续安排和服务补救；P08继续至后期。",
+    "scene_function": "老人房门口的自主权、二楼集体活动不可任意腾空、姐姐两难选择与实做、孙女相册情感兑现和取消外出的真实后果并置。"
+  },
+  "thread_events": [
+    {
+      "id": "P03",
+      "action": "partial",
+      "description": "临时照护已按现场方案实施，设备仍停用，原定外出没发生；CH005前落实连续安全服务与具体后续措施。",
+      "quote": "原计划陪同外出一项未执行"
+    },
+    {
+      "id": "P08",
+      "action": "plant",
+      "description": "未完成的陪同外出和其他服务变动形成后续补救与权利核对义务，不能把临时理解当作已赔偿。",
+      "quote": "以后怎么补，要有一个能追的安排。"
+    },
+    {
+      "id": "P07",
+      "action": "develop",
+      "description": "两姐妹对经营责任有有限一致，姐姐不代替长者签同意；尚未和解。",
+      "quote": "我签我有权承担的部分。"
+    }
+  ],
+  "stage_closing": false,
+  "measured_han": 9654
+}
