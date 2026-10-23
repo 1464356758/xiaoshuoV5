@@ -1,0 +1,197 @@
+{
+  "chapter": 9,
+  "title": "银行只认到账的那一笔",
+  "stage": "S01",
+  "base_revision": 12,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+  "complete": true,
+  "story_time_end": 12310,
+  "summary": "D8（2026-11-20）邱沅亲自至银行核其名下指定账户10月1日至当日的交易，未见可辨认的6400元整笔退款；银行明确该限定结果不能证明其他账户、汇款银行或原指令执行状态。母亲记得出院时被问原账户还是新账户但不能确定手续，独立决定次日按银行要求核本人相关资料，不授权他人擅改受款人。公司适格岗位核原结算系统，10月31日QY一一一二进入支付准备区，仍无付款银行受理/扣款/退回/到账凭证；准备区受款信息末位与客户联系资料末位不直接对应，必须取原签署申请及支付记录才能判断。公司正式把客户已清退显示更正为结算完成、支付待核并保全操作日志。叶珊仅负责结算归档；周柏衡建议先重新发款，家属和林遥要求防不明旧款的重复支付同时不得继续拖欠。庞念青照护记录不能代银行核证；姐妹有有限工作与生活互动但未和解。CH010 P02首笔双源及阶段五章/十章审查到期。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [
+      {
+        "chapter": 2,
+        "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+        "quote": "金额是六千四百元。"
+      },
+      {
+        "chapter": 7,
+        "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+        "quote": "钱有没有动，仍然未知"
+      },
+      {
+        "chapter": 8,
+        "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+        "quote": "明天我有空去银行"
+      }
+    ],
+    "conclusion": "实际完整阅读CH009正文8876汉字和CH006–CH008冻结全文关联事实及第一轮五章回看。CH009主要行动是家属银行柜台限定核账、母亲在家自主决定、结算经办员工与公司支付权限分工，而非CH008已发生经营赔付或CH007旧档漏水。客户本人账户有限未入账记录与公司付款准备批次属不同来源，二者尚不能确定最终资金去向。误导性已清退对外更正构成不可逆进展；第十章必须实证原申请收款权、付款行执行状态和负责任的纠正动作，不能延期P02或提前控诉挪用。"
+  },
+  "facts": [
+    {
+      "kind": "state",
+      "key": "qiu:verified_personal_account",
+      "value": "邱沅11月20日查本人指定账户10月1日至当天上午可查入账，没有可辨认的6400元整笔退款；仅证明本账户对应窗口事实。",
+      "holder": "",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "这张卡从十月一日至十一月二十日上午查询时点，没有出现可辨认为对应退款的六千四百元入账。"
+    },
+    {
+      "kind": "fact",
+      "key": "bank:negative_scope",
+      "value": "银行限定核对的是持有人本账户，不代证明付款行实际划款、其他账户或未收款原因。",
+      "holder": "",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "您这张卡没有整笔六千四百元，不自动证明任何其他账户都没收过"
+    },
+    {
+      "kind": "state",
+      "key": "mother:consent_pending",
+      "value": "邱沅母亲记得被问过返还原账户还是新账户，不确定手续是否完成；表示愿次日在银行自行决定核本人账户，不允许被代改受款账户。",
+      "holder": "",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "我不授权任何人未经我确认就代我更改退费收款对象。"
+    },
+    {
+      "kind": "state",
+      "key": "refund:payer_vs_recipient",
+      "value": "邱沅曾垫付母亲照护费用，受照护人和付款人不一定是同一合法受款人，原申请仍需正式核查。",
+      "holder": "",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "服务对象是母亲"
+    },
+    {
+      "kind": "state",
+      "key": "finance:batch_ready_not_paid",
+      "value": "QY一一一二的6400元10月31日系统形成支付准备批次，尚无付款行实际受理、扣款或到账凭证。",
+      "holder": "",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "十月三十一日，系统生成了一条进入支付准备区的批次记录。"
+    },
+    {
+      "kind": "state",
+      "key": "finance:wording_retracted",
+      "value": "公司在QY本人争议答复中把已清退更正为结算完成、支付待核，并保存原始批次操作记录。",
+      "holder": "",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "已经在本笔争议的答复范围内更正为“结算完成，支付待核”"
+    },
+    {
+      "kind": "state",
+      "key": "finance:payee_mismatch_unverified",
+      "value": "内部付款准备受款末位与另份客服退款联系资料末位不完全对应，原申请及可能变更未核，不能归因错户到账。",
+      "holder": "",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "受款账户末位，与客服另行保存的退款联系资料末位没有直接对应。"
+    },
+    {
+      "kind": "state",
+      "key": "finance:bank_trace_next",
+      "value": "有权付款经办与银行在次日核原指令是否受理扣款退回及收款主体；CH009末实际执行结论未知。",
+      "holder": "",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "现在有没有银行真正受理的交易参考号？"
+    },
+    {
+      "kind": "state",
+      "key": "risk:duplicate_payment",
+      "value": "周柏衡建议立即重走款项，家属与林遥要求先核旧指令，不把重复支付风险转嫁客户。",
+      "holder": "",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "不能先凭客户急就重复发起未知状态的同一笔款。"
+    },
+    {
+      "kind": "state",
+      "key": "staff:ye_shan_authority",
+      "value": "结算经办叶珊只到归档和支付准备阶段，不能指挥银行出账，应检查系统误导但不得预定其资金责任。",
+      "holder": "",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "我操作权限到这里，不能指挥银行划款。"
+    },
+    {
+      "kind": "state",
+      "key": "care:separate_accountability",
+      "value": "庞念青确认护理实际服务不能替代退款账户事实；明川安全接续仍持续，设备长期配件未修复。",
+      "holder": "",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "不能问我。"
+    },
+    {
+      "kind": "state",
+      "key": "sisters:no_resolution",
+      "value": "林遥仍为总经理，无正式董事会人事决议；她与林葭有有限生活及专业互动，尚未和解。",
+      "holder": "",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "一次顺手帮忙不应替过去的决定盖章。"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:payment_not_proved",
+      "value": "林葭已知客户本人一账户未见整笔入账且公司仅支付准备，但不能证明母亲批准挪用或财务主管侵占、钱已划出。",
+      "holder": "林葭",
+      "valid_from": 12310,
+      "valid_until": null,
+      "quote": "旧结算凭证冒充支付证明"
+    }
+  ],
+  "progression": {
+    "goal": "将QY6400元从内部已清退争议推进到客户本人银行范围与公司结算准备链，同时纠正客户误导状态。",
+    "obstacle": "付款人/服务对象/合法受款人并非必然相同，一张本人账户未入账不能证明其他账户；企业准备区不等于银行受理；盲重付有双付风险。",
+    "method": "邱沅本人核有限银行记录，通过公司正式接件提交限定请求；有权岗位查询旧批次并保全操作日志，母亲表态将自愿核本人账户。",
+    "choice": "家属拒不明旧指令情况下立刻重签收款账户，林遥要求核银行同时安排适格补救；林葭仅听授权摘要不取隐私原件。",
+    "result": "客户已清退表述正式更正为结算完成、支付待核；准备批次受款信息与客服联系资料不直接对应；原付款银行凭据及最终受款人仍待CH010核证。",
+    "consequence": "公司必须纠正错误对外状态，家属为核查花费工作与家庭时间，下一章无法再用‘已处理’挡住正式银行实证。",
+    "next_options": "CH010先真实核原退款申请与有权银行付款执行，形成首笔6400元双源结论及对客户实际补救；再全文连读CH006–CH010、CH001–CH010十章阶段复核，更新后十章路线。",
+    "scene_function": "本人银行大厅柜台、母亲南瓜粥边的旧铁盒、结算员工真实权责和跨出款阶段的接件让‘钱在哪’变成有合法来源的悬念；不靠神秘文件和全知股东。"
+  },
+  "thread_events": [
+    {
+      "id": "P02",
+      "action": "develop",
+      "description": "CH009取得邱沅本人账户有限银行负面记录、公司10月31日结算支付准备资料与对外更正；原正式退款申请和付款银行受理/扣回/成功状态CH010必须独立实证。",
+      "quote": "原支付状态没定"
+    },
+    {
+      "id": "P04",
+      "action": "develop",
+      "description": "林遥仍正常任职，仅要求防重复付款和查明原支付，股东监督没有转成董事任免。",
+      "quote": "不能先凭客户急就重复发起未知状态的同一笔款。"
+    },
+    {
+      "id": "P05",
+      "action": "develop",
+      "description": "不得用本次6400元准备区信息臆断沈清禾三年前批准调拨。",
+      "quote": "不该把姐姐的一句回忆当成母亲操纵资金的证据"
+    },
+    {
+      "id": "P07",
+      "action": "develop",
+      "description": "姐妹便利店门口小范围互助，仍有尚未恢复的私人信任和职位责任。",
+      "quote": "一次顺手帮忙不应替过去的决定盖章。"
+    },
+    {
+      "id": "P08",
+      "action": "develop",
+      "description": "老人保留对本人受款核验的自主意愿，家属不代签；明川服务与退款分开。",
+      "quote": "老人只是在为自己的生活争一笔原本应有清楚去向的钱。"
+    }
+  ],
+  "stage_closing": false,
+  "measured_han": 8876
+}

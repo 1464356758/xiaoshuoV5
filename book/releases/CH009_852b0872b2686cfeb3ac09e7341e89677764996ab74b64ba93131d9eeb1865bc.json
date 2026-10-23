@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
+  "chapter": 9,
+  "base_revision": 12,
+  "task_id": "315ed87d-d7f1-44fb-8324-af7f599cb907",
+  "repairs": 0,
+  "text_sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+  "record_sha256": "7fa00d458b2bf1a201851a31f05035a7c93db278509ca5f8a4a0694274a939a3",
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "roadmap_sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+  "decision": "release",
+  "read_full_text": true,
+  "blocking_issues": [],
+  "read_coverage": {
+    "6": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+    "7": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+    "8": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+    "9": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48"
+  },
+  "reader_reason_to_continue": "客户自己查的银行账户没有整笔6400入账，而公司原批次只在支付准备区且受款末位不一致，既不能推迟合同补救也不能先盲重付。第十章必须取两边合法原件核付款银行执行结果，真正说明钱到哪里并落实责任。",
+  "consequence": "公司正式撤回以‘已清退’代表入账的对外旧表述且保全旧系统日志，原始申请受款人和银行执行因果成为有期限的必查事实；邱沅和母亲自行作证，财务不准以一张新签收单把双付风险甩给客户。",
+  "ending_runway": "CH010 P02第10章必须核第一笔6400真实企业付款与接收账户两个独立来源，给客户具体纠错和处理责任；采用前必须CH006–CH010五章全文回看、CH001–CH010十章阶段报告、近期十章新路线，不得以准备区和客服显示重复拖延。",
+  "checks": {
+    "timeline": {
+      "decision": "pass",
+      "conclusion": "D8（2026-11-20）8:41至21:10，接CH008 D7（11月19日）；邱沅银行柜台、公司下午回溯、家庭晚间核对顺序一致，不把2023年草稿时间误当本笔款发生时间。",
+      "evidence": [
+        {
+          "chapter": 9,
+          "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+          "quote": "十一月二十日早上八点四十一分"
+        }
+      ]
+    },
+    "knowledge": {
+      "decision": "pass",
+      "conclusion": "叶珊仅有结算归档权限，林葭未获银行交易原件；客户负面银行记录不代表别的账户或其他银行，家属对退款申请原件也仍存在不确定。",
+      "evidence": [
+        {
+          "chapter": 9,
+          "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+          "quote": "我操作权限到这里，不能指挥银行划款。"
+        }
+      ]
+    },
+    "props_resources": {
+      "decision": "pass",
+      "conclusion": "查验限定账号和查询窗口，公司批次只是准备状态，原资料留在对应受托/金融机构；母亲独立选择是否授权；没有私用预收款或把钱凭空打入错户。",
+      "evidence": [
+        {
+          "chapter": 9,
+          "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+          "quote": "这张卡从十月一日至十一月二十日上午查询时点"
+        }
+      ]
+    },
+    "causality": {
+      "decision": "pass",
+      "conclusion": "CH001–002指出‘已清退’与家属到账不符，CH008家属愿自主核银行，CH009有银行有限入账记录及公司批次核查后纠正旧对外状态，迫使下章真实核付款行。",
+      "evidence": [
+        {
+          "chapter": 9,
+          "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+          "quote": "已经在本笔争议的答复范围内更正为“结算完成，支付待核”"
+        }
+      ]
+    },
+    "power_rules": {
+      "decision": "pass",
+      "conclusion": "女儿只查本人账户，母亲独立决定是否本人验证；林葭18%股份不开放公司支付后台，周柏衡建议不等于支付授权，林遥经营责任不等于董事投票结果。",
+      "evidence": [
+        {
+          "chapter": 9,
+          "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+          "quote": "不授权任何人未经我确认就代我更改退费收款对象"
+        }
+      ]
+    },
+    "promises": {
+      "decision": "pass",
+      "conclusion": "P02明确CH010到期，本章只有不同来源的有限核验与客户对外更正，绝不伪称已确认实际出款或完成双源实证；P10已关闭不重开。",
+      "evidence": [
+        {
+          "chapter": 9,
+          "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+          "quote": "现在有没有银行真正受理的交易参考号？"
+        }
+      ]
+    },
+    "anti_repeat": {
+      "decision": "pass",
+      "conclusion": "CH006海棠取消虚假展示，CH007雨中保护旧档并核独立场地，CH008实际经营补偿到账，CH009围绕本人银行账户、收款权和付款准备批次的不同证据和家属自主；不重复会议戏。",
+      "evidence": [
+        {
+          "chapter": 9,
+          "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+          "quote": "服务对象是母亲"
+        }
+      ]
+    },
+    "character_agency": {
+      "decision": "pass",
+      "conclusion": "邱沅母亲自主决定授权核自身账户，邱沅自行提出正式接件与拒绝盲重付，叶珊只确认职责内操作，林遥保留防双付与不得无限拖欠的两种义务。",
+      "evidence": [
+        {
+          "chapter": 9,
+          "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+          "quote": "她只是老了，不是没人问她就可以把她的钱退给任何一个名字。"
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "chapter": 6,
+      "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+      "quote": "我们不是为了证明你对，才决定不用实习生当背景板。",
+      "difference": "CH006海棠员工独立决定取消不符合人员配置的公开宣传、造成新客户等待；CH009是旧客户真实账户与企业退款准备区调查，根本活动机制不同。"
+    },
+    {
+      "chapter": 7,
+      "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+      "quote": "钱有没有动，仍然未知",
+      "difference": "CH007外部场地日志仅证明历史讨论场地实际被用并保全雨损纸档；CH009本人银行有限账户负面记录和独立企业支付准备原件来自不同业务源头，证据直指6400退款而不臆断历史周转。"
+    },
+    {
+      "chapter": 8,
+      "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+      "quote": "韩立川亲自确认三百元到账并限定处理范围",
+      "difference": "CH008有新增失约客户及合同供应商实际赔付与收款确认；CH009明确缺少原支付行受理证据，禁止以类似‘已处理’造银行完成，两种经济后果不同。"
+    }
+  ],
+  "future_window": [
+    {
+      "chapter": 10,
+      "goal": "据退款申请、付款银行实际指令/扣回状态与合法收款人记录形成6400元真实双源实证，兑付P02并落地纠错；完成CH006–CH010全文回看、CH001–CH010第一阶段核验。",
+      "change": "不再靠“准备付款”吊着家属，必须确定实际付/未付/退回及相应赔付执行责任，不能凭确认户号推断侵占。",
+      "ending_question": "澄岚第一次正式承认的6400元处理事实会怎样改变董事和员工对公司履约的信任？"
+    },
+    {
+      "chapter": 11,
+      "goal": "把阶段风险事实与客户权益、董事监督的实际取证边界连接，明确合法议程和资料授权。",
+      "change": "从客户退款个案转向有权治理程序真实材料，投资董事、员工代表和经营负责人产生新的行动与成本。",
+      "ending_question": "谁有权决定何时对外承担风险，谁不能再用旧汇总挡住真实服务？"
+    },
+    {
+      "chapter": 12,
+      "goal": "推动独立经营核查与护理资源承担，开始第二阶段机构选择和股东监督的实际阻力。",
+      "change": "接入真实经营场景和护理员工意见，不再连续三章围着退款表格，形成制度处理与服务不断裂间的代价。",
+      "ending_question": "要求如实披露以后，还能否让七处照护点正常给老人提供服务？"
+    }
+  ],
+  "promise_reviews": [
+    {
+      "id": "P01",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "母亲为什么要撤姐的私人动机仍未清，邱沅款的账户疑点不能推断母亲任何公司资金批准。",
+      "evidence": {
+        "chapter": 9,
+        "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+        "quote": "不该把姐姐的一句回忆当成母亲操纵资金的证据"
+      }
+    },
+    {
+      "id": "P02",
+      "deadline_chapter": 10,
+      "action": "keep",
+      "reason": "已有邱沅本人指定账户未见整笔6400及企业支付准备批次，原付款行受理/扣款/退回/到账及原退款申请签署尚缺，CH010到期必须兑现。",
+      "evidence": {
+        "chapter": 9,
+        "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+        "quote": "现在有没有银行真正受理的交易参考号？"
+      }
+    },
+    {
+      "id": "P04",
+      "deadline_chapter": 20,
+      "action": "keep",
+      "reason": "林遥仍任总经理，尚无有权董事会对其经营职务的正式表决/人事决定。",
+      "evidence": {
+        "chapter": 9,
+        "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+        "quote": "不能先凭客户急就重复发起未知状态的同一笔款。"
+      }
+    },
+    {
+      "id": "P05",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "2023年母亲讨论草稿与外部场地核验不能被CH009当成资金挪用，P05期限不变。",
+      "evidence": {
+        "chapter": 9,
+        "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+        "quote": "不该把姐姐的一句回忆当成母亲操纵资金的证据"
+      }
+    },
+    {
+      "id": "P07",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "姐妹在路边有轻微生活互助但没有和解、不抹去旧披露过错，仍须后续公开代价。",
+      "evidence": {
+        "chapter": 9,
+        "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+        "quote": "一次顺手帮忙不应替过去的决定盖章。"
+      }
+    },
+    {
+      "id": "P08",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "蒋素琴11月14日未执行服务仍未合同补救，邱沅母亲独立银行验证仅与本项退款有关，客户赔补仍分案。",
+      "evidence": {
+        "chapter": 3,
+        "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+        "quote": "原计划陪同外出一项未执行"
+      }
+    },
+    {
+      "id": "P09",
+      "deadline_chapter": 95,
+      "action": "keep",
+      "reason": "明川首次短期安全接续仍在执行，但设备长程配件未修复，不能通过本章银行线自动解决护理资源。",
+      "evidence": {
+        "chapter": 9,
+        "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+        "quote": "明川设备怎么样？"
+      }
+    }
+  ],
+  "incident_actions": []
+}

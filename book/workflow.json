@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 27,
+  "revision": 30,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "phase": "WAITING_NEXT",
   "platform": "qidian",
@@ -23,7 +23,7 @@
   },
   "research_path": "research/platform_6be8e3dcc722535c92ab8700a59443ad957ba34b1287affc13e6372b08ba4e67.json",
   "topics_path": "research/topics_7e38d6fa745c83141f0fa27ffbef2a6823e5a67ca43d956c18deccaff754de05.json",
-  "chapter": 9,
+  "chapter": 10,
   "history": [
     {
       "at": "2026-10-23T02:03:07+00:00",
@@ -192,9 +192,27 @@
       "phase": "WAITING_NEXT",
       "label": "等待下一章",
       "detail": "CH008《三百块买不回那半天》8546汉字已冻结，累计73085汉字；P10限定范围关闭，无起点发布回执。"
+    },
+    {
+      "at": "2026-10-23T14:07:59+00:00",
+      "phase": "WRITING",
+      "label": "撰写正文",
+      "detail": "CH009银行与公司双来源取证小说8876汉字已完成。"
+    },
+    {
+      "at": "2026-10-23T14:08:00+00:00",
+      "phase": "REVIEWING",
+      "label": "审核正文",
+      "detail": "CH009八项发布前审核、三章反重复、P02@10期限核对、原文证据完整检查。"
+    },
+    {
+      "at": "2026-10-23T14:08:01+00:00",
+      "phase": "WAITING_NEXT",
+      "label": "等待下一章",
+      "detail": "CH009《银行只认到账的那一笔》8876汉字冻结；全书累计81961汉字；P02仍到期CH010，尚无真实起点发布回执。"
     }
   ],
-  "detail": "CH008《三百块买不回那半天》8546汉字已冻结，累计73085汉字；P10限定范围关闭，无起点发布回执。",
-  "next_action": "下一章CH009：针对邱沅6400元款项准备合法银行双来源，CH010须完成P02及五章、十章回看；无发布回执不得登记起点发布。",
-  "updated_at": "2026-10-23T13:19:08+00:00"
+  "detail": "CH009《银行只认到账的那一笔》8876汉字冻结；全书累计81961汉字；P02仍到期CH010，尚无真实起点发布回执。",
+  "next_action": "CH010必须核QY6400银行指令真实执行和原退款申请受款人、兑现P02；CH006–CH010五章全文回看及CH001–CH010十章阶段审查必须在采用前执行，不登记起点发布。",
+  "updated_at": "2026-10-23T14:08:01+00:00"
 }
