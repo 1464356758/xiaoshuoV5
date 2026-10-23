@@ -1,0 +1,193 @@
+{
+  "chapter": 1,
+  "title": "遗言让我撤掉姐姐",
+  "stage": "S01",
+  "base_revision": 3,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+  "complete": true,
+  "story_time_end": 525,
+  "summary": "2026年11月12日母亲告别仪式上，林葭从何屿处获悉沈清禾生前私录要求她撤掉姐姐林遥，并留下交付条件受限的旧项目私人材料。邱沅质疑明川照护点退款汇总状态与其实际到账情况不符。林葭不把个人股权和母亲遗愿当作任免或查账特权，现场登记异议、保留客户原件与隐私边界。林遥主动让周柏衡停止归档并协调护理维修。下午财务要求林葭签署可能误导董事的清退完整性说明，她拒绝并提交独立书面异议，综合管理完成留档，责任和证据尚待核查；两姐妹仍有关系裂缝，但已经正面告知录音。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [],
+    "conclusion": "完整阅读CH001；开篇录音已在首段呈现，3000汉字内具体呈现养老服务退款与姐妹共同利益矛盾。林葭无公司任免权或公司账户直接读取权，母亲私人保管条件不构成法定扣证权。邱沅说自己的已核账户未收到款，不等于证明企业未付款；姐姐知道拖延但不知道实际去向。对立者周柏衡主动提交偏向完整性确认的文件，主角拒签并留下实际可追责记录；未发现需阻断的连续性硬冲突，本文仅是第一章，尚不能证明后文商业质量。"
+  },
+  "facts": [
+    {
+      "kind": "fact",
+      "key": "audio:mother_directive",
+      "value": "何屿向林葭展示母亲生前要求亲手撤林遥的录音；原录音由何屿保管，副本当天依法记录交付。",
+      "holder": "",
+      "valid_from": 35,
+      "valid_until": null,
+      "quote": "你要亲手让林遥下台。"
+    },
+    {
+      "kind": "fact",
+      "key": "archive:private_condition",
+      "value": "何屿称母亲另留旧项目私人整理材料，私嘱在林遥离开经营岗位后交付；材料真实性及是否涉及依法披露事项未证实。",
+      "holder": "",
+      "valid_from": 38,
+      "valid_until": null,
+      "quote": "私人的交付嘱咐不能代替法定程序。"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:shareholder_power",
+      "value": "林葭知道自己是股东，不能凭一句录音直接任免总经理，也不能径自取得银行后台数据。",
+      "holder": "林葭",
+      "valid_from": 90,
+      "valid_until": null,
+      "quote": "不是董事会决议。"
+    },
+    {
+      "kind": "fact",
+      "key": "complaint:QY_20261112",
+      "value": "邱沅提出其已核对收款账户没有见到对应退款；总部汇总状态称已清退，但真实付款去向未核实。",
+      "holder": "",
+      "valid_from": 70,
+      "valid_until": null,
+      "quote": "银行不认识你们的汇总表。"
+    },
+    {
+      "kind": "state",
+      "key": "proof:QY_original",
+      "value": "邱沅保留自己的银行交易打印单原件，林葭只摘录争议信息。",
+      "holder": "",
+      "valid_from": 108,
+      "valid_until": null,
+      "quote": "不收走你的原件。"
+    },
+    {
+      "kind": "fact",
+      "key": "jie:refund_knowledge",
+      "value": "林遥承认知道退款进度拖延，不知道邱沅账户未到账具体原因。",
+      "holder": "",
+      "valid_from": 125,
+      "valid_until": null,
+      "quote": "我知道退款进度拖了，不知道她的卡为什么没有到账。"
+    },
+    {
+      "kind": "fact",
+      "key": "mother:died",
+      "value": "母亲沈清禾确实去世，故事当日是第九天的告别仪式。",
+      "holder": "",
+      "valid_from": -12960,
+      "valid_until": null,
+      "quote": "母亲去世后的第九天。"
+    },
+    {
+      "kind": "state",
+      "key": "role:linyao",
+      "value": "林遥仍任澄岚总经理，管理责任尚在，未被母亲录音或本章异议撤职。",
+      "holder": "",
+      "valid_from": 525,
+      "valid_until": null,
+      "quote": "我会看他们拿出的依据。"
+    },
+    {
+      "kind": "fact",
+      "key": "finance:incomplete_refund_summary",
+      "value": "周柏衡提出让林葭签十月清退数据完整性说明，林葭指出其中把客户投诉说成理解差异。",
+      "holder": "",
+      "valid_from": 445,
+      "valid_until": null,
+      "quote": "后续沟通仅针对客户理解差异"
+    },
+    {
+      "kind": "fact",
+      "key": "linjia:objection_filed",
+      "value": "林葭提交反对将未核对款项认定已清退的书面异议，综合管理登记并交付签收单。",
+      "holder": "",
+      "valid_from": 525,
+      "valid_until": null,
+      "quote": "下午四点四十五分，综合管理给了林葭一张签收单"
+    },
+    {
+      "kind": "state",
+      "key": "care:mingchuan_risk",
+      "value": "明川点位晚间床边辅助设备维修仍未确认供应商到场时间；林遥协调护理督导以现有安全资源调整排班。",
+      "holder": "",
+      "valid_from": 505,
+      "valid_until": null,
+      "quote": "还在确认。"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linyao:audio_directive",
+      "value": "林遥在午餐时听林葭亲口告知母亲录音要求妹妹撤她。",
+      "holder": "林遥",
+      "valid_from": 270,
+      "valid_until": null,
+      "quote": "她在录音里，让我亲手撤掉你。"
+    },
+    {
+      "kind": "belief",
+      "key": "linjia:family_fairness",
+      "value": "林葭暂定不因爱姐姐包庇、不因母亲私录就认定姐姐有错。",
+      "holder": "林葭",
+      "valid_from": 525,
+      "valid_until": null,
+      "quote": "不能因为爱姐姐就替她签字，也不能因为妈留下了话，就先认定姐姐有罪。"
+    }
+  ],
+  "progression": {
+    "goal": "林葭核实母亲撤姐私录性质、安置邱沅的真实客诉与姐姐关系，同时不让自己的签字把尚未核对的退款说成已经完成。",
+    "obstacle": "母亲以私人条件控制旧材料交付、姐姐负实际运营责任且担忧点位供应；财务欲将一名客户的退款异议写成客户理解差异，主角并无直接账户查验权。",
+    "method": "在告别厅限定记录客户陈述、保留原件，在老宅直面姐姐，在总部会议室逐条阅读文件并另写个人异议，要求依法留档和指定责任节点。",
+    "choice": "拒签数据完整性文件，不使用私人录音撤人；同意让综合管理正式登记自己的异议，并将真实核查责任与时间转述家属。",
+    "result": "取得录音副本和登记签收单；财务暂缓清退材料归档；公司确定负责部门与次日中午的首轮核查节点；明川维修仍未确认到场。",
+    "consequence": "林葭从旁观股东成为有姓名、有原文的异议提出者；姐妹真正说出了母亲撤姐要求，不能再装作互不知情，财务与董事会将面对不同版本的说明。",
+    "next_options": "CH002核对录音交付文件及明川退款申请、批准、内部结算、实际银行执行四层证据；CH003去点位核明护理影响；CH004核验供应商交付；保持遗嘱私嘱与公司权力分开。",
+    "scene_function": "告别厅给出遗言和实际客户，车内/老宅揭开姐妹关系与母亲旧伤，总部用签字与不签字形成首个不可逆、低成本可拍的选择。"
+  },
+  "thread_events": [
+    {
+      "id": "P01",
+      "action": "plant",
+      "description": "母亲私人音频指令撤姐姐，真实动机与私档案尚未知。",
+      "quote": "你要亲手让林遥下台。"
+    },
+    {
+      "id": "P01A",
+      "action": "plant",
+      "description": "何屿保管的录音副本已经交付，仍需核对保管来源及完整性。",
+      "quote": "她签下交付单，问是否能取得一份副本。"
+    },
+    {
+      "id": "P02",
+      "action": "plant",
+      "description": "已清退的汇总记录和客户查询的账户结果相矛盾。",
+      "quote": "清退汇总表状态与客户提供的到账材料不一致"
+    },
+    {
+      "id": "P03",
+      "action": "plant",
+      "description": "护理设备到场不明，现有排班需要调整，家属是否受影响待核。",
+      "quote": "明川今晚的床边辅助设备维修还没定下供应商"
+    },
+    {
+      "id": "P04",
+      "action": "plant",
+      "description": "董事责任/总经理权限牵涉到母亲私人指令，但本章无任何合法任免程序。",
+      "quote": "我会看他们拿出的依据。"
+    },
+    {
+      "id": "P05",
+      "action": "plant",
+      "description": "母亲旧项目笔记和封存私档案可能涉及早期照护承诺，真伪未核。",
+      "quote": "账上说完成，不等于老人真的用上。"
+    },
+    {
+      "id": "P07",
+      "action": "plant",
+      "description": "姐妹告知了录音且承认并非完全清白，关系变化未解决。",
+      "quote": "我不能告诉你，我从来没做错过事。"
+    }
+  ],
+  "stage_closing": false,
+  "measured_han": 9751
+}

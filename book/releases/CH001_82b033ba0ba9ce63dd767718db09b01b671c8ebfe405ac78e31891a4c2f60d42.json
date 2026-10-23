@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
+  "chapter": 1,
+  "base_revision": 3,
+  "task_id": "b5615ef8-f0b2-42e5-9264-c5f9951a7125",
+  "repairs": 0,
+  "text_sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+  "record_sha256": "02229a6597fcb8913f052ac31908aee4545a3b507dc4325c8a203796fcb2080e",
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "roadmap_sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+  "decision": "release",
+  "read_full_text": true,
+  "blocking_issues": [],
+  "read_coverage": {
+    "1": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829"
+  },
+  "reader_reason_to_continue": "母亲为什么要已离职的妹妹扳倒经营公司十三年的姐姐？一项明明显示已清退却未见到账的客户诉求，让姐妹必须与财务和董事发生实质冲突。",
+  "consequence": "林葭的拒签异议有真实签收、正式登记和她自己的姓名；公司不能再仅以客户理解差异完成汇总，姐姐也无法装作母亲没有要求妹妹撤她。",
+  "ending_runway": "第一阶段还需在第2–5章推进退款四层证据、护理点现实风险和姐妹第一次有代价的程序性抉择；没有提前解决资金链或撤职结果，S01仍有足够发展空间。",
+  "checks": {
+    "timeline": {
+      "decision": "pass",
+      "conclusion": "按十一月十二日D0从告别仪式、午餐到下午四点四十五分推进；十一月一日录音和死亡节点独立区分，没有让已故母亲在今天行动。",
+      "evidence": [
+        {
+          "chapter": 1,
+          "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+          "quote": "母亲去世后的第九天。"
+        }
+      ]
+    },
+    "knowledge": {
+      "decision": "pass",
+      "conclusion": "姐姐承认拖延不等于知道具体去向；林葭只凭家属交易单及公司说明提出核验，不能知道周柏衡私下所为。",
+      "evidence": [
+        {
+          "chapter": 1,
+          "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+          "quote": "我知道退款进度拖了，不知道她的卡为什么没有到账。"
+        }
+      ]
+    },
+    "props_resources": {
+      "decision": "pass",
+      "conclusion": "客户保留银行打印单原件，妹妹收到录音副本与现场记录；退款、维修款及公司资源均没有凭空到账或自动修好。",
+      "evidence": [
+        {
+          "chapter": 1,
+          "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+          "quote": "没有的部分写没有，不许先拿一个'系统已完成'来糊弄。"
+        }
+      ]
+    },
+    "causality": {
+      "decision": "pass",
+      "conclusion": "财务要求签完整性模板→主角拒绝→自行写异议→综合管理留档，人物行为促成可见后果，不是随手揭秘。",
+      "evidence": [
+        {
+          "chapter": 1,
+          "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+          "quote": "她把桌上的空白便笺拉过来，没用公司抬头纸，也没拿那份模板遮住它。"
+        }
+      ]
+    },
+    "power_rules": {
+      "decision": "pass",
+      "conclusion": "母亲私人录音和私档案交付意愿不能强制免职或封存依法应披露证据；18%股东无银行后台直取与单方人事任免权。",
+      "evidence": [
+        {
+          "chapter": 1,
+          "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+          "quote": "私人的交付嘱咐不能代替法定程序。"
+        }
+      ]
+    },
+    "promises": {
+      "decision": "pass",
+      "conclusion": "退款实际是否到账保持未知，已明确下一轮核验责任；母亲为何撤姐仍待解，承诺记录明确到期，非无限许诺。",
+      "evidence": [
+        {
+          "chapter": 1,
+          "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+          "quote": "钱有没有退，还要查。"
+        }
+      ]
+    },
+    "anti_repeat": {
+      "decision": "pass",
+      "conclusion": "第一章采用一次可复制的正式异议行为，而非重复放录音或姐姐嘴战；后续三章分别转到账、照护和合同验证。",
+      "evidence": [
+        {
+          "chapter": 1,
+          "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+          "quote": "你可以把这份作为我的说明。不能把它换成那份模板。"
+        }
+      ]
+    },
+    "character_agency": {
+      "decision": "pass",
+      "conclusion": "姐姐主动暂停归档、部署维修风险与护理安全；邱沅限定其凭据效力；周柏衡主动提出有偏向的版本；妹妹独立承担留档成本。",
+      "evidence": [
+        {
+          "chapter": 1,
+          "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+          "quote": "今天先用现有能安全使用的设备调整排班，护理督导确认可行的范围，不能让护工带着风险硬上。"
+        }
+      ]
+    }
+  },
+  "comparison": [],
+  "future_window": [
+    {
+      "chapter": 2,
+      "goal": "逐项核对邱沅退款申请、账面审批、实际支付通道和客户到账材料的差异。",
+      "change": "确定至少一条可以依法复核而不依赖周柏衡单方摘要的路径；补充录音交付凭证。",
+      "ending_question": "账面完成为何与客户账户不符，是跨期处理、通道退回还是其他原因？"
+    },
+    {
+      "chapter": 3,
+      "goal": "林葭实地到明川照护点了解维修排班和老人主观意愿。",
+      "change": "根据真实资源做出一次有书面记录的护理服务调整，不能靠口头承诺让物资到位。",
+      "ending_question": "保住今晚的护理后，谁承担被推迟的服务与费用？"
+    },
+    {
+      "chapter": 4,
+      "goal": "分清朗和配服合同中的约定、批准、验收及实际履约。",
+      "change": "放弃有利却片面的公开指控，换成正式且有边界的项目核查。",
+      "ending_question": "是谁批准先认定交付，相关的实际业务凭证在哪里？"
+    }
+  ],
+  "promise_reviews": [
+    {
+      "id": "P01",
+      "action": "set",
+      "deadline_chapter": 50,
+      "reason": "本章确立母亲撤姐录音及封存私人旧项目材料；原始动机不明，中点CH050前必须揭示，不能靠继续解锁录音。",
+      "evidence": {
+        "chapter": 1,
+        "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+        "quote": "你要亲手让林遥下台。"
+      }
+    },
+    {
+      "id": "P01A",
+      "action": "set",
+      "deadline_chapter": 2,
+      "reason": "本章有保管单及副本交付，第二章复核签收、录音来源和原始文件保管过程，不能因目前自述认定法律效力。",
+      "evidence": {
+        "chapter": 1,
+        "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+        "quote": "她签下交付单，问是否能取得一份副本。"
+      }
+    },
+    {
+      "id": "P02",
+      "action": "set",
+      "deadline_chapter": 10,
+      "reason": "客户账户未见对应退款与汇总状态不符；第10章前核验首笔账的双源事实，不能预断贪污或已退款。",
+      "evidence": {
+        "chapter": 1,
+        "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+        "quote": "银行不认识你们的汇总表。"
+      }
+    },
+    {
+      "id": "P03",
+      "action": "set",
+      "deadline_chapter": 5,
+      "reason": "明川护理辅助设备晚间维修未确定，已临时改排班；第5章前核查是否真实受影响及确保实际接续措施。",
+      "evidence": {
+        "chapter": 1,
+        "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+        "quote": "还在确认。"
+      }
+    },
+    {
+      "id": "P04",
+      "action": "set",
+      "deadline_chapter": 20,
+      "reason": "姐姐职位没有改变，母亲私嘱只是冲突；第20章前必须有合法治理程序与明确人事结果。",
+      "evidence": {
+        "chapter": 1,
+        "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+        "quote": "我会看他们拿出的依据。"
+      }
+    },
+    {
+      "id": "P05",
+      "action": "set",
+      "deadline_chapter": 50,
+      "reason": "母亲旧项目私档与笔记只形成待调查方向，不能据此认定其资金责任；中点前结合双源证据解释。",
+      "evidence": {
+        "chapter": 1,
+        "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+        "quote": "账上说完成，不等于老人真的用上。"
+      }
+    },
+    {
+      "id": "P07",
+      "action": "set",
+      "deadline_chapter": 100,
+      "reason": "本章姐妹告知录音后未完成和解，后续CH010、CH050应有实际交谈与共担，最终CH100给关系方向。",
+      "evidence": {
+        "chapter": 1,
+        "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+        "quote": "我不能告诉你，我从来没做错过事。"
+      }
+    }
+  ],
+  "incident_actions": [],
+  "opening": {
+    "first_hook": {
+      "quote": "母亲的告别厅里，林葭听见自己的名字，接着听见一句：“你要亲手让林遥下台。”",
+      "why": "第一句话给出丧礼与母亲撤姐指令的正面冲突，形成明确阅读问题。"
+    },
+    "core_promise": {
+      "quote": "别让你姐姐再管澄岚。你要亲手让她下台。",
+      "why": "书名核心承诺在最早的一段真实录音中实际发生，后续财务与照护带来现实行动，而非封面预告。"
+    },
+    "protagonist_impact": {
+      "quote": "林遥在公司待了十三年。我走了五年。",
+      "why": "母亲指令落在离开企业五年的妹妹身上，她直面缺乏任免权限与即将破坏的姐妹关系。"
+    }
+  }
+}

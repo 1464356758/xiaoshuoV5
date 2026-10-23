@@ -11,40 +11,53 @@
   "source": {
     "repository_url": "https://github.com/1464356758/xiaoshuoV5",
     "branch": "main",
-    "generated_at": "2026-10-23T03:39:19.625+00:00",
-    "state_revision": 3,
-    "workflow_revision": 5,
-    "state_sha256": "055cf6009499b889089c51ebf3fce5906217addf42ae0e840c12c6c081121ca0",
-    "workflow_sha256": "9ad118097553dfb0796ad5f4831cb6b9047f2a3636f8d0500bfd6ee742afe64d",
+    "generated_at": "2026-10-23T03:56:36+00:00",
+    "state_revision": 4,
+    "workflow_revision": 7,
+    "state_sha256": "90a352e6214863a73e771992622b8c52be4122428c75a634dea144cf040ad361",
+    "workflow_sha256": "8a0c4ef999315b61abb470bcd72579e9bc68aa7121ebec8518f6689f1793044b",
     "manuscript_storage": "plain_files_v1",
     "requires_reader_key": false
   },
   "progress": {
     "target_chapters": 100,
-    "adopted_chapters": 0,
+    "adopted_chapters": 1,
     "target_han": 900000,
-    "actual_han": 0,
+    "actual_han": 9751,
     "completed": false,
     "needs_revalidation": [],
     "reviewed_until": 0,
     "window_review_due": false,
     "unresolved_reviews": [],
     "serial_mode": true,
-    "frozen_chapters": 0,
+    "frozen_chapters": 1,
     "published_chapters": 0,
     "publication_status": "只统计真实回执；无回执不等于未发布",
     "open_incidents": 0,
     "release_check_required": true
   },
   "task": {
-    "phase": "PLANNING",
-    "label": "长篇规划",
-    "chapter": 1,
-    "detail": "T05已锁定；CANON与ROADMAP登记完成，100章十阶段与前5章路线已就绪；未创作任何正文。",
-    "next_action": "等待作者明确下达“开始第一章”；先重读远程state、两份正式输入与CH001计划，再写作、检查和定稿冻结。",
-    "updated_at": "2026-10-23T03:39:19.625+00:00"
+    "phase": "WAITING_NEXT",
+    "label": "等待下一章",
+    "chapter": 2,
+    "detail": "CH001《遗言让我撤掉姐姐》实测9751汉字，完成发布前检查并登记定稿冻结；尚无平台发布回执。",
+    "next_action": "等待作者下达“继续下一章”或使用每日一章指令；下次仅写CH002，先回读CH001全文、章后记录、CANON与ROADMAP，并复核开放承诺。",
+    "updated_at": "2026-10-23T03:56:36+00:00"
   },
-  "chapters": [],
+  "chapters": [
+    {
+      "number": 1,
+      "title": "遗言让我撤掉姐姐",
+      "stage": "S01",
+      "han_count": 9751,
+      "text_path": "book/chapters/CH001_cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829.txt",
+      "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+      "needs_revalidation": false,
+      "frozen": true,
+      "publication_status": "unreported",
+      "published_at": null
+    }
+  ],
   "topics": [
     {
       "id": "T01",
@@ -486,6 +499,18 @@
       "phase": "PLANNING",
       "label": "长篇规划",
       "detail": "T05已锁定；CANON与ROADMAP登记完成，100章十阶段与前5章路线已就绪；未创作任何正文。"
+    },
+    {
+      "at": "2026-10-23T03:56:35+00:00",
+      "phase": "WRITING",
+      "label": "撰写正文",
+      "detail": "已获得作者“开始吧”授权，正在创作CH001并检查发布前条件。"
+    },
+    {
+      "at": "2026-10-23T03:56:36+00:00",
+      "phase": "WAITING_NEXT",
+      "label": "等待下一章",
+      "detail": "CH001《遗言让我撤掉姐姐》实测9751汉字，完成发布前检查并登记定稿冻结；尚无平台发布回执。"
     }
   ]
 }

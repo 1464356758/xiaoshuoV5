@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "revision": 5,
+  "revision": 7,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
-  "phase": "PLANNING",
+  "phase": "WAITING_NEXT",
   "platform": "qidian",
   "selected_topic": {
     "id": "T05",
@@ -23,7 +23,7 @@
   },
   "research_path": "research/platform_6be8e3dcc722535c92ab8700a59443ad957ba34b1287affc13e6372b08ba4e67.json",
   "topics_path": "research/topics_7e38d6fa745c83141f0fa27ffbef2a6823e5a67ca43d956c18deccaff754de05.json",
-  "chapter": 1,
+  "chapter": 2,
   "history": [
     {
       "at": "2026-10-23T02:03:07+00:00",
@@ -60,9 +60,21 @@
       "phase": "PLANNING",
       "label": "长篇规划",
       "detail": "T05已锁定；CANON与ROADMAP登记完成，100章十阶段与前5章路线已就绪；未创作任何正文。"
+    },
+    {
+      "at": "2026-10-23T03:56:35+00:00",
+      "phase": "WRITING",
+      "label": "撰写正文",
+      "detail": "已获得作者“开始吧”授权，正在创作CH001并检查发布前条件。"
+    },
+    {
+      "at": "2026-10-23T03:56:36+00:00",
+      "phase": "WAITING_NEXT",
+      "label": "等待下一章",
+      "detail": "CH001《遗言让我撤掉姐姐》实测9751汉字，完成发布前检查并登记定稿冻结；尚无平台发布回执。"
     }
   ],
-  "detail": "T05已锁定；CANON与ROADMAP登记完成，100章十阶段与前5章路线已就绪；未创作任何正文。",
-  "next_action": "等待作者明确下达“开始第一章”；先重读远程state、两份正式输入与CH001计划，再写作、检查和定稿冻结。",
-  "updated_at": "2026-10-23T03:39:19.625+00:00"
+  "detail": "CH001《遗言让我撤掉姐姐》实测9751汉字，完成发布前检查并登记定稿冻结；尚无平台发布回执。",
+  "next_action": "等待作者下达“继续下一章”或使用每日一章指令；下次仅写CH002，先回读CH001全文、章后记录、CANON与ROADMAP，并复核开放承诺。",
+  "updated_at": "2026-10-23T03:56:36+00:00"
 }

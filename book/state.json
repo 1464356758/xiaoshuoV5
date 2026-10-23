@@ -2,7 +2,7 @@
   "schema_version": 2,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "title": "母亲的遗嘱，要我扮演坏女儿",
-  "revision": 3,
+  "revision": 4,
   "config": {
     "target_chapters": 100,
     "target_han": 900000,
@@ -20,7 +20,17 @@
     "opening_core_max_han": 3000,
     "opening_impact_max_han": 3000
   },
-  "chapters": {},
+  "chapters": {
+    "1": {
+      "title": "遗言让我撤掉姐姐",
+      "stage": "S01",
+      "text_path": "chapters/CH001_cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829.txt",
+      "text_sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+      "record_path": "records/CH001_02229a6597fcb8913f052ac31908aee4545a3b507dc4325c8a203796fcb2080e.json",
+      "record_sha256": "02229a6597fcb8913f052ac31908aee4545a3b507dc4325c8a203796fcb2080e",
+      "han_count": 9751
+    }
+  },
   "checkpoints": [],
   "needs_revalidation": [],
   "inputs": {
@@ -51,15 +61,177 @@
       "reason": "作者授权建立90万字十阶段因果路线及近期5章规划，尚未授权写正文"
     }
   ],
-  "tasks": {},
+  "tasks": {
+    "1": {
+      "task_id": "b5615ef8-f0b2-42e5-9264-c5f9951a7125",
+      "chapter": 1,
+      "mode": "write",
+      "phase": "adopted",
+      "repairs": 0,
+      "history": [
+        {
+          "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+          "reason": "初稿",
+          "repairs": 0
+        }
+      ],
+      "candidate_sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+      "candidate_path": "candidates/CH001_cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829.txt"
+    }
+  },
   "completion": null,
   "serialization": {
     "schema_version": 1,
     "enabled": true,
-    "frozen": {},
+    "frozen": {
+      "1": {
+        "text_sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+        "record_sha256": "02229a6597fcb8913f052ac31908aee4545a3b507dc4325c8a203796fcb2080e"
+      }
+    },
     "published": {},
-    "gates": {},
-    "promises": {},
+    "gates": {
+      "1": {
+        "path": "releases/CH001_82b033ba0ba9ce63dd767718db09b01b671c8ebfe405ac78e31891a4c2f60d42.json",
+        "sha256": "82b033ba0ba9ce63dd767718db09b01b671c8ebfe405ac78e31891a4c2f60d42",
+        "used": true
+      }
+    },
+    "promises": {
+      "P01": {
+        "history": [
+          {
+            "id": "P01",
+            "action": "set",
+            "deadline_chapter": 50,
+            "reason": "本章确立母亲撤姐录音及封存私人旧项目材料；原始动机不明，中点CH050前必须揭示，不能靠继续解锁录音。",
+            "evidence": {
+              "chapter": 1,
+              "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+              "quote": "你要亲手让林遥下台。"
+            },
+            "chapter": 1
+          }
+        ],
+        "deadline_chapter": 50,
+        "status": "open",
+        "last_reviewed_chapter": 1
+      },
+      "P01A": {
+        "history": [
+          {
+            "id": "P01A",
+            "action": "set",
+            "deadline_chapter": 2,
+            "reason": "本章有保管单及副本交付，第二章复核签收、录音来源和原始文件保管过程，不能因目前自述认定法律效力。",
+            "evidence": {
+              "chapter": 1,
+              "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+              "quote": "她签下交付单，问是否能取得一份副本。"
+            },
+            "chapter": 1
+          }
+        ],
+        "deadline_chapter": 2,
+        "status": "open",
+        "last_reviewed_chapter": 1
+      },
+      "P02": {
+        "history": [
+          {
+            "id": "P02",
+            "action": "set",
+            "deadline_chapter": 10,
+            "reason": "客户账户未见对应退款与汇总状态不符；第10章前核验首笔账的双源事实，不能预断贪污或已退款。",
+            "evidence": {
+              "chapter": 1,
+              "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+              "quote": "银行不认识你们的汇总表。"
+            },
+            "chapter": 1
+          }
+        ],
+        "deadline_chapter": 10,
+        "status": "open",
+        "last_reviewed_chapter": 1
+      },
+      "P03": {
+        "history": [
+          {
+            "id": "P03",
+            "action": "set",
+            "deadline_chapter": 5,
+            "reason": "明川护理辅助设备晚间维修未确定，已临时改排班；第5章前核查是否真实受影响及确保实际接续措施。",
+            "evidence": {
+              "chapter": 1,
+              "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+              "quote": "还在确认。"
+            },
+            "chapter": 1
+          }
+        ],
+        "deadline_chapter": 5,
+        "status": "open",
+        "last_reviewed_chapter": 1
+      },
+      "P04": {
+        "history": [
+          {
+            "id": "P04",
+            "action": "set",
+            "deadline_chapter": 20,
+            "reason": "姐姐职位没有改变，母亲私嘱只是冲突；第20章前必须有合法治理程序与明确人事结果。",
+            "evidence": {
+              "chapter": 1,
+              "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+              "quote": "我会看他们拿出的依据。"
+            },
+            "chapter": 1
+          }
+        ],
+        "deadline_chapter": 20,
+        "status": "open",
+        "last_reviewed_chapter": 1
+      },
+      "P05": {
+        "history": [
+          {
+            "id": "P05",
+            "action": "set",
+            "deadline_chapter": 50,
+            "reason": "母亲旧项目私档与笔记只形成待调查方向，不能据此认定其资金责任；中点前结合双源证据解释。",
+            "evidence": {
+              "chapter": 1,
+              "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+              "quote": "账上说完成，不等于老人真的用上。"
+            },
+            "chapter": 1
+          }
+        ],
+        "deadline_chapter": 50,
+        "status": "open",
+        "last_reviewed_chapter": 1
+      },
+      "P07": {
+        "history": [
+          {
+            "id": "P07",
+            "action": "set",
+            "deadline_chapter": 100,
+            "reason": "本章姐妹告知录音后未完成和解，后续CH010、CH050应有实际交谈与共担，最终CH100给关系方向。",
+            "evidence": {
+              "chapter": 1,
+              "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+              "quote": "我不能告诉你，我从来没做错过事。"
+            },
+            "chapter": 1
+          }
+        ],
+        "deadline_chapter": 100,
+        "status": "open",
+        "last_reviewed_chapter": 1
+      }
+    },
     "incidents": {}
   }
 }
