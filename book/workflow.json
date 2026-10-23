@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 24,
+  "revision": 27,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "phase": "WAITING_NEXT",
   "platform": "qidian",
@@ -23,7 +23,7 @@
   },
   "research_path": "research/platform_6be8e3dcc722535c92ab8700a59443ad957ba34b1287affc13e6372b08ba4e67.json",
   "topics_path": "research/topics_7e38d6fa745c83141f0fa27ffbef2a6823e5a67ca43d956c18deccaff754de05.json",
-  "chapter": 8,
+  "chapter": 9,
   "history": [
     {
       "at": "2026-10-23T02:03:07+00:00",
@@ -174,9 +174,27 @@
       "phase": "WAITING_NEXT",
       "label": "等待下一章",
       "detail": "CH007《那天确实有人来过》8605汉字正式冻结；全书累计64539汉字。"
+    },
+    {
+      "at": "2026-10-23T13:19:06+00:00",
+      "phase": "WRITING",
+      "label": "撰写正文",
+      "detail": "CH008海棠活动善后正文8546汉字完成。"
+    },
+    {
+      "at": "2026-10-23T13:19:07+00:00",
+      "phase": "REVIEWING",
+      "label": "检查本章",
+      "detail": "CH008八项发布前检查、近三章反重复及P10真实到期兑付审核完成。"
+    },
+    {
+      "at": "2026-10-23T13:19:08+00:00",
+      "phase": "WAITING_NEXT",
+      "label": "等待下一章",
+      "detail": "CH008《三百块买不回那半天》8546汉字已冻结，累计73085汉字；P10限定范围关闭，无起点发布回执。"
     }
   ],
-  "detail": "CH007《那天确实有人来过》8605汉字正式冻结；全书累计64539汉字。",
-  "next_action": "CH008落实P10海棠取消活动的家属与供应商成本后续；P02第十章资金双源核实不得延期。",
-  "updated_at": "2026-10-23T12:45:18+00:00"
+  "detail": "CH008《三百块买不回那半天》8546汉字已冻结，累计73085汉字；P10限定范围关闭，无起点发布回执。",
+  "next_action": "下一章CH009：针对邱沅6400元款项准备合法银行双来源，CH010须完成P02及五章、十章回看；无发布回执不得登记起点发布。",
+  "updated_at": "2026-10-23T13:19:08+00:00"
 }

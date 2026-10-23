@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
+  "chapter": 8,
+  "base_revision": 11,
+  "task_id": "bd7b0946-1b1d-4f89-90e8-29e47cf6d760",
+  "repairs": 0,
+  "text_sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+  "record_sha256": "408422f99e74f475fe0b7afc33ca4f2bce6f8415664a1dde02c415f9ff9c4043",
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "roadmap_sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+  "decision": "release",
+  "read_full_text": true,
+  "blocking_issues": [],
+  "read_coverage": {
+    "5": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+    "6": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+    "7": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+    "8": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5"
+  },
+  "reader_reason_to_continue": "海棠真实赔付已经发生并经收款者确认，仍有潜在客户因真实服务不确定而不签约；邱沅将就自己母亲6400元退款有限授权核银行来源，真正的旧资金验证压力转入CH009与CH010。",
+  "consequence": "P10原定的韩立川和合作方范围已实付、经营支出增加3170元，另有合作摄影师收款确认，下次新增宣传采购暂不发起；韩家没有被强迫签约，其他家属不同诉求仍单独受理。",
+  "ending_runway": "CH009需要由邱沅本人同意后的有限银行记录和公司真实付款安排建立两来源查证，CH010对P02第10章期限作实证兑现、五章全文回看和阶段审查；不能拿海棠今日赔付替旧6400元已清退状态。",
+  "checks": {
+    "timeline": {
+      "decision": "pass",
+      "conclusion": "故事D7=11月19日，承接CH007 11月18日晚海棠P10次日到期。韩立川、合作方及摄影师在19日当天均确认款项。",
+      "evidence": [
+        {
+          "chapter": 8,
+          "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+          "quote": "十一月十九日上午七点五十六分"
+        }
+      ]
+    },
+    "knowledge": {
+      "decision": "pass",
+      "conclusion": "林葭仅知现场所见和按授权反馈的脱敏结果，不取得韩立川账户、合作方全合同或周柏衡银行流水；公司内部申请和实际收款分离。",
+      "evidence": [
+        {
+          "chapter": 8,
+          "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+          "quote": "我不能替经办人算钱"
+        }
+      ]
+    },
+    "props_resources": {
+      "decision": "pass",
+      "conclusion": "已确定300元客户一次性限定赔付和2870元供应商实际完成部分，资金从有权经营预算承担，未挪客户服务预收款与正常护理工资；营销采购实际延期有机会成本。",
+      "evidence": [
+        {
+          "chapter": 8,
+          "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+          "quote": "下个月原计划新增的第二场宣传采购先不发起"
+        }
+      ]
+    },
+    "causality": {
+      "decision": "pass",
+      "conclusion": "CH006开放日取消及模糊通知→客户白请假与合作方实做劳动→CH008经有权合同处理实际付款并由双方收款确认；客户仍保留是否成为新客的独立选择。",
+      "evidence": [
+        {
+          "chapter": 8,
+          "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+          "quote": "钱到了。这件事按咱们说的范围算处理了"
+        }
+      ]
+    },
+    "power_rules": {
+      "decision": "pass",
+      "conclusion": "韩立川有权拒绝预约、要求就失约协商；林遥按授权处理经营资源，公司财务核验付款，林葭不得以18%持股越权发钱或承诺签约。",
+      "evidence": [
+        {
+          "chapter": 8,
+          "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+          "quote": "您可以换。"
+        }
+      ]
+    },
+    "promises": {
+      "decision": "pass",
+      "conclusion": "P10在CH008到期兑现：客户300、供应商2870与合作摄影师应得劳务均有真实本人收款确认；其他预约者个别诉求不伪报所有人已满意，P02@CH010保持。",
+      "evidence": [
+        {
+          "chapter": 8,
+          "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+          "quote": "韩立川亲自确认三百元到账并限定处理范围"
+        }
+      ]
+    },
+    "anti_repeat": {
+      "decision": "pass",
+      "conclusion": "CH005姐妹说出管理过错并发监督申请，CH006取消一场没有真实能力的宣传，CH007保存旧档核外部场地，CH008以赔付入账及客户自主是否签约发生不可逆经济后果，不再回到开会改表。",
+      "evidence": [
+        {
+          "chapter": 8,
+          "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+          "quote": "我今天没打算签约。"
+        }
+      ]
+    },
+    "character_agency": {
+      "decision": "pass",
+      "conclusion": "韩立川与其母亲保持决定权；贺敏放弃用赠券绑新客，摄影师要求由雇用方落实收入，林遥实付并压缩下次新增营销，林葭不为善后独占功劳。",
+      "evidence": [
+        {
+          "chapter": 8,
+          "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+          "quote": "要不要带我妈来，得她愿意才行。"
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "chapter": 5,
+      "sha256": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+      "quote": "今晚站不到。",
+      "difference": "CH005姐妹承认十月投诉说明不实，提交受限股东监督形成关系裂痕；CH008向外部家属及合作方发生实际付款、明确范围与自由选择，主轴不是家族对质。"
+    },
+    {
+      "chapter": 6,
+      "sha256": "92cf39ec75783d4db2c3b85725e93e9c73d7c212d858fa8e1019778292483d99",
+      "quote": "保留依约提出意见的权利",
+      "difference": "CH006选择取消不具备岗位资源的宣传活动，建立尚待处理P10；CH008兑现合同结算、消费者受理意见并由收款者确认实际入账，经济和服务意愿均有不可逆成本。"
+    },
+    {
+      "chapter": 7,
+      "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+      "quote": "钱有没有动，仍然未知",
+      "difference": "CH007经保全旧纸档与外部实际场地日志调查三年前讨论存在但资金不明；CH008对新发生的实际赔付有自愿确认与收款事实，不能误用该款证明历史6400元路径。"
+    }
+  ],
+  "future_window": [
+    {
+      "chapter": 9,
+      "goal": "通过邱沅自愿且有界的银行信息、企业内部真实支付指令/付款方记录建立6400元双方独立证据核验渠道。",
+      "change": "从新事件善后切换到旧客户银行外部来源，核实真实收款与公司实际付款是否一致，保留隐私与权限界限。",
+      "ending_question": "一笔被称为已清退的6400元究竟有没有进入邱沅有权查看的账户？"
+    },
+    {
+      "chapter": 10,
+      "goal": "兑付P02首笔6400元到账/未到账双源核验并完成CH006—CH010全文回看和十章阶段复盘。",
+      "change": "资金状态必须落到可证明的银行或合同事实，并产生运营更正责任和有成本的处理，不允许再只重复已处理一词。",
+      "ending_question": "第一笔退款的真实执行路径指向怎样的制度问题，谁需要正式负责纠正？"
+    },
+    {
+      "chapter": 11,
+      "goal": "使用已验证的阶段结果推动有权限董事审视，但不因母亲私录自动改变管理权。",
+      "change": "从客户个案与客诉善后转向董事正式监督议程的具体事实门槛，出现投资人与员工权益间不同代价。",
+      "ending_question": "旧的风险隐瞒与如今真实支付矛盾能否形成有权机关实际监督决定？"
+    }
+  ],
+  "promise_reviews": [
+    {
+      "id": "P01",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "母亲私录撤姐动机尚未揭示，CH008经营赔付不证明母亲生前的资金责任。",
+      "evidence": {
+        "chapter": 7,
+        "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+        "quote": "钱有没有动，仍然未知"
+      }
+    },
+    {
+      "id": "P02",
+      "deadline_chapter": 10,
+      "action": "keep",
+      "reason": "邱沅已表达愿在适格渠道核有限范围本人银行记录，第十章必须兑现6400元双源信息；目前不得认定到账与否的全貌。",
+      "evidence": {
+        "chapter": 8,
+        "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+        "quote": "明天我有空去银行"
+      }
+    },
+    {
+      "id": "P04",
+      "deadline_chapter": 20,
+      "action": "keep",
+      "reason": "董事会尚无撤任总经理的合规决议，姐妹现场经营责任不产生人事变动。",
+      "evidence": {
+        "chapter": 8,
+        "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+        "quote": "需要有权程序处理她的职务"
+      }
+    },
+    {
+      "id": "P05",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "旧讨论仅有草稿和独立场地使用记录，未证明沈清禾参与或签字，不能拿本章新支付代替母亲责任线。",
+      "evidence": {
+        "chapter": 8,
+        "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+        "quote": "谁参加、谁签字、钱有没有动，都还得查"
+      }
+    },
+    {
+      "id": "P07",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "姐妹有有限公事互动但并未和好，最终关系方向仍需因果兑现。",
+      "evidence": {
+        "chapter": 8,
+        "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+        "quote": "这话不是原谅"
+      }
+    },
+    {
+      "id": "P08",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "11月14日蒋素琴一项服务未履行仍按本人的选择与原合同安排后续，韩立川独立客户事件不能用于兑付。",
+      "evidence": {
+        "chapter": 5,
+        "sha256": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+        "quote": "要求先看原合同怎样写"
+      }
+    },
+    {
+      "id": "P09",
+      "deadline_chapter": 95,
+      "action": "keep",
+      "reason": "明川设备和长期护理安全仍开放，经营营销成本不得挤占现有长者必要服务和员工工资。",
+      "evidence": {
+        "chapter": 8,
+        "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+        "quote": "正常签约照护和员工依法应得工资不能拿来填活动取消的洞"
+      }
+    },
+    {
+      "id": "P10",
+      "deadline_chapter": 8,
+      "action": "complete",
+      "reason": "本章韩立川300元确认到账，合作方2870元确认到账，摄影师确认实际劳动款入账；P10限定的两个原始纠纷范围完成，不代表其他预约家属全部解决，也不捆绑未来签约。",
+      "evidence": {
+        "chapter": 8,
+        "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+        "quote": "韩立川亲自确认三百元到账并限定处理范围"
+      }
+    }
+  ],
+  "incident_actions": []
+}

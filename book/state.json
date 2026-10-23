@@ -2,7 +2,7 @@
   "schema_version": 2,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "title": "母亲的遗嘱，要我扮演坏女儿",
-  "revision": 11,
+  "revision": 12,
   "config": {
     "target_chapters": 100,
     "target_han": 900000,
@@ -83,6 +83,15 @@
       "record_path": "records/CH007_4be5f12623f8a72beb245671b87a9fddb403aa10f2591f0f6621bb48b4e4d689.json",
       "record_sha256": "4be5f12623f8a72beb245671b87a9fddb403aa10f2591f0f6621bb48b4e4d689",
       "han_count": 8605
+    },
+    "8": {
+      "title": "三百块买不回那半天",
+      "stage": "S01",
+      "text_path": "chapters/CH008_9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5.txt",
+      "text_sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+      "record_path": "records/CH008_408422f99e74f475fe0b7afc33ca4f2bce6f8415664a1dde02c415f9ff9c4043.json",
+      "record_sha256": "408422f99e74f475fe0b7afc33ca4f2bce6f8415664a1dde02c415f9ff9c4043",
+      "han_count": 8546
     }
   },
   "checkpoints": [
@@ -267,6 +276,22 @@
       ],
       "candidate_sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
       "candidate_path": "candidates/CH007_309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085.txt"
+    },
+    "8": {
+      "task_id": "bd7b0946-1b1d-4f89-90e8-29e47cf6d760",
+      "chapter": 8,
+      "mode": "write",
+      "phase": "adopted",
+      "repairs": 0,
+      "history": [
+        {
+          "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+          "reason": "初稿",
+          "repairs": 0
+        }
+      ],
+      "candidate_sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+      "candidate_path": "candidates/CH008_9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5.txt"
     }
   },
   "completion": null,
@@ -301,6 +326,10 @@
       "7": {
         "text_sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
         "record_sha256": "4be5f12623f8a72beb245671b87a9fddb403aa10f2591f0f6621bb48b4e4d689"
+      },
+      "8": {
+        "text_sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+        "record_sha256": "408422f99e74f475fe0b7afc33ca4f2bce6f8415664a1dde02c415f9ff9c4043"
       }
     },
     "published": {},
@@ -339,6 +368,11 @@
         "path": "releases/CH007_eea395d3a03e97cc2a40cb0f06f97a91df3d014d101a254f52c6def72ccdeafe.json",
         "sha256": "eea395d3a03e97cc2a40cb0f06f97a91df3d014d101a254f52c6def72ccdeafe",
         "used": true
+      },
+      "8": {
+        "path": "releases/CH008_cb0edcdfed51a32b671d7aaae13347358d1358463d772f9a14af0b8041d24b2d.json",
+        "sha256": "cb0edcdfed51a32b671d7aaae13347358d1358463d772f9a14af0b8041d24b2d",
+        "used": true
       }
     },
     "promises": {
@@ -359,7 +393,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 7
+        "last_reviewed_chapter": 8
       },
       "P01A": {
         "history": [
@@ -409,7 +443,7 @@
         ],
         "deadline_chapter": 10,
         "status": "open",
-        "last_reviewed_chapter": 7
+        "last_reviewed_chapter": 8
       },
       "P03": {
         "history": [
@@ -459,7 +493,7 @@
         ],
         "deadline_chapter": 20,
         "status": "open",
-        "last_reviewed_chapter": 7
+        "last_reviewed_chapter": 8
       },
       "P05": {
         "history": [
@@ -478,7 +512,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 7
+        "last_reviewed_chapter": 8
       },
       "P07": {
         "history": [
@@ -497,7 +531,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 7
+        "last_reviewed_chapter": 8
       },
       "P08": {
         "history": [
@@ -516,7 +550,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 7
+        "last_reviewed_chapter": 8
       },
       "P09": {
         "history": [
@@ -535,7 +569,7 @@
         ],
         "deadline_chapter": 95,
         "status": "open",
-        "last_reviewed_chapter": 7
+        "last_reviewed_chapter": 8
       },
       "P10": {
         "history": [
@@ -550,11 +584,23 @@
               "quote": "保留依约提出意见的权利"
             },
             "chapter": 6
+          },
+          {
+            "id": "P10",
+            "deadline_chapter": 8,
+            "action": "complete",
+            "reason": "本章韩立川300元确认到账，合作方2870元确认到账，摄影师确认实际劳动款入账；P10限定的两个原始纠纷范围完成，不代表其他预约家属全部解决，也不捆绑未来签约。",
+            "evidence": {
+              "chapter": 8,
+              "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+              "quote": "韩立川亲自确认三百元到账并限定处理范围"
+            },
+            "chapter": 8
           }
         ],
         "deadline_chapter": 8,
-        "status": "open",
-        "last_reviewed_chapter": 7
+        "status": "closed",
+        "last_reviewed_chapter": 8
       }
     },
     "incidents": {}
