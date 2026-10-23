@@ -3,9 +3,9 @@
 正式起点选题T05，CH001–CH005全部已采用、五章窗口实际阅读全文并冻结，累计 **47005 汉字**。未收到起点真实发布回执，**登记已发布0章**。
 当前任务：`WAITING_NEXT / CH006`。
 
-- 第五章正式正文：`book/chapters/CH005_1929a76e44cde18a68c6ee3631f5299659847f7e019047e5352714cfef072765.txt`
-- 第五章事实记录：`book/records/CH005_a2aa0b2ecac81f9e0ce9177f80b6b9ac98286ab47f1c986b1b1010d2b86c47a8.json`
-- 五章关口发布前审查：`book/releases/CH005_61f64e23150c3fc67247c58bb0a43e0dc9ebc196b8004185f06116a16e11263e.json`
+- 第五章正式正文：`book/chapters/CH005_677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b.txt`
+- 第五章事实记录：`book/records/CH005_296a2b4c6e5a355efebbdfa15dc490934f09cf6053435c2ff322c19bcd98288c.json`
+- 五章关口发布前审查：`book/releases/CH005_8628183694b94fba067637f735b168f860ef6fd174ac94c50b5ab97e4479acf3.json`
 - 可读五章复核：`book/五章全文回看_CH001-CH005.md`
 - 正式数据：`book/state.json`；工作进度：`book/workflow.json`；公开阅读索引：`online/index.json`；接管记录：`book/接管记录.md`
 - CANON：`book/inputs/canon_1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c.md`；ROADMAP：`book/inputs/roadmap_508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6.md`。
