@@ -1,0 +1,197 @@
+{
+  "chapter": 10,
+  "title": "钱没有从银行出去",
+  "stage": "S01",
+  "base_revision": 13,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+  "complete": true,
+  "story_time_end": 13750,
+  "summary": "D9（2026-11-21）邱沅母亲自愿在银行核本人旧账户并当面核公司保管的10月12日退款申请，确认本人同意合法受款为女儿邱沅。付款银行独立处理记录证实10月31日原批次将受款人姓名与旧联系栏账户错误拼接，因户名账号不符被银行校验拒绝、企业原笔未成功扣款，不能说当时已经退了。公司依有权程序将失败原指令留档、正确核受款信息重发。付款行下午确认新指令成功扣款转出，邱沅本人15:54按自己账户确认收到6400元。P02本金承诺实际兑现，长期拖延、曾错误显示和其他合理客诉未被强行结清。对同类旧显示启动有界核证，财务异常处理和经营风险披露责任独立调查。许致远仅提议进入适格董事监督程序，不构成任免。明川设备未修复、未执行的陪同外出未补，姐妹关系未和解，母亲私人录音和旧资金议题仍无法定责。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [
+      {
+        "chapter": 7,
+        "sha256": "309ee34a4f9907a4cb7edbeae0ab6b7688f2b2dc3d6a41c940b4deffc2f5d085",
+        "quote": "钱有没有动，仍然未知"
+      },
+      {
+        "chapter": 8,
+        "sha256": "9c5dbf6499761f1bd9b673bad0757cd9d2b82adec03edc40388e95e8d64cadb5",
+        "quote": "韩立川亲自确认三百元到账并限定处理范围"
+      },
+      {
+        "chapter": 9,
+        "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+        "quote": "原支付状态没定"
+      }
+    ],
+    "conclusion": "CH010正文9004汉字全文阅读、CH006–CH010五章全文连读与CH001–CH010阶段全书事实连读完成。既有章节冻结不改，十章到期P02以银行拒绝/真实新扣款和邱沅本人到账独立印证。本章真实新责任为旧系统批次字段错误、银行异常队列未处理、客户权益被拖延，不靠虚构侵占或母亲违法。反重复转为客户母亲自我授权、银行拒绝后正确实付及实际经营更正。"
+  },
+  "facts": [
+    {
+      "kind": "fact",
+      "key": "qiu:consent_payee",
+      "value": "2026年10月12日原申请经本人和经办链核，老人自愿同意退至女儿邱沅名下指定账户；号码与本人持有合法账户对应。",
+      "holder": "",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "经老人本人同意，退至邱沅所持账户"
+    },
+    {
+      "kind": "fact",
+      "key": "qiu:original_bank_rejection",
+      "value": "2026年10月31日原企业退款准备批次因姓名与旧联系账号不匹配被付款银行校验拒绝，原笔未成功扣划。",
+      "holder": "",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "收款户名与账户不一致，支付受理失败"
+    },
+    {
+      "kind": "state",
+      "key": "qiu:original_no_debit",
+      "value": "付款企业银行对应原批次无6400元成功扣款，受理失败不能视为向客户付款。",
+      "holder": "",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "没有这笔六千四百元成功扣款记录"
+    },
+    {
+      "kind": "state",
+      "key": "qiu:replacement_paid",
+      "value": "2026年11月21日经适格授权另建正确付款指令，付款银行确认成功扣款、转出，失败原批次保留。",
+      "holder": "",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "扣款成功，转出完成"
+    },
+    {
+      "kind": "state",
+      "key": "qiu:recipient_bank_confirmed",
+      "value": "邱沅本人11月21日15:54在本行记录确认收到对应澄岚6400元，母亲知情，P02本金真实履行。",
+      "holder": "",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "十五点五十四分确认收到澄岚本次六千四百元退款"
+    },
+    {
+      "kind": "state",
+      "key": "qiu:delay_claim_open",
+      "value": "本金退款结束，不等于延期、误导答复及其他适当补救全部结清，邱沅保留意见和独立投诉权。",
+      "holder": "",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "对长期延误及答复仍有意见"
+    },
+    {
+      "kind": "state",
+      "key": "finance:mapping_error",
+      "value": "旧系统支付准备时受款人取原申请、账号取旧联系字段，银行拒绝结果未正确触发客服已清退状态撤销。",
+      "holder": "",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "收款账户从旧联系账户栏继承"
+    },
+    {
+      "kind": "state",
+      "key": "finance:similar_cases_review",
+      "value": "经营层开始有权限的类似批次回执分层核验与客户前台状态改进，不预言其他项目均有错误、不无差别中断正常付款。",
+      "holder": "",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "发现一笔核一笔，实证一笔更正一笔"
+    },
+    {
+      "kind": "state",
+      "key": "finance:roles",
+      "value": "叶珊只负责结算归档，财务异常队列责任与经营层风险披露须分别核日志，未查实盗款或个人恶意。",
+      "holder": "",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "结算核算与对外用词由归档及客户系统岗位复盘"
+    },
+    {
+      "kind": "state",
+      "key": "governance:no_resolution",
+      "value": "许致远要求将核实事项纳入适格董事监督议程，尚无正式董事会任免表决。",
+      "holder": "",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "议程能否获准、何时开会及哪些人需要回避"
+    },
+    {
+      "kind": "state",
+      "key": "care:still_ongoing",
+      "value": "明川真实人员安全照护正常衔接，起身设备仍停用，未履约外出仍存在，查退款不借调护工。",
+      "holder": "",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "不能让老人等护工"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:bounded_finance_truth",
+      "value": "林葭只据银行与客户两独立来源知道本笔先拒后付；不能归罪母亲的2023年旧周转讨论或以此任免姐姐。",
+      "holder": "林葭",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "母亲的录音依旧存在，私人档案仍受交付条件限制"
+    },
+    {
+      "kind": "state",
+      "key": "sisters:not_reconciled",
+      "value": "姐妹仍有实际工作及家庭对话，未和好；姐姐须独立承担既往风险汇总写轻。",
+      "holder": "",
+      "valid_from": 13750,
+      "valid_until": null,
+      "quote": "她们没有拥抱"
+    }
+  ],
+  "progression": {
+    "goal": "在第十章期限内查明邱沅首笔6400元真实支付路径，依合法受款申请真正退回，完成十章阶段兑现。",
+    "obstacle": "客户/原付款人/受款人不能自动合一，旧批次户名与账号混拼导致银行拒绝，企业内部已清退状态误导，重新发款必须防重复。",
+    "method": "两位账户持有人依自身权限查交易；企业有权岗位核退款申请、付款行独立拒绝结果，保留失败原件、新付款指令真实扣款，再由邱沅本人确认到账。",
+    "choice": "林遥按职权纠正真实付款、保留延期责任和风险披露说明，不把失职随意扣叶珊或周柏衡偷款；林葭不越权拿账户或撤人。",
+    "result": "原10月31日银行因姓名账号不符拒绝受理未扣款；11月21日正确受款人新汇6400元，银行扣款且邱沅本人15:54确认到账，P02履行。",
+    "consequence": "客户拿到拖延退款但保留等待损失请求；财务要承担同类旧显示与失败队列复核工时、对投资人披露差异；护理安全与姐妹裂痕仍在。",
+    "next_options": "CH011–CH020转进正式监督议程、员工权益和机构服务能力，同时CH015兑现同类状态风险P11，CH020必须有合法治理人事结果P04，不再反复查已兑现的6400。",
+    "scene_function": "老人自己在银行查账户并识别原受款意愿，银行原拒绝与新实付改变现实，客户本人确认金额而不签全部满意，姐妹在有事实之后维持监督边界。"
+  },
+  "thread_events": [
+    {
+      "id": "P02",
+      "action": "payoff",
+      "description": "P02@CH010期限兑现：老退款申请确定合法受款邱沅，原银行拒绝未扣款；今新银行出款且邱沅本人确认6400元到账。该本金付款事实结案，但延误投诉保留。",
+      "quote": "十五点五十四分确认收到澄岚本次六千四百元退款"
+    },
+    {
+      "id": "P04",
+      "action": "develop",
+      "description": "投资董事要求适格程序审核资料但没有任免董事会决议，CH020保留。",
+      "quote": "议程能否获准、何时开会及哪些人需要回避"
+    },
+    {
+      "id": "P07",
+      "action": "develop",
+      "description": "姐妹没有恢复旧亲密或因真实退款抹去曾被写轻的十月投诉。",
+      "quote": "她们没有拥抱"
+    },
+    {
+      "id": "P09",
+      "action": "develop",
+      "description": "明川护理仍靠滚动合资格接续，停用设备和长期配件风险不能被退款成功抵销。",
+      "quote": "不能让老人等护工"
+    },
+    {
+      "id": "P11",
+      "action": "plant",
+      "description": "对旧系统同类‘结算完成’显示为‘已到账’的项目启动有权限分层核验，CH015必须给出样本范围、实际结果及纠错行动，不能预设全部错。",
+      "quote": "发现一笔核一笔，实证一笔更正一笔"
+    }
+  ],
+  "stage_closing": true,
+  "measured_han": 9004
+}

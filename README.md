@@ -1,10 +1,13 @@
-# V5｜《母亲的遗嘱，要我扮演坏女儿》
+# V5《母亲的遗嘱，要我扮演坏女儿》
+CH001–CH010正式冻结，共90965汉字。起点真实发布回执登记0章。
 
-起点T05；正式冻结CH001–CH009，累计 **81961汉字**；起点无回执，发布登记0章。下一章`WAITING_NEXT / CH010`。
+**当前 WAITING_NEXT / CH011 / S02**
 
-- 第九章《银行只认到账的那一笔》：`book/chapters/CH009_f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48.txt`，8876汉字
-- 章后事实：`book/records/CH009_7fa00d458b2bf1a201851a31f05035a7c93db278509ca5f8a4a0694274a939a3.json`
-- 八项审核：`book/releases/CH009_852b0872b2686cfeb3ac09e7341e89677764996ab74b64ba93131d9eeb1865bc.json`
-- 唯一事实源`book/state.json`、流程`book/workflow.json`、阅读索引`online/index.json`、接管`book/接管记录.md`；CANON/ROADMAP以state.inputs SHA为准。
-- CH009得邱沅本人账户银行有限核验和企业内部支付准备批次，正式撤回“已清退”对外措辞。**没有银行最终付款结果，P02仍未结清**。
-- **CH010必须真实兑付P02@10并在冻结前完成CH006–CH010五章全文连读及CH001–CH010十章阶段复核**。不得复写冻结文稿、不得无回执登记起点发布。
+- 正文：`book/chapters/CH010_cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3.txt`
+- 事实账：`book/records/CH010_d436e85f6f917595d8b57c88535735f179c38cf1a9b364ea624bdc275f931079.json`
+- 正式审核及十章checkpoint：`book/releases/CH010_865e3de00450dadd7d4f8edb91db82aa023cf20fd28f61999db9c9ea76303855.json`
+- 回看：`book/五章全文回看_CH006-CH010.md`、`book/十章结构终审_CH001-CH010.md`
+- 新路线：`book/阶段路线_CH011-CH020.md`
+- 唯一事实源：`book/state.json`、`book/workflow.json`、`online/index.json`、`book/接管记录.md`
+
+P02@10首笔6400元按实际付款行拒绝旧指令、新指令银行执行且客户本人收款确认完成，其他延误权利未终结。下阶段P11@15与P04@20不得延期。原CANON/ROADMAP冻结不回写，冻结旧稿不修改，不登记没有真实回执的起点发布。
