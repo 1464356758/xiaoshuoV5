@@ -5,17 +5,17 @@
   "book": {
     "id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
     "title": "未命名小说",
-    "platform": null,
+    "platform": "qidian",
     "selected_topic_id": null
   },
   "source": {
     "repository_url": "https://github.com/1464356758/xiaoshuoV5",
     "branch": "main",
-    "generated_at": "2026-10-23T02:03:07+00:00",
+    "generated_at": "2026-10-23T03:25:00+00:00",
     "state_revision": 0,
-    "workflow_revision": 0,
+    "workflow_revision": 3,
     "state_sha256": "79eb021f5d94557761b7072e314c52e4f9d4077f8ca250dd649bc8a2bf121276",
-    "workflow_sha256": "87f8e262059958f244a1389682bee18c4b6a542988e9fa2140637b9327695502",
+    "workflow_sha256": "f2c9506de6b4ff3f25925cdd462b94c043942536c8b7b6258cfbb755d4517389",
     "manuscript_storage": "plain_files_v1",
     "requires_reader_key": false
   },
@@ -37,22 +37,443 @@
     "release_check_required": true
   },
   "task": {
-    "phase": "WAITING_PLATFORM",
-    "label": "等待选择平台",
+    "phase": "WAITING_TOPIC",
+    "label": "等待选择题材",
     "chapter": 1,
-    "detail": "系统已准备好，请先选择创作平台。",
-    "next_action": "在起点、番茄、七猫、晋江中选择一个平台，或指定其他平台。",
-    "updated_at": "2026-10-23T02:03:07+00:00"
+    "detail": "已准备8个短剧改编潜力原创选题，等待作者选择。",
+    "next_action": "作者选择T01–T08候选编号后，开展90万字长篇耐久性规划；未选定不写正文。",
+    "updated_at": "2026-10-23T03:25:00+00:00"
   },
   "chapters": [],
-  "topics": [],
-  "research": null,
+  "topics": [
+    {
+      "id": "T01",
+      "title": "我替活人办葬礼",
+      "genre": "都市悬疑·殡葬职业，男频现实向",
+      "pitch": "殡葬策划师周牧为一位活人承办告别会，当事人却在台上揭露六名亲属为瓜分房产伪造了自己的死亡材料。",
+      "reader_promise": "首场现场撕破亲情骗局；主角为偿还父债不得不追查父亲参与的旧案。",
+      "long_form_engine": "每个仪式都会产生真实损失与证据，不写一章一个同套路反转；通过人物关系完成更大案件。",
+      "stage_variation": "前20章假死与首单；21–40章证人关系反噬；41–60章养老资产链与失业；61–80章城际取证和家人决裂；81–100章依法追责与偿还旧债。",
+      "ending_direction": "中点揭示父亲确实做错过事而非清白英雄；结局公开完整责任链并执行赔偿。",
+      "risk": "殡葬法规与死亡证明程序要核实；不能把各案写成拼盘。",
+      "short_drama_adaptation": "低：殡仪厅、普通住宅、办公室、社区；无特效。",
+      "source_ids": [
+        "S07",
+        "S04"
+      ]
+    },
+    {
+      "id": "T02",
+      "title": "裁员名单上有三个死人",
+      "genre": "都市职场·资金悬疑，男频",
+      "pitch": "薪资审核员陆惟在裁员会上发现三个已经去世的员工仍在领工资，更惊觉自己是下一张死亡赔偿单的受益人。",
+      "reader_promise": "保护弟弟治疗费与自证清白发生正面冲突；主角必须用真实财务证据在公司和法律程序中行动。",
+      "long_form_engine": "从人事造假进入工伤理赔、供应商账款与资本控制，结构升级不依赖不停新增死者；每次获胜付出职位、现金或信誉。",
+      "stage_variation": "前20章公司内公开冲突；21–40章赔付链；41–60章主角被背叛、失去证据；61–80章外部调查；81–100章公开责任与修复。",
+      "ending_direction": "中点必须认清帮助过自己的上司就是受益者之一，终局主角失去事业捷径但守住证据。",
+      "risk": "劳动仲裁、会计、理赔程序须查证；反转不能靠不真实的黑客能力。",
+      "short_drama_adaptation": "极低：会议室、工位、家、办公室、少量取证外景。",
+      "source_ids": [
+        "S04",
+        "S07"
+      ]
+    },
+    {
+      "id": "T03",
+      "title": "全城都封杀我，我偏要还债",
+      "genre": "都市商战·现实逆袭，男频",
+      "pitch": "被行业列入黑名单的债务经理，带着父亲留下的一笔坏账，宣称要让十七家公司把欠工人的钱逐笔还清。",
+      "reader_promise": "第一笔债追回后会导致小厂停产，主角必须在合法债权与活人的生计之间选边。",
+      "long_form_engine": "坏账链接不同产业和利益群体，从追债转到企业重组、经营与公众信任，主角资源增长同时责任加重。",
+      "stage_variation": "20章第一笔债；40章建团队；60章债转股背负工人命运；80章地区连锁危机；100章归责与产业复原。",
+      "ending_direction": "中点不再只替父亲翻案，终局承认父亲责任并补救员工。",
+      "risk": "金融法务细节专业性高，勿靠神豪反转或凭空融资。",
+      "short_drama_adaptation": "低至中：办公室、小厂、仓库、债权会议。",
+      "source_ids": [
+        "S06",
+        "S07"
+      ]
+    },
+    {
+      "id": "T04",
+      "title": "明天的热搜，今天让我背锅",
+      "genre": "都市科技悬疑·舆论职业，男频",
+      "pitch": "内容审核主管收到一份明天才会发布的热搜报告，标题写着自己将当众承认一场尚未发生的杀人案。",
+      "reader_promise": "拦下一场事故却让无辜同事被指控；未来热搜可能是人为策划而非预言。",
+      "long_form_engine": "逐步追踪内容编排链、舆论产业与家人的牵连，中段变为主动公开自己参与的错误，不能一直靠新预言撑篇幅。",
+      "stage_variation": "20章证伪第一份报告；40章揭露人为操控；60章主角被迫成为工具；80章公开审计；100章自揭罪责并停机。",
+      "ending_direction": "从寻找黑幕到承认参与，最后没有完美洗白但制度可被监督。",
+      "risk": "需严守信息预告能力边界，避免逼真传播操纵教程。",
+      "short_drama_adaptation": "低：写字楼、出租屋、直播间、手机屏幕。",
+      "source_ids": [
+        "S04",
+        "S06"
+      ]
+    },
+    {
+      "id": "T05",
+      "title": "母亲的遗嘱，要我扮演坏女儿",
+      "genre": "家庭商战·女性成长，都市",
+      "pitch": "母亲去世后，林葭拿到一份录音：只有亲手撤掉最疼爱自己的姐姐，才能打开母亲留下的养老公司调查档案。",
+      "reader_promise": "姐妹互相保护却被迫公开敌对，母亲的要求也许包含严重偏见。",
+      "long_form_engine": "从家族决议与财务漏洞推进到养老资产纠纷、外部受害者和合法追偿；主角主动决定而非等待录像。",
+      "stage_variation": "20章姐妹公开决裂；40章查出公司黑洞；60章主角遭驱逐；80章受害者加入；100章姐妹分担责任。",
+      "ending_direction": "终局反抗母亲有缺陷的遗愿，以公开补救重建关系。",
+      "risk": "遗嘱效力、企业治理和养老现实需核实；防止无穷录音与误会。",
+      "short_drama_adaptation": "极低：家庭、公寓、公司、社区会议。",
+      "source_ids": [
+        "S07",
+        "S05"
+      ]
+    },
+    {
+      "id": "T06",
+      "title": "不肯认错的人，都来我这间调解室",
+      "genre": "现实群像·民事悬疑，职业",
+      "pitch": "被停职的旧改纠纷调解员重新开设咨询室，三个互不相识的人同时带来同一张不存在的房屋买卖合同。",
+      "reader_promise": "主角要为父亲洗掉污名，必须先承认自己当年的错误调解害人失去住所。",
+      "long_form_engine": "主线从争房发展成租赁资金池、旧改利益和公开追责，每20章产生确定后果，后续逐渐不再以接案为主。",
+      "stage_variation": "20章争房；40章资金链；60章执业身份危机；80章居民联盟分裂；100章完整归责与补偿。",
+      "ending_direction": "结尾主角正式纠正旧案，不替法院裁决，只推进合法协商。",
+      "risk": "调解并非司法机关，避免说教以及每章接一案的单元拼盘。",
+      "short_drama_adaptation": "极低：一间咨询室、小区、住宅、街道。",
+      "source_ids": [
+        "S07"
+      ]
+    },
+    {
+      "id": "T07",
+      "title": "他们都说我杀了她",
+      "genre": "城市社会悬疑·心理对抗，男频",
+      "pitch": "停电三分钟后，小区所有监控和证人都证明保安陈牧杀害业主，只有他记得受害者曾自行离开。",
+      "reader_promise": "主角追查清白，同时揭露他自己为保护家人隐藏了当晚最关键的秘密。",
+      "long_form_engine": "从小区取证到证人利害、数据伪造、安保外包与旧城事故；中点主角主动坦白个人责任，换掉被追捕式推进。",
+      "stage_variation": "20章夺回当夜线索；40章冲突证词；60章公开旧错；80章证人联盟瓦解；100章给出可验证归责。",
+      "ending_direction": "受害者命运彻底说明，主角为保护他人的错承担代价。",
+      "risk": "记忆谜题必须公平给线索，不能无限推翻证词；案件细节需防侵害性描述。",
+      "short_drama_adaptation": "低：小区、物业室、出租屋、车内。",
+      "source_ids": [
+        "S07",
+        "S08"
+      ]
+    },
+    {
+      "id": "T08",
+      "title": "我收到了七天后的欠费通知",
+      "genre": "都市轻科幻·债务伦理，男频",
+      "pitch": "外卖站点主管每晚收到七天后的账单，其中除金钱外还有朋友、健康、信任；第一张账单写着母亲将失去亲儿子。",
+      "reader_promise": "他能改变预测，但每次替自己还债，都可能让另一个人承担代价。",
+      "long_form_engine": "先解决家庭职场欠账，后进到互保组织、平台算法和城市资源分配；中段揭明账单并非神明预言，而是会造成偏见的预测模型。",
+      "stage_variation": "20章母亲账单；40章互保小队；60章揭露预测误差；80章系统大规模失误；100章停止替他人决定未来。",
+      "ending_direction": "舍弃控制他人的能力，以真实沟通与合理资源弥补旧错。",
+      "risk": "必须锁定账单的知识边界及错误率；社会问题不可魔法抹平。",
+      "short_drama_adaptation": "低：外卖站、出租屋、家庭、办公室；仅手机屏幕特效。",
+      "source_ids": [
+        "S04",
+        "S06"
+      ]
+    }
+  ],
+  "research": {
+    "platform": "qidian",
+    "checked_at": "2026-10-23",
+    "coverage_status": "partial",
+    "sources": [
+      {
+        "id": "S01",
+        "title": "阅文作家专区·投稿给编辑",
+        "url": "https://write.qq.com/portal/college/editordetail",
+        "accessed_at": "2026-10-23"
+      },
+      {
+        "id": "S02",
+        "title": "阅文作家专区·版本说明",
+        "url": "https://write.qq.com/portal/version",
+        "accessed_at": "2026-10-23"
+      },
+      {
+        "id": "S03",
+        "title": "起点中文网·公开网站与版权提示",
+        "url": "https://www.qidian.com/",
+        "accessed_at": "2026-10-23"
+      },
+      {
+        "id": "S04",
+        "title": "起点签约新书榜（本周阅读指数）",
+        "url": "https://www.qidian.com/rank/signNewBkAll/",
+        "accessed_at": "2026-10-23"
+      },
+      {
+        "id": "S05",
+        "title": "起点未签约新书榜（本周阅读指数）",
+        "url": "https://www.qidian.com/rank/pubnewbook/",
+        "accessed_at": "2026-10-23"
+      },
+      {
+        "id": "S06",
+        "title": "起点2026年10月都市月票榜",
+        "url": "https://www.qidian.com/rank/yuepiao/catid20109/202610/chn4/",
+        "accessed_at": "2026-10-23"
+      },
+      {
+        "id": "S07",
+        "title": "起点2026年10月现实月票榜",
+        "url": "https://www.qidian.com/rank/yuepiao/catid20109/202610/chn15/",
+        "accessed_at": "2026-10-23"
+      },
+      {
+        "id": "S08",
+        "title": "起点畅销榜（本日作品销量排行）",
+        "url": "https://www.qidian.com/rank/hotsales/",
+        "accessed_at": "2026-10-23"
+      }
+    ],
+    "rules": [
+      {
+        "topic": "作者创作与投稿入口",
+        "status": "verified",
+        "source_id": "S01",
+        "conclusion": "官方作家专区展示成为作家、起点男生/女生及投稿给编辑入口；可创建原创作品并选择编辑组投稿。具体收稿要求需以对应编辑组为准。"
+      },
+      {
+        "topic": "电子签约功能",
+        "status": "verified",
+        "source_id": "S02",
+        "conclusion": "官方版本说明展示电子签约与创建作品功能的迭代；并非签约资格、条款或收入保证。"
+      },
+      {
+        "topic": "作品内容合规底线",
+        "status": "verified",
+        "source_id": "S03",
+        "conclusion": "起点公开页面要求遵守互联网信息管理规定并明确拒绝色情小说；其他原创性、授权细则仍要核对后台协议。"
+      },
+      {
+        "topic": "GPT生成或润色正文的编辑组政策",
+        "status": "unknown",
+        "source_id": null,
+        "conclusion": "未取得统一现行的明确允许条件；公开编辑组之间可能差异，签约/投稿前应向实际收稿编辑确认，不把AI写作视为已获许可。"
+      },
+      {
+        "topic": "男频新人现行签约字数与更新要求",
+        "status": "unknown",
+        "source_id": null,
+        "conclusion": "未核实适用的当前官方统一门槛；本书100章、8000–10000汉字为作者内部要求。"
+      },
+      {
+        "topic": "新人福利、保底金额及资格",
+        "status": "unknown",
+        "source_id": null,
+        "conclusion": "当前官方细则及合同未完整获取；不能承诺签约、金额、保底或者奖励。"
+      },
+      {
+        "topic": "短剧改编权、影视版权及分成",
+        "status": "unknown",
+        "source_id": null,
+        "conclusion": "需逐条审核将来拟签合同，确认短剧/影视/漫剧授权范围和分成，不能假设版权仍属于作者。"
+      }
+    ],
+    "rank_samples": [
+      {
+        "source_id": "S04",
+        "list_name": "签约新书榜（本周阅读指数）",
+        "rank": 1,
+        "title": "千秋契",
+        "author": "姬叉",
+        "category": "仙侠·幻想修仙",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1050046338/",
+        "visible_indicator": "榜位1；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S04",
+        "list_name": "签约新书榜（本周阅读指数）",
+        "rank": 5,
+        "title": "华娱：乐子人在线吃瓜！",
+        "author": "灌江之主",
+        "category": "都市·娱乐明星",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1051008079/",
+        "visible_indicator": "榜位5；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S04",
+        "list_name": "签约新书榜（本周阅读指数）",
+        "rank": 8,
+        "title": "你们的黑料真令人震惊",
+        "author": "泪水打湿一百万",
+        "category": "都市·都市生活",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1050958176/",
+        "visible_indicator": "榜位8；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S05",
+        "list_name": "未签约新书榜（本周阅读指数）",
+        "rank": 3,
+        "title": "我是水哥，我要镇压文坛一万年",
+        "author": "水哥回来了",
+        "category": "都市·都市生活",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1051278181/",
+        "visible_indicator": "榜位3；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S05",
+        "list_name": "未签约新书榜（本周阅读指数）",
+        "rank": 9,
+        "title": "趁我傻，姐姐上门求嫁",
+        "author": "符卡",
+        "category": "都市·都市生活",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1051317249/",
+        "visible_indicator": "榜位9；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S05",
+        "list_name": "未签约新书榜（本周阅读指数）",
+        "rank": 11,
+        "title": "来生有限公司",
+        "author": "怨猫咯",
+        "category": "悬疑灵异·惊悚微恐",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1051406703/",
+        "visible_indicator": "榜位11；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S06",
+        "list_name": "都市月票榜（2026年10月）",
+        "rank": 1,
+        "title": "请勿高考时渡劫",
+        "author": "最白的乌鸦",
+        "category": "都市·都市异能",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1049898328/",
+        "visible_indicator": "榜位1；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S06",
+        "list_name": "都市月票榜（2026年10月）",
+        "rank": 2,
+        "title": "1984：从川菜馆开始",
+        "author": "轻语江湖",
+        "category": "都市·都市生活",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1044818845/",
+        "visible_indicator": "榜位2；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S06",
+        "list_name": "都市月票榜（2026年10月）",
+        "rank": 4,
+        "title": "国民律师",
+        "author": "青衫仗剑行天涯",
+        "category": "都市·都市生活",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1047321972/",
+        "visible_indicator": "榜位4；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S06",
+        "list_name": "都市月票榜（2026年10月）",
+        "rank": 8,
+        "title": "我的学习群里全是真大佬",
+        "author": "胖胖的小橘",
+        "category": "都市·都市生活",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1047956575/",
+        "visible_indicator": "榜位8；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S07",
+        "list_name": "现实月票榜（2026年10月）",
+        "rank": 2,
+        "title": "王牌律师",
+        "author": "雪映红梅",
+        "category": "现实·人间百态",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1046157939/",
+        "visible_indicator": "榜位2；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S07",
+        "list_name": "现实月票榜（2026年10月）",
+        "rank": 4,
+        "title": "回乡创业，开局老爸送我废旧小学",
+        "author": "杨儒鸿",
+        "category": "现实·青年故事",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1050772337/",
+        "visible_indicator": "榜位4；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S07",
+        "list_name": "现实月票榜（2026年10月）",
+        "rank": 8,
+        "title": "致命代游",
+        "author": "诸神红温",
+        "category": "现实·人间百态",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1051079452/",
+        "visible_indicator": "榜位8；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      },
+      {
+        "source_id": "S08",
+        "list_name": "畅销榜（本日作品销量排行）",
+        "rank": 9,
+        "title": "1984：从川菜馆开始",
+        "author": "轻语江湖",
+        "category": "都市·都市生活",
+        "observed_at": "2026-10-23",
+        "book_url": "https://www.qidian.com/book/1044818845/",
+        "visible_indicator": "榜位9；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+      }
+    ],
+    "gaps": [
+      "已记录四类榜单和14个带作者、类别、位次、链接的样本；未取得全部题材细榜与实际阅读指数、销量数值。",
+      "排名为2026-10-23观察快照，不宣称恒定榜位，也不以榜单判定短剧改编率。",
+      "现行AI辅助内容收稿政策、签约字数、福利、更新和合同衍生权细节仍需本人作者后台或对应编辑组核对。"
+    ],
+    "analysis": {
+      "method": "分析榜单可见信息，仅借鉴职业成长、身份矛盾、信息差和连续阶段因果，不复制其他作品角色与剧情。",
+      "findings": [
+        "当期签约新书可见仙侠与都市混合；男频发展不可只靠短剧前十分钟的刺激。",
+        "都市与现实分类可见职业题材和家庭社会冲突，适于真人竖屏可拍摄场景，但其成功改编并无官方数据验证。",
+        "作品主冲突要持续分阶段推进，中点必须改变主角资源、身份或代价机制。"
+      ],
+      "adaptation_filter": "优先3–6个高频场景、可用演员对白和行动演绎的冲突；避免昂贵灾难特效与纯内心独白。",
+      "external_context": [
+        {
+          "title": "北京市广播电视局2026首批微短剧+推荐剧目",
+          "url": "https://gdj.beijing.gov.cn/zwxx/gzbg1/202604/t20260422_4602123.html",
+          "use": "现实文化与AI题材可发展，但不是起点签约政策"
+        }
+      ]
+    }
+  },
   "history": [
     {
       "at": "2026-10-23T02:03:07+00:00",
       "phase": "WAITING_PLATFORM",
       "label": "等待选择平台",
       "detail": "系统已准备好，请先选择创作平台。"
+    },
+    {
+      "at": "2026-10-23T03:25:00+00:00",
+      "phase": "RESEARCH_PLATFORM",
+      "label": "核查平台规则",
+      "detail": "已选择起点中文网，正在核查现行规则。"
+    },
+    {
+      "at": "2026-10-23T03:25:00+00:00",
+      "phase": "SCANNING_RANKINGS",
+      "label": "研究榜单",
+      "detail": "起点公开规则与多类榜单已记录；尚有需作者核对的条款。"
+    },
+    {
+      "at": "2026-10-23T03:25:00+00:00",
+      "phase": "WAITING_TOPIC",
+      "label": "等待选择题材",
+      "detail": "已准备8个短剧改编潜力原创选题，等待作者选择。"
     }
   ]
 }

@@ -1,0 +1,276 @@
+{
+  "platform": "qidian",
+  "checked_at": "2026-10-23",
+  "coverage_status": "partial",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "阅文作家专区·投稿给编辑",
+      "url": "https://write.qq.com/portal/college/editordetail",
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "S02",
+      "title": "阅文作家专区·版本说明",
+      "url": "https://write.qq.com/portal/version",
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "S03",
+      "title": "起点中文网·公开网站与版权提示",
+      "url": "https://www.qidian.com/",
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "S04",
+      "title": "起点签约新书榜（本周阅读指数）",
+      "url": "https://www.qidian.com/rank/signNewBkAll/",
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "S05",
+      "title": "起点未签约新书榜（本周阅读指数）",
+      "url": "https://www.qidian.com/rank/pubnewbook/",
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "S06",
+      "title": "起点2026年10月都市月票榜",
+      "url": "https://www.qidian.com/rank/yuepiao/catid20109/202610/chn4/",
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "S07",
+      "title": "起点2026年10月现实月票榜",
+      "url": "https://www.qidian.com/rank/yuepiao/catid20109/202610/chn15/",
+      "accessed_at": "2026-10-23"
+    },
+    {
+      "id": "S08",
+      "title": "起点畅销榜（本日作品销量排行）",
+      "url": "https://www.qidian.com/rank/hotsales/",
+      "accessed_at": "2026-10-23"
+    }
+  ],
+  "rules": [
+    {
+      "topic": "作者创作与投稿入口",
+      "status": "verified",
+      "source_id": "S01",
+      "conclusion": "官方作家专区展示成为作家、起点男生/女生及投稿给编辑入口；可创建原创作品并选择编辑组投稿。具体收稿要求需以对应编辑组为准。"
+    },
+    {
+      "topic": "电子签约功能",
+      "status": "verified",
+      "source_id": "S02",
+      "conclusion": "官方版本说明展示电子签约与创建作品功能的迭代；并非签约资格、条款或收入保证。"
+    },
+    {
+      "topic": "作品内容合规底线",
+      "status": "verified",
+      "source_id": "S03",
+      "conclusion": "起点公开页面要求遵守互联网信息管理规定并明确拒绝色情小说；其他原创性、授权细则仍要核对后台协议。"
+    },
+    {
+      "topic": "GPT生成或润色正文的编辑组政策",
+      "status": "unknown",
+      "source_id": null,
+      "conclusion": "未取得统一现行的明确允许条件；公开编辑组之间可能差异，签约/投稿前应向实际收稿编辑确认，不把AI写作视为已获许可。"
+    },
+    {
+      "topic": "男频新人现行签约字数与更新要求",
+      "status": "unknown",
+      "source_id": null,
+      "conclusion": "未核实适用的当前官方统一门槛；本书100章、8000–10000汉字为作者内部要求。"
+    },
+    {
+      "topic": "新人福利、保底金额及资格",
+      "status": "unknown",
+      "source_id": null,
+      "conclusion": "当前官方细则及合同未完整获取；不能承诺签约、金额、保底或者奖励。"
+    },
+    {
+      "topic": "短剧改编权、影视版权及分成",
+      "status": "unknown",
+      "source_id": null,
+      "conclusion": "需逐条审核将来拟签合同，确认短剧/影视/漫剧授权范围和分成，不能假设版权仍属于作者。"
+    }
+  ],
+  "rank_samples": [
+    {
+      "source_id": "S04",
+      "list_name": "签约新书榜（本周阅读指数）",
+      "rank": 1,
+      "title": "千秋契",
+      "author": "姬叉",
+      "category": "仙侠·幻想修仙",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1050046338/",
+      "visible_indicator": "榜位1；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S04",
+      "list_name": "签约新书榜（本周阅读指数）",
+      "rank": 5,
+      "title": "华娱：乐子人在线吃瓜！",
+      "author": "灌江之主",
+      "category": "都市·娱乐明星",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1051008079/",
+      "visible_indicator": "榜位5；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S04",
+      "list_name": "签约新书榜（本周阅读指数）",
+      "rank": 8,
+      "title": "你们的黑料真令人震惊",
+      "author": "泪水打湿一百万",
+      "category": "都市·都市生活",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1050958176/",
+      "visible_indicator": "榜位8；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S05",
+      "list_name": "未签约新书榜（本周阅读指数）",
+      "rank": 3,
+      "title": "我是水哥，我要镇压文坛一万年",
+      "author": "水哥回来了",
+      "category": "都市·都市生活",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1051278181/",
+      "visible_indicator": "榜位3；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S05",
+      "list_name": "未签约新书榜（本周阅读指数）",
+      "rank": 9,
+      "title": "趁我傻，姐姐上门求嫁",
+      "author": "符卡",
+      "category": "都市·都市生活",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1051317249/",
+      "visible_indicator": "榜位9；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S05",
+      "list_name": "未签约新书榜（本周阅读指数）",
+      "rank": 11,
+      "title": "来生有限公司",
+      "author": "怨猫咯",
+      "category": "悬疑灵异·惊悚微恐",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1051406703/",
+      "visible_indicator": "榜位11；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S06",
+      "list_name": "都市月票榜（2026年10月）",
+      "rank": 1,
+      "title": "请勿高考时渡劫",
+      "author": "最白的乌鸦",
+      "category": "都市·都市异能",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1049898328/",
+      "visible_indicator": "榜位1；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S06",
+      "list_name": "都市月票榜（2026年10月）",
+      "rank": 2,
+      "title": "1984：从川菜馆开始",
+      "author": "轻语江湖",
+      "category": "都市·都市生活",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1044818845/",
+      "visible_indicator": "榜位2；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S06",
+      "list_name": "都市月票榜（2026年10月）",
+      "rank": 4,
+      "title": "国民律师",
+      "author": "青衫仗剑行天涯",
+      "category": "都市·都市生活",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1047321972/",
+      "visible_indicator": "榜位4；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S06",
+      "list_name": "都市月票榜（2026年10月）",
+      "rank": 8,
+      "title": "我的学习群里全是真大佬",
+      "author": "胖胖的小橘",
+      "category": "都市·都市生活",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1047956575/",
+      "visible_indicator": "榜位8；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S07",
+      "list_name": "现实月票榜（2026年10月）",
+      "rank": 2,
+      "title": "王牌律师",
+      "author": "雪映红梅",
+      "category": "现实·人间百态",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1046157939/",
+      "visible_indicator": "榜位2；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S07",
+      "list_name": "现实月票榜（2026年10月）",
+      "rank": 4,
+      "title": "回乡创业，开局老爸送我废旧小学",
+      "author": "杨儒鸿",
+      "category": "现实·青年故事",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1050772337/",
+      "visible_indicator": "榜位4；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S07",
+      "list_name": "现实月票榜（2026年10月）",
+      "rank": 8,
+      "title": "致命代游",
+      "author": "诸神红温",
+      "category": "现实·人间百态",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1051079452/",
+      "visible_indicator": "榜位8；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    },
+    {
+      "source_id": "S08",
+      "list_name": "畅销榜（本日作品销量排行）",
+      "rank": 9,
+      "title": "1984：从川菜馆开始",
+      "author": "轻语江湖",
+      "category": "都市·都市生活",
+      "observed_at": "2026-10-23",
+      "book_url": "https://www.qidian.com/book/1044818845/",
+      "visible_indicator": "榜位9；仅榜名与位次可核，具体销量、追读、订阅收入不可推知。"
+    }
+  ],
+  "gaps": [
+    "已记录四类榜单和14个带作者、类别、位次、链接的样本；未取得全部题材细榜与实际阅读指数、销量数值。",
+    "排名为2026-10-23观察快照，不宣称恒定榜位，也不以榜单判定短剧改编率。",
+    "现行AI辅助内容收稿政策、签约字数、福利、更新和合同衍生权细节仍需本人作者后台或对应编辑组核对。"
+  ],
+  "analysis": {
+    "method": "分析榜单可见信息，仅借鉴职业成长、身份矛盾、信息差和连续阶段因果，不复制其他作品角色与剧情。",
+    "findings": [
+      "当期签约新书可见仙侠与都市混合；男频发展不可只靠短剧前十分钟的刺激。",
+      "都市与现实分类可见职业题材和家庭社会冲突，适于真人竖屏可拍摄场景，但其成功改编并无官方数据验证。",
+      "作品主冲突要持续分阶段推进，中点必须改变主角资源、身份或代价机制。"
+    ],
+    "adaptation_filter": "优先3–6个高频场景、可用演员对白和行动演绎的冲突；避免昂贵灾难特效与纯内心独白。",
+    "external_context": [
+      {
+        "title": "北京市广播电视局2026首批微短剧+推荐剧目",
+        "url": "https://gdj.beijing.gov.cn/zwxx/gzbg1/202604/t20260422_4602123.html",
+        "use": "现实文化与AI题材可发展，但不是起点签约政策"
+      }
+    ]
+  }
+}
