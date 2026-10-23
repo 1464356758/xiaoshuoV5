@@ -1,0 +1,185 @@
+{
+  "chapter": 12,
+  "title": "少掉的那一行",
+  "stage": "S02",
+  "base_revision": 15,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+  "complete": true,
+  "story_time_end": 16590,
+  "summary": "D11（2026-11-23）独立记录管理员唐霁依授权核2026-10-07明川夜间翻身协助家属投诉和10-09续查请求的原受理版本，与10-09内部V2及10-10送董事事务V3。V2保留家属未接受结案，V3仅写沟通已处理。企业邮件网关10-10 15:23发出，董事事务邮箱15:24接收，董事材料区后续仅目录级访问痕迹，不证明许致远等董事个人已阅读每页。独立资料保管岗位双人回读受限邮件关联并保全，不因迁移将未核材料写成全已核。林遥承认知晓未结诉求却批准不完整摘要，在原V3之后署名提交不利责任补充；客诉家属经合规渠道只授权去身份信息的未结诉求，未表示满意。董事事务正式接收差异说明与林遥单独补充，但无表决。投资方要求缺人力与服务连续性依据的扩张/缩床建议补核而非盲上会。唐霁依权限完成交接请假，无违法取得客户原件。母亲私人遗言与2023年资金讨论无新证明。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [
+      {
+        "chapter": 5,
+        "sha256": "677286513a3825e12a5125942c59d1e6b5d1c5ab850ba14d69074de69fb1924b",
+        "quote": "我在送出去的汇总里把那件事写成‘沟通已处理’"
+      },
+      {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "她们没有拥抱"
+      },
+      {
+        "chapter": 11,
+        "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+        "quote": "监督议题申请已被登记受理"
+      }
+    ],
+    "conclusion": "本章8561汉字已完整逐段审读，结合CH005原客诉及CH010–011冻结章节并按S02前向路线核对。新冲突是唐霁独立选择限定保留并在能力范围接力、客户自己决定披露范围、林遥亲签不利补充、董事事务真正接收和潜在经营建议退回补核，不重复QY银行出款情节；禁止推断全部董事早已知晓、林遥亲手删字、已有人事结果或客户满意。"
+  },
+  "facts": [
+    {
+      "kind": "state",
+      "key": "complaint:origin",
+      "value": "10月7日家属明确要核未按约完成的夜间翻身协助，10月9日继续问询，并未同意结案。",
+      "holder": "",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "她并没有授权机构以此判断服务已履行"
+    },
+    {
+      "kind": "state",
+      "key": "complaint:emotion",
+      "value": "客服罗芮将家属情绪标为平稳仅指电话语气，不能当认可处理。",
+      "holder": "",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "家属情绪平稳"
+    },
+    {
+      "kind": "state",
+      "key": "board:v2",
+      "value": "十月9日的V2内部稿含家属未同意结案的状态，未随正式送审包外发。",
+      "holder": "",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "待核班次及家属未接受结案"
+    },
+    {
+      "kind": "state",
+      "key": "board:v3",
+      "value": "十月10日送董事事务的V3将案件写成沟通已处理，遗漏了继续核夜班排班的要求。",
+      "holder": "",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "明川夜间服务沟通已处理，照护调整持续观察"
+    },
+    {
+      "kind": "state",
+      "key": "board:delivery",
+      "value": "公司网关十月10日15:23发送V3，董事事务邮箱15:24确认接收，是组织渠道送达，不能当每位董事看过。",
+      "holder": "",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "十月十日十五点二十三分"
+    },
+    {
+      "kind": "state",
+      "key": "board:reading",
+      "value": "许致远账号仅有目录级访问记录，尚不能证明阅读风险摘要全部页或原客户投诉。",
+      "holder": "",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "日志只有目录级信息"
+    },
+    {
+      "kind": "state",
+      "key": "archive:preservation",
+      "value": "唐霁拒将未核的导出文档写成全部已保全，定向留存两项邮件关联并获双人回读，未妨碍其它合法迁移。",
+      "holder": "",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "限定保全已完成"
+    },
+    {
+      "kind": "state",
+      "key": "linyao:adverse_supplement",
+      "value": "林遥知晓家属继续投诉却批准仅写已处理的V3，独立签署对自己不利的经营复核责任说明，原V3不覆盖。",
+      "holder": "",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "我对此项经营复核承担责任"
+    },
+    {
+      "kind": "state",
+      "key": "client:limited_authorization",
+      "value": "家属只同意去身份化说明继续核夜班排班，不允许公开健康信息，不表示投诉全部满意。",
+      "holder": "",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "家属要求核夜班排班，未认可该投诉结案"
+    },
+    {
+      "kind": "state",
+      "key": "board:correction_received",
+      "value": "有权董事事务渠道收到脱敏事实差异及林遥单独责任补充，仍非董事会决议。",
+      "holder": "",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "由接件系统形成新的收到回执"
+    },
+    {
+      "kind": "state",
+      "key": "business:prerequisites",
+      "value": "许致远要求预算顾问退回缺少夜班人员与照护连续性依据的建议补核，暂未产生正式董事投票或合同损失。",
+      "holder": "",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "先退回补核关键岗位能力"
+    },
+    {
+      "kind": "knowledge",
+      "key": "linjia:bounded",
+      "value": "林葭明白原投诉与送达摘要不一致，但无权直接索客户隐私或推断董事个人必定阅读。",
+      "holder": "林葭",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "董事实际阅看范围仍不完整"
+    },
+    {
+      "kind": "state",
+      "key": "tangji:work",
+      "value": "唐霁按权限交接留存工作并获准离开办理继续教育确认，拒绝让有权工作变成依赖她一人无偿加班。",
+      "holder": "",
+      "valid_from": 16590,
+      "valid_until": null,
+      "quote": "口袋里装着一张盖了章的现场确认单"
+    }
+  ],
+  "progression": {
+    "goal": "真实独立核证十月7日投诉原文、V2、送董事V3及各自传输来源，推进经营披露失当到可核实体。",
+    "obstacle": "原投诉个人隐私与正式董事程序权限不同，V3删弱关键诉求且电子资料迁移易造成证明困难，无法从送达推断个人阅读。",
+    "method": "档案经办双人权限核原投诉/后续问询/经营复核/网关发出及董事事务接收；限定保留邮件关联，客户只授权去身份化诉求。",
+    "choice": "唐霁拒签‘已全核’、限定留存并交接请假；林遥签对己不利责任说明；家属仅允许引用自己选择的诉求；许致远不依据有缺陷汇总支持扩大或缩减计划。",
+    "result": "确认原件与V3遗漏是内容层级差异而非发送时附件误漏，补充材料确实送达董事事务并留存原版，不代表审议通过。",
+    "consequence": "林遥的经营复核失误成可复核且书面的治理材料，客户权益被保留，投资与运营必须补核夜班能力前提，未来人事判断不靠家族私录。",
+    "next_options": "CH013梁谨从七处服务经营收入与合格夜班人力提出具体选择并承担可核代价；CH014进入P11旧结算批次有界抽查，CH015到期兑现；CH020须有合法人事结果，不因本章先判撤职。",
+    "scene_function": "留存索引变更、经办请假交接、客户拒绝被董事当作私人证据、董事建议退回和姐妹短信冲突为五种不同动作，推进证据而不重开退费对账。"
+  },
+  "thread_events": [
+    {
+      "id": "P04",
+      "action": "develop",
+      "description": "独立核对客户投诉与董事送达版差异，林遥自认经营复核责任并送交合法渠道；CH020人事结果仍待程序。",
+      "quote": "由接件系统形成新的收到回执"
+    },
+    {
+      "id": "P07",
+      "action": "develop",
+      "description": "林遥正式承担不利解释，林葭既坚持事实也不把所有解释当狡辩，姐妹未和解。",
+      "quote": "我签了。原版本也留着"
+    },
+    {
+      "id": "P09",
+      "action": "develop",
+      "description": "十月夜班翻身履约问题暴露合格照护风险，实际个人责任和服务补救仍待调查，不据此认定长期设备已修。",
+      "quote": "她需要有人按约来"
+    }
+  ],
+  "stage_closing": false,
+  "measured_han": 8561
+}

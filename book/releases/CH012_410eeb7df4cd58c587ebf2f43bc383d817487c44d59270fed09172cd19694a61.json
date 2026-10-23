@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
+  "chapter": 12,
+  "base_revision": 15,
+  "task_id": "b2198e44-c2fe-4c48-b41f-8bd37c0d12cf",
+  "repairs": 0,
+  "text_sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+  "record_sha256": "0266f7fb31c15605141fe56e3f554303a8c80dfb08d27d6d2dac3aa4deb85a30",
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "roadmap_sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+  "decision": "release",
+  "read_full_text": true,
+  "blocking_issues": [],
+  "read_coverage": {
+    "9": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+    "10": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+    "11": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+    "12": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7"
+  },
+  "reader_reason_to_continue": "原家属未结诉求终于进入真实董事资料，投资建议退回补核，下一章七处点位的夜班成本将产生现实选择。",
+  "consequence": "林遥正式留存不利责任补充，董事事务真实接收差异说明，客户授权边界受到保护；无正式人事表决。",
+  "ending_runway": "CH013须有真实预算与合同牺牲；CH015兑付P11，CH020兑付P04。",
+  "checks": {
+    "timeline": {
+      "decision": "pass",
+      "conclusion": "D11，十月原事件与11月新核查严格分时。",
+      "evidence": [
+        {
+          "chapter": 12,
+          "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+          "quote": "十一月二十三日早上八点十七分"
+        }
+      ]
+    },
+    "knowledge": {
+      "decision": "pass",
+      "conclusion": "仅证公司发出、接件邮箱收到和目录访问，不臆断个人阅读。",
+      "evidence": [
+        {
+          "chapter": 12,
+          "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+          "quote": "董事实际阅看范围仍不完整"
+        }
+      ]
+    },
+    "props_resources": {
+      "decision": "pass",
+      "conclusion": "两项邮件限定保留，双人校验，不冻结全部系统或无限占用人手。",
+      "evidence": [
+        {
+          "chapter": 12,
+          "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+          "quote": "限定保全已完成"
+        }
+      ]
+    },
+    "causality": {
+      "decision": "pass",
+      "conclusion": "原投诉→V2待核→V3简化→董事事务接受→林遥亲签不利补充。",
+      "evidence": [
+        {
+          "chapter": 12,
+          "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+          "quote": "我对此项经营复核承担责任"
+        }
+      ]
+    },
+    "power_rules": {
+      "decision": "pass",
+      "conclusion": "家属仅有限去身份授权，股东董事不越权查隐私或解任经理。",
+      "evidence": [
+        {
+          "chapter": 12,
+          "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+          "quote": "她并没有授权机构以此判断服务已履行"
+        }
+      ]
+    },
+    "promises": {
+      "decision": "pass",
+      "conclusion": "P04第20章人事、P11第15章银行核证仍未关闭。",
+      "evidence": [
+        {
+          "chapter": 12,
+          "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+          "quote": "由接件系统形成新的收到回执"
+        }
+      ]
+    },
+    "anti_repeat": {
+      "decision": "pass",
+      "conclusion": "与前三章退款银行和护理访查不同，本章由独立档案员推进版本原件证据。",
+      "evidence": [
+        {
+          "chapter": 12,
+          "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+          "quote": "口袋里装着一张盖了章的现场确认单"
+        }
+      ]
+    },
+    "character_agency": {
+      "decision": "pass",
+      "conclusion": "唐霁坚持限定留存，林遥主动担责，家属自行决定授权。",
+      "evidence": [
+        {
+          "chapter": 12,
+          "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+          "quote": "我签了。原版本也留着"
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "chapter": 9,
+      "sha256": "f4dc83132aeeb963fee781c1f74076bb78887103fdfa78a6801f64d64cd2cf48",
+      "quote": "原支付状态没定",
+      "difference": "CH009查客户本人银行和准备区，CH012独立核董事风险披露原版与实收版。"
+    },
+    {
+      "chapter": 10,
+      "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+      "quote": "她们没有拥抱",
+      "difference": "CH010退款重新实付，CH012签认不完整董事报告并保全来源。"
+    },
+    {
+      "chapter": 11,
+      "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+      "quote": "监督议题申请已被登记受理",
+      "difference": "CH011护理现场抵抗抽班及680元费用，CH012追溯历史报告并正式补报。"
+    }
+  ],
+  "future_window": [
+    {
+      "chapter": 13,
+      "goal": "梁谨提交可核夜班人力与拟议续约资源方案。",
+      "change": "真正收缩服务承诺或新增适格成本。",
+      "ending_question": "维护真实夜班资格会失去多少业务机会？"
+    },
+    {
+      "chapter": 14,
+      "goal": "对P11同类旧结算状态启动限定银行证据抽核。",
+      "change": "分开实付、失败和未知，不泛化。",
+      "ending_question": "哪些绿色结案能拿出银行凭证？"
+    },
+    {
+      "chapter": 15,
+      "goal": "兑付P11并完成CH011–015五章连读回看。",
+      "change": "至少一次客户真实纠正和公司成本。",
+      "ending_question": "谁为系统错报承担真实责任？"
+    }
+  ],
+  "promise_reviews": [
+    {
+      "id": "P01",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "亡母遗言撤姐动机尚不明确，十月披露不足不是其私人录音的直接因果。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "母亲的录音依旧存在，私人档案仍受交付条件限制"
+      }
+    },
+    {
+      "id": "P04",
+      "deadline_chapter": 20,
+      "action": "keep",
+      "reason": "董事事务实收风险更正及林遥责任说明，但未召开有权董事会，更未任免经理。",
+      "evidence": {
+        "chapter": 12,
+        "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+        "quote": "由接件系统形成新的收到回执"
+      }
+    },
+    {
+      "id": "P05",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "2023年周转材料只证讨论和场地，不推断沈清禾当时批准划款。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "三年前的讨论发生过，谁作过决定尚未知道"
+      }
+    },
+    {
+      "id": "P07",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "林遥主动签名、林葭保持自主监督，两姐妹尚未和解。",
+      "evidence": {
+        "chapter": 12,
+        "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+        "quote": "我签了。原版本也留着"
+      }
+    },
+    {
+      "id": "P08",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "11月14日蒋素琴陪同外出未履约，不能由本次十月夜班投诉替代补救。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "蒋姨那次没去成的外出"
+      }
+    },
+    {
+      "id": "P09",
+      "deadline_chapter": 95,
+      "action": "keep",
+      "reason": "十月夜班未履约需依权核，长期设备修复及护理能力承诺仍在。",
+      "evidence": {
+        "chapter": 12,
+        "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+        "quote": "她需要有人按约来"
+      }
+    },
+    {
+      "id": "P11",
+      "deadline_chapter": 15,
+      "action": "keep",
+      "reason": "旧结算批次银行实际执行有界抽核仍须CH014启动、CH015兑现，不由董事风险材料替代。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "发现一笔核一笔，实证一笔更正一笔"
+      }
+    }
+  ],
+  "incident_actions": []
+}

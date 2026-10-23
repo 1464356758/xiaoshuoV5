@@ -2,7 +2,7 @@
   "schema_version": 2,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "title": "母亲的遗嘱，要我扮演坏女儿",
-  "revision": 15,
+  "revision": 16,
   "config": {
     "target_chapters": 100,
     "target_han": 900000,
@@ -119,6 +119,15 @@
       "record_path": "records/CH011_d55360837675cfd9111682a5f6c0ec478cd6b3ae87d1847a7f73c7429904c67f.json",
       "record_sha256": "d55360837675cfd9111682a5f6c0ec478cd6b3ae87d1847a7f73c7429904c67f",
       "han_count": 8803
+    },
+    "12": {
+      "title": "少掉的那一行",
+      "stage": "S02",
+      "text_path": "chapters/CH012_7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7.txt",
+      "text_sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+      "record_path": "records/CH012_0266f7fb31c15605141fe56e3f554303a8c80dfb08d27d6d2dac3aa4deb85a30.json",
+      "record_sha256": "0266f7fb31c15605141fe56e3f554303a8c80dfb08d27d6d2dac3aa4deb85a30",
+      "han_count": 8561
     }
   },
   "checkpoints": [
@@ -419,6 +428,22 @@
       ],
       "candidate_sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
       "candidate_path": "candidates/CH011_f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322.txt"
+    },
+    "12": {
+      "task_id": "b2198e44-c2fe-4c48-b41f-8bd37c0d12cf",
+      "chapter": 12,
+      "mode": "write",
+      "phase": "adopted",
+      "repairs": 0,
+      "history": [
+        {
+          "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+          "reason": "初稿审查通过",
+          "repairs": 0
+        }
+      ],
+      "candidate_sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+      "candidate_path": "candidates/CH012_7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7.txt"
     }
   },
   "completion": null,
@@ -469,6 +494,10 @@
       "11": {
         "text_sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
         "record_sha256": "d55360837675cfd9111682a5f6c0ec478cd6b3ae87d1847a7f73c7429904c67f"
+      },
+      "12": {
+        "text_sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+        "record_sha256": "0266f7fb31c15605141fe56e3f554303a8c80dfb08d27d6d2dac3aa4deb85a30"
       }
     },
     "published": {},
@@ -527,6 +556,11 @@
         "path": "releases/CH011_ea7c0a0fb71378751acb036b9df460811718c9e7aed8cf51701f81b95e86a767.json",
         "sha256": "ea7c0a0fb71378751acb036b9df460811718c9e7aed8cf51701f81b95e86a767",
         "used": true
+      },
+      "12": {
+        "path": "releases/CH012_410eeb7df4cd58c587ebf2f43bc383d817487c44d59270fed09172cd19694a61.json",
+        "sha256": "410eeb7df4cd58c587ebf2f43bc383d817487c44d59270fed09172cd19694a61",
+        "used": true
       }
     },
     "promises": {
@@ -547,7 +581,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 11
+        "last_reviewed_chapter": 12
       },
       "P01A": {
         "history": [
@@ -659,7 +693,7 @@
         ],
         "deadline_chapter": 20,
         "status": "open",
-        "last_reviewed_chapter": 11
+        "last_reviewed_chapter": 12
       },
       "P05": {
         "history": [
@@ -678,7 +712,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 11
+        "last_reviewed_chapter": 12
       },
       "P07": {
         "history": [
@@ -697,7 +731,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 11
+        "last_reviewed_chapter": 12
       },
       "P08": {
         "history": [
@@ -716,7 +750,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 11
+        "last_reviewed_chapter": 12
       },
       "P09": {
         "history": [
@@ -735,7 +769,7 @@
         ],
         "deadline_chapter": 95,
         "status": "open",
-        "last_reviewed_chapter": 11
+        "last_reviewed_chapter": 12
       },
       "P10": {
         "history": [
@@ -785,7 +819,7 @@
         ],
         "deadline_chapter": 15,
         "status": "open",
-        "last_reviewed_chapter": 11
+        "last_reviewed_chapter": 12
       }
     },
     "incidents": {}
