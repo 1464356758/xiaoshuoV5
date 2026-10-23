@@ -32,6 +32,9 @@ class RealThirdReleaseTest(unittest.TestCase):
         before["chapters"] = {
             k: v for k, v in before["chapters"].items() if int(k) <= 2
         }
+        before["tasks"] = {k: v for k, v in before["tasks"].items() if int(k) <= 3}
+        before["serialization"]["frozen"] = {k: v for k, v in before["serialization"]["frozen"].items() if int(k) <= 3}
+        before["serialization"]["gates"] = {k: v for k, v in before["serialization"]["gates"].items() if int(k) <= 3}
         before["revision"] = record["base_revision"]
         before["tasks"]["3"]["phase"] = "candidate"
         before["serialization"]["frozen"].pop("3")

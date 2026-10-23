@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
+  "chapter": 4,
+  "base_revision": 6,
+  "task_id": "d4238d88-4d94-4545-833e-914d3575248f",
+  "repairs": 0,
+  "text_sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+  "record_sha256": "3cb1ab27845290be00eef91a33c56eba3b80c3172c43a983b90208394071259b",
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "roadmap_sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+  "decision": "release",
+  "read_full_text": true,
+  "blocking_issues": [],
+  "read_coverage": {
+    "1": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+    "2": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+    "3": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+    "4": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee"
+  },
+  "reader_reason_to_continue": "妹妹签下实名核查申请，将揭示姐姐签字的责任及母亲旧项目影子，明川仍缺可靠维修与长者补救；第五章必须处理姐妹真实对立和公司监督程序。",
+  "consequence": "林葭将实名接受董事与管理方的追问，林遥承认过渡协议与附件疏漏；1800元未实际付款，设备仍停用，服务损失不能被查询进度抹去。",
+  "ending_runway": "CH005合规监督申请、姐姐披露曾对投诉作不充分披露、服务连续性方案和五章全文回看同时到期；CH006以后转入制度治理而不是再连写一章同样的工单。",
+  "checks": {
+    "timeline": {
+      "decision": "pass",
+      "conclusion": "D3 11月15日上午合同起，到下午五点十六签收，章末故事时间4876，不倒退D2章末3480。",
+      "evidence": [
+        {
+          "chapter": 4,
+          "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+          "quote": "十一月十五日早上"
+        }
+      ]
+    },
+    "knowledge": {
+      "decision": "pass",
+      "conclusion": "妹妹只见经授权合同目录、费用待核摘要与公开现场铭牌；没有得到合同全部原件、真实银行流水或供应商后台。",
+      "evidence": [
+        {
+          "chapter": 4,
+          "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+          "quote": "具体给你看哪些，等综合管理确认可公开部分。"
+        }
+      ]
+    },
+    "props_resources": {
+      "decision": "pass",
+      "conclusion": "1800只是待核费用、没有对应实付确认；6400退款独立继续，停用机器无法凭一纸声明修复，也没有凭空派出技师。",
+      "evidence": [
+        {
+          "chapter": 4,
+          "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+          "quote": "没有本项目付款执行凭证"
+        }
+      ]
+    },
+    "causality": {
+      "decision": "pass",
+      "conclusion": "姐姐为维保中断风险签过渡协议→响应统计被错接为处理完成→明川现场确认未修→妹妹明确范围实名提交核查，连锁因果不同于匿名爆料。",
+      "evidence": [
+        {
+          "chapter": 4,
+          "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+          "quote": "是我签的，当然登记。"
+        }
+      ]
+    },
+    "power_rules": {
+      "decision": "pass",
+      "conclusion": "申请不等于董事会表决，更不赋予妹妹直接银行访问权，也不合法解除总经理职务。",
+      "evidence": [
+        {
+          "chapter": 4,
+          "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+          "quote": "这只是内部有限核查的受理记录"
+        }
+      ]
+    },
+    "promises": {
+      "decision": "pass",
+      "conclusion": "护理设备与第三章错过的服务尚待补救，P03@CH005持续；母亲旧交易责任不能由引用原则自动认定。",
+      "evidence": [
+        {
+          "chapter": 4,
+          "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+          "quote": "明川那台设备仍然不能用。"
+        }
+      ]
+    },
+    "anti_repeat": {
+      "decision": "pass",
+      "conclusion": "CH001书面异议、CH002退款分段、CH003现场护理、CH004项目签约与派工多源核验并实名申请，各章办法与不可逆后果不同。",
+      "evidence": [
+        {
+          "chapter": 4,
+          "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+          "quote": "申请不等于结算，结算不等于银行付出。"
+        }
+      ]
+    },
+    "character_agency": {
+      "decision": "pass",
+      "conclusion": "妹妹拒绝匿名占便宜并承担调查实名成本，姐姐承认合同审核疏漏，供应商解释配件变更而非被写成万能反派，护理督导反对强行试用。",
+      "evidence": [
+        {
+          "chapter": 4,
+          "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+          "quote": "我也刚失去母亲。"
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "chapter": 1,
+      "sha256": "cf34bf3b039e314058717a92e68cfbe46e32986b6f49d91c9dc6d5482d9a9829",
+      "quote": "你可以把这份作为我的说明。不能把它换成那份模板。",
+      "difference": "CH001拒绝签整批结算说明并发起客诉；CH004不直接曝光，而是对具体供应合同和型号、派工及申请款做来源分层并实名进入窄范围调查，责任与成本改变。"
+    },
+    {
+      "chapter": 2,
+      "sha256": "d27a29f0c252d113756b2970320a84e57f6b60f62541b788378e3571be2feda4",
+      "quote": "四个方框：受理、批准、账面处理、付款执行。",
+      "difference": "CH002查客户预收余额到账，CH004查供应商合同服务内容与支付条件，两笔钱、合同主体、供应链、当事人均不同，未将退款视为维保费用。"
+    },
+    {
+      "chapter": 3,
+      "sha256": "0d9a6f944f2e8de03dd8de5c63bf216c31236ea46048d13bdec299286712222b",
+      "quote": "原计划陪同外出一项未执行",
+      "difference": "CH003实施安全护理并确认错过的服务，CH004查导致设备未能恢复的合同和组件信息证据，同时明确不因核查消除前章老人的损失。"
+    }
+  ],
+  "future_window": [
+    {
+      "chapter": 5,
+      "goal": "姐妹面对彼此掌握的事实，姐姐承认一项已隐瞒的投诉，落实明川持续照护与服务损失处理渠道，并合法请求董事监督。",
+      "change": "发生可追踪的正式监督提出及姐妹关系裂缝，完成CH001–CH005实际全文窗口回看与到期P03审视。",
+      "ending_question": "摆脱母亲私录的控制后，妹妹能否与姐姐共同面对可能涉及母亲的原始账？"
+    },
+    {
+      "chapter": 6,
+      "goal": "以有限范围资料请求与真实审核计划衔接治理，而非继续在同一会议室追问1800元。",
+      "change": "对立方在期限与资源安排上施加新的实际障碍，主角须改变合法信息取得方式。",
+      "ending_question": "哪些证据可以独立复核，谁有权限在董事会议程上提出？"
+    },
+    {
+      "chapter": 7,
+      "goal": "让第一次独立证据核验的外部客户选择真正影响公司治理方案，减少家族内耗戏。",
+      "change": "一次原有资源或客诉应对安排产生新的公开责任，避免轻易给妹妹全部公司权力。",
+      "ending_question": "保护老人具体服务和保住公司经营是否能够同时达成？"
+    }
+  ],
+  "promise_reviews": [
+    {
+      "id": "P01",
+      "action": "keep",
+      "deadline_chapter": 50,
+      "reason": "母亲撤姐原因仍未知，母亲名字出现合同理由不等于实质授权或已揭动机。",
+      "evidence": {
+        "chapter": 4,
+        "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+        "quote": "沈清禾的名字出现在申请理由里"
+      }
+    },
+    {
+      "id": "P02",
+      "action": "keep",
+      "deadline_chapter": 10,
+      "reason": "邱沅6400元真实支付路径仍未核，本章1800元维保待核申请与她的退款互不等同。",
+      "evidence": {
+        "chapter": 4,
+        "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+        "quote": "邱沅的六千四百元也没有被这场核查找回来"
+      }
+    },
+    {
+      "id": "P03",
+      "action": "keep",
+      "deadline_chapter": 5,
+      "reason": "辅助架仍停用，必要照护继续采取临时措施，CH005前需落持久安排而不靠维修商口头承诺。",
+      "evidence": {
+        "chapter": 4,
+        "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+        "quote": "明川那台设备仍然不能用。"
+      }
+    },
+    {
+      "id": "P04",
+      "action": "keep",
+      "deadline_chapter": 20,
+      "reason": "总经理林遥尚未发生任何人事变更，下一章仅考虑有程序的监督请求，原CH020时限不变。",
+      "evidence": {
+        "chapter": 4,
+        "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+        "quote": "不是董事会作出任何审查决议"
+      }
+    },
+    {
+      "id": "P05",
+      "action": "keep",
+      "deadline_chapter": 50,
+      "reason": "续约理由引用已故母亲原则，但母亲是否签过风险调拨毫无新证据，不因姐姐签名自带定论。",
+      "evidence": {
+        "chapter": 4,
+        "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+        "quote": "意见不是签字。"
+      }
+    },
+    {
+      "id": "P07",
+      "action": "keep",
+      "deadline_chapter": 100,
+      "reason": "姐妹首次直面合同行政责任且信任成本上升，但不能靠一句允诺直接和解。",
+      "evidence": {
+        "chapter": 4,
+        "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+        "quote": "你可以查。以后查到我错的地方，也不必先来问我愿不愿意认。"
+      }
+    },
+    {
+      "id": "P08",
+      "action": "keep",
+      "deadline_chapter": 100,
+      "reason": "护理项目损失依旧未补，点位联系了有关客户但有人未回复，不能把调查供应商当补偿。",
+      "evidence": {
+        "chapter": 4,
+        "sha256": "f9fae34f7fdf24cfb108dd4827163e98a2035b4a2174cc373662149ba7a804ee",
+        "quote": "有人还没回话。"
+      }
+    }
+  ],
+  "incident_actions": []
+}
