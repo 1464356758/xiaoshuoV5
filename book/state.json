@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
-  "title": "未命名小说",
-  "revision": 0,
+  "title": "母亲的遗嘱，要我扮演坏女儿",
+  "revision": 3,
   "config": {
     "target_chapters": 100,
     "target_han": 900000,
@@ -23,8 +23,34 @@
   "chapters": {},
   "checkpoints": [],
   "needs_revalidation": [],
-  "inputs": {},
-  "input_history": [],
+  "inputs": {
+    "canon": {
+      "kind": "canon",
+      "path": "inputs/canon_1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c.md",
+      "sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+      "reason": "作者2026-10-23正式选择T05，建立独立小说人物与世界硬设定"
+    },
+    "roadmap": {
+      "kind": "roadmap",
+      "path": "inputs/roadmap_508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6.md",
+      "sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+      "reason": "作者授权建立90万字十阶段因果路线及近期5章规划，尚未授权写正文"
+    }
+  },
+  "input_history": [
+    {
+      "kind": "canon",
+      "path": "inputs/canon_1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c.md",
+      "sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+      "reason": "作者2026-10-23正式选择T05，建立独立小说人物与世界硬设定"
+    },
+    {
+      "kind": "roadmap",
+      "path": "inputs/roadmap_508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6.md",
+      "sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+      "reason": "作者授权建立90万字十阶段因果路线及近期5章规划，尚未授权写正文"
+    }
+  ],
   "tasks": {},
   "completion": null,
   "serialization": {

@@ -1,10 +1,26 @@
 {
   "schema_version": 1,
-  "revision": 3,
+  "revision": 5,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
-  "phase": "WAITING_TOPIC",
+  "phase": "PLANNING",
   "platform": "qidian",
-  "selected_topic": null,
+  "selected_topic": {
+    "id": "T05",
+    "title": "母亲的遗嘱，要我扮演坏女儿",
+    "genre": "家庭商战·女性成长，都市",
+    "pitch": "母亲去世后，林葭拿到一份录音：只有亲手撤掉最疼爱自己的姐姐，才能打开母亲留下的养老公司调查档案。",
+    "reader_promise": "姐妹互相保护却被迫公开敌对，母亲的要求也许包含严重偏见。",
+    "long_form_engine": "从家族决议与财务漏洞推进到养老资产纠纷、外部受害者和合法追偿；主角主动决定而非等待录像。",
+    "stage_variation": "20章姐妹公开决裂；40章查出公司黑洞；60章主角遭驱逐；80章受害者加入；100章姐妹分担责任。",
+    "ending_direction": "终局反抗母亲有缺陷的遗愿，以公开补救重建关系。",
+    "risk": "遗嘱效力、企业治理和养老现实需核实；防止无穷录音与误会。",
+    "short_drama_adaptation": "极低：家庭、公寓、公司、社区会议。",
+    "source_ids": [
+      "S07",
+      "S05"
+    ],
+    "author_request": "V5正式选择选题 T05。把真实选择写入GitHub，建立90万字的canon、roadmap、10个阶段因果规划，并细化近期3—5章；暂不写正文。"
+  },
   "research_path": "research/platform_6be8e3dcc722535c92ab8700a59443ad957ba34b1287affc13e6372b08ba4e67.json",
   "topics_path": "research/topics_7e38d6fa745c83141f0fa27ffbef2a6823e5a67ca43d956c18deccaff754de05.json",
   "chapter": 1,
@@ -32,9 +48,21 @@
       "phase": "WAITING_TOPIC",
       "label": "等待选择题材",
       "detail": "已准备8个短剧改编潜力原创选题，等待作者选择。"
+    },
+    {
+      "at": "2026-10-23T03:39:18.625+00:00",
+      "phase": "PLANNING",
+      "label": "长篇规划",
+      "detail": "已选定《母亲的遗嘱，要我扮演坏女儿》，准备长篇规划。"
+    },
+    {
+      "at": "2026-10-23T03:39:19.625+00:00",
+      "phase": "PLANNING",
+      "label": "长篇规划",
+      "detail": "T05已锁定；CANON与ROADMAP登记完成，100章十阶段与前5章路线已就绪；未创作任何正文。"
     }
   ],
-  "detail": "已准备8个短剧改编潜力原创选题，等待作者选择。",
-  "next_action": "作者选择T01–T08候选编号后，开展90万字长篇耐久性规划；未选定不写正文。",
-  "updated_at": "2026-10-23T03:25:00+00:00"
+  "detail": "T05已锁定；CANON与ROADMAP登记完成，100章十阶段与前5章路线已就绪；未创作任何正文。",
+  "next_action": "等待作者明确下达“开始第一章”；先重读远程state、两份正式输入与CH001计划，再写作、检查和定稿冻结。",
+  "updated_at": "2026-10-23T03:39:19.625+00:00"
 }
