@@ -11,26 +11,26 @@
   "source": {
     "repository_url": "https://github.com/1464356758/xiaoshuoV5",
     "branch": "main",
-    "generated_at": "2026-10-23T18:33:29+00:00",
-    "state_revision": 16,
-    "workflow_revision": 39,
-    "state_sha256": "076cd5df9ad8ec97a9e73b70ee741609f6b492ce90df089bf032f6960f9fae04",
-    "workflow_sha256": "be5aff43ca192ec3e5e139b32fee4e4be9c34d272767bd52d107a4bbe9e0d4d5",
+    "generated_at": "2026-10-23T19:10:06+00:00",
+    "state_revision": 17,
+    "workflow_revision": 42,
+    "state_sha256": "9201be1178ae04ff436178d6715294e4d20d7c38d419b1cb9fa5ee6bce14fbc8",
+    "workflow_sha256": "f52b8313096c47d09d4e94e4d71790bd0306cb31e537f78708fdf6b9a9016a6d",
     "manuscript_storage": "plain_files_v1",
     "requires_reader_key": false
   },
   "progress": {
     "target_chapters": 100,
-    "adopted_chapters": 12,
+    "adopted_chapters": 13,
     "target_han": 900000,
-    "actual_han": 108329,
+    "actual_han": 117450,
     "completed": false,
     "needs_revalidation": [],
     "reviewed_until": 10,
     "window_review_due": false,
     "unresolved_reviews": [],
     "serial_mode": true,
-    "frozen_chapters": 12,
+    "frozen_chapters": 13,
     "published_chapters": 0,
     "publication_status": "只统计真实回执；无回执不等于未发布",
     "open_incidents": 0,
@@ -39,10 +39,10 @@
   "task": {
     "phase": "WAITING_NEXT",
     "label": "等待下一章",
-    "chapter": 13,
-    "detail": "CH012正式冻结，累计108329汉字，CH013经营与护理人手冲突。",
-    "next_action": "CH013按S02路线核续约与合资格夜班资源实际取舍；P11@15、P04@20期限保留；不登记起点发布。",
-    "updated_at": "2026-10-23T18:33:29+00:00"
+    "chapter": 14,
+    "detail": "CH013正式冻结，累计117450汉字；CH014启动P11同类旧结算银行证据有界抽核。",
+    "next_action": "CH014按S02前向路线由有权财务经办启动P11限定样本银行实付/拒绝/待核三类独立核证，CH015兑现并五章回看，P04@20及P12@21维持；不登记起点发布。",
+    "updated_at": "2026-10-23T19:10:06+00:00"
   },
   "chapters": [
     {
@@ -184,6 +184,18 @@
       "han_count": 8561,
       "text_path": "book/chapters/CH012_7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7.txt",
       "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+      "needs_revalidation": false,
+      "frozen": true,
+      "publication_status": "unreported",
+      "published_at": null
+    },
+    {
+      "number": 13,
+      "title": "这四张床，现在不卖",
+      "stage": "S02",
+      "han_count": 9121,
+      "text_path": "book/chapters/CH013_778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7.txt",
+      "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
       "needs_revalidation": false,
       "frozen": true,
       "publication_status": "unreported",
@@ -597,24 +609,6 @@
   },
   "history": [
     {
-      "at": "2026-10-23T13:19:06+00:00",
-      "phase": "WRITING",
-      "label": "撰写正文",
-      "detail": "CH008海棠活动善后正文8546汉字完成。"
-    },
-    {
-      "at": "2026-10-23T13:19:07+00:00",
-      "phase": "REVIEWING",
-      "label": "检查本章",
-      "detail": "CH008八项发布前检查、近三章反重复及P10真实到期兑付审核完成。"
-    },
-    {
-      "at": "2026-10-23T13:19:08+00:00",
-      "phase": "WAITING_NEXT",
-      "label": "等待下一章",
-      "detail": "CH008《三百块买不回那半天》8546汉字已冻结，累计73085汉字；P10限定范围关闭，无起点发布回执。"
-    },
-    {
       "at": "2026-10-23T14:07:59+00:00",
       "phase": "WRITING",
       "label": "撰写正文",
@@ -685,6 +679,24 @@
       "phase": "WAITING_NEXT",
       "label": "等待下一章",
       "detail": "CH012正式冻结，累计108329汉字，CH013经营与护理人手冲突。"
+    },
+    {
+      "at": "2026-10-23T19:10:04+00:00",
+      "phase": "WRITING",
+      "label": "本章写作完成",
+      "detail": "CH013《这四张床，现在不卖》9121汉字完成，青芦四席机会流失和支援合同真实签署。"
+    },
+    {
+      "at": "2026-10-23T19:10:05+00:00",
+      "phase": "REVIEWING",
+      "label": "本章审查完成",
+      "detail": "CH013已审八项并核38处引用；57600未实现商机、3600实际预付与12600合同义务分层无混账。"
+    },
+    {
+      "at": "2026-10-23T19:10:06+00:00",
+      "phase": "WAITING_NEXT",
+      "label": "等待下一章",
+      "detail": "CH013正式冻结，累计117450汉字；CH014启动P11同类旧结算银行证据有界抽核。"
     }
   ]
 }

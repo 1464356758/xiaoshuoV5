@@ -1,0 +1,182 @@
+{
+  "chapter": 13,
+  "title": "这四张床，现在不卖",
+  "stage": "S02",
+  "base_revision": 16,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+  "complete": true,
+  "story_time_end": 18060,
+  "summary": "D12（2026-11-24）青芦点原拟与安桥谈判新增6席夜间短托，每席4800元/月，三个月满额收入最多86400元但未签合同/未收到款。梁谨现场核夜班合格人力、陶绫轮休及两间短住房待验收情况，无法承诺6席。田岚在合法委托内与另适格机构正式安排当季4席，澄岚丧失4席优先商机，对应最多57600元理论季度收入机会而非实际现金亏损。青芦剩2席为附夜班资格、场地验收及家属独立同意条件的试运行机会，未接新长者未取得收入。林遥按授权批准启望护理协作30日支援合同12600元，尚需实际到岗与设施核验；企业付款3600元预付款且启望对公确认收款，依合同可抵扣或退回，不是已发生服务费用。2席若满额9600元/月仍不覆盖仅支援合同12600元，其他费用尚未知。王伯和陶绫分别维护既有服务与员工休息权，明川韩曼未被强行挪岗。旧母亲录音及董事人事仍不具结论。姐妹对话有限缓和。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [
+      {
+        "chapter": 11,
+        "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+        "quote": "那就是放弃一份可能的收入。"
+      },
+      {
+        "chapter": 12,
+        "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+        "quote": "少掉的那一行已经找回。欠下的那个夜晚，还没有。"
+      },
+      {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "她们没有拥抱"
+      }
+    ],
+    "conclusion": "CH013实读9121汉字并对照CH011实际人员权益、CH012董事披露核证和S02路线。非会议式变化：已由安桥将4席正式另约供应商，梁谨失本季独家协调商机；启望三十日支援合同签署、3600元对公预付款实际入账。未签六席不等于现金损失，已预付不等于费用消耗，两席仍未验收开服。无董事人事变化。"
+  },
+  "facts": [
+    {
+      "kind": "state",
+      "key": "qinglu:qualified_coverage",
+      "value": "青芦原夜班合资格员工须继续服务既有长者且依法轮休，不能只凭空床数推算新增六席。",
+      "holder": "",
+      "valid_from": 18060,
+      "valid_until": null,
+      "quote": "没有替班人的名字"
+    },
+    {
+      "kind": "state",
+      "key": "commercial:original_draft",
+      "value": "安桥原拟6席每席4800元月、三个月满额86400元未经签约不算既有收入。",
+      "holder": "",
+      "valid_from": 18060,
+      "valid_until": null,
+      "quote": "三个月预计总额八万六千四百元"
+    },
+    {
+      "kind": "state",
+      "key": "commercial:four_spots_reallocated",
+      "value": "安桥另按四户合法委托把4席交其它适格机构，青芦失去当季优先协调商机，57600为最大理论营业额而非实损。",
+      "holder": "",
+      "valid_from": 18060,
+      "valid_until": null,
+      "quote": "四席已经由安桥按四户家庭各自的有效服务委托"
+    },
+    {
+      "kind": "state",
+      "key": "commercial:two_conditional",
+      "value": "剩余2席仅经合作方接受附人手、空间与客户独立同意条件的试运营机会，不可提前按已售服务入账。",
+      "holder": "",
+      "valid_from": 18060,
+      "valid_until": null,
+      "quote": "两席只是附条件的合作名额"
+    },
+    {
+      "kind": "state",
+      "key": "vendor:staff_contract",
+      "value": "启望三十日夜间支援合同在授权采购权限内签署，有明确履约/岗位核验条件，合同总额12600元。",
+      "holder": "",
+      "valid_from": 18060,
+      "valid_until": null,
+      "quote": "合同价一万二千六百元"
+    },
+    {
+      "kind": "state",
+      "key": "vendor:deposit_confirmed",
+      "value": "澄岚企业账户已汇3600元按合约可抵扣/退回的预付款，启望正式对公账户确认收到，不等于服务完成费用。",
+      "holder": "",
+      "valid_from": 18060,
+      "valid_until": null,
+      "quote": "正式对公账户核实收到这笔钱"
+    },
+    {
+      "kind": "state",
+      "key": "commercial:first_month_deficit",
+      "value": "2席潜在满额9600元月，小于12600元支援合同，首月即使满额两项差3000，尚未算其它成本。",
+      "holder": "",
+      "valid_from": 18060,
+      "valid_until": null,
+      "quote": "单看这两项首月的增量现金成本就比名额费多三千元"
+    },
+    {
+      "kind": "state",
+      "key": "site:rooms_pending",
+      "value": "青芦两间拟增房呼叫系统与转移条件仍待真实验收，不得拿其设备冒充现有服务能力。",
+      "holder": "",
+      "valid_from": 18060,
+      "valid_until": null,
+      "quote": "这间房尚未验收"
+    },
+    {
+      "kind": "state",
+      "key": "worker:taoling_choice",
+      "value": "陶绫拒签无轮休替班的连续新夜班安排，明川韩曼仍归原单位及岗位。",
+      "holder": "",
+      "valid_from": 18060,
+      "valid_until": null,
+      "quote": "没有替班人的名字"
+    },
+    {
+      "kind": "state",
+      "key": "client:wang_right",
+      "value": "现住王伯不愿以牺牲原有合格照护来换取公司新增收入，护理意见自愿登记。",
+      "holder": "",
+      "valid_from": 18060,
+      "valid_until": null,
+      "quote": "第一位客人的馅不能拿来给第二位包包子"
+    },
+    {
+      "kind": "knowledge",
+      "key": "liangjin:limit",
+      "value": "梁谨以自身经营职责决定放弃超能力四席，而非将空床冒充夜班实际服务。",
+      "holder": "梁谨",
+      "valid_from": 18060,
+      "valid_until": null,
+      "quote": "这四张床，现在不卖。"
+    },
+    {
+      "kind": "state",
+      "key": "family:unresolved",
+      "value": "林葭林遥只出现有限短信交流，十月投诉后续、母亲私录、长期旧设备仍未结。",
+      "holder": "",
+      "valid_from": 18060,
+      "valid_until": null,
+      "quote": "笑不代表这些问题解决了"
+    }
+  ],
+  "progression": {
+    "goal": "通过梁谨面对七点位真实合格夜班资源与续约机会，使第十三章产生不可逆且有来源的经营选择。",
+    "obstacle": "青芦旧住客、轮休、适配与短住房间未验收；六席草案无法兑现，田岚负责的四户家庭不能延误。",
+    "method": "当面核现场夜班人员能力与老客户自决，放弃四席并允许合作方另签；以适格采购签两席支援合同且企业银行付预付款。",
+    "choice": "梁谨自愿少接4席，不把护理员无轮休加班当经营条件；田岚把4席签往另一有资格服务商；林遥承担条件性试营采购责任。",
+    "result": "青芦失去本季4席优先权，2席有条件待验；支援合同总额12600元，首笔3600元预付款收到确认。",
+    "consequence": "最大原草案三个月潜在营业额差额57600元属于未实现机会，非现款；预付占用现金3600元且后续支援履约有12600合同约束；初月两席潜在9600元不足支援费，经营须为护工实际成本买单。",
+    "next_options": "CH014按权限对旧结算状态开始P11限定银行回单抽查；CH015 P11到期兑现并五章回看；CH020 P04治理人事；CH021 P12两席实际开服或失败的权利和付款结论。",
+    "scene_function": "堵消防通道的六张样品床、王伯的包子比喻、陶绫自主拒新增无替班、田岚协调另4席、公司先付3600元，动作为跨岗位经营选择而非另一张风险报告。"
+  },
+  "thread_events": [
+    {
+      "id": "P04",
+      "action": "develop",
+      "description": "林遥签署日常权限内支援采购，不等于撤职或董事会结果，CH020持续。",
+      "quote": "合同经办确认，日常经营与授权采购额度内可以由林遥按职责批准"
+    },
+    {
+      "id": "P07",
+      "action": "develop",
+      "description": "姐妹围绕新经营选择有轻微情绪缓和，未和解，母亲私录未作人事决议。",
+      "quote": "笑不代表这些问题解决了"
+    },
+    {
+      "id": "P09",
+      "action": "develop",
+      "description": "青芦长期合资格夜班能力与员工轮休仍紧张，原有住客权利保留；明川辅助设备未修。",
+      "quote": "没有替班人的名字"
+    },
+    {
+      "id": "P12",
+      "action": "plant",
+      "description": "青芦两席附条件试运营的人员真实到岗、房间呼叫验收及家属知情同意必须到CH021前核明开服/未开服及现金处理。",
+      "quote": "两席只是附条件的合作名额"
+    }
+  ],
+  "stage_closing": false,
+  "measured_han": 9121
+}

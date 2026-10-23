@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
+  "chapter": 13,
+  "base_revision": 16,
+  "task_id": "450323ab-8575-4ce8-8a12-bc4a29177513",
+  "repairs": 0,
+  "text_sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+  "record_sha256": "fbd85726cd2e5e689593910185d0b76d619d2d5b764e485e4f924240ec8e4e0b",
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "roadmap_sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+  "decision": "release",
+  "read_full_text": true,
+  "blocking_issues": [],
+  "read_coverage": {
+    "10": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+    "11": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+    "12": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+    "13": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7"
+  },
+  "reader_reason_to_continue": "梁谨选择放弃本季4席、启动有条件2席夜间试营及实际支付3600元预款后，另一条早已开放的同类退款内控风险P11仍待银行凭证独立抽核；CH014不能用经营牺牲替代客户财务权益。",
+  "consequence": "安桥与另一供应商确定当季4席，澄岚失去这4席最多57600元季度潜在营业额并非已发生现金亏损；新签12600元合同且3600元对公预付，青芦2席仍须人员到岗、场地验收和家属独立同意。",
+  "ending_runway": "CH014限定抽核同类旧结算与银行执行记录，CH015兑现P11并五章全文回看，CH020合法人事结果P04，CH021前核两席实际服务和预付处理P12。",
+  "checks": {
+    "timeline": {
+      "decision": "pass",
+      "conclusion": "本章D12=2026-11-24，自上午排班实地核查到21时结尾，承接11/23治理资料独立送达；2026-12-01服务尚未启动。",
+      "evidence": [
+        {
+          "chapter": 13,
+          "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+          "quote": "十一月二十四日早上七点十六分"
+        }
+      ]
+    },
+    "knowledge": {
+      "decision": "pass",
+      "conclusion": "梁谨知道原6席只是未签合同的收入预测；田岚以有效四户服务委托安排别家，林葭只收到脱敏结果，无权看个体长者资料。",
+      "evidence": [
+        {
+          "chapter": 13,
+          "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+          "quote": "未签草案的理论空间"
+        }
+      ]
+    },
+    "props_resources": {
+      "decision": "pass",
+      "conclusion": "实付3600元是可按合同抵扣/退款的预付款而非既耗服务费，月服务合同12600元及两席满额9600元预期区分；不得挪现有合资格护工或占现有住客房间。",
+      "evidence": [
+        {
+          "chapter": 13,
+          "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+          "quote": "首期三千六百元预付款"
+        }
+      ]
+    },
+    "causality": {
+      "decision": "pass",
+      "conclusion": "本章安桥硬期限与青芦六席合资格资源不匹配，梁谨主动放弃4席让其他机构承接，另2席附条件启用并由澄岚承担支持采购成本，形成不可逆经营机会变化。",
+      "evidence": [
+        {
+          "chapter": 13,
+          "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+          "quote": "四席已经由安桥按四户家庭各自的有效服务委托"
+        }
+      ]
+    },
+    "power_rules": {
+      "decision": "pass",
+      "conclusion": "基层护理员陶绫对超岗排班有自主拒绝权，老人服务不被商业签约挪走；林遥依授权日常预算签合同但不可绕过人力资质监管，许董事无即时任免票决。",
+      "evidence": [
+        {
+          "chapter": 13,
+          "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+          "quote": "没有替班人的名字"
+        }
+      ]
+    },
+    "promises": {
+      "decision": "pass",
+      "conclusion": "新P12@21追踪真实到岗、设施验收与家属同意；P11@15同类付款银行核证、P04@20人事结果、P08/09旧未履约及长期设备义务仍在。",
+      "evidence": [
+        {
+          "chapter": 13,
+          "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+          "quote": "两席只是附条件的合作名额"
+        }
+      ]
+    },
+    "anti_repeat": {
+      "decision": "pass",
+      "conclusion": "CH010银行拒绝后真实退款、CH011现场保障护理班次及680取消费用、CH012投诉源与董事版本核验、CH013第三方合作方正式转签四席并发生现金预款和用工承诺，行动者与后果明显不同。",
+      "evidence": [
+        {
+          "chapter": 13,
+          "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+          "quote": "这四张床，现在不卖。"
+        }
+      ]
+    },
+    "character_agency": {
+      "decision": "pass",
+      "conclusion": "陶绫拒成为无替班夜班责任人，王伯拒以自身服务补新人的缺口，田岚优先安置家庭，梁谨亲自承担失去续约商机，姐妹有限对话但没有和解。",
+      "evidence": [
+        {
+          "chapter": 13,
+          "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+          "quote": "我不签连续两周夜班都由我承担的临时承诺"
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "chapter": 10,
+      "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+      "quote": "她们没有拥抱",
+      "difference": "CH010还原银行原失败和重新实付6400；CH013原客户已结本金不再参与，新合作按资格真实缩减且发生合同现金预付。"
+    },
+    {
+      "chapter": 11,
+      "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+      "quote": "那就是放弃一份可能的收入。",
+      "difference": "CH011抽调护工展示遭拒及行政承担680取消出车成本；CH013将那时仅为争论的合作机会变成四席真的签给他人，并另签真实人力合同与现金预付。"
+    },
+    {
+      "chapter": 12,
+      "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+      "quote": "少掉的那一行已经找回。欠下的那个夜晚，还没有。",
+      "difference": "CH012独立追溯投诉源、版本与董事实收材料；CH013由现住老人、护理员和合作方独立选择使经营能力和收入受真实约束，没有继续复读文件保全。"
+    }
+  ],
+  "future_window": [
+    {
+      "chapter": 14,
+      "goal": "由合法经办限定抽查与邱沅个案同类的旧客户退款结算完成/银行实付记录。",
+      "change": "选择对客户影响显著且留有不同来源的真实样本，分成功实付、拒绝和未知，保护客户隐私，不宣称所有记录错误。",
+      "ending_question": "除了已经实付的邱沅，哪些已清退记录能拿出银行真实执行凭证？"
+    },
+    {
+      "chapter": 15,
+      "goal": "P11到期，实际样本双源核验和真实纠正；完成CH011–15实际五章全文回看。",
+      "change": "至少一项影响客户的错误事实获得有权更正，落实资金/通知责任，并追踪青芦条件性两席不擅自开服。",
+      "ending_question": "客户和董事能否接受这些分层真实结果与公司代价？"
+    },
+    {
+      "chapter": 16,
+      "goal": "林遥就十月披露问题接受正式有权问询，运营和一线资质工作不能因治理中断。",
+      "change": "独立问询证据与姐妹关系产生新实际成本，不另造可疑秘密录音。",
+      "ending_question": "总经理该承担多少治理责任，如何保障七处真实护理岗位？"
+    }
+  ],
+  "promise_reviews": [
+    {
+      "id": "P01",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "母亲撤姐遗言真实原因未因梁谨签少合同而揭示。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "母亲的录音依旧存在，私人档案仍受交付条件限制"
+      }
+    },
+    {
+      "id": "P04",
+      "deadline_chapter": 20,
+      "action": "keep",
+      "reason": "林遥仅行日常采购经营权，正式董事监督不等于人事议决，CH020期限不变。",
+      "evidence": {
+        "chapter": 13,
+        "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+        "quote": "合同经办确认，日常经营与授权采购额度内可以由林遥按职责批准"
+      }
+    },
+    {
+      "id": "P05",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "2023年周转讨论与青芦新夜间合同无证明关系，不定母亲真实审批。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "三年前的讨论发生过，谁作过决定尚未知道"
+      }
+    },
+    {
+      "id": "P07",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "姐妹短信略缓和但母亲私录、对董事披露责任未结，不和解。",
+      "evidence": {
+        "chapter": 13,
+        "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+        "quote": "笑不代表这些问题解决了"
+      }
+    },
+    {
+      "id": "P08",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "蒋素琴11月14日未履行陪同外出仍需原服务和合同补救，本章新青芦合同不能抵扣。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "蒋姨那次没去成的外出"
+      }
+    },
+    {
+      "id": "P09",
+      "deadline_chapter": 95,
+      "action": "keep",
+      "reason": "青芦合格夜班不挤现有护理，明川旧起身辅助设备仍停用，阶段CH030及最终CH095不变。",
+      "evidence": {
+        "chapter": 13,
+        "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+        "quote": "没有替班人的名字"
+      }
+    },
+    {
+      "id": "P11",
+      "deadline_chapter": 15,
+      "action": "keep",
+      "reason": "旧清退系统同类银行付款核证须CH014启动、CH015真实兑现，不从梁谨新签采购推断历史客户款。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "发现一笔核一笔，实证一笔更正一笔"
+      }
+    },
+    {
+      "id": "P12",
+      "deadline_chapter": 21,
+      "action": "set",
+      "reason": "新设青芦2席有条件运营，12月前核真实人员、场地与家属个别同意，CH021前必须给出实际开服/未开服及3600预付款后续处理，不能提前登记收入。",
+      "evidence": {
+        "chapter": 13,
+        "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+        "quote": "两席只是附条件的合作名额"
+      }
+    }
+  ],
+  "incident_actions": []
+}

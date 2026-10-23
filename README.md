@@ -1,10 +1,10 @@
 # V5｜《母亲的遗嘱，要我扮演坏女儿》
-起点T05。**CH001–CH012正式冻结，108329汉字。** 起点真实发布回执登记0章。当前 `WAITING_NEXT / CH013 / S02`。
+起点T05。**CH001–CH013全部正式冻结，累计117450汉字。** 起点无真实发布回执，登记0章。当前 `WAITING_NEXT / CH014 / S02`。
 
-- CH012《少掉的那一行》：`book/chapters/CH012_7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7.txt`（8561汉字）
-- CH012事实：`book/records/CH012_0266f7fb31c15605141fe56e3f554303a8c80dfb08d27d6d2dac3aa4deb85a30.json`
-- 八项审核：`book/releases/CH012_410eeb7df4cd58c587ebf2f43bc383d817487c44d59270fed09172cd19694a61.json`
-- 正式状态：`book/state.json`；工作流：`book/workflow.json`；阅读索引：`online/index.json`；断点：`book/接管记录.md`
-- 十章阶段回看：`book/十章结构终审_CH001-CH010.md`，S02路线：`book/阶段路线_CH011-CH020.md`
+第十三章《这四张床，现在不卖》9121汉字：
+- 正文 `book/chapters/CH013_778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7.txt`
+- 事实账 `book/records/CH013_fbd85726cd2e5e689593910185d0b76d619d2d5b764e485e4f924240ec8e4e0b.json`
+- 八项审核 `book/releases/CH013_00a9d18e0841d782b2b438ffeb2d4215eab3fac890a78e1bcee9b54cdddfff20.json`
+- 事实源 `book/state.json`、`book/workflow.json`、`online/index.json`；断点 `book/接管记录.md`；S02前向路线 `book/阶段路线_CH011-CH020.md`。
 
-CH012独立核证10月7日家属未结投诉与10月10日董事送审V3披露差异，林遥正式签不利复核说明，董事事务真实接收，但无董事人事表决。CH013转实际经营/合格护理成本。P11@CH015与P04@CH020期限不可延期；原CANON与ROADMAP不回写，冻结历史稿不修改，不登记无真实回执的发布。
+本章放弃安桥本季四席的潜在收入机会(按草案最多57600元，非已得营业额)，仅两席附真实夜间人员和设施验收条件；签12600元夜班支援合同，已支付3600元可抵扣/退回预付款、启望对公已确认收款，尚未开服或产生试营营业收入。P11@CH015旧清退银行核证、P04@CH020合规人事、P12@CH021两席真实开服结果均须前向兑现。冻结历史不得改稿，未收到平台回执不登记发布。

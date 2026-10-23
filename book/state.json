@@ -2,7 +2,7 @@
   "schema_version": 2,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "title": "母亲的遗嘱，要我扮演坏女儿",
-  "revision": 16,
+  "revision": 17,
   "config": {
     "target_chapters": 100,
     "target_han": 900000,
@@ -128,6 +128,15 @@
       "record_path": "records/CH012_0266f7fb31c15605141fe56e3f554303a8c80dfb08d27d6d2dac3aa4deb85a30.json",
       "record_sha256": "0266f7fb31c15605141fe56e3f554303a8c80dfb08d27d6d2dac3aa4deb85a30",
       "han_count": 8561
+    },
+    "13": {
+      "title": "这四张床，现在不卖",
+      "stage": "S02",
+      "text_path": "chapters/CH013_778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7.txt",
+      "text_sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+      "record_path": "records/CH013_fbd85726cd2e5e689593910185d0b76d619d2d5b764e485e4f924240ec8e4e0b.json",
+      "record_sha256": "fbd85726cd2e5e689593910185d0b76d619d2d5b764e485e4f924240ec8e4e0b",
+      "han_count": 9121
     }
   },
   "checkpoints": [
@@ -444,6 +453,22 @@
       ],
       "candidate_sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
       "candidate_path": "candidates/CH012_7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7.txt"
+    },
+    "13": {
+      "task_id": "450323ab-8575-4ce8-8a12-bc4a29177513",
+      "chapter": 13,
+      "mode": "write",
+      "phase": "adopted",
+      "repairs": 0,
+      "history": [
+        {
+          "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+          "reason": "初稿全文审读、商业损失真实性分层及八项发布前审核通过",
+          "repairs": 0
+        }
+      ],
+      "candidate_sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+      "candidate_path": "candidates/CH013_778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7.txt"
     }
   },
   "completion": null,
@@ -498,6 +523,10 @@
       "12": {
         "text_sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
         "record_sha256": "0266f7fb31c15605141fe56e3f554303a8c80dfb08d27d6d2dac3aa4deb85a30"
+      },
+      "13": {
+        "text_sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+        "record_sha256": "fbd85726cd2e5e689593910185d0b76d619d2d5b764e485e4f924240ec8e4e0b"
       }
     },
     "published": {},
@@ -561,6 +590,11 @@
         "path": "releases/CH012_410eeb7df4cd58c587ebf2f43bc383d817487c44d59270fed09172cd19694a61.json",
         "sha256": "410eeb7df4cd58c587ebf2f43bc383d817487c44d59270fed09172cd19694a61",
         "used": true
+      },
+      "13": {
+        "path": "releases/CH013_00a9d18e0841d782b2b438ffeb2d4215eab3fac890a78e1bcee9b54cdddfff20.json",
+        "sha256": "00a9d18e0841d782b2b438ffeb2d4215eab3fac890a78e1bcee9b54cdddfff20",
+        "used": true
       }
     },
     "promises": {
@@ -581,7 +615,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 12
+        "last_reviewed_chapter": 13
       },
       "P01A": {
         "history": [
@@ -693,7 +727,7 @@
         ],
         "deadline_chapter": 20,
         "status": "open",
-        "last_reviewed_chapter": 12
+        "last_reviewed_chapter": 13
       },
       "P05": {
         "history": [
@@ -712,7 +746,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 12
+        "last_reviewed_chapter": 13
       },
       "P07": {
         "history": [
@@ -731,7 +765,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 12
+        "last_reviewed_chapter": 13
       },
       "P08": {
         "history": [
@@ -750,7 +784,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 12
+        "last_reviewed_chapter": 13
       },
       "P09": {
         "history": [
@@ -769,7 +803,7 @@
         ],
         "deadline_chapter": 95,
         "status": "open",
-        "last_reviewed_chapter": 12
+        "last_reviewed_chapter": 13
       },
       "P10": {
         "history": [
@@ -819,7 +853,26 @@
         ],
         "deadline_chapter": 15,
         "status": "open",
-        "last_reviewed_chapter": 12
+        "last_reviewed_chapter": 13
+      },
+      "P12": {
+        "history": [
+          {
+            "id": "P12",
+            "deadline_chapter": 21,
+            "action": "set",
+            "reason": "新设青芦2席有条件运营，12月前核真实人员、场地与家属个别同意，CH021前必须给出实际开服/未开服及3600预付款后续处理，不能提前登记收入。",
+            "evidence": {
+              "chapter": 13,
+              "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+              "quote": "两席只是附条件的合作名额"
+            },
+            "chapter": 13
+          }
+        ],
+        "deadline_chapter": 21,
+        "status": "open",
+        "last_reviewed_chapter": 13
       }
     },
     "incidents": {}
