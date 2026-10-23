@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
+  "chapter": 14,
+  "base_revision": 17,
+  "task_id": "d3c3e7ba-2c26-4a13-a214-22e933b46b18",
+  "repairs": 0,
+  "text_sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+  "record_sha256": "eb806f94a6697a5e06ee10d3a011daa552ab09b1421bde35e489209abfa24913",
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "roadmap_sha256": "508d6e4d0a86fbeff618dd77375a460841c462293b288312d8c85baa65c349a6",
+  "decision": "release",
+  "read_full_text": true,
+  "blocking_issues": [],
+  "read_coverage": {
+    "11": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+    "12": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+    "13": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+    "14": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd"
+  },
+  "reader_reason_to_continue": "六笔中两笔明确银行拒绝且客户收到真实纠正，资金尚未合法重付；CH015 P11硬期限要求至少一项真实结算纠错、完善未知项进度与正式五章全文回看。",
+  "consequence": "成功样本7000元防重复联系，拒绝样本8400元客户获更正但仍要真实付账，未知样本10000元持续授权取证；风险汇总合法进入董事事务，不能推断43笔全错。",
+  "ending_runway": "CH015兑现P11并完成CH011–15实际全文回看；CH016林遥因曾写轻十月投诉接受有权问询，CH020 P04正式人事结果，CH021 P12两席开服/退出。",
+  "checks": {
+    "timeline": {
+      "decision": "pass",
+      "conclusion": "CH014 D13=11月25日，承接CH013 11月24日青芦合作，旧样本起止是10月1日—11月10日，客户次日上午反馈不是当天结果。",
+      "evidence": [
+        {
+          "chapter": 14,
+          "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+          "quote": "十一月二十五日早上七点零九分"
+        }
+      ]
+    },
+    "knowledge": {
+      "decision": "pass",
+      "conclusion": "股东林葭仅收匿名核证进度；季芳可知本人业务结果，内控不可把6笔直接推断43笔；董事收件不代表个人读完或表决。",
+      "evidence": [
+        {
+          "chapter": 14,
+          "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+          "quote": "不是百分之多少的坏账率"
+        }
+      ]
+    },
+    "props_resources": {
+      "decision": "pass",
+      "conclusion": "企业/银行执行成功7000，银行拒绝8400，缺凭10000，合计业务额25400不等于公司欠款总额；客户资金与护理班次相互独立。",
+      "evidence": [
+        {
+          "chapter": 14,
+          "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+          "quote": "成功合计七千"
+        }
+      ]
+    },
+    "causality": {
+      "decision": "pass",
+      "conclusion": "旧结算批次状态误映射导致客户被误告清退；事前分层取样、多源独立结果推动实际拒付信息纠正与下一章重付动作。",
+      "evidence": [
+        {
+          "chapter": 14,
+          "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+          "quote": "银行返回这笔十月旧指令的明确拒绝处理回执"
+        }
+      ]
+    },
+    "power_rules": {
+      "decision": "pass",
+      "conclusion": "姚阿姨拒交全年度个人账，股份人无权访问私人流水；季芳可签收不签满意，付款需要合法受款人核验，董事事务不得借匿名汇总决定个人失职。",
+      "evidence": [
+        {
+          "chapter": 14,
+          "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+          "quote": "她不愿交出一整年的家庭收支记录"
+        }
+      ]
+    },
+    "promises": {
+      "decision": "pass",
+      "conclusion": "P11@CH015仍未提前关闭，P04@20人事决定与P12@21青芦两席开服均另有后续义务。",
+      "evidence": [
+        {
+          "chapter": 14,
+          "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+          "quote": "明天两笔明确拒绝的业务必须走向实际处理"
+        }
+      ]
+    },
+    "anti_repeat": {
+      "decision": "pass",
+      "conclusion": "CH011护理现场及680行政费用、CH012十月投诉版本、CH013安桥四席商业取舍、CH014客户站台、门诊及6笔分层银行核证，不复查邱沅6400。",
+      "evidence": [
+        {
+          "chapter": 14,
+          "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+          "quote": "手套摸起来有点粗，但终于不割手了"
+        }
+      ]
+    },
+    "character_agency": {
+      "decision": "pass",
+      "conclusion": "叶珊不代付款岗签、孟舒不外推，季芳不签满意，姚阿姨不交全年流水，其他老人本人只确认到账不代表护理满意。",
+      "evidence": [
+        {
+          "chapter": 14,
+          "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+          "quote": "她只在收悉新通知的位置签名，拒绝勾选纠纷终结"
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "chapter": 11,
+      "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+      "quote": "监督议题申请已被登记受理",
+      "difference": "CH011董事现场抽班冲突与680行政损失；CH014由独立内控分层六笔，客户获得拒付通知，无护理接待演示。"
+    },
+    {
+      "chapter": 12,
+      "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+      "quote": "少掉的那一行已经找回。欠下的那个夜晚，还没有。",
+      "difference": "CH012核十月护理投诉原件/V3董事送达差异；CH014不查同一投诉，而核银行处理状态与客户本人的真实资金权益。"
+    },
+    {
+      "chapter": 13,
+      "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+      "quote": "这四张床，现在不卖。",
+      "difference": "CH013梁谨为合资格夜班放弃四席潜在营业额并实付3600预款；CH014独立银行核证六笔，已成功防重付、拒付真实告知、未知不冒险定性。"
+    }
+  ],
+  "future_window": [
+    {
+      "chapter": 15,
+      "goal": "P11到期，依法核受款信息及银行独立结果，对拒绝样本作至少一笔实际更正付款或合适有效客户权益措施，另追踪两笔未知，CH011–15五章全文回看。",
+      "change": "有真实银行资金结果或不可逆合理纠正成本、客户本人确认及工作责任后果；不把未知强行归拒付。",
+      "ending_question": "哪一笔老客户的钱今天终于真正到手，谁必须公开承担旧错成本？"
+    },
+    {
+      "chapter": 16,
+      "goal": "林遥就经营风险摘要与护理资源接受有权监督问询，姐妹不绕权限取私人资料。",
+      "change": "真实经营和姐妹关系承受新增代价，问询结果进入适格程序，不造秘密盗款悬疑。",
+      "ending_question": "知道风险仍写轻的总经理还能以怎样的条件保住合法职责？"
+    },
+    {
+      "chapter": 17,
+      "goal": "长者和护理员工不被迫当宣传素材，后续合作与持续护理服务权益发生真实经营冲突。",
+      "change": "一次有量化费用的商业取舍、员工个人选择，不能与CH013四席谈判复制。",
+      "ending_question": "投资方向护理安全让步时，经营账究竟由谁承担？"
+    }
+  ],
+  "promise_reviews": [
+    {
+      "id": "P01",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "母亲撤姐遗言真实原因未因梁谨签少合同而揭示。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "母亲的录音依旧存在，私人档案仍受交付条件限制"
+      }
+    },
+    {
+      "id": "P04",
+      "deadline_chapter": 20,
+      "action": "keep",
+      "reason": "林遥仅行日常采购经营权，正式董事监督不等于人事议决，CH020期限不变。",
+      "evidence": {
+        "chapter": 13,
+        "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+        "quote": "合同经办确认，日常经营与授权采购额度内可以由林遥按职责批准"
+      }
+    },
+    {
+      "id": "P05",
+      "deadline_chapter": 50,
+      "action": "keep",
+      "reason": "2023年周转讨论与青芦新夜间合同无证明关系，不定母亲真实审批。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "三年前的讨论发生过，谁作过决定尚未知道"
+      }
+    },
+    {
+      "id": "P07",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "姐妹短信略缓和但母亲私录、对董事披露责任未结，不和解。",
+      "evidence": {
+        "chapter": 13,
+        "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+        "quote": "笑不代表这些问题解决了"
+      }
+    },
+    {
+      "id": "P08",
+      "deadline_chapter": 100,
+      "action": "keep",
+      "reason": "蒋素琴11月14日未履行陪同外出仍需原服务和合同补救，本章新青芦合同不能抵扣。",
+      "evidence": {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "蒋姨那次没去成的外出"
+      }
+    },
+    {
+      "id": "P09",
+      "deadline_chapter": 95,
+      "action": "keep",
+      "reason": "青芦合格夜班不挤现有护理，明川旧起身辅助设备仍停用，阶段CH030及最终CH095不变。",
+      "evidence": {
+        "chapter": 13,
+        "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+        "quote": "没有替班人的名字"
+      }
+    },
+    {
+      "id": "P11",
+      "deadline_chapter": 15,
+      "action": "keep",
+      "reason": "今日六笔中成功两笔/银行拒绝两笔/证据不足两笔，经合法核证及对客户更正；两笔拒付尚未付款，CH015必须按期限实际纠正。",
+      "evidence": {
+        "chapter": 14,
+        "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+        "quote": "明天两笔明确拒绝的业务必须走向实际处理"
+      }
+    },
+    {
+      "id": "P12",
+      "deadline_chapter": 21,
+      "action": "keep",
+      "reason": "青芦两席附条件的资格及空间验收仍未完成，本章独立内控核款未替代该合规服务承诺。",
+      "evidence": {
+        "chapter": 13,
+        "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+        "quote": "两席只是附条件的合作名额"
+      }
+    }
+  ],
+  "incident_actions": []
+}

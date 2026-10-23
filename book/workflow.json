@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 42,
+  "revision": 45,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "phase": "WAITING_NEXT",
   "platform": "qidian",
@@ -23,7 +23,7 @@
   },
   "research_path": "research/platform_6be8e3dcc722535c92ab8700a59443ad957ba34b1287affc13e6372b08ba4e67.json",
   "topics_path": "research/topics_7e38d6fa745c83141f0fa27ffbef2a6823e5a67ca43d956c18deccaff754de05.json",
-  "chapter": 14,
+  "chapter": 15,
   "history": [
     {
       "at": "2026-10-23T02:03:07+00:00",
@@ -282,9 +282,27 @@
       "phase": "WAITING_NEXT",
       "label": "等待下一章",
       "detail": "CH013正式冻结，累计117450汉字；CH014启动P11同类旧结算银行证据有界抽核。"
+    },
+    {
+      "at": "2026-10-23T19:41:03+00:00",
+      "phase": "WRITING",
+      "label": "正文完成",
+      "detail": "CH014《绿色的勾，没有到账》8811汉字已完成，六笔真实独立核证。"
+    },
+    {
+      "at": "2026-10-23T19:41:04+00:00",
+      "phase": "REVIEWING",
+      "label": "审核完成",
+      "detail": "CH014八项检查、37处引用证据及反重复通过；拒绝款尚未重付。"
+    },
+    {
+      "at": "2026-10-23T19:41:05+00:00",
+      "phase": "WAITING_NEXT",
+      "label": "等待下一章",
+      "detail": "CH014冻结，累计126261汉字；CH015兑现P11并完成CH011–CH015五章连读复核。"
     }
   ],
-  "detail": "CH013正式冻结，累计117450汉字；CH014启动P11同类旧结算银行证据有界抽核。",
-  "next_action": "CH014按S02前向路线由有权财务经办启动P11限定样本银行实付/拒绝/待核三类独立核证，CH015兑现并五章回看，P04@20及P12@21维持；不登记起点发布。",
-  "updated_at": "2026-10-23T19:10:06+00:00"
+  "detail": "CH014冻结，累计126261汉字；CH015兑现P11并完成CH011–CH015五章连读复核。",
+  "next_action": "CH015按合法受款路径兑现P11至少一笔真实资金纠错、未知项有期限核证，并进行CH011–CH015五章实际全文回看及八项发布前审核；不登记起点发布。",
+  "updated_at": "2026-10-23T19:41:05+00:00"
 }

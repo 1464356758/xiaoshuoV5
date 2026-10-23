@@ -11,26 +11,26 @@
   "source": {
     "repository_url": "https://github.com/1464356758/xiaoshuoV5",
     "branch": "main",
-    "generated_at": "2026-10-23T19:10:06+00:00",
-    "state_revision": 17,
-    "workflow_revision": 42,
-    "state_sha256": "9201be1178ae04ff436178d6715294e4d20d7c38d419b1cb9fa5ee6bce14fbc8",
-    "workflow_sha256": "f52b8313096c47d09d4e94e4d71790bd0306cb31e537f78708fdf6b9a9016a6d",
+    "generated_at": "2026-10-23T19:41:05+00:00",
+    "state_revision": 18,
+    "workflow_revision": 45,
+    "state_sha256": "53b30ed77f5163857fd9e7682bc90eb3f83ab95ca9ccbd14539ba60a8746a169",
+    "workflow_sha256": "05788e6202a0a361f2252c819874505aa6689d30e08b0b17c02b14efd03e4b3b",
     "manuscript_storage": "plain_files_v1",
     "requires_reader_key": false
   },
   "progress": {
     "target_chapters": 100,
-    "adopted_chapters": 13,
+    "adopted_chapters": 14,
     "target_han": 900000,
-    "actual_han": 117450,
+    "actual_han": 126261,
     "completed": false,
     "needs_revalidation": [],
     "reviewed_until": 10,
     "window_review_due": false,
     "unresolved_reviews": [],
     "serial_mode": true,
-    "frozen_chapters": 13,
+    "frozen_chapters": 14,
     "published_chapters": 0,
     "publication_status": "只统计真实回执；无回执不等于未发布",
     "open_incidents": 0,
@@ -39,10 +39,10 @@
   "task": {
     "phase": "WAITING_NEXT",
     "label": "等待下一章",
-    "chapter": 14,
-    "detail": "CH013正式冻结，累计117450汉字；CH014启动P11同类旧结算银行证据有界抽核。",
-    "next_action": "CH014按S02前向路线由有权财务经办启动P11限定样本银行实付/拒绝/待核三类独立核证，CH015兑现并五章回看，P04@20及P12@21维持；不登记起点发布。",
-    "updated_at": "2026-10-23T19:10:06+00:00"
+    "chapter": 15,
+    "detail": "CH014冻结，累计126261汉字；CH015兑现P11并完成CH011–CH015五章连读复核。",
+    "next_action": "CH015按合法受款路径兑现P11至少一笔真实资金纠错、未知项有期限核证，并进行CH011–CH015五章实际全文回看及八项发布前审核；不登记起点发布。",
+    "updated_at": "2026-10-23T19:41:05+00:00"
   },
   "chapters": [
     {
@@ -196,6 +196,18 @@
       "han_count": 9121,
       "text_path": "book/chapters/CH013_778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7.txt",
       "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+      "needs_revalidation": false,
+      "frozen": true,
+      "publication_status": "unreported",
+      "published_at": null
+    },
+    {
+      "number": 14,
+      "title": "绿色的勾，没有到账",
+      "stage": "S02",
+      "han_count": 8811,
+      "text_path": "book/chapters/CH014_124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd.txt",
+      "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
       "needs_revalidation": false,
       "frozen": true,
       "publication_status": "unreported",
@@ -609,24 +621,6 @@
   },
   "history": [
     {
-      "at": "2026-10-23T14:07:59+00:00",
-      "phase": "WRITING",
-      "label": "撰写正文",
-      "detail": "CH009银行与公司双来源取证小说8876汉字已完成。"
-    },
-    {
-      "at": "2026-10-23T14:08:00+00:00",
-      "phase": "REVIEWING",
-      "label": "审核正文",
-      "detail": "CH009八项发布前审核、三章反重复、P02@10期限核对、原文证据完整检查。"
-    },
-    {
-      "at": "2026-10-23T14:08:01+00:00",
-      "phase": "WAITING_NEXT",
-      "label": "等待下一章",
-      "detail": "CH009《银行只认到账的那一笔》8876汉字冻结；全书累计81961汉字；P02仍到期CH010，尚无真实起点发布回执。"
-    },
-    {
       "at": "2026-10-23T14:43:12+00:00",
       "phase": "WRITING",
       "label": "写作完成",
@@ -697,6 +691,24 @@
       "phase": "WAITING_NEXT",
       "label": "等待下一章",
       "detail": "CH013正式冻结，累计117450汉字；CH014启动P11同类旧结算银行证据有界抽核。"
+    },
+    {
+      "at": "2026-10-23T19:41:03+00:00",
+      "phase": "WRITING",
+      "label": "正文完成",
+      "detail": "CH014《绿色的勾，没有到账》8811汉字已完成，六笔真实独立核证。"
+    },
+    {
+      "at": "2026-10-23T19:41:04+00:00",
+      "phase": "REVIEWING",
+      "label": "审核完成",
+      "detail": "CH014八项检查、37处引用证据及反重复通过；拒绝款尚未重付。"
+    },
+    {
+      "at": "2026-10-23T19:41:05+00:00",
+      "phase": "WAITING_NEXT",
+      "label": "等待下一章",
+      "detail": "CH014冻结，累计126261汉字；CH015兑现P11并完成CH011–CH015五章连读复核。"
     }
   ]
 }

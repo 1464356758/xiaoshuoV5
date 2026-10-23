@@ -1,0 +1,173 @@
+{
+  "chapter": 14,
+  "title": "绿色的勾，没有到账",
+  "stage": "S02",
+  "base_revision": 17,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+  "complete": true,
+  "story_time_end": 19450,
+  "summary": "D13（2026-11-25）孟舒有权内控从十月一日—十一月十日旧已清退43笔按事前规则抽6笔。六笔金额5200、3800、2900、1800、4600、7100共25400元；西禾5200与清桐1800双源成功共7000元且客户本人确认，停止重复联系；南榆3800与松汀4600银行真实拒绝、企业未有效扣款合计8400元，季芳及路恒得到正式更正通知但本金尚未重新付款；外部渠道2900和旧窗口7100证据未充分共10000，姚阿姨拒交不必要全年流水，有次日上午十一点进度反馈责任。不得把六笔总额当已欠或对其余37笔作比率推断。叶珊不替银行结果签字，接口回写历史岗位责任待依法核。董事事务仅限匿名汇总，非个人私密资料或人事票决。明川旧设备仍停用，姐妹仍未和解；P11第15章须落地至少一笔真实可核退款纠正与正式五章回看。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [
+      {
+        "chapter": 10,
+        "sha256": "cd46fabe7141aa7b1a96144a2835689726619f8a8ff3a3d6b6ec16506629ffb3",
+        "quote": "发现一笔核一笔，实证一笔更正一笔"
+      },
+      {
+        "chapter": 12,
+        "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+        "quote": "董事实际阅看范围仍不完整"
+      },
+      {
+        "chapter": 13,
+        "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+        "quote": "这四张床，现在不卖。"
+      }
+    ],
+    "conclusion": "全文8811汉字按CH010—CH013账本和S02前向路线审读。成功/拒绝/未知三分法以企业/银行/当事人合法范围佐证，客户有新更正和继续查询权，拒绝本金未付不得冒称P11完成。与CH013续约四席及CH012董事实收版本核证无重复调查场面。"
+  },
+  "facts": [
+    {
+      "kind": "state",
+      "key": "sample:scope",
+      "value": "内控对旧系统43笔事先分层抽6笔，其余37笔不得外推。",
+      "holder": "",
+      "valid_from": 19450,
+      "valid_until": null,
+      "quote": "余下三十七笔既未被宣布准确，也没有被宣布错误"
+    },
+    {
+      "kind": "state",
+      "key": "sample:total",
+      "value": "六笔样本总25400元不是全部欠款或已付款。",
+      "holder": "",
+      "valid_from": 19450,
+      "valid_until": null,
+      "quote": "二万五千四百元"
+    },
+    {
+      "kind": "state",
+      "key": "sample:success",
+      "value": "西禾5200清桐1800获银行企业执行及客户本人成功确认，合计7000，撤冗余联系。",
+      "holder": "",
+      "valid_from": 19450,
+      "valid_until": null,
+      "quote": "成功合计七千"
+    },
+    {
+      "kind": "state",
+      "key": "sample:rejected",
+      "value": "南榆3800松汀4600有银行拒绝及企业无有效扣款证据，合计8400，客户已获信息更正但未再付。",
+      "holder": "",
+      "valid_from": 19450,
+      "valid_until": null,
+      "quote": "拒绝合计八千四百"
+    },
+    {
+      "kind": "state",
+      "key": "sample:unknown",
+      "value": "外部服务2900和旧窗口7100仍缺完成凭据，合计10000，未知而非直接未付。",
+      "holder": "",
+      "valid_from": 19450,
+      "valid_until": null,
+      "quote": "证据不足，等待独立执行结果"
+    },
+    {
+      "kind": "state",
+      "key": "bank:reject3800",
+      "value": "银行独立拒绝南榆3800旧指令，原收款方式当时不支持。",
+      "holder": "",
+      "valid_from": 19450,
+      "valid_until": null,
+      "quote": "银行返回这笔十月旧指令的明确拒绝处理回执"
+    },
+    {
+      "kind": "state",
+      "key": "bank:reject4600",
+      "value": "松汀4600原资料不匹配，经银行退回并没有企业有效扣出。",
+      "holder": "",
+      "valid_from": 19450,
+      "valid_until": null,
+      "quote": "与企业原批次识别信息匹配的明确拒绝回执"
+    },
+    {
+      "kind": "state",
+      "key": "client:jifang",
+      "value": "季芳收到真实更正并拒全案满意，助听器维修仍受等待影响。",
+      "holder": "",
+      "valid_from": 19450,
+      "valid_until": null,
+      "quote": "她只在收悉新通知的位置签名，拒绝勾选纠纷终结"
+    },
+    {
+      "kind": "state",
+      "key": "client:yao",
+      "value": "姚阿姨拒交无关全年收支记录并获次日上午11时进度节点。",
+      "holder": "",
+      "valid_from": 19450,
+      "valid_until": null,
+      "quote": "她不愿交出一整年的家庭收支记录"
+    },
+    {
+      "kind": "state",
+      "key": "governance:scope",
+      "value": "限定匿名六笔进入董事事务，不作为董事已投人事决议或全公司退款错误证明。",
+      "holder": "",
+      "valid_from": 19450,
+      "valid_until": null,
+      "quote": "四十三笔是本次风险筛选母体"
+    },
+    {
+      "kind": "state",
+      "key": "care:device",
+      "value": "明川坏起身辅助设备仍未核定修复，财务查证不越权挪护理岗位。",
+      "holder": "",
+      "valid_from": 19450,
+      "valid_until": null,
+      "quote": "此前停用的起身辅助设备仍在维修核查流程里"
+    }
+  ],
+  "progression": {
+    "goal": "对同类旧已清退结果有权限定抽样以取得P11下章兑现前的可核证据。",
+    "obstacle": "旧审批绿勾并非付款终态，外部渠道缺回执，客户隐私和业务权限分离。",
+    "method": "事前分层43中6笔，付款岗获银行独立执行信息，客户本人确认仅必要范围，未知留进度节点。",
+    "choice": "季芳拒满意，姚阿姨拒不必要流水，孟舒拒凭6笔推断37笔，叶珊拒代签银行结果。",
+    "result": "双源成功2笔7000，银行拒绝2笔8400，未知2笔10000，真实更正通知与部分重复请求终止。",
+    "consequence": "两客户明确获知原先到账状态错误并握有公司通知，拒绝本金尚需依法核收款人后执行，次日公司承担明确结果义务。",
+    "next_options": "CH015兑现P11至少一项实付纠正/有限真相，并对CH011—CH015五章实际全文复核；CH020落实P04；CH021落实P12。",
+    "scene_function": "叶珊的棉手套、季芳门诊和维修单、姚阿姨不交全年流水、匿名董事进度共同承载不同真实生活变化。"
+  },
+  "thread_events": [
+    {
+      "id": "P11",
+      "action": "develop",
+      "description": "六笔限定核证完成初步分层及书面纠正、拒付金额仍待CH015合法重付或真实纠错，未知须继续核询。",
+      "quote": "明天两笔明确拒绝的业务必须走向实际处理"
+    },
+    {
+      "id": "P04",
+      "action": "develop",
+      "description": "去身份内控监督进度按合法渠道提供，尚无董事人事表决。",
+      "quote": "按权限允许提供的匿名监督进度"
+    },
+    {
+      "id": "P07",
+      "action": "develop",
+      "description": "姐妹对调查认识逐渐不同但不作为母亲遗言的最终结论，未和解。",
+      "quote": "我不想再用一个不完整的结论替另一个不完整的结论讨说法"
+    },
+    {
+      "id": "P09",
+      "action": "develop",
+      "description": "长期坏设备和照护资源问题独立继续。",
+      "quote": "此前停用的起身辅助设备仍在维修核查流程里"
+    }
+  ],
+  "stage_closing": false,
+  "measured_han": 8811
+}

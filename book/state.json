@@ -2,7 +2,7 @@
   "schema_version": 2,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "title": "母亲的遗嘱，要我扮演坏女儿",
-  "revision": 17,
+  "revision": 18,
   "config": {
     "target_chapters": 100,
     "target_han": 900000,
@@ -137,6 +137,15 @@
       "record_path": "records/CH013_fbd85726cd2e5e689593910185d0b76d619d2d5b764e485e4f924240ec8e4e0b.json",
       "record_sha256": "fbd85726cd2e5e689593910185d0b76d619d2d5b764e485e4f924240ec8e4e0b",
       "han_count": 9121
+    },
+    "14": {
+      "title": "绿色的勾，没有到账",
+      "stage": "S02",
+      "text_path": "chapters/CH014_124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd.txt",
+      "text_sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+      "record_path": "records/CH014_eb806f94a6697a5e06ee10d3a011daa552ab09b1421bde35e489209abfa24913.json",
+      "record_sha256": "eb806f94a6697a5e06ee10d3a011daa552ab09b1421bde35e489209abfa24913",
+      "han_count": 8811
     }
   },
   "checkpoints": [
@@ -469,6 +478,22 @@
       ],
       "candidate_sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
       "candidate_path": "candidates/CH013_778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7.txt"
+    },
+    "14": {
+      "task_id": "d3c3e7ba-2c26-4a13-a214-22e933b46b18",
+      "chapter": 14,
+      "mode": "write",
+      "phase": "adopted",
+      "repairs": 0,
+      "history": [
+        {
+          "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+          "reason": "初稿，八项审核和六笔授权样本分层核证通过",
+          "repairs": 0
+        }
+      ],
+      "candidate_sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+      "candidate_path": "candidates/CH014_124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd.txt"
     }
   },
   "completion": null,
@@ -527,6 +552,10 @@
       "13": {
         "text_sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
         "record_sha256": "fbd85726cd2e5e689593910185d0b76d619d2d5b764e485e4f924240ec8e4e0b"
+      },
+      "14": {
+        "text_sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+        "record_sha256": "eb806f94a6697a5e06ee10d3a011daa552ab09b1421bde35e489209abfa24913"
       }
     },
     "published": {},
@@ -595,6 +624,11 @@
         "path": "releases/CH013_00a9d18e0841d782b2b438ffeb2d4215eab3fac890a78e1bcee9b54cdddfff20.json",
         "sha256": "00a9d18e0841d782b2b438ffeb2d4215eab3fac890a78e1bcee9b54cdddfff20",
         "used": true
+      },
+      "14": {
+        "path": "releases/CH014_698a9dba6b42149cc6d97d16bd81b13d13ac98dcc5056d5042a746fe52009817.json",
+        "sha256": "698a9dba6b42149cc6d97d16bd81b13d13ac98dcc5056d5042a746fe52009817",
+        "used": true
       }
     },
     "promises": {
@@ -615,7 +649,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 13
+        "last_reviewed_chapter": 14
       },
       "P01A": {
         "history": [
@@ -727,7 +761,7 @@
         ],
         "deadline_chapter": 20,
         "status": "open",
-        "last_reviewed_chapter": 13
+        "last_reviewed_chapter": 14
       },
       "P05": {
         "history": [
@@ -746,7 +780,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 13
+        "last_reviewed_chapter": 14
       },
       "P07": {
         "history": [
@@ -765,7 +799,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 13
+        "last_reviewed_chapter": 14
       },
       "P08": {
         "history": [
@@ -784,7 +818,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 13
+        "last_reviewed_chapter": 14
       },
       "P09": {
         "history": [
@@ -803,7 +837,7 @@
         ],
         "deadline_chapter": 95,
         "status": "open",
-        "last_reviewed_chapter": 13
+        "last_reviewed_chapter": 14
       },
       "P10": {
         "history": [
@@ -853,7 +887,7 @@
         ],
         "deadline_chapter": 15,
         "status": "open",
-        "last_reviewed_chapter": 13
+        "last_reviewed_chapter": 14
       },
       "P12": {
         "history": [
@@ -872,7 +906,7 @@
         ],
         "deadline_chapter": 21,
         "status": "open",
-        "last_reviewed_chapter": 13
+        "last_reviewed_chapter": 14
       }
     },
     "incidents": {}
