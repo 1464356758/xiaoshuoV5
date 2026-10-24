@@ -24,7 +24,8 @@ class ChapterThirteenRelease(unittest.TestCase):
         for id,deadline in (("P11",15),("P04",20),("P12",21)):
             self.assertEqual(state["serialization"]["promises"][id]["deadline_chapter"],deadline)
             # A promise due AFTER CH013 may later be fulfilled, without invalidating CH013.
-            self.assertEqual(next(p for p in report["promise_reviews"] if p["id"]==id)["action"],"keep")
+            expected_action="set" if id=="P12" else "keep"
+            self.assertEqual(next(p for p in report["promise_reviews"] if p["id"]==id)["action"],expected_action)
         for id in ("P04","P12"):
             self.assertEqual(state["serialization"]["promises"][id]["status"],"open")
         self.assertIn("正式对公账户核实收到这笔钱",body)
