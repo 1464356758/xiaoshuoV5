@@ -39,7 +39,10 @@ class ChapterThirteenRelease(unittest.TestCase):
             for k in list(pre["serialization"][kind]):
                 if int(k)>=13:pre["serialization"][kind].pop(k)
         pre["checkpoints"]=[c for c in pre["checkpoints"] if c["to"]<13]
+        # New promises introduced AFTER CH013 do not belong to its historical prestate.
         pre["serialization"]["promises"].pop("P12",None)
+        for later in ("P13",):
+            pre["serialization"]["promises"].pop(later,None)
         previous_reviews={p["id"]:p for p in report["promise_reviews"] if p["id"]!="P12"}
         for key,p in pre["serialization"]["promises"].items():
             if p.get("last_reviewed_chapter",0)>=13:p["last_reviewed_chapter"]=12

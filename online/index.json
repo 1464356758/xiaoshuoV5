@@ -11,26 +11,26 @@
   "source": {
     "repository_url": "https://github.com/1464356758/xiaoshuoV5",
     "branch": "main",
-    "generated_at": "2026-10-23T19:41:05+00:00",
-    "state_revision": 18,
-    "workflow_revision": 45,
-    "state_sha256": "53b30ed77f5163857fd9e7682bc90eb3f83ab95ca9ccbd14539ba60a8746a169",
-    "workflow_sha256": "05788e6202a0a361f2252c819874505aa6689d30e08b0b17c02b14efd03e4b3b",
+    "generated_at": "2026-10-24T00:25:03+00:00",
+    "state_revision": 19,
+    "workflow_revision": 48,
+    "state_sha256": "3c5a8c7bab9746f2f324edb3aa6cbbdeb821c92e1045ca1893c2ba3046c8ea5f",
+    "workflow_sha256": "c798839f3d4c94ae7b48ea97656baedee36e5fd6f0254ae79b40e19ad327e1ef",
     "manuscript_storage": "plain_files_v1",
     "requires_reader_key": false
   },
   "progress": {
     "target_chapters": 100,
-    "adopted_chapters": 14,
+    "adopted_chapters": 15,
     "target_han": 900000,
-    "actual_han": 126261,
+    "actual_han": 135292,
     "completed": false,
     "needs_revalidation": [],
-    "reviewed_until": 10,
+    "reviewed_until": 15,
     "window_review_due": false,
     "unresolved_reviews": [],
     "serial_mode": true,
-    "frozen_chapters": 14,
+    "frozen_chapters": 15,
     "published_chapters": 0,
     "publication_status": "只统计真实回执；无回执不等于未发布",
     "open_incidents": 0,
@@ -39,10 +39,10 @@
   "task": {
     "phase": "WAITING_NEXT",
     "label": "等待下一章",
-    "chapter": 15,
-    "detail": "CH014冻结，累计126261汉字；CH015兑现P11并完成CH011–CH015五章连读复核。",
-    "next_action": "CH015按合法受款路径兑现P11至少一笔真实资金纠错、未知项有期限核证，并进行CH011–CH015五章实际全文回看及八项发布前审核；不登记起点发布。",
-    "updated_at": "2026-10-23T19:41:05+00:00"
+    "chapter": 16,
+    "detail": "CH015冻结，累计135292汉字；CH016以公司经营风险正式问询和真实人物行动推动。",
+    "next_action": "CH016读取最新GitHub与CH011–15窗口review，走林遥经营风险合法问询及护理经营责任选择，不重复旧退款对账；P13@19、P04@20、P12@21保留；不登记起点发布。",
+    "updated_at": "2026-10-24T00:25:03+00:00"
   },
   "chapters": [
     {
@@ -208,6 +208,18 @@
       "han_count": 8811,
       "text_path": "book/chapters/CH014_124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd.txt",
       "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+      "needs_revalidation": false,
+      "frozen": true,
+      "publication_status": "unreported",
+      "published_at": null
+    },
+    {
+      "number": 15,
+      "title": "她自己看见了到账",
+      "stage": "S02",
+      "han_count": 9031,
+      "text_path": "book/chapters/CH015_5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114.txt",
+      "sha256": "5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114",
       "needs_revalidation": false,
       "frozen": true,
       "publication_status": "unreported",
@@ -621,24 +633,6 @@
   },
   "history": [
     {
-      "at": "2026-10-23T14:43:12+00:00",
-      "phase": "WRITING",
-      "label": "写作完成",
-      "detail": "CH010正文9004汉字和6400元本人到账双源实证完成。"
-    },
-    {
-      "at": "2026-10-23T14:43:13+00:00",
-      "phase": "REVIEWING",
-      "label": "第一阶段全文回看",
-      "detail": "CH006–CH010五章全文审查与CH001–CH010十章结构检查通过，决策ADJUST_FUTURE，生成S02十章前向计划。"
-    },
-    {
-      "at": "2026-10-23T14:43:14+00:00",
-      "phase": "WAITING_NEXT",
-      "label": "等待第十一章",
-      "detail": "CH010《钱没有从银行出去》9004汉字冻结，累计90965汉字；P02真实兑付，第一阶段S01完成，下一阶段S02 / CH011。"
-    },
-    {
       "at": "2026-10-23T16:49:29+00:00",
       "phase": "WRITING",
       "label": "撰写正文",
@@ -709,6 +703,24 @@
       "phase": "WAITING_NEXT",
       "label": "等待下一章",
       "detail": "CH014冻结，累计126261汉字；CH015兑现P11并完成CH011–CH015五章连读复核。"
+    },
+    {
+      "at": "2026-10-24T00:25:01+00:00",
+      "phase": "WRITING",
+      "label": "正文完成",
+      "detail": "CH015《她自己看见了到账》9031汉字，合法受款人3800元银行实际支付与本人核到到账。"
+    },
+    {
+      "at": "2026-10-24T00:25:02+00:00",
+      "phase": "REVIEWING",
+      "label": "五章回看与八项审核完成",
+      "detail": "CH011–CH015五章实际全文回看已填检查点，P11到期完成，P13@19承接三笔未结。"
+    },
+    {
+      "at": "2026-10-24T00:25:03+00:00",
+      "phase": "WAITING_NEXT",
+      "label": "等待下一章",
+      "detail": "CH015冻结，累计135292汉字；CH016以公司经营风险正式问询和真实人物行动推动。"
     }
   ]
 }

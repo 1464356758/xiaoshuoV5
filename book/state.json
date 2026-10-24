@@ -2,7 +2,7 @@
   "schema_version": 2,
   "book_id": "fecf168c-8f57-4c2c-98ad-622f20134a1d",
   "title": "母亲的遗嘱，要我扮演坏女儿",
-  "revision": 18,
+  "revision": 19,
   "config": {
     "target_chapters": 100,
     "target_han": 900000,
@@ -146,6 +146,15 @@
       "record_path": "records/CH014_eb806f94a6697a5e06ee10d3a011daa552ab09b1421bde35e489209abfa24913.json",
       "record_sha256": "eb806f94a6697a5e06ee10d3a011daa552ab09b1421bde35e489209abfa24913",
       "han_count": 8811
+    },
+    "15": {
+      "title": "她自己看见了到账",
+      "stage": "S02",
+      "text_path": "chapters/CH015_5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114.txt",
+      "text_sha256": "5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114",
+      "record_path": "records/CH015_db8a98b6d194470cb5e115c05d13c26c9a16f3027c0b9f6fdb23252e1585ee92.json",
+      "record_sha256": "db8a98b6d194470cb5e115c05d13c26c9a16f3027c0b9f6fdb23252e1585ee92",
+      "han_count": 9031
     }
   },
   "checkpoints": [
@@ -239,6 +248,56 @@
       "promise_payoffs": "P01A@2 P03@5 P10@8已完；P02@10由银行真实受理拒绝和新付款出款、客户真实到账核实按时兑付。P04@20、P05@50、P07@100、P08@100、P09@95继续，P11@15新增有界复核。",
       "ending_runway": "第二阶段须转从单一付款个案到七点位运行、投资人正式监督程序及员工权益；CH015 P11实证，CH020 P04合规人事结论，P05不得提前靠猜测定罪。",
       "next_action": "CH011阅读阶段结论和十章正文，先让一线服务的真实经营代价与许致远正式监督议程产生新冲突；严格检查CH015及CH020硬门。"
+    },
+    {
+      "kind": "window",
+      "from": 11,
+      "to": 15,
+      "base_revision": 18,
+      "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+      "read_mode": "full_text_batches",
+      "decision": "adjust_future",
+      "coverage": {
+        "11": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+        "12": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+        "13": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+        "14": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+        "15": "5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114"
+      },
+      "record_coverage": {
+        "11": "d55360837675cfd9111682a5f6c0ec478cd6b3ae87d1847a7f73c7429904c67f",
+        "12": "0266f7fb31c15605141fe56e3f554303a8c80dfb08d27d6d2dac3aa4deb85a30",
+        "13": "fbd85726cd2e5e689593910185d0b76d619d2d5b764e485e4f924240ec8e4e0b",
+        "14": "eb806f94a6697a5e06ee10d3a011daa552ab09b1421bde35e489209abfa24913",
+        "15": "db8a98b6d194470cb5e115c05d13c26c9a16f3027c0b9f6fdb23252e1585ee92"
+      },
+      "findings": [
+        {
+          "severity": "risk",
+          "scope": "CH014–CH015",
+          "issue": "连续两章以银行资金核证推进，阅读气味可能重复。",
+          "mitigation": "CH016转正式问询和权责对抗，CH017转长者/护理员自主行动，禁止再次把六笔付款分类当主情节。"
+        },
+        {
+          "severity": "watch",
+          "scope": "CH011–CH015",
+          "issue": "母亲私录与2023年周转近段只是长期背景，若长期搁置会弱化主线。",
+          "mitigation": "后续通过有权经营治理中姐妹不同选择作低密度回应，不借母亲幽灵录音或未经许可的私人档案短路解谜。"
+        },
+        {
+          "severity": "watch",
+          "scope": "P13@19",
+          "issue": "P11已实付一笔并有限核证完毕，另外三笔尚未结束。",
+          "mitigation": "独立建账P13，分别核4600受款资格、2900执行终态、7100原编号映射，CH019前给真实结果或代价。"
+        }
+      ],
+      "conclusion": "对CH011–CH015五章冻结全文/候选全文与各自事实账作完整窗口核查，总汉字：8803、8561、9121、8811、9031，合计44327。因果连续、未发现冻结事实硬冲突。本次继续连载并调整下一阶段的主场景，避免审查与对账持续重复。",
+      "causal_progress": "CH011在场护理员拒绝为董事抽班使监督权边界实质改变；CH012原家属投诉与送董摘要差异双来源核实林遥签名担责；CH013青芦当季4席真实失机会、公司签12600元支援并实付3600预款；CH014六笔分层确证；CH015季秀兰本人新授权后旧拒付3800得到银行执行、企业扣款、本人独立收款同向证实。",
+      "repetition_comparison": "CH011现场照护拒抽岗、CH012档案信息送达差异、CH013经营合同与收入机会、CH014资金样本分层、CH015客户本人收款与验配，自主角色和资源变量不同。但CH014、CH015连续金融主题密度偏高，后3章应离开客户银行对账现场。",
+      "character_changes": "林葭由想以母亲私录快速定姐姐罪，转为尊重授权与不同事实；林遥从隐瞒投诉经营风险转为书面承认自身复核责任并承担业务成本，但仍非无条件洗白；庞念青/苏荷、唐霁、陶绫/王伯/梁谨、叶珊/孟舒、季秀兰都以拒绝/选择影响现实；姐妹尚未和解。",
+      "promise_payoffs": "P11@15兑现：限定六笔旧清退查证已完成，已拒付3800在本章银行实际成功、公司扣款和季秀兰本人确认。先前已付5200/1800防重复。未付4600及终态未明2900/7100转P13@19，不伪装已清结；P04@20、P12@21仍开放。",
+      "ending_runway": "CH016经营问询必须有依法取得且对任职产生现实影响的答复；CH017客户/护工拒未授权展示并形成新经营成本；CH018完整董事议程程序；CH019 P13客户剩余资金核清/救济；CH020 P04合法人事决议；CH021 P12两席实际服务结论。",
+      "next_action": "CH016先读五章窗口及S02路线，写9000左右汉字，聚焦经营控制正式问询如何改变林遥与林葭选择和七处照护职责，不重复退款查账；冻结章不可回改。"
     }
   ],
   "needs_revalidation": [],
@@ -494,6 +553,22 @@
       ],
       "candidate_sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
       "candidate_path": "candidates/CH014_124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd.txt"
+    },
+    "15": {
+      "task_id": "8b113e2c-cb07-49c0-b628-0249a754c111",
+      "chapter": 15,
+      "mode": "write",
+      "phase": "adopted",
+      "repairs": 0,
+      "history": [
+        {
+          "sha256": "5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114",
+          "reason": "初稿，五章回看及八项检查通过",
+          "repairs": 0
+        }
+      ],
+      "candidate_sha256": "5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114",
+      "candidate_path": "candidates/CH015_5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114.txt"
     }
   },
   "completion": null,
@@ -556,6 +631,10 @@
       "14": {
         "text_sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
         "record_sha256": "eb806f94a6697a5e06ee10d3a011daa552ab09b1421bde35e489209abfa24913"
+      },
+      "15": {
+        "text_sha256": "5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114",
+        "record_sha256": "db8a98b6d194470cb5e115c05d13c26c9a16f3027c0b9f6fdb23252e1585ee92"
       }
     },
     "published": {},
@@ -629,6 +708,11 @@
         "path": "releases/CH014_698a9dba6b42149cc6d97d16bd81b13d13ac98dcc5056d5042a746fe52009817.json",
         "sha256": "698a9dba6b42149cc6d97d16bd81b13d13ac98dcc5056d5042a746fe52009817",
         "used": true
+      },
+      "15": {
+        "path": "releases/CH015_e722f60290c647aeeee096dd81660ddcb6992cbdcce95f2f3ca0d05e7916736a.json",
+        "sha256": "e722f60290c647aeeee096dd81660ddcb6992cbdcce95f2f3ca0d05e7916736a",
+        "used": true
       }
     },
     "promises": {
@@ -649,7 +733,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 14
+        "last_reviewed_chapter": 15
       },
       "P01A": {
         "history": [
@@ -761,7 +845,7 @@
         ],
         "deadline_chapter": 20,
         "status": "open",
-        "last_reviewed_chapter": 14
+        "last_reviewed_chapter": 15
       },
       "P05": {
         "history": [
@@ -780,7 +864,7 @@
         ],
         "deadline_chapter": 50,
         "status": "open",
-        "last_reviewed_chapter": 14
+        "last_reviewed_chapter": 15
       },
       "P07": {
         "history": [
@@ -799,7 +883,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 14
+        "last_reviewed_chapter": 15
       },
       "P08": {
         "history": [
@@ -818,7 +902,7 @@
         ],
         "deadline_chapter": 100,
         "status": "open",
-        "last_reviewed_chapter": 14
+        "last_reviewed_chapter": 15
       },
       "P09": {
         "history": [
@@ -837,7 +921,7 @@
         ],
         "deadline_chapter": 95,
         "status": "open",
-        "last_reviewed_chapter": 14
+        "last_reviewed_chapter": 15
       },
       "P10": {
         "history": [
@@ -883,11 +967,23 @@
               "quote": "发现一笔核一笔，实证一笔更正一笔"
             },
             "chapter": 10
+          },
+          {
+            "id": "P11",
+            "deadline_chapter": 15,
+            "action": "complete",
+            "reason": "限定样本真实分层和客户信息纠错完成，3800元被银行执行且老人官方渠道独立确认，本章到期真实兑现；余项P13独立跟踪。",
+            "evidence": {
+              "chapter": 15,
+              "sha256": "5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114",
+              "quote": "本期同类旧清退状态的限定双来源核查、分类纠正及三千八百元实际清偿已经完成"
+            },
+            "chapter": 15
           }
         ],
         "deadline_chapter": 15,
-        "status": "open",
-        "last_reviewed_chapter": 14
+        "status": "closed",
+        "last_reviewed_chapter": 15
       },
       "P12": {
         "history": [
@@ -906,7 +1002,26 @@
         ],
         "deadline_chapter": 21,
         "status": "open",
-        "last_reviewed_chapter": 14
+        "last_reviewed_chapter": 15
+      },
+      "P13": {
+        "history": [
+          {
+            "id": "P13",
+            "action": "set",
+            "deadline_chapter": 19,
+            "reason": "P11限定样本完成后单列未付款4600及终态未知2900/7100，CH019有约束力地落实证据/付款/实际救济，不因旧结案掩盖客户权利。",
+            "evidence": {
+              "chapter": 15,
+              "sha256": "5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114",
+              "quote": "随后另开一个具有到期要求的承诺"
+            },
+            "chapter": 15
+          }
+        ],
+        "deadline_chapter": 19,
+        "status": "open",
+        "last_reviewed_chapter": 15
       }
     },
     "incidents": {}

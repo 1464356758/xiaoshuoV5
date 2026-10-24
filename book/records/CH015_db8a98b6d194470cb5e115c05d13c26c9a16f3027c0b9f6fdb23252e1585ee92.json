@@ -1,0 +1,217 @@
+{
+  "chapter": 15,
+  "title": "她自己看见了到账",
+  "stage": "S02",
+  "base_revision": 18,
+  "canon_sha256": "1acd83c11c3ae92cab1d5a203b8016db345a8c089ee208c9b45c3542bc67fd7c",
+  "text_sha256": "5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114",
+  "complete": true,
+  "story_time_end": 20940,
+  "summary": "D14=2026-11-26，季芳母亲季秀兰亲自确认3800元新合法受款途径，公司有权经办核原拒付非待重试，向新确认账户实际转出3800元，银行正式执行成功、公司对应扣款与老人通过官方银行渠道自主确认到账三源一致；本金完成但并非服务全部满意或放弃迟延损失。CH014样本5200及1800仍真实成功不重付，4600旧委托权利关系未核仍未付，2900和7100外部资金执行终态仍未知。P11有界核证和至少一笔实际纠正到期完成，剩余4600/2900/7100另开P13@19；林遥批准只读核证扩面与防错误回写，不批量重付，董事事务正式发经营问询，未有人事表决。明川旧设备仍停用，青芦两席尚待合格人手/设施验收和客户同意，姐妹未和解。",
+  "review": {
+    "read_full_text": true,
+    "decision": "adopt",
+    "blocking_issues": [],
+    "sources_checked": [
+      {
+        "chapter": 11,
+        "sha256": "f4edb7a46807a8b419dc060af4487effd7e76bc4f4b5ba01ed18cc928efd7322",
+        "quote": "监督议题申请已被登记受理"
+      },
+      {
+        "chapter": 12,
+        "sha256": "7aabda71771137538bf835d6406666d32ca195127e14fff81fb7c2da2012f5b7",
+        "quote": "少掉的那一行已经找回。欠下的那个夜晚，还没有。"
+      },
+      {
+        "chapter": 13,
+        "sha256": "778256f8ba3f4473bace07134b8ec96dd65ad245c67972f67377f2667da98ae7",
+        "quote": "这四张床，现在不卖。"
+      },
+      {
+        "chapter": 14,
+        "sha256": "124b6c56d2baada448781c15d6e5869afc20564f2e1a8341a65f36b6aa0a8cbd",
+        "quote": "明天两笔明确拒绝的业务必须走向实际处理"
+      }
+    ],
+    "conclusion": "CH015全文9031汉字已审，按CH011–CH015实际全文与后续事实进行对照。本章发生真实银行执行和本人入账确认，非再发拒付通知；残余独立P13接管，CH020人事与CH021夜托仍未完成。"
+  },
+  "facts": [
+    {
+      "kind": "state",
+      "key": "refund3800:original",
+      "value": "季秀兰本人受款，原10月失败批次不删除。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "原来的失败批次没有被删除"
+    },
+    {
+      "kind": "state",
+      "key": "refund3800:consent",
+      "value": "季秀兰自行确认合法新收款方式，不向工作人员私传银行密码。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "账户是我的，我自己说"
+    },
+    {
+      "kind": "state",
+      "key": "refund3800:bank",
+      "value": "11月26日3800元银行实际执行成功，公司账户相应扣款已核。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "银行返回了有确定交易标识的执行成功回执"
+    },
+    {
+      "kind": "state",
+      "key": "refund3800:received",
+      "value": "季秀兰本人独立通过银行官方渠道核实3800元入账。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "季秀兰自己读过金额与来源，点头确认"
+    },
+    {
+      "kind": "state",
+      "key": "refund3800:otherrights",
+      "value": "本金清偿不代表其它服务投诉和实际迟延损失请求一并结清。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "服务反馈”和“延误费用核实"
+    },
+    {
+      "kind": "state",
+      "key": "refund4600:open",
+      "value": "松汀4600元仍未付，旧委托权利关系需核；次日中午前反馈。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "次日中午前确认权利关系复核进度"
+    },
+    {
+      "kind": "state",
+      "key": "refund2900:unknown",
+      "value": "姚阿姨2900元仍缺独立最终执行证据，11月28日下午3时前反馈。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "下一次进度二十八日下午三点之前给您"
+    },
+    {
+      "kind": "state",
+      "key": "refund7100:unknown",
+      "value": "7100元旧柜台纸原件存在但外部两组编号关联未知，执行状态未知。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "七千一百元先缺关联映射"
+    },
+    {
+      "kind": "state",
+      "key": "P11:fulfilled",
+      "value": "六笔限定样本双源分类和纠正已完成，3800实际入账，余项不冒称已付。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "本期同类旧清退状态的限定双来源核查、分类纠正及三千八百元实际清偿已经完成"
+    },
+    {
+      "kind": "state",
+      "key": "P13:residual",
+      "value": "剩余4600、2900、7100单列P13@19追踪，防P11结案遮盖客户权利。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "随后另开一个具有到期要求的承诺"
+    },
+    {
+      "kind": "state",
+      "key": "control:restricted",
+      "value": "林遥只批准隔离误回写和只读核查37笔，不批量改写资金状态或触发支付。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "先执行不会改变资金的风险隔离和核查"
+    },
+    {
+      "kind": "state",
+      "key": "board:inquiry",
+      "value": "正式经营风险问询按权限发送，尚无董事会有效人事决议。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "一份按章程拟制的经营风险问询通知经有权流程送出"
+    },
+    {
+      "kind": "state",
+      "key": "care:mingchuan",
+      "value": "明川原起身辅助设备仍不得用，蒋素琴原未完成外出仍另待履约救济。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "那台停用的起身辅助设备仍不能被拿来服务"
+    },
+    {
+      "kind": "state",
+      "key": "qinglu:not_open",
+      "value": "青芦两席仍需资格、房间验收及家属独立同意，未投入运营和确认收入。",
+      "holder": "",
+      "valid_from": 20940,
+      "valid_until": null,
+      "quote": "它尚未等来所有设备验收与家属个别同意"
+    }
+  ],
+  "progression": {
+    "goal": "完成P11有限同类退款核证与真实清偿，保护未结客户权益。",
+    "obstacle": "旧账户拒收、委托受款关系不明、第三方缺终态。",
+    "method": "本人选授权收款、银行执行、企业实际扣款及客户本人官方渠道确认相互核证。",
+    "choice": "季秀兰坚持本人选择，卢蔓不将受理当到账，孟舒分立未结承诺。",
+    "result": "3800元本金独立三源实付收悉，4600仍未付，2900与7100未知。",
+    "consequence": "现金实付3800，老人自主做验配选择，旧错误不能因本次付款被抹去。",
+    "next_options": "CH016董事问询，CH019 P13，CH020 P04，CH021 P12。",
+    "scene_function": "维修单、银行本人选择、到账、验配生活行动、姐妹问责构成不同于CH014的不可逆结果。"
+  },
+  "thread_events": [
+    {
+      "id": "P11",
+      "action": "payoff",
+      "description": "已完成同类旧清退六笔有限双源查证和差异纠正，其中银行拒付3800元已获本人新授权重新真实支付并独立确认；余项P13单列。",
+      "quote": "本期同类旧清退状态的限定双来源核查、分类纠正及三千八百元实际清偿已经完成"
+    },
+    {
+      "id": "P13",
+      "action": "plant",
+      "description": "仍未付款4600与付款终态未知2900/7100至CH019必须给有权最终核证、实际清偿或真实救济及承担成本。",
+      "quote": "随后另开一个具有到期要求的承诺"
+    },
+    {
+      "id": "P04",
+      "action": "develop",
+      "description": "正式经营风险问询通知送出，董事会尚未对林遥人事作决议。",
+      "quote": "一份按章程拟制的经营风险问询通知经有权流程送出"
+    },
+    {
+      "id": "P07",
+      "action": "develop",
+      "description": "姐妹直面对十月被淡化投诉，认可归认可仍不和解。",
+      "quote": "你现在每件事都说得更准确了"
+    },
+    {
+      "id": "P09",
+      "action": "develop",
+      "description": "明川旧设备仍停用，付款不能抵消照护承诺。",
+      "quote": "那台停用的起身辅助设备仍不能被拿来服务"
+    },
+    {
+      "id": "P12",
+      "action": "develop",
+      "description": "青芦两席条件仍待核，不提前开服。",
+      "quote": "它尚未等来所有设备验收与家属个别同意"
+    }
+  ],
+  "stage_closing": false,
+  "measured_han": 9031
+}
