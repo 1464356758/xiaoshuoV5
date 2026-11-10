@@ -111,6 +111,8 @@
       "full_prompt_generated": true,
       "copy_success_toast": true,
       "clipboard_bytes_verified": false
-    }
+    },
+    "deployment_record": "release_checks/SOFTWARE_SITE.json",
+    "deployed": true
   }
 }
