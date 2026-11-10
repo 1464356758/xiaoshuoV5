@@ -1,4 +1,4 @@
-# 小说系统 V4.6 · XS-KU 实库版
+# 小说系统 V4.6.1 · XS-KU 实库修正版
 
 本次系统升级已完成：默认绑定XS-KU，打通真实教材检索、原文版本、写前任务书、写后效果检查和冻结。可复现源码在[system_templates/v4.6](system_templates/v4.6/README.md)，接管状态见[SYSTEM_STATUS.md](SYSTEM_STATUS.md)，验证记录在[release_checks/V4.6.json](release_checks/V4.6.json)。
 
@@ -13,3 +13,5 @@
 - 八项审核及CH011–CH015全文回看：`book/releases/CH015_e722f60290c647aeeee096dd81660ddcb6992cbdcce95f2f3ca0d05e7916736a.json`
 - 唯一状态：`book/state.json`、`book/workflow.json`、`online/index.json`；新聊天交接：`book/接管记录.md`；S02路线：`book/阶段路线_CH011-CH020.md`
 **P11兑现关闭**：六笔旧退款有界双源核验，3800元本章通过合法新收款授权、银行执行及老人本人确认真实入账。另3笔4600未付、2900/7100未知划P13@19续追，未冒称全部已清。五章回看reviewed_until=15。后续P04@20董事合法人事结果、P12@21青芦两席实际开服结论仍须兑现；冻结章不可回写、无真实平台回执不登记发布。
+
+工程复查：4类问题已复现并修复，最终解压包371项检查通过，详见[复查与流程](release_checks/V4.6_AUDIT.md)。

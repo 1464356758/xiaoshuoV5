@@ -706,7 +706,7 @@ def snapshot(root, out):
         for name in ("启动指令.txt", "启动新书.txt", "启动小说库.txt", "每日一章指令.txt", "docs/连载冻结与发布前检查.md", "docs/写作与叙事检查.md", "docs/专项技法.md", "docs/小说参考库.md", "docs/XS-KU接入与创作.md", "reference_library/XS-KU.json", "平台研究与选题.md", "platforms.json", "执行规程.md", "工具使用与数据格式.md", "system_config.json", "project_config.json"):
             path = package / name
             if path.is_file(): files["SYSTEM/" + name] = path.read_bytes()
-        for name in ("online_state.py", "make_init_package.py", "serial_release.py", "narrative_quality.py", "novel_library.py", "daily_update.py", "check_updates.mjs"):
+        for name in ("online_state.py", "make_init_package.py", "serial_release.py", "narrative_quality.py", "novel_library.py", "reference_bridge.py", "release_source_guard.py", "daily_update.py", "check_updates.mjs"):
             path = package / "tools" / name
             if path.is_file(): files["SYSTEM/tools/" + name] = path.read_bytes()
         for name in ("core.mjs", "hub-core.mjs"):

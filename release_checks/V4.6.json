@@ -3,14 +3,14 @@
   "system_version": "4.6-xs-ku",
   "workspace_version": "1.4.7",
   "date_asia_shanghai": "2026-11-10",
-  "python_tests": 199,
+  "python_tests": 207,
   "node_tests": 164,
-  "total_tests": 363,
+  "total_tests": 371,
   "skipped_tests": 0,
   "tested_from_extracted_init_package": true,
   "real_library_integration_tests": 1,
   "real_library_integration_scope": "核对12条教材及1条复盘的来源，并将实库摘要接入临时合成作品，完成任务书、release-check和冻结；不评价文学水平。",
-  "init_package_sha256": "79617c293ebbf35c4feb70945aef630a606dbfe031f0dc9fade6fc9a52a6cae8",
+  "init_package_sha256": "8cf77040037dffc6b726bfb9db79c32004b321ef874f9c03cd58196c13612cb0",
   "reference_integrity": {
     "status": "passed",
     "source_files": 171,
@@ -46,5 +46,17 @@
     "工程与来源检查不代表全库通读。",
     "文学判断由实际审读完成，未验证平台签约效果。",
     "未重新部署既有网站，未创建定时任务。"
-  ]
+  ],
+  "patch_version": "4.6.1",
+  "audit": {
+    "bug_categories_reproduced": 4,
+    "new_regression_tests": 8,
+    "all_fixed": true,
+    "checks": [
+      "教材路径参数及等号/缩写形式",
+      "备份恢复新接库工具",
+      "旧书说明与空初始化包隔离",
+      "未提交/未跟踪/忽略的源文件禁止混入发布"
+    ]
+  }
 }

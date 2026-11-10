@@ -52,14 +52,14 @@ def build(root=ROOT,out=None):
     config['storage']={'mode':'plain_files','requires_reader_key':False}
     config['reference_library']=dict(config.get('reference_library',{}))
     files['project_config.json']=(json.dumps(config,ensure_ascii=False,indent=2)+'\n').encode()
-    files['README.md']=(root/'README.md').read_bytes()
+    files['README.md']=(root/'templates/新书说明.md').read_bytes()
     files['book/README.md']='# 空工作区\n\n由GPT运行bootstrap生成这本书的新身份。正文与记录直接保存，无需阅读密钥。不要复制旧书state.json。\n'.encode()
     files['research/README.md']='# 尚未研究\n\n选定平台后重新核查官方规则和榜单。\n'.encode()
     empty={'schema_version':1,'system_version':config['system_version'],'initialized':False,'book':{'id':None,'title':'新小说（待初始化）','platform':None,'selected_topic_id':None},'source':{'repository_url':None,'branch':'main','generated_at':None,'state_revision':0,'workflow_revision':0},'progress':{'target_chapters':100,'adopted_chapters':0,'target_han':900000,'actual_han':0,'completed':False,'needs_revalidation':[]},'task':{'phase':'NOT_INITIALIZED','label':'等待初始化','chapter':1,'detail':'复制启动指令交给GPT，建立这本书的新身份。','next_action':'读取启动新书.txt，填入新仓库链接后bootstrap。','updated_at':None},'chapters':[],'topics':[],'research':None,'history':[]}
     files['online/index.json']=(json.dumps(empty,ensure_ascii=False,indent=2)+'\n').encode()
     if (root/'.github/workflows/validate.yml').exists():files['.github/workflows/validate.yml']=(root/'.github/workflows/validate.yml').read_bytes()
     assert not any(name.startswith(('book/chapters/','book/records/','book/candidates/')) or name in ('book/state.json','book/workflow.json') for name in files)
-    manifest={'template_version':config['system_version'],'workspace_version':config['workspace_version'],'contains_novel_data':False,'files':{name:hashlib.sha256(data).hexdigest() for name,data in files.items()}}
+    manifest={'template_version':config['system_version'],'patch_version':config.get('patch_version'),'workspace_version':config['workspace_version'],'contains_novel_data':False,'files':{name:hashlib.sha256(data).hexdigest() for name,data in files.items()}}
     files['INIT_MANIFEST.json']=(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n').encode()
     out.parent.mkdir(parents=True,exist_ok=True)
     with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED) as archive:

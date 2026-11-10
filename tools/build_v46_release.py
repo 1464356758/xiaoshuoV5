@@ -12,16 +12,17 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "system_templates/v4.6"
 sys.path.insert(0, str(TEMPLATE / "tools"))
 import build_web_package
+from release_source_guard import assert_clean_source
 
 
 def build(out_dir):
     out = Path(out_dir).resolve(); out.mkdir(parents=True, exist_ok=True)
-    version = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
-    subprocess.check_call(["git", "diff", "--quiet", "HEAD", "--", "system_templates/v4.6", "tools/build_v46_release.py"], cwd=ROOT)
+    version = assert_clean_source(ROOT, ["system_templates/v4.6", "tools/build_v46_release.py", "release_checks/V4.6.json", "release_checks/python-v46.log", "release_checks/node-v46.log"])
     components = build_web_package.build(TEMPLATE, out)
     profile = json.loads((TEMPLATE / "reference_library/XS-KU.json").read_text())
     validation = json.loads((ROOT / "release_checks/V4.6.json").read_text())
-    manifest = {"format": "novel-system-release-v1", "system_version": "4.6-xs-ku", "workspace_version": "1.4.7",
+    config = json.loads((TEMPLATE / "project_config.json").read_text())
+    manifest = {"format": "novel-system-release-v1", "system_version": config["system_version"], "patch_version": config.get("patch_version"), "workspace_version": config["workspace_version"],
                 "source": {"repository_url": "https://github.com/1464356758/xiaoshuoV5", "commit": version,
                            "template_path": "system_templates/v4.6"}, "reference_library": profile["origin"],
                 "indexed": profile["indexed"], "declared_study_scope": profile["declared_study_scope"],
@@ -31,7 +32,7 @@ def build(out_dir):
         manifest["components"][name] = {"filename": path.name, "size_bytes": path.stat().st_size,
                                          "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
     (out / "交付清单.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
-    instructions = '''小说库与创作系统 V4.6 · XS-KU 实库版
+    instructions = '''小说库与创作系统 V4.6.1 · XS-KU 实库修正版
 
 开始一本新书：只需把“初始化系统包.zip”交给新的GPT工作聊天，并提供独立的新书GitHub仓库链接。包内《启动新书.txt》已填写XS-KU绑定；GPT负责部署、查库、阅读、选题、规划、写作与审读，你只选择平台、选题并授权开始写。
 
@@ -47,6 +48,8 @@ def build(out_dir):
 参考库本次索引171份原文、168组书名作者、74608个网页阅读单元。首批教材12条来自6本书的开篇9个单元；其余按任务实际阅读。索引不等于通读，也不是模型参数训练。签约结果仍须实际投稿验证。
 
 旧作品的冻结正文与事实记录继续只读，不用空包覆盖已有小说。包内不含模型API密钥，不会自动建立计划或投稿。网页部署包已重建，原有在线网址是否升级另据真实部署记录；本次没有更改既有网站。
+
+V4.6.1复查修复了教材路径校验、备份工具缺失、旧书说明混入空包、未跟踪源文件混入发布包四类问题。
 
 复现命令、实际源码提交与测试结果见交付清单.json。每个组件内也有文件哈希清单。
 '''

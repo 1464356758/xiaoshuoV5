@@ -158,6 +158,14 @@ test_revoked_owner_cannot_write_and_changed_audit_cannot_be_claimed (test_task_e
 test_terminal_proof_for_a_different_platform_run_cannot_resume (test_task_executor.ExecutorTests.test_terminal_proof_for_a_different_platform_run_cannot_resume) ... ok
 test_tool_failure_preserves_repair_budget_and_records_block_with_valid_index (test_task_executor.ExecutorTests.test_tool_failure_preserves_repair_budget_and_records_block_with_valid_index) ... ok
 test_remote_advance_blocks_old_request_and_exact_recorded_result_can_be_reused (test_task_executor.GitLeaseTests.test_remote_advance_blocks_old_request_and_exact_recorded_result_can_be_reused) ... ok
+test_rebuilding_from_an_active_project_keeps_its_readme_out_of_the_empty_package (test_v46_audit.AuditRegressionTests.test_rebuilding_from_an_active_project_keeps_its_readme_out_of_the_empty_package) ... ok
+test_reference_and_inline_path_arguments_cannot_escape_or_use_abbreviations (test_v46_audit.AuditRegressionTests.test_reference_and_inline_path_arguments_cannot_escape_or_use_abbreviations) ... ok
+test_snapshot_restores_reference_bridge_and_its_import_dependencies (test_v46_audit.AuditRegressionTests.test_snapshot_restores_reference_bridge_and_its_import_dependencies) ... ok
+test_clean_source_returns_actual_commit (test_v46_audit.ReleaseSourceGuardTests.test_clean_source_returns_actual_commit) ... ok
+test_ignored_compiled_cache_does_not_block_a_valid_build (test_v46_audit.ReleaseSourceGuardTests.test_ignored_compiled_cache_does_not_block_a_valid_build) ... ok
+test_ignored_python_source_is_also_rejected (test_v46_audit.ReleaseSourceGuardTests.test_ignored_python_source_is_also_rejected) ... ok
+test_modified_tracked_source_is_rejected (test_v46_audit.ReleaseSourceGuardTests.test_modified_tracked_source_is_rejected) ... ok
+test_untracked_python_source_is_rejected (test_v46_audit.ReleaseSourceGuardTests.test_untracked_python_source_is_rejected) ... ok
 test_candidate_cannot_reset_open_task_counter (test_v4_reliability.ReliabilityTests.test_candidate_cannot_reset_open_task_counter) ... ok
 test_canon_change_invalidates_existing_chapters_and_checkpoint (test_v4_reliability.ReliabilityTests.test_canon_change_invalidates_existing_chapters_and_checkpoint) ... ok
 test_changes_invalidate_beyond_thirty_chapters (test_v4_reliability.ReliabilityTests.test_changes_invalidate_beyond_thirty_chapters) ... ok
@@ -199,6 +207,6 @@ test_sync_is_idempotent_for_a_committed_source_version_and_ignores_untracked_inp
 test_all_registered_evidence_and_actual_packet_reach_frozen_synthetic_chapter (test_xsku_real.RealLibraryIntegration.test_all_registered_evidence_and_actual_packet_reach_frozen_synthetic_chapter) ... ok
 
 ----------------------------------------------------------------------
-Ran 199 tests in 55.009s
+Ran 207 tests in 21.889s
 
 OK
