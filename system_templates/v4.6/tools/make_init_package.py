@@ -21,7 +21,7 @@ def build(root=ROOT,out=None):
     files['docs/XS-KU接入与创作.md']=(root/'docs/XS-KU接入与创作.md').read_bytes()
     files['reference_library/XS-KU.json']=(root/'reference_library/XS-KU.json').read_bytes()
     files['启动小说库.txt']=(root/'启动小说库.txt').read_bytes()
-    for name in ('开篇试写与剧情验收.md', 'AI网文工作流调研.md'):
+    for name in ('开篇试写与剧情验收.md', '前五章投稿验收.md', 'AI网文工作流调研.md'):
         files['docs/' + name] = (root / 'docs' / name).read_bytes()
     # Historical verification describes the original author's enrollment, not
     # the new project's state. Keep operational rules without old book records.
@@ -56,6 +56,9 @@ def build(root=ROOT,out=None):
     files['book/README.md']='# 空工作区\n\n由GPT运行bootstrap生成这本书的新身份。正文与记录直接保存，无需阅读密钥。不要复制旧书state.json。\n'.encode()
     files['research/README.md']='# 尚未研究\n\n选定平台后重新核查官方规则和榜单。\n'.encode()
     empty={'schema_version':1,'system_version':config['system_version'],'initialized':False,'book':{'id':None,'title':'新小说（待初始化）','platform':None,'selected_topic_id':None},'source':{'repository_url':None,'branch':'main','generated_at':None,'state_revision':0,'workflow_revision':0},'progress':{'target_chapters':100,'adopted_chapters':0,'target_han':900000,'actual_han':0,'completed':False,'needs_revalidation':[]},'task':{'phase':'NOT_INITIALIZED','label':'等待初始化','chapter':1,'detail':'复制启动指令交给GPT，建立这本书的新身份。','next_action':'读取启动新书.txt，填入新仓库链接后bootstrap。','updated_at':None},'chapters':[],'topics':[],'research':None,'history':[]}
+    defaults=json.loads(files['system_config.json'])
+    empty['progress']['target_chapters']=defaults['target_chapters']
+    empty['progress']['target_han']=defaults['target_han']
     files['online/index.json']=(json.dumps(empty,ensure_ascii=False,indent=2)+'\n').encode()
     if (root/'.github/workflows/validate.yml').exists():files['.github/workflows/validate.yml']=(root/'.github/workflows/validate.yml').read_bytes()
     assert not any(name.startswith(('book/chapters/','book/records/','book/candidates/')) or name in ('book/state.json','book/workflow.json') for name in files)
@@ -87,6 +90,7 @@ def build_library(root=ROOT, out=None):
         'tools/novel_state.py': (root / 'tools/novel_state.py').read_bytes(),
         'docs/小说参考库.md': (root / 'docs/小说参考库.md').read_bytes(),
         'docs/XS-KU接入与创作.md': (root / 'docs/XS-KU接入与创作.md').read_bytes(),
+        'docs/前五章投稿验收.md': (root / 'docs/前五章投稿验收.md').read_bytes(),
     }
     manifest = {'format': 'novel-reference-library-init-v1', 'contains_novel_data': False,
                 'files': {name: hashlib.sha256(body).hexdigest() for name, body in files.items()}}

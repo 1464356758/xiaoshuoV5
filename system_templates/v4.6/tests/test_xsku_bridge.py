@@ -76,6 +76,11 @@ class XskuBridgeTests(RepositoryFixture):
         library.export_packet(self.root, [self.study_id], [], "交换", out, self.repository, self.git("rev-parse", "HEAD"))
         value = library.validate_packet(workspace.read_json(out))
         self.assertIn("source_origin", value["lessons"][0]); self.assertIn("evidence_sources", value["lessons"][0])
+        scope = value["lessons"][0]["source_scope"]
+        self.assertEqual(scope["from_unit"], 1)
+        self.assertEqual(scope["to_unit"], 2)
+        self.assertEqual(scope["level"], "scene")
+        self.assertEqual(scope["han_count"], sum(workspace.han_count(library.read_chapter(self.root, self.book_id, n)["text"]) for n in (1, 2)))
         self.assertNotIn("甲交出木料", out.read_text())
         bad = copy.deepcopy(value); bad["lessons"][0]["source_origin"]["path"] = "../outside"
         with self.assertRaises(workspace.WorkspaceError): library.validate_packet(bad)
@@ -109,6 +114,37 @@ class XskuBridgeTests(RepositoryFixture):
         self.assertEqual(before, (self.root / "catalog.json").read_bytes())
         with self.assertRaisesRegex(workspace.WorkspaceError, "未找到"):
             bridge.prepare(self.project, self.root, "无法命中的问题", self.base / "nothing.json")
+
+    def test_new_opening_does_not_treat_short_scene_studies_as_two_full_openings(self):
+        workspace.init(self.project / "book", "合成新书", {"serial_mode": True, "narrative_review_required": True, "opening_five_required": True})
+        with self.assertRaisesRegex(workspace.WorkspaceError, "开篇教材不足"):
+            bridge.prepare(self.project, self.root, "求助", self.base / "opening.json")
+
+    def test_two_committed_long_opening_studies_can_be_selected_with_measured_scope(self):
+        for name in ("甲", "乙"):
+            source = self.root / f"【合成开篇{name}-合成作者{name}】"
+            source.write_text('<b>www.example.invalid</b>\n<p>第一章 合成开篇</p><p>' + "测试" * 6000 +
+                              f'</p>\n<b>www.example.invalid</b>\n<p>第二章 合成后果</p><p>{name}决定守门。</p>\n')
+        self.commit(); library.sync_repository(self.root, self.repository)
+        catalog = library.load(self.root)
+        long_books = [key for key, entry in catalog["books"].items() if entry["title"].startswith("合成开篇")]
+        for index, book in enumerate(long_books):
+            request = self.base / f"arc-{index}.json"
+            library.study_request(self.root, book, "arc", 1, 2, request)
+            value = workspace.read_json(request); chapter = library.read_chapter(self.root, book, 2)
+            evidence = {key: chapter[key] for key in ("chapter", "start_line", "end_line", "sha256")}
+            evidence["quote"] = chapter["text"].splitlines()[-1]
+            value.update(decision="ready", read_full_scope=True, question="开篇选择怎样产生后果", observation="合成场景中的守门决定。",
+                         interpretation="合成输入用于验证范围。", technique="合成写法", applicability="只验证工程连接。",
+                         failure_conditions="不验证文学质量。", terms=["开篇", "选择"], evidence=[evidence])
+            workspace.atomic_json(request, value); library.study_check(self.root, request)
+        self.commit()
+        workspace.init(self.project / "book", "合成新书", {"serial_mode": True, "narrative_review_required": True, "opening_five_required": True})
+        out = self.base / "opening-packet.json"; bridge.prepare(self.project, self.root, "开篇 选择", out)
+        packet = library.validate_packet(workspace.read_json(out))
+        self.assertEqual(len(packet["lessons"]), 2)
+        self.assertEqual(len({item["source_scope"]["family_id"] for item in packet["lessons"]}), 2)
+        self.assertTrue(all(item["source_scope"]["han_count"] >= 10000 and item["source_scope"]["level"] == "arc" for item in packet["lessons"]))
 
 
 if __name__ == "__main__": unittest.main()

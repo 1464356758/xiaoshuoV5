@@ -1,16 +1,16 @@
 {
   "status": "passed",
   "system_version": "4.6-xs-ku",
-  "workspace_version": "1.4.7",
+  "workspace_version": "1.4.8",
   "date_asia_shanghai": "2026-11-10",
-  "python_tests": 207,
-  "node_tests": 164,
-  "total_tests": 371,
+  "python_tests": 217,
+  "node_tests": 165,
+  "total_tests": 382,
   "skipped_tests": 0,
   "tested_from_extracted_init_package": true,
   "real_library_integration_tests": 1,
   "real_library_integration_scope": "核对12条教材及1条复盘的来源，并将实库摘要接入临时合成作品，完成任务书、release-check和冻结；不评价文学水平。",
-  "init_package_sha256": "8cf77040037dffc6b726bfb9db79c32004b321ef874f9c03cd58196c13612cb0",
+  "init_package_sha256": "0e7aeaef0d732cbafb4cf04bdfc3cb8e51d39797ef6d9140a959af7d2dfdcb5a",
   "reference_integrity": {
     "status": "passed",
     "source_files": 171,
@@ -18,8 +18,8 @@
     "manifests_checked": 171,
     "reading_units": 74608,
     "source_bytes": 541198341,
-    "reference_commit": "00f5791d495105eb30989d1523c28084d054d385",
-    "meaning": "源文件与索引完整性核验，不代表全文阅读或文学判断。"
+    "reference_commit": "f3b66ec5305aa28c75998c4fd1f58227358404a4",
+    "meaning": "源文件与索引核验，不代表全文阅读。"
   },
   "reference_study_scope": {
     "books": 6,
@@ -47,7 +47,7 @@
     "文学判断由实际审读完成，未验证平台签约效果。",
     "未重新部署既有网站，未创建定时任务。"
   ],
-  "patch_version": "4.6.1",
+  "patch_version": "4.6.2",
   "audit": {
     "bug_categories_reproduced": 4,
     "new_regression_tests": 8,
@@ -58,5 +58,41 @@
       "旧书说明与空初始化包隔离",
       "未提交/未跟踪/忽略的源文件禁止混入发布"
     ]
+  },
+  "chapter_policy": {
+    "target_han": 6000,
+    "min_han": 5500,
+    "max_han": 6500,
+    "applies_from_chapter": 1,
+    "target_chapters": 150,
+    "target_book_han": 900000,
+    "opening_short_exception": false
+  },
+  "first_five": {
+    "enabled_for_new_books": true,
+    "minimum_distinct_opening_books": 2,
+    "minimum_han_per_benchmark": 10000,
+    "cumulative_full_text_before_each_adoption": true,
+    "sample_reviews": [
+      3,
+      5
+    ],
+    "internal_assessment_not_platform_acceptance": true
+  },
+  "synthetic_150x6000": {
+    "synthetic_only": true,
+    "chapters": 150,
+    "han_per_chapter": 6000,
+    "actual_han": 900000,
+    "window_reviews": 30,
+    "stage_reviews": 15,
+    "completion_gate": "passed",
+    "export": "passed",
+    "snapshot_integrity": "passed",
+    "restore_with_bundled_tool": "passed",
+    "context_characters": 9095,
+    "model_calls": 0,
+    "literary_quality_evaluated": false,
+    "note": "阅读声明和报告均为人工构造；不是90万字小说质量验证。"
   }
 }

@@ -75,7 +75,7 @@ def validate_reference_packet(packet):
     for item in lessons:
         fields = {"kind", "id", "sha256", "lesson", "applicability", "failure_conditions", "book_id", "source_sha256", "feedback_origin"}
         extended = {"source_origin", "evidence_sources"}
-        require(isinstance(item, dict) and set(item) in (fields, fields | extended), "教材摘要含额外或缺失字段，请重新导出学习结论。")
+        require(isinstance(item, dict) and set(item) in (fields, fields | extended, fields | extended | {"source_scope"}), "教材摘要含额外或缺失字段，请重新导出学习结论。")
         require(all(isinstance(item[key], str) and item[key].strip() for key in fields), "教材摘要字段须有实际内容。")
         require(item["feedback_origin"] in ("model", "author", "reader", "editor"), "教材须保留实际反馈来源。")
         require(item["kind"] in ("study", "review"), "教材记录类型无效。")
@@ -93,6 +93,12 @@ def validate_reference_packet(packet):
                 require(isinstance(position, dict) and set(position) == {"chapter", "start_line", "end_line", "sha256", "quote_sha256"}, "原文证据定位格式无效。")
                 require(all(type(position[key]) is int and position[key] > 0 for key in ("chapter", "start_line", "end_line")) and position["start_line"] <= position["end_line"], "原文证据范围无效。")
                 require(all(isinstance(position[key], str) and re.fullmatch(r"[0-9a-f]{64}", position[key]) for key in ("sha256", "quote_sha256")), "原文证据哈希无效。")
+        if "source_scope" in item:
+            scope = item["source_scope"]
+            require(isinstance(scope, dict) and set(scope) == {"from_unit", "to_unit", "han_count", "level", "family_id", "reading_basis"}, "教材实读范围字段无效。")
+            require(all(type(scope[key]) is int and scope[key] > 0 for key in ("from_unit", "to_unit")) and type(scope["han_count"]) is int and scope["han_count"] >= 0 and scope["from_unit"] <= scope["to_unit"], "教材实读范围或字数无效。")
+            require(scope["level"] in ("book", "arc", "scene", "prose", "review") and scope["reading_basis"] == "reviewer_declared", "教材阅读声明或层次无效。")
+            require(isinstance(scope["family_id"], str) and bool(re.fullmatch(r"[0-9a-f]{24}", scope["family_id"])), "教材同书族身份无效。")
     return packet
 
 
@@ -197,6 +203,11 @@ def load_state(root):
 
 
 def verify_files(root, state):
+    if "opening_five_plan" in state:
+        pin = state["opening_five_plan"]
+        require(isinstance(pin, dict) and isinstance(pin.get("path"), str), "前五章方案定位无效。")
+        path = inside(root, pin["path"])
+        require(path.is_file() and digest(path.read_text(encoding="utf-8")) == pin.get("sha256"), "前五章方案文件与登记版本不符。")
     for item in state["inputs"].values():
         path = inside(root, item["path"])
         require(path.is_file() and digest(path.read_text(encoding="utf-8")) == item["sha256"], "规划或作者设定与登记版本不符。")
@@ -218,15 +229,18 @@ def init(root, title, overrides=None):
     require(bool(title.strip()), "书名或临时项目名不能为空。")
     with writer_lock(root):
         require(not (Path(root) / "state.json").exists(), "已有本书进度，禁止重新初始化覆盖。")
-        config = {"target_chapters": 100, "target_han": 900000,
-                  "chapter_han_min": 8000, "chapter_han_max": 10000,
+        config = {"target_chapters": 150, "target_han": 900000,
+                  "chapter_han_target": 6000, "chapter_han_min": 5500, "chapter_han_max": 6500,
                   "book_han_min": 880000, "book_han_max": 920000,
                   "strict_length": True, "review_interval": 5, "max_local_repairs": 3,
                   "serial_mode": False, "serial_stage_size": 10, "serial_lookahead": 3,
                   "opening_hook_max_han": 800, "opening_core_max_han": 3000,
                   "opening_impact_max_han": 3000,
-                  "narrative_review_required": False}
+                  "narrative_review_required": False, "opening_five_required": False,
+                  "opening_benchmark_min_han": 10000}
         config.update(overrides or {})
+        if "chapter_han_target" not in (overrides or {}) and not config["chapter_han_min"] <= config["chapter_han_target"] <= config["chapter_han_max"]:
+            config["chapter_han_target"] = (config["chapter_han_min"] + config["chapter_han_max"]) // 2
         require(config["review_interval"] >= 1, "回看间隔必须为正数。")
         require(0 <= config["chapter_han_min"] <= config["chapter_han_max"], "章长区间无效。")
         require(isinstance(config["target_chapters"], int) and not isinstance(config["target_chapters"], bool) and config["target_chapters"] > 0, "目标章数必须为正整数。")
@@ -234,6 +248,9 @@ def init(root, title, overrides=None):
         require(0 <= config["book_han_min"] <= config["book_han_max"], "全书字数范围无效。")
         require(type(config["narrative_review_required"]) is bool, "narrative_review_required必须为布尔值。")
         require(not config["narrative_review_required"] or config["serial_mode"] is True, "叙事检查须与连载冻结一起启用。旧工程保持原检查，不静默追认。")
+        require(type(config["chapter_han_target"]) is int and config["chapter_han_min"] <= config["chapter_han_target"] <= config["chapter_han_max"], "章长目标须在允许区间内。")
+        require(type(config["opening_five_required"]) is bool and (not config["opening_five_required"] or config["narrative_review_required"]), "前五章检查须与叙事检查一起启用。")
+        require(type(config["opening_benchmark_min_han"]) is int and config["opening_benchmark_min_han"] > 0, "开篇对照阅读量须为正整数。")
         opening_max = config.get("opening_chapter_han_max")
         require(opening_max is None or (type(opening_max) is int and opening_max > 0), "开篇章长上限须为正整数。")
         state = {"schema_version": 2, "book_id": str(uuid.uuid4()), "title": title,
@@ -589,6 +606,9 @@ def context(root, query="", budget=80000, story_time=None, profile="author", tex
              "说明：这是待阅读资料，不证明GPT已读完。字数预算按字符计，不是token预算。"]
     for kind, item in state["inputs"].items():
         parts.append(f"## {kind} {item['sha256']}\n" + inside(root, item["path"]).read_text(encoding="utf-8"))
+    if state["config"].get("opening_five_required") and len(state["chapters"]) < 5 and state.get("opening_five_plan"):
+        pin = state["opening_five_plan"]
+        parts.append("## 前五章写前方案（预测与已发生事实分开）\n" + inside(root, pin["path"]).read_text(encoding="utf-8"))
     if items:
         last = len(items)
         adopted = state["chapters"][str(last)]
@@ -706,7 +726,7 @@ def snapshot(root, out):
         for name in ("启动指令.txt", "启动新书.txt", "启动小说库.txt", "每日一章指令.txt", "docs/连载冻结与发布前检查.md", "docs/写作与叙事检查.md", "docs/专项技法.md", "docs/小说参考库.md", "docs/XS-KU接入与创作.md", "reference_library/XS-KU.json", "平台研究与选题.md", "platforms.json", "执行规程.md", "工具使用与数据格式.md", "system_config.json", "project_config.json"):
             path = package / name
             if path.is_file(): files["SYSTEM/" + name] = path.read_bytes()
-        for name in ("online_state.py", "make_init_package.py", "serial_release.py", "narrative_quality.py", "novel_library.py", "reference_bridge.py", "release_source_guard.py", "daily_update.py", "check_updates.mjs"):
+        for name in ("online_state.py", "make_init_package.py", "serial_release.py", "narrative_quality.py", "opening_five.py", "novel_library.py", "reference_bridge.py", "release_source_guard.py", "daily_update.py", "check_updates.mjs"):
             path = package / "tools" / name
             if path.is_file(): files["SYSTEM/tools/" + name] = path.read_bytes()
         for name in ("core.mjs", "hub-core.mjs"):

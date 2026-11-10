@@ -3,8 +3,13 @@
 from __future__ import annotations
 
 import json
+import importlib.util
 from pathlib import Path
 import re
+
+_opening_spec = importlib.util.spec_from_file_location("novel_opening_five", Path(__file__).with_name("opening_five.py"))
+opening_five = importlib.util.module_from_spec(_opening_spec)
+_opening_spec.loader.exec_module(opening_five)
 
 
 def nonempty(value):
@@ -101,7 +106,7 @@ def surface_scan(text):
 def brief_skeleton(state, a):
     bindings = brief_bindings(state, a)
     config = state["config"]
-    budget = config["chapter_han_min"]
+    budget = config.get("chapter_han_target", config["chapter_han_min"])
     chapter = bindings["chapter"]
     if config.get("opening_chapter_han_max") is not None:
         if chapter <= 3:
@@ -113,9 +118,11 @@ def brief_skeleton(state, a):
     limits = a.chapter_han_range(state, chapter)
     if limits is not None:
         budget = max(limits[0], min(budget, limits[1]))
-    return dict(bindings, decision="pending", writer_brief="",
+    result = dict(bindings, decision="pending", writer_brief="",
                 hard_boundaries=[""], reader_promise="", history_queries=[""],
                 scene_plan=[{"purpose": "", "target_han": budget}])
+    opening_five.add_brief_fields(state, result)
+    return result
 
 
 def validate_brief(state, brief, a):
@@ -143,6 +150,7 @@ def validate_brief(state, brief, a):
         a.require(references.get("packet_sha256") == a.digest(encoded(packet)), "参考教材摘要版本不符。")
         a.require(all(nonempty(references.get(key)) for key in ("application", "originality")), "写明本章怎样运用教材，以及人物、办法和代价的原创安排。")
         a.require(not surface_scan(references["application"] + references["originality"]), "教材用法含制作字段，请用自然语言描述本书场景。")
+    opening_five.validate_brief(state, brief, a)
     return brief
 
 
@@ -185,6 +193,7 @@ def check_brief(root, path, a):
         state = a.load_state(root); a.verify_files(root, state)
         brief = validate_brief(state, a.read_json(path), a)
         library_binding(root, brief, a)
+        opening_five.register_plan(root, state, brief, a)
         body = json.dumps(brief, ensure_ascii=False, indent=2) + "\n"; sha = a.digest(body)
         relative = f"briefs/CH{brief['chapter']:03d}_{sha}.json"
         a.immutable_text(a.inside(root, relative), body)
@@ -201,6 +210,7 @@ def current_brief(root, state, a):
     a.require(a.digest(body) == pin["sha256"], "已登记写作任务书被改写。")
     brief = validate_brief(state, json.loads(body), a)
     library_binding(root, brief, a)
+    opening_five.verify_plan(root, state, a)
     return brief, pin["sha256"]
 
 
@@ -214,6 +224,7 @@ def writer_packet(root, state, a):
         references = brief["references"]
         parts += ["## 本章采用的写法", references["application"],
                   "## 本书的原创安排", references["originality"]]
+    parts += opening_five.writer_focus(state, brief)
     if state["chapters"]:
         item = state["chapters"][str(len(state["chapters"]))]
         parts += ["## 上一章正式正文", a.inside(root, item["text_path"]).read_text(encoding="utf-8")]
@@ -238,7 +249,7 @@ def reader_packet(root, state, text, a, history_from=None, history_to=None):
         item = state["chapters"][str(n)]
         gate = state.get("serialization", {}).get("gates", {}).get(str(n))
         review = None
-        if not partial and n <= count - 3 and gate:
+        if not partial and not opening_five.enabled(state) and n <= count - 3 and gate:
             body = a.inside(root, gate["path"]).read_text(encoding="utf-8")
             a.require(a.digest(body) == gate["sha256"], "历史读者回顾的检查文件已改变。")
             report = json.loads(body)
@@ -278,6 +289,7 @@ def skeleton(root, state, text, record, a):
         result["reference_use"] = {"packet_sha256": brief["references"]["packet_sha256"],
                                    "outcome": "pending", "application_observed": "",
                                    "originality_review": "", "evidence": [dict(ev)]}
+    opening_five.add_review_fields(root, state, text, record, brief, result, a)
     return result
 
 
@@ -347,4 +359,5 @@ def validate(root, state, text, record, review, a):
                   all(nonempty(usage.get(key)) for key in ("application_observed", "originality_review")),
                   "教材效果尚未审读：填写实际用法、未采用原因或调整，以及原创性判断。")
         evidence_list(root, state, text, n, usage.get("evidence"), a)
+    opening_five.validate_review(root, state, text, record, brief, review, a, evidence_list)
     return review

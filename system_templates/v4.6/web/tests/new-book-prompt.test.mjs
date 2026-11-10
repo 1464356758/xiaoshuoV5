@@ -22,7 +22,13 @@ test('new book and daily prompts carry the real library through the existing bri
   const prompt=newBookPrompt({repository:'https://github.com/example/new-novel'});
   for(const value of [REFERENCE_LIBRARY,'reference_library/XS-KU.json','brief-request --references','narrative_review.reference_use'])assert.ok(prompt.includes(value),value);
   const source=readFileSync(new URL('../dist/hub-core.mjs',import.meta.url),'utf8');
-  assert.match(source,/四、完成正文和实质审核\n如果本书已绑定reference_library/);
+  assert.match(source,/四、完成正文和实质审核\n[\s\S]*?如果本书已绑定reference_library/);
+});
+
+test('new book prompt uses 6000 characters from chapter one and requires the first-five review',()=>{
+  const prompt=newBookPrompt({repository:'https://github.com/example/new-novel'});
+  for(const value of ['150章','6000汉字','5500—6500','docs/前五章投稿验收.md','两部独立开篇','第3和第5章'])assert.ok(prompt.includes(value),value);
+  assert.ok(!prompt.includes('默认100章'));
 });
 
 test('new book prompt refuses template, management repository, invalid URL and oversized input',()=>{

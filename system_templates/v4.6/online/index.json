@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "system_version": "4.5-reference",
+  "system_version": "4.6-xs-ku",
   "initialized": false,
   "book": {
     "id": null,
@@ -16,7 +16,7 @@
     "workflow_revision": 0
   },
   "progress": {
-    "target_chapters": 100,
+    "target_chapters": 150,
     "adopted_chapters": 0,
     "target_han": 900000,
     "actual_han": 0,

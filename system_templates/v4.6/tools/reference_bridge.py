@@ -35,9 +35,29 @@ def binding(project, library_root):
 
 
 def prepare(project, library_root, query, out, studies=None, platform="", genre="", limit=2):
+    workspace.require(type(limit) is int and 1 <= limit <= 30, "教材数量须为1—30。")
     bound, origin, catalog = binding(project, library_root)
-    found = library.search(library_root, query, platform=platform, genre=genre, limit=limit)
+    state_path = Path(project) / "book/state.json"
+    state = workspace.load_state(state_path.parent) if state_path.is_file() else {}
+    opening = state.get("config", {}).get("opening_five_required") is True and not state.get("chapters")
+    found = library.search(library_root, query, platform=platform, genre=genre, limit=30 if opening else limit)
     chosen = list(dict.fromkeys(studies or [item["study_id"] for item in found["results"]]))
+    if opening and not studies:
+        chosen, families = [], set()
+        for item in found["results"]:
+            value = item["study"]; source = value["source"]
+            entry = catalog["books"][source["book_id"]]
+            family = entry.get("family_id", source["book_id"])
+            if value.get("level") not in ("arc", "book") or source["from_chapter"] != 1 or family in families:
+                continue
+            manifest, lines = library.book_data(library_root, catalog, source["book_id"])
+            body = "".join(lines[:manifest["chapters"][source["to_chapter"] - 1]["end_line"]])
+            if workspace.han_count(body) < state["config"].get("opening_benchmark_min_han", 10000):
+                continue
+            chosen.append(item["study_id"]); families.add(family)
+            if len(chosen) >= max(2, limit):
+                break
+        workspace.require(len(families) >= 2, "开篇教材不足：先实读两部独立同类开篇各至少一万汉字，保存并提交阶段教材，再准备首章摘要。")
     workspace.require(chosen, "未找到已读教材。先阅读候选原文并保存本轮拆书记录，再提交参考库后准备摘要。")
     checked = []
     for record_id in chosen:

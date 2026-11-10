@@ -595,6 +595,15 @@ def export_packet(root, studies, reviews, question, out, repository_url="", comm
                 lesson_entry["evidence_sources"] = [
                     {key: item[key] for key in ("chapter", "start_line", "end_line", "sha256")}
                     | {"quote_sha256": workspace.digest(item["quote"])} for item in value["evidence"]]
+                manifest, lines = book_data(root, catalog, source["book_id"])
+                first, last = source["from_chapter"], source["to_chapter"]
+                scope_text = "".join(lines[manifest["chapters"][first - 1]["start_line"] - 1:manifest["chapters"][last - 1]["end_line"]])
+                entry = catalog["books"][source["book_id"]]
+                lesson_entry["source_scope"] = {"from_unit": first, "to_unit": last,
+                                                "han_count": workspace.han_count(scope_text),
+                                                "level": value.get("level", "review"),
+                                                "family_id": entry.get("family_id") or workspace.digest(entry["title"] + "\n" + entry["author"])[:24],
+                                                "reading_basis": "reviewer_declared"}
             lessons.append(lesson_entry)
     packet = {"format": PACKET_FORMAT, "library_id": catalog["library_id"], "library_revision": catalog["revision"],
               "origin": {"repository_url": repository_url.rstrip("/"), "commit": commit},

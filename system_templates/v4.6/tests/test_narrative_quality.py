@@ -19,7 +19,7 @@ class QualityFixture(WorkspaceFixture):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name) / "book"
-        ns.init(self.root, "合成机制测试书", {"strict_length": False, "serial_mode": True, "narrative_review_required": True})
+        ns.init(self.root, "合成机制测试书", {"strict_length": False, "serial_mode": True, "narrative_review_required": True, "target_chapters": 100})
         self.q = ns.narrative_module(); self.a = ns.serial_api(); self.serial = ns.serial_module()
         for kind, content in (("canon", "CANON_SECRET：未来答案只在作者资料里。"), ("roadmap", "ROADMAP_SECRET：未写出的未来计划。")):
             file = Path(self.temp.name) / (kind + ".md"); file.write_text(content, encoding="utf-8")
@@ -89,7 +89,8 @@ class NarrativeQualityTests(QualityFixture):
     def test_opening_budget_leaves_enough_words_for_frozen_book(self):
         state = ns.load_state(self.root)
         state["config"].update(strict_length=True, opening_chapter_han_max=4500,
-                               target_chapters=4, book_han_min=22000, book_han_max=23500)
+                               target_chapters=4, book_han_min=22000, book_han_max=23500,
+                               chapter_han_min=8000, chapter_han_max=10000)
         ns.atomic_json(self.root / "state.json", state)
         for count in (2999, 3000):
             text = TEXT + "门" * (count - ns.han_count(TEXT))
@@ -120,7 +121,7 @@ class NarrativeQualityTests(QualityFixture):
         with self.assertRaises(ns.WorkspaceError): self.q.check_brief(self.root, path, self.a)
         path, brief = self.brief(); brief["book_id"] = "another-book"; ns.atomic_json(path, brief)
         with self.assertRaises(ns.WorkspaceError): self.q.check_brief(self.root, path, self.a)
-        state = ns.load_state(self.root); state["config"]["strict_length"] = True; ns.atomic_json(self.root / "state.json", state)
+        state = ns.load_state(self.root); state["config"].update(strict_length=True, target_chapters=150); ns.atomic_json(self.root / "state.json", state)
         path, _ = self.brief({"scene_plan": [{"purpose": "有效场景", "target_han": 100}]})
         with self.assertRaises(ns.WorkspaceError): self.q.check_brief(self.root, path, self.a)
 

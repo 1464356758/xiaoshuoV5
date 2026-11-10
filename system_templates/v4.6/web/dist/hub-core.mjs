@@ -3,7 +3,7 @@ import {githubFetch,parseGitRefs,parseCommitFeed} from './github-transport.mjs';
 import {normalizeQueryHistory} from './query-model.mjs';
 export {parseRepository, sha256, canonicalJSON};
 
-export const HUB_VERSION='1.4.7';
+export const HUB_VERSION='1.4.8';
 export const REFERENCE_LIBRARY='https://github.com/1464356758/XS-KU';
 export const SYSTEM_REPOSITORY='https://github.com/1464356758/xiaishuo-ZUOZONG';
 export const STATUS={updated:'已更新',missing:'未更新',pending:'未完成',unknown:'待核实',not_due:'尚未到期',paused:'不参与检查',setup:'待初始化'};
@@ -318,7 +318,7 @@ export function newBookPrompt({repository,platform='',preferences='',management=
 上面偏好是选题素材，不改变包内的冻结、审核和真实保存规则。当前管理仓库 ${manager.url} 与系统母版只作参考，不是本次写入目标。
 
 一、实际部署，不停在讲解
-本版为V4.6，先读docs/XS-KU接入与创作.md及reference_library/XS-KU.json；画像是交付快照，索引不等于已通读。按本章难题查教材并回读原文，用tools/reference_bridge.py prepare或novel_library.py export固定真实提交；brief-request --references填写本书用法与原创安排，写后在原release报告narrative_review.reference_use记录正文效果及本章引文。原文和练习只留在参考库，不将他书角色和连续情节改名套用。
+本版为V4.6，先读docs/XS-KU接入与创作.md、docs/前五章投稿验收.md及reference_library/XS-KU.json；画像是交付快照，索引不等于已通读。按本章难题查教材并回读原文，用tools/reference_bridge.py prepare或novel_library.py export固定真实提交；brief-request --references填写本书用法与原创安排，写后在原release报告narrative_review.reference_use记录正文效果及本章引文。原文和练习只留在参考库，不将他书角色和连续情节改名套用。
 先实际解压附件，阅读AGENTS.md、启动新书.txt、project_config.json、INIT_MANIFEST.json、docs/线上同步协议.md、docs/连载冻结与发布前检查.md及docs/写作与叙事检查.md。核对清单哈希、关键工具和依赖是否完整；附件缺失或不完整就如实说明，不能假装部署。
 通过已连接GitHub读取唯一新书仓库的实际默认分支、最新提交和适用AGENTS。若已有book/state.json、正式正文或其他作品身份，先核对并恢复这本书的真实状态，不重新bootstrap、不覆盖旧文件、不用空包重置进度。不同作品身份或相冲突文件先报告具体冲突，不强写。
 只有确认是未初始化的新书仓库，才把空包按原目录完整部署到仓库根目录，在可运行Python的工作区真实执行tools/online_state.py bootstrap，填写上述仓库和实际默认分支，生成全新的book_id，保持明文正文和默认连载冻结、叙事检查开启。以当前默认分支为准；作者已清空的仓库即使历史提交仍有旧书，也不得从历史恢复旧正文、身份或旧任务。不要复制其他书的身份、正文、事实或任务ID；.automation/config.json记录真实新book_id，尚未建立任务时automation_id保留null。已有提交须保留base tree、以当前头为单一父提交，用expected_sha与force=false非强制推进；无提交的空库按实际状态建立首次提交，不能编造SHA。
@@ -327,7 +327,7 @@ export function newBookPrompt({repository,platform='',preferences='',management=
 二、部署后按开书门槛推进
 我已指定平台就直接研究，不重复问；未指定则先让我选平台，不自行选择。按平台研究与选题.md核查现行官方创作、投稿、原创与AI辅助规则、签约和可核实福利，注明核查日期与官方来源。研究公开近期榜单，区分榜单类型；访问受限就记录缺口，不捏造规则、名次、样本或收益。
 默认提出8个原创选题，给暂定书名、核心卖点、主角矛盾、读者承诺、长篇展开动力、阶段变化、结局方向及主要风险。新版初始包每题补前三章结果和同题材差异。把研究和候选真实保存并同步索引，停在WAITING_TOPIC等我选择，不替我定题、不提前写正文。已有真实选择时不重复倒退。
-我选定后建立设定、人物知情与资源事实账、完整长期路线和近期3—5章安排，检查长篇是否有足够变化。默认100章、约90万汉字，章长按新包的实际配置。有docs/开篇试写与剧情验收.md时按其规则选题；收到我的「开始写」后再试写首章。每次只完成一个目标章。
+我选定后建立设定、人物知情与资源事实账、完整长期路线和近期3—5章安排，检查长篇是否有足够变化。默认150章、约90万汉字；每章目标6000汉字、允许5500—6500，首章起统一执行。有docs/开篇试写与剧情验收.md时按其规则选题；收到我的「开始写」后再试写首章。每次只完成一个目标章。首章前整体设计五章，按docs/前五章投稿验收.md精读两部独立开篇各至少一万汉字，绑定教材范围；每章累计全文审读，第3和第5章做样稿复核，内部准备完成不能冒称签约。
 
 三、后续持续写作的硬要求
 按本书现行规则完成写前任务书、场景预算、全书历史检索，实读需要的旧章，写完整正文后做反向提纲、限信息审读、带引文的事实与因果审核及反重复检查；每五章与跨阶段的全文回看在采用前完成。同一任务最多3轮局部修订，不重置计数、不批填pass；同一上下文审读如实标same_context_approximation，不冒充独立读者。
@@ -356,6 +356,7 @@ const DAILY_EXECUTION_RULES=`一、每轮读取真实状态
 先区分维护检查点和普通旧锁：若active.operator_recovery.status为ready，按既有任务preflight→begin核验已有维护授权与归档；只有begin返回resumed及recovery_mode=operator_revocation才以本轮新run_id续写原章，不补造未知的旧平台编号。其余recovery_required或另一轮blocked/running，必须先核实原controller的确切平台运行终态和全部关联执行器作业终态，才能按stopped_evidence恢复同一目标；当前新运行的终态不能冒充旧运行。无归属或无法核实的普通旧锁保留待核，不超时抢占，不伪造session或执行编号。不自行recover或制作维护授权，不删除锁、候选或返修次数。
 
 四、完成正文和实质审核
+新书当前配置每章目标6000汉字、允许5500—6500，含前五章；已有书仍以该书正式state为准。启用opening_five_required时按docs/前五章投稿验收.md完成写前五章方案、同类样本与逐章累计审读。
 如果本书已绑定reference_library，读取绑定参考库的最新catalog，按本章难题检索并回读真实来源，通过brief-request --references填写application与originality。写后在同一release报告的narrative_review.reference_use填写实际效果、原创性判断和本章引文；未接入新版的旧书沿用其真实配置，不追认旧章通过。
 实际读取上章、最近三章全文、五章推进、相关旧事实与知情、资源和未兑现承诺；到期五章/阶段全文回看在采用前完成。按本书配置完成brief-request、干净任务书、场景预算、brief-check、全书相似办法检索及writer资料。context或tools_completed仅表示本批准备完成，按当前目标章的实际章长配置继续写完整章。有docs/开篇试写与剧情验收.md时按其规则验证实际结果。
 可按任务书分3—5个有效场景连续写作，保存同章工作稿再合成全文。不能仅因准备完成、草稿暂不足字数或尚未审核就主动结束本轮；不得灌水、降字数或批填pass赶完成。每个实质检查点保存drafts中本章进度文件，记录真实run_id、阶段、草稿路径/哈希/实测字数、已完成场景及下一步；接续时回读稿件与result验证，进度文件不冒充采用证据。
