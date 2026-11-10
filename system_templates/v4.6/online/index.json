@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "system_version": "4.5-reference",
+  "initialized": false,
+  "book": {
+    "id": null,
+    "title": "新小说（待初始化）",
+    "platform": null,
+    "selected_topic_id": null
+  },
+  "source": {
+    "repository_url": null,
+    "branch": "main",
+    "generated_at": null,
+    "state_revision": 0,
+    "workflow_revision": 0
+  },
+  "progress": {
+    "target_chapters": 100,
+    "adopted_chapters": 0,
+    "target_han": 900000,
+    "actual_han": 0,
+    "completed": false,
+    "needs_revalidation": []
+  },
+  "task": {
+    "phase": "NOT_INITIALIZED",
+    "label": "等待初始化",
+    "chapter": 1,
+    "detail": "复制启动指令交给GPT，建立这本书的新身份。",
+    "next_action": "读取启动新书.txt，填入新仓库链接后bootstrap。",
+    "updated_at": null
+  },
+  "chapters": [],
+  "topics": [],
+  "research": null,
+  "history": []
+}

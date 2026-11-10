@@ -1,4 +1,12 @@
-# V5｜《母亲的遗嘱，要我扮演坏女儿》
+# 小说系统 V4.6 · XS-KU 实库版
+
+本次系统升级已完成：默认绑定XS-KU，打通真实教材检索、原文版本、写前任务书、写后效果检查和冻结。可复现源码在[system_templates/v4.6](system_templates/v4.6/README.md)，接管状态见[SYSTEM_STATUS.md](SYSTEM_STATUS.md)，验证记录在[release_checks/V4.6.json](release_checks/V4.6.json)。
+
+重建全部五个组件及完整交付包：`python3 tools/build_v46_release.py --out-dir ../V4.6-deliverables`。新书使用独立仓库；现有网站未在本次任务中重新部署。
+
+## 既有小说工作区
+
+### V5｜《母亲的遗嘱，要我扮演坏女儿》
 起点T05。**CH001–CH015正式冻结，累计135292汉字。** 当前 `WAITING_NEXT / CH016 / S02`。起点真实发布回执登记0章。
 - CH015《她自己看见了到账》：`book/chapters/CH015_5fffa660b4e538b75a946c0309a1bb799e1372da10f6edf71095fdf6f6efe114.txt`（9031汉字）
 - 正式事实：`book/records/CH015_db8a98b6d194470cb5e115c05d13c26c9a16f3027c0b9f6fdb23252e1585ee92.json`

@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "system_version": "4.6-xs-ku",
+  "workspace_version": "1.4.7",
+  "date_asia_shanghai": "2026-11-10",
+  "python_tests": 199,
+  "node_tests": 164,
+  "total_tests": 363,
+  "skipped_tests": 0,
+  "tested_from_extracted_init_package": true,
+  "real_library_integration_tests": 1,
+  "real_library_integration_scope": "核对12条教材及1条复盘的来源，并将实库摘要接入临时合成作品，完成任务书、release-check和冻结；不评价文学水平。",
+  "init_package_sha256": "79617c293ebbf35c4feb70945aef630a606dbfe031f0dc9fade6fc9a52a6cae8",
+  "reference_integrity": {
+    "status": "passed",
+    "source_files": 171,
+    "raw_git_blobs_checked": 171,
+    "manifests_checked": 171,
+    "reading_units": 74608,
+    "source_bytes": 541198341,
+    "reference_commit": "00f5791d495105eb30989d1523c28084d054d385",
+    "meaning": "源文件与索引完整性核验，不代表全文阅读或文学判断。"
+  },
+  "reference_study_scope": {
+    "books": 6,
+    "reading_units": 9,
+    "studies": 12,
+    "practices": 1,
+    "reviews": 1,
+    "full_library_read": false
+  },
+  "existing_book": {
+    "unchanged_files": 71,
+    "adopted_frozen_chapters": 15,
+    "text_or_fact_changes": 0
+  },
+  "commands": [
+    "NOVEL_XSKU_ROOT=<实际XS-KU检出> python3 -m unittest discover -s tests -v",
+    "node --test web/tests/*.test.mjs"
+  ],
+  "logs": [
+    "release_checks/python-v46.log",
+    "release_checks/node-v46.log"
+  ],
+  "limits": [
+    "工程与来源检查不代表全库通读。",
+    "文学判断由实际审读完成，未验证平台签约效果。",
+    "未重新部署既有网站，未创建定时任务。"
+  ]
+}

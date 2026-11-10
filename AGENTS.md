@@ -34,3 +34,7 @@
 提交后回读至少`book/workflow.json`、`online/index.json`，正文采用时另回读对应正文与记录，并核对真实文件或哈希。成功后才说“已写回”。只在临时目录保存不算线上交付。
 
 当前网页是公开仓库阅读器，没有GPT API钥匙，也不自动在后台写小说。网页显示的是已提交进度，默认每60秒刷新，手动可刷新。持续创作在实际授权的GPT任务中执行。
+
+## V4.6系统维护入口
+
+本轮系统版本在system_templates/v4.6，不覆盖本仓库旧小说工作区。继续系统升级任务时先读SYSTEM_STATUS.md与system_templates/AGENTS.md；写作状态仍由book/state.json决定，不能将系统完成误当成新增小说章节。
