@@ -1,14 +1,20 @@
 {
-  "workspace_version": "1.4.9",
-  "patch_version": "4.6.3",
-  "template_source_commit": "97269fba14d6a2bcdc14787ef185fdb4b29ae1f1",
-  "site_source_commit": "2d19380b80aa873d048ee68a177bc00c4d327f10",
-  "init_package_sha256": "1a869a10b36a080b66046eb292c64ea3879ba6a0e9cc0bbc907a0ac47bed0b37",
+  "workspace_version": "1.4.10",
+  "patch_version": "4.6.4",
+  "template_source_commit": "9940008c7ba7a3882d7f9615fb7c718b61d5fd5a",
+  "site_source_commit": "a232813743d38a7bb9482cc52908761553713ac4",
+  "xs1_policy_commit": "4fcb03494232fb27f6ce56a590ababc00c06109c",
+  "writing_frequency": {
+    "policy": "per_trigger",
+    "chapters_per_day_limit": null,
+    "same_request_retries_do_not_advance": true
+  },
+  "init_package_sha256": "bc83a4ac17907054ce9d120c5e4d8e15da4cd6ff1790444adc09320a90037512",
   "deployment": {
-    "id": "appgdep_6af34af45e588191adf02e1fc1a2701c",
+    "id": "appgdep_6af39098f938819197bebfad1bcb12c8",
     "project_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2",
     "title": "小说工作台 · 个人管理与代发",
-    "version_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_10b66887bb90819192eea7fcbfc6069b",
+    "version_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_9c77298140248191a175d51625ab3a97",
     "type": "publish",
     "status": "succeeded",
     "url": "https://novel-workspace-v44.qq1464356758.chatgpt.site",
@@ -17,23 +23,18 @@
     "provider_deployment_id": "site---6adf1e4d5adc8191ba57f57fd4bbeda2",
     "failure_message": null,
     "env_set_revision": 0,
-    "updated_at": "2026-11-10T16:49:04.363405+00:00"
+    "updated_at": "2026-11-10T21:46:12.127676+00:00"
   },
   "verification": {
     "source_tests": {
-      "python": 217,
-      "node": 166,
-      "total": 383
+      "python": 224,
+      "node": 169,
+      "total": 393
     },
     "worker_routes_and_download": "passed",
-    "browser_preview": {
-      "template_repository_rejected": true,
-      "complete_prompt_generated": true,
-      "copy_success_toast": true,
-      "clipboard_bytes_verified": false
-    },
-    "production_browser": "existing_sign_in_gate_preserved; authenticated_ui_not_verified",
+    "browser_preview": "not_repeated_for_this_release",
+    "production_browser": "authenticated_ui_not_verified",
     "access_unchanged": true,
-    "registry_and_existing_books_unchanged": true
+    "xs1_existing_chapters_and_active_target_unchanged": true
   }
 }

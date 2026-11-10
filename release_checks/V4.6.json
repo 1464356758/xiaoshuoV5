@@ -106,7 +106,7 @@
     "matching_package_required": true,
     "preserve_existing_registry": true,
     "deployment_record": "release_checks/SOFTWARE_SITE.json",
-    "deployed": false
+    "deployed": true
   },
   "writing_frequency": {
     "policy": "per_trigger",
@@ -114,6 +114,7 @@
     "one_chapter_per_independent_request": true,
     "stable_trigger_retry_deduplication": true,
     "same_day_three_chapters_test": "passed",
-    "legacy_xs1_active_compatibility": "passed"
+    "legacy_xs1_active_compatibility": "passed",
+    "xs1_policy_commit": "4fcb03494232fb27f6ce56a590ababc00c06109c"
   }
 }

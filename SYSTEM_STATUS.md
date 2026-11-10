@@ -1,6 +1,6 @@
 # V4.6.4 系统任务接管状态
 
-2026-11-11（北京时间）。写作系统4.6-xs-ku，补丁4.6.4，工作台1.4.10。源码与解压包验证完成，软件端更新按独立部署回执确认。
+2026-11-11（北京时间）。写作系统4.6-xs-ku，补丁4.6.4，工作台1.4.10。状态：COMPLETE。源码与解压包验证完成，软件端已在原网址发布成功，见release_checks/SOFTWARE_SITE.json。
 
 用户要求取消一天一章限制。现在每次独立写作请求完成一章，同一天可继续多章；同次重试固定trigger_id，只核验或接续原目标。完成记录按请求不可变保存，旧日期回执保留首份，不再作为限额。恢复保留目标、前文基线及新旧请求绑定。
 
@@ -10,3 +10,5 @@
 - 新书、日更指令、软件核验及匹配下载包同步升级。软件核验读取active指向的实际receipt_path；当天后续章节的进行状态不会被第一章完成记录遮住。
 
 源码：system_templates/v4.6。复现：python3 tools/build_v46_release.py --out-dir ../V4.6-deliverables。软件发布以release_checks/SOFTWARE_SITE.json内对应1.4.10回执为准。修复细节见release_checks/V4.6_UNLIMITED.md。
+
+XS1现有书也已同步取消日限额，提交4fcb03494232fb27f6ce56a590ababc00c06109c；正文、drafts、online及在途第二章执行记录均未改写。
