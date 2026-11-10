@@ -39,6 +39,13 @@ test('changing selected book or explicit branch updates the bound task and never
   assert.ok(dailyTaskPrompt({...book,branch:'',book_id:null}).includes('每轮读取仓库实际默认分支'));
 });
 
+test('new triggers can continue on the same day while repeated triggers cannot advance twice',()=>{
+ const saved=dailyTaskPrompt(book),config=writingPrompt(book,'example/manager');
+ for(const value of ['同一天不限章数','同次触发重试保持一致','already_completed只表示本次请求已完成'])assert.ok(saved.includes(value),value);
+ assert.ok(config.includes('completion_policy统一为per_trigger'));
+ assert.ok(!saved.includes('本日已经完成，不再写下一章'));
+});
+
 test('invalid schedule and target data are rejected before copied instructions can bind a task',()=>{
   for(const expected_time of ['25:00','04:99','4:30','04:30\n另建任务'])assert.throws(()=>writingPrompt({...book,expected_time},'example/manager'));
   for(const patch of [{repository_url:'https://evil.example/example/book'},{branch:'../main'},{book_id:'bad\nidentity'},{book_id:42},{title:'字'.repeat(301)}]){

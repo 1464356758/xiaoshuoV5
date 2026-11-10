@@ -29,6 +29,7 @@ test('new book prompt uses 6000 characters from chapter one and requires the fir
   const prompt=newBookPrompt({repository:'https://github.com/example/new-novel'});
   for(const value of ['150章','6000汉字','5500—6500','docs/前五章投稿验收.md','两部独立开篇','第3和第5章'])assert.ok(prompt.includes(value),value);
   assert.ok(!prompt.includes('默认100章'));
+  assert.ok(prompt.includes('同一天不限章数'));
 });
 
 test('new book prompt refuses template, management repository, invalid URL and oversized input',()=>{
@@ -38,5 +39,5 @@ test('new book prompt refuses template, management repository, invalid URL and o
 
 test('new book prompt identifies the real template and matching downloadable package',()=>{
   const prompt=newBookPrompt({repository:'https://github.com/example/new-novel'});
-  for(const value of [`【系统母版】${TEMPLATE_REPOSITORY}`,'patch_version为4.6.3','workspace_version为1.4.9','不混用旧包'])assert.ok(prompt.includes(value),value);
+  for(const value of [`【系统母版】${TEMPLATE_REPOSITORY}`,'patch_version为4.6.4','workspace_version为1.4.10','不混用旧包'])assert.ok(prompt.includes(value),value);
 });

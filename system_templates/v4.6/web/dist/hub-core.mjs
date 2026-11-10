@@ -3,7 +3,7 @@ import {githubFetch,parseGitRefs,parseCommitFeed} from './github-transport.mjs';
 import {normalizeQueryHistory} from './query-model.mjs';
 export {parseRepository, sha256, canonicalJSON};
 
-export const HUB_VERSION='1.4.9';
+export const HUB_VERSION='1.4.10';
 export const REFERENCE_LIBRARY='https://github.com/1464356758/XS-KU';
 export const SYSTEM_REPOSITORY='https://github.com/1464356758/xiaishuo-ZUOZONG';
 export const TEMPLATE_REPOSITORY='https://github.com/1464356758/xiaoshuoV5';
@@ -250,6 +250,19 @@ export async function verifyCompletion(client,book,receipt,date,now=new Date()){
   proof(rec.data.chapter===r.chapter&&rec.data.text_sha256===r.body_sha256&&release.data.chapter===r.chapter&&release.data.book_id===r.book_id&&release.data.text_sha256===r.body_sha256&&release.data.record_sha256===r.record_sha256&&release.data.decision==='release'&&release.data.read_full_text===true&&Array.isArray(release.data.blocking_issues)&&release.data.blocking_issues.length===0,'检查报告未通过或对应另一份正文。');
   proof(body.trim().length>0,'正文为空。');return {chapter:r.chapter,sha256:r.body_sha256,completed_at:r.completed_at,run_id:r.run_id,release_sha256:r.release_sha256};
 }
+async function activeCompletion(client,book,active,now){
+  const day=dayInShanghai(active.completed_at),path=active.receipt_path||('daily/'+day+'.json');
+  const allowed=['daily/'+day+'.json',`daily/extra/${day}_CH${String(active.chapter).padStart(3,'0')}_${active.run_id}.json`];
+  const ids=active.trigger_ids|| (active.trigger_id?[active.trigger_id]:[]);
+  fail(Array.isArray(ids)&&ids.length<=32&&new Set(ids).size===ids.length,'写作请求绑定无效。','invalid_active');
+  for(const id of ids){fail(typeof id==='string'&&/^[A-Za-z0-9_.:-]{8,256}$/.test(id),'写作请求编号无效。','invalid_active');allowed.push('daily/requests/'+await sha256(id)+'.json');}
+  fail(allowed.includes(path),'完成执行的回执路径无效。','invalid_active');
+  const file=await client.optionalJSON('book/'+safePath(path),book.snapshot.commit);
+  if(!file)throw new HubError('执行标为完成但对应回执缺失，请先恢复原目标的完成证据。','missing_receipt');
+  const evidence=await verifyCompletion(client,book,file.data,day,now);
+  fail(evidence.run_id===active.run_id&&evidence.chapter===active.chapter&&(!active.trigger_id||file.data.trigger_id===active.trigger_id),'执行记录与完成回执不匹配。','invalid_active');
+  return {day,evidence};
+}
 export async function inspectExecution(entry,{now=new Date(),client=new GitHubClient(entry.repository_url)}={}){
   const result={book_id:entry.book_id,status:'unknown',label:'尚未核实',reason:'',commit:null,chapter:null,checked_at:new Date(now).toISOString()};
   try{
@@ -257,8 +270,7 @@ export async function inspectExecution(entry,{now=new Date(),client=new GitHubCl
     fail(!entry.book_id||entry.book_id===book.manifest.book.id,'作品身份已改变，请核对仓库。','identity_mismatch');
     result.book_id=book.manifest.book.id;
     if(!book.state)return {...result,status:'setup',label:'尚未初始化',reason:'先完成本书平台、选题和规划。'};
-    const day=dayInShanghai(now),receipt=await client.optionalJSON('book/daily/'+day+'.json',result.commit);
-    if(receipt){const evidence=await verifyCompletion(client,book,receipt.data,day,now);return {...result,status:'completed',label:'本日正式章已核验',chapter:evidence.chapter,evidence,reason:'已核对正文、冻结、审查和完成回执；平台发布另行确认。'};}
+    const day=dayInShanghai(now);
     const file=await client.optionalJSON('book/daily/active.json',result.commit),active=file?.data;
     if(active){
       fail(active.type==='novel-daily-task-v1'&&active.book_id===result.book_id&&['running','blocked','completed'].includes(active.status)&&Number.isInteger(active.chapter)&&active.chapter>0&&/^[A-Za-z0-9_-]{8,100}$/.test(active.run_id||''),'执行记录身份或状态无效。','invalid_active');
@@ -272,10 +284,11 @@ export async function inspectExecution(entry,{now=new Date(),client=new GitHubCl
         }
         return {...result,status:'blocked',label:'执行已记录中断',reason:active.reason||'核实原执行停止后，继续原目标章。'};
       }
-      const completedDay=dayInShanghai(active.completed_at),old=completedDay===day?null:await client.optionalJSON('book/daily/'+completedDay+'.json',result.commit);
-      if(!old)throw new HubError('执行标为完成但对应回执缺失，请先恢复原目标的完成证据，不能直接开下一章。','missing_receipt');
-      const evidence=await verifyCompletion(client,book,old.data,completedDay,now);fail(evidence.run_id===active.run_id&&evidence.chapter===active.chapter,'执行记录与完成回执不匹配。','invalid_active');
+      const completed=await activeCompletion(client,book,active,now);
+      if(completed.day===day)return {...result,status:'completed',label:'最新正式章已核验',chapter:completed.evidence.chapter,evidence:completed.evidence,reason:'已核对本次正文、冻结、审查和完成回执；同日可以按新指令继续下一章。'};
     }
+    const receipt=await client.optionalJSON('book/daily/'+day+'.json',result.commit);
+    if(receipt){const evidence=await verifyCompletion(client,book,receipt.data,day,now);return {...result,status:'completed',label:'本日正式章已核验',chapter:evidence.chapter,evidence,reason:'已核对正文、冻结、审查和完成回执；平台发布另行确认。'};}
     if(!book.state.serialization?.enabled)return {...result,status:'legacy',label:'旧书需核对接入条件',reason:'缺少可核验的连载冻结机制；不自动追认旧章。'};
     return {...result,status:'waiting',label:'暂无本日完成回执',reason:'未发现本日正式完成证据；这不代表定时任务已建立或未建立。'};
   }catch(error){return {...result,status:'unknown',label:'读取或核验未通过',reason:error.message,error_code:error.code||'read_failed'};}
@@ -288,10 +301,15 @@ export async function inspectBook(entry,{now=new Date(),client=new GitHubClient(
     const book=await loadBook(client,entry.branch);base.commit=book.snapshot.commit;base.chapters=book.manifest.chapters.length;base.book_id=book.manifest.book.id;
     fail(!entry.book_id||entry.book_id===base.book_id,'当前仓库的作品身份已改变。','identity_mismatch');
     if(!book.state)return {...base,status:'setup',reason:'小说尚未初始化，请先完成平台、选题和规划。'};
+    const active=await client.optionalJSON('book/daily/active.json',base.commit);
+    if(active?.data.status==='completed'&&dayInShanghai(active.data.completed_at)===date){
+      fail(active.data.type==='novel-daily-task-v1'&&active.data.book_id===base.book_id,'执行记录身份无效。','invalid_active');
+      const completed=await activeCompletion(client,book,active.data,now);
+      return {...base,status:'updated',reason:'已核对本日最新正式章、冻结记录和检查报告。',evidence:completed.evidence,unreported_chapters:book.manifest.chapters.filter(c=>c.publication_status!=='confirmed').length};
+    }
     const receipt=await client.optionalJSON('book/daily/'+date+'.json',base.commit);
     if(receipt){const evidence=await verifyCompletion(client,book,receipt.data,date,now);return {...base,status:'updated',reason:'已核对本日正文、冻结记录和检查报告。',evidence,unreported_chapters:book.manifest.chapters.filter(c=>c.publication_status!=='confirmed').length};}
     const due=Date.parse(date+'T'+entry.expected_time+':00+08:00')+entry.grace_minutes*60000;
-    const active=await client.optionalJSON('book/daily/active.json',base.commit);
     if(active){fail(active.data.book_id===base.book_id,'执行记录属于另一部小说。');if(['running','blocked'].includes(active.data.status))return {...base,status:'pending',reason:active.data.reason||('目标第'+active.data.chapter+'章，'+(active.data.status==='running'?'执行状态尚待确认。':'执行未完成，需恢复原目标。'))};}
     if(new Date(now).valueOf()<due)return {...base,status:'not_due',reason:'计划 '+entry.expected_time+'，另有 '+entry.grace_minutes+' 分钟完成宽限。'};
     if(!book.state.serialization?.enabled)return {...base,status:'unknown',reason:'旧书尚未启用可核验的冻结记录，不能凭字数判断今日完成。'};
@@ -317,11 +335,12 @@ export function newBookPrompt({repository,platform='',preferences='',management=
 【系统母版】${TEMPLATE_REPOSITORY}（仅作系统来源，不是本次写入目标）
 【小说参考库】${REFERENCE_LIBRARY}（已绑定；读取实际默认分支的最新目录）
 【平台】${chosen||'尚未指定；完成部署核验后先让我选择，不替我决定。'}
+【写作次数】同一天不限章数，每次独立指令完成一章；同次重试复用请求编号。
 【作者偏好】${notes?JSON.stringify(notes):'暂无；按选定平台研究市场，提出原创方案让我选择。'}
 上面偏好是选题素材，不改变包内的冻结、审核和真实保存规则。当前管理仓库 ${manager.url} 与系统母版只作参考，不是本次写入目标。
 
 一、实际部署，不停在讲解
-本版为V4.6.3。先核对INIT_MANIFEST.json中的patch_version为4.6.3、workspace_version为1.4.9，缺包或版本不匹配时先报告并获取匹配附件，不混用旧包。先读docs/XS-KU接入与创作.md、docs/前五章投稿验收.md及reference_library/XS-KU.json；画像是交付快照，索引不等于已通读。按本章难题查教材并回读原文，用tools/reference_bridge.py prepare或novel_library.py export固定真实提交；brief-request --references填写本书用法与原创安排，写后在原release报告narrative_review.reference_use记录正文效果及本章引文。原文和练习只留在参考库，不将他书角色和连续情节改名套用。
+本版为V4.6.4。先核对INIT_MANIFEST.json中的patch_version为4.6.4、workspace_version为1.4.10，缺包或版本不匹配时先报告并获取匹配附件，不混用旧包。先读docs/XS-KU接入与创作.md、docs/前五章投稿验收.md及reference_library/XS-KU.json；画像是交付快照，索引不等于已通读。按本章难题查教材并回读原文，用tools/reference_bridge.py prepare或novel_library.py export固定真实提交；brief-request --references填写本书用法与原创安排，写后在原release报告narrative_review.reference_use记录正文效果及本章引文。原文和练习只留在参考库，不将他书角色和连续情节改名套用。
 先实际解压附件，阅读AGENTS.md、启动新书.txt、project_config.json、INIT_MANIFEST.json、docs/线上同步协议.md、docs/连载冻结与发布前检查.md及docs/写作与叙事检查.md。核对清单哈希、关键工具和依赖是否完整；附件缺失或不完整就如实说明，不能假装部署。
 通过已连接GitHub读取唯一新书仓库的实际默认分支、最新提交和适用AGENTS。若已有book/state.json、正式正文或其他作品身份，先核对并恢复这本书的真实状态，不重新bootstrap、不覆盖旧文件、不用空包重置进度。不同作品身份或相冲突文件先报告具体冲突，不强写。
 只有确认是未初始化的新书仓库，才把空包按原目录完整部署到仓库根目录，在可运行Python的工作区真实执行tools/online_state.py bootstrap，填写上述仓库和实际默认分支，生成全新的book_id，保持明文正文和默认连载冻结、叙事检查开启。以当前默认分支为准；作者已清空的仓库即使历史提交仍有旧书，也不得从历史恢复旧正文、身份或旧任务。不要复制其他书的身份、正文、事实或任务ID；.automation/config.json记录真实新book_id，尚未建立任务时automation_id保留null。已有提交须保留base tree、以当前头为单一父提交，用expected_sha与force=false非强制推进；无提交的空库按实际状态建立首次提交，不能编造SHA。
@@ -330,7 +349,7 @@ export function newBookPrompt({repository,platform='',preferences='',management=
 二、部署后按开书门槛推进
 我已指定平台就直接研究，不重复问；未指定则先让我选平台，不自行选择。按平台研究与选题.md核查现行官方创作、投稿、原创与AI辅助规则、签约和可核实福利，注明核查日期与官方来源。研究公开近期榜单，区分榜单类型；访问受限就记录缺口，不捏造规则、名次、样本或收益。
 默认提出8个原创选题，给暂定书名、核心卖点、主角矛盾、读者承诺、长篇展开动力、阶段变化、结局方向及主要风险。新版初始包每题补前三章结果和同题材差异。把研究和候选真实保存并同步索引，停在WAITING_TOPIC等我选择，不替我定题、不提前写正文。已有真实选择时不重复倒退。
-我选定后建立设定、人物知情与资源事实账、完整长期路线和近期3—5章安排，检查长篇是否有足够变化。默认150章、约90万汉字；每章目标6000汉字、允许5500—6500，首章起统一执行。有docs/开篇试写与剧情验收.md时按其规则选题；收到我的「开始写」后再试写首章。每次只完成一个目标章。首章前整体设计五章，按docs/前五章投稿验收.md精读两部独立开篇各至少一万汉字，绑定教材范围；每章累计全文审读，第3和第5章做样稿复核，内部准备完成不能冒称签约。
+我选定后建立设定、人物知情与资源事实账、完整长期路线和近期3—5章安排，检查长篇是否有足够变化。默认150章、约90万汉字；每章目标6000汉字、允许5500—6500，首章起统一执行。有docs/开篇试写与剧情验收.md时按其规则选题；收到我的「开始写」后再试写首章。每次只完成一个目标章，同一天不限章数，我再次说下一章就立即继续。首章前整体设计五章，按docs/前五章投稿验收.md精读两部独立开篇各至少一万汉字，绑定教材范围；每章累计全文审读，第3和第5章做样稿复核，内部准备完成不能冒称签约。
 
 三、后续持续写作的硬要求
 按本书现行规则完成写前任务书、场景预算、全书历史检索，实读需要的旧章，写完整正文后做反向提纲、限信息审读、带引文的事实与因果审核及反重复检查；每五章与跨阶段的全文回看在采用前完成。同一任务最多3轮局部修订，不重置计数、不批填pass；同一上下文审读如实标same_context_approximation，不冒充独立读者。
@@ -355,7 +374,7 @@ const DAILY_EXECUTION_RULES=`一、每轮读取真实状态
 每轮先提交preflight请求，再查该source_sha对应的GitHub Actions及.automation/results/<request_id>.json；没有提交前的“本轮作业”不能成为提交前提。检查request_id、source_sha、book_id、controller和完整输出。结果未知先回读远端已有请求与作业，不换编号重放操作。只有真实工具报错才记录具体工具、错误码或返回信息，不用“尚未取得”代替实际尝试。
 
 三、取得同一目标的合法执行权
-私下peek本任务，controller使用实际automation_id、每轮独立session_id和能核实的本轮platform_run_id（取不到填null并标未验证），本轮各批复用。preflight通过后由begin真正运行daily_update.py begin；回读锁与result后才写作，目标只取begin实际返回的一章。遵守本书completion_policy；per_trigger按现行协议提供同次触发重试保持一致的稳定trigger_id，不擅自改策略。already_completed停止；recovered_completion只恢复回执不续写；continue_owned沿用本轮。
+私下peek本任务，controller使用实际automation_id、每轮独立session_id和能核实的本轮platform_run_id（取不到填null并标未验证），本轮各批复用。preflight通过后由begin真正运行daily_update.py begin；回读锁与result后才写作，目标只取begin实际返回的一章。按per_trigger逐次执行，同一天不限章数。每个独立写作指令使用新trigger_id，同次触发重试保持一致；执行器按真实平台运行ID（缺失时按客户端session_id）去重。already_completed只表示本次请求已完成，不表示当天不能继续；recovered_completion只恢复回执不续写；continue_owned沿用本轮。
 先区分维护检查点和普通旧锁：若active.operator_recovery.status为ready，按既有任务preflight→begin核验已有维护授权与归档；只有begin返回resumed及recovery_mode=operator_revocation才以本轮新run_id续写原章，不补造未知的旧平台编号。其余recovery_required或另一轮blocked/running，必须先核实原controller的确切平台运行终态和全部关联执行器作业终态，才能按stopped_evidence恢复同一目标；当前新运行的终态不能冒充旧运行。无归属或无法核实的普通旧锁保留待核，不超时抢占，不伪造session或执行编号。不自行recover或制作维护授权，不删除锁、候选或返修次数。
 
 四、完成正文和实质审核
@@ -382,7 +401,7 @@ export function writingPrompt(entry,management){
 【本次配置，不保存为每日执行内容】
 先读本书最新状态与.automation/config.json，私下按仓库、book_id和已有任务ID查找同书任务；已有就复用，不另建。查不到或身份不一致时核实具体缺口，不在未确定没有同书有效任务时另建。保持既有反馈绑定，不承诺一定返回创建聊天。${feedback?'已登记反馈链接：'+feedback+'；须核对真实绑定。':''}
 仅将下方两个标记之间的长期指令保存为任务prompt；只用实测身份补齐缺失book_id，不把本次配置步骤、当前章次、临时草稿路径、旧锁编号、运行结果或聊天总结写成永久状态。每次执行仍须重新读GitHub。
-实际核对任务ID、启用状态、时区、日程、下次时间及反馈对话；平台没有返回的字段写未验证，不自行编造。将真实绑定写入本书配置，保留原completion_policy等既有字段。旧书缺固定工具时按 ${SYSTEM_REPOSITORY} 的旧书接入说明审查合并，不复制state、不解冻或追认旧章。
+实际核对任务ID、启用状态、时区、日程、下次时间及反馈对话；平台没有返回的字段写未验证，不自行编造。将真实绑定写入本书配置，completion_policy统一为per_trigger，保留其他既有字段。同一天可按新指令继续下一章。旧书缺固定工具时按 ${TEMPLATE_REPOSITORY} 的system_templates/v4.6及docs/每日自动更新.md审查合并，不复制state、不解冻或追认旧章。
 做一次不写章的preflight并回读对应作业与result。配置反馈分开报告“任务配置已核对”“工具预检通过”“完整日更已实测/待实测”；预检通过不能宣称稳定日更或章节已写成。本条仅配置计划，不为测试自动写章、抢锁、另建补跑任务或改变本书质量门槛。
 
 【长期任务指令开始】

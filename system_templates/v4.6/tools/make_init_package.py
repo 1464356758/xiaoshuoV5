@@ -35,7 +35,7 @@ def build(root=ROOT,out=None):
         elif name.startswith('docs/assets/'):
             del files[name]
     files['.github/workflows/novel-executor.yml']=(root/'.github/workflows/novel-executor.yml').read_bytes()
-    files['.automation/config.json']=(json.dumps({'schema_version':1,'book_id':None,'automation_id':None},ensure_ascii=False,indent=2)+'\n').encode()
+    files['.automation/config.json']=(json.dumps({'schema_version':1,'book_id':None,'automation_id':None,'completion_policy':'per_trigger'},ensure_ascii=False,indent=2)+'\n').encode()
     for folder in ('tools','templates','tests'):
         for path in sorted((root/folder).glob('*')):
             if path.is_file() and path.suffix in ('.py','.mjs','.json','.md','.txt'):

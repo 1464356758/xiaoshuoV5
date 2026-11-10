@@ -81,6 +81,23 @@ test('running execution is explicitly a record, not proof of a live worker',asyn
  writeJSON(f,'book/daily/active.json',{type:'novel-daily-task-v1',book_id:entry().book_id,run_id:'synthetic_run',chapter:2,status:'running'});
  const result=await inspectExecution(entry(),{now,client:f.client()});assert.equal(result.status,'pending');assert.match(result.reason,/不能证明任务仍存活/);
 });
+test('an unfinished later request is visible even when today already has a completed chapter',async()=>{
+ const f=await fixture();
+ writeJSON(f,'book/daily/active.json',{type:'novel-daily-task-v1',book_id:entry().book_id,run_id:'synthetic_run_later',chapter:2,status:'running'});
+ const result=await inspectExecution(entry(),{now,client:f.client()});
+ assert.equal(result.status,'pending');assert.equal(result.chapter,2);
+});
+test('current execution follows its individual receipt instead of requiring a date receipt',async()=>{
+ const f=await fixture(),trigger='synthetic_new_trigger',path='daily/requests/'+await sha256(trigger)+'.json';
+ const receipt=JSON.parse(f.files['book/daily/2026-10-26.json'].text);
+ receipt.trigger_id=trigger;receipt.trigger_ids=[trigger];
+ writeJSON(f,'book/'+path,receipt);f.files['book/daily/2026-10-26.json']={missing:true};
+ writeJSON(f,'book/daily/active.json',{type:'novel-daily-task-v1',book_id:entry().book_id,run_id:receipt.run_id,chapter:1,status:'completed',completed_at:receipt.completed_at,receipt_path:path,trigger_id:trigger,trigger_ids:[trigger]});
+ const result=await inspectExecution(entry(),{now,client:f.client()});
+ assert.equal(result.status,'completed');assert.equal(result.evidence.run_id,receipt.run_id);
+ const active=JSON.parse(f.files['book/daily/active.json'].text);active.receipt_path='../state.json';writeJSON(f,'book/daily/active.json',active);
+ assert.equal((await inspectExecution(entry(),{now,client:f.client()})).error_code,'invalid_active');
+});
 test('completed active without its receipt requests recovery rather than a new chapter',async()=>{
  const f=await fixture();f.files['book/daily/2026-10-26.json']={missing:true};
  writeJSON(f,'book/daily/active.json',{type:'novel-daily-task-v1',book_id:entry().book_id,run_id:f.receipt.run_id,chapter:1,status:'completed',completed_at:f.receipt.completed_at});

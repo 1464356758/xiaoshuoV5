@@ -1,16 +1,16 @@
 {
   "status": "passed",
   "system_version": "4.6-xs-ku",
-  "workspace_version": "1.4.9",
+  "workspace_version": "1.4.10",
   "date_asia_shanghai": "2026-11-11",
-  "python_tests": 217,
-  "node_tests": 166,
-  "total_tests": 383,
+  "python_tests": 224,
+  "node_tests": 169,
+  "total_tests": 393,
   "skipped_tests": 0,
   "tested_from_extracted_init_package": true,
   "real_library_integration_tests": 1,
   "real_library_integration_scope": "核对12条教材及1条复盘的来源，并将实库摘要接入临时合成作品，完成任务书、release-check和冻结；不评价文学水平。",
-  "init_package_sha256": "1a869a10b36a080b66046eb292c64ea3879ba6a0e9cc0bbc907a0ac47bed0b37",
+  "init_package_sha256": "bc83a4ac17907054ce9d120c5e4d8e15da4cd6ff1790444adc09320a90037512",
   "reference_integrity": {
     "status": "passed",
     "source_files": 171,
@@ -47,7 +47,7 @@
     "文学判断由实际审读完成，未验证平台签约效果。",
     "线上更新以软件端独立部署回执为准；未创建定时任务。"
   ],
-  "patch_version": "4.6.3",
+  "patch_version": "4.6.4",
   "audit": {
     "bug_categories_reproduced": 4,
     "new_regression_tests": 8,
@@ -96,7 +96,7 @@
     "note": "阅读声明和报告均为人工构造；不是90万字小说质量验证。"
   },
   "software_update": {
-    "version": "1.4.9",
+    "version": "1.4.10",
     "reserved_repositories": [
       "xiaoshuoV5",
       "XS-KU",
@@ -105,14 +105,15 @@
     ],
     "matching_package_required": true,
     "preserve_existing_registry": true,
-    "browser_preview": {
-      "new_book_view": "passed",
-      "reserved_template_rejected": true,
-      "full_prompt_generated": true,
-      "copy_success_toast": true,
-      "clipboard_bytes_verified": false
-    },
     "deployment_record": "release_checks/SOFTWARE_SITE.json",
-    "deployed": true
+    "deployed": false
+  },
+  "writing_frequency": {
+    "policy": "per_trigger",
+    "chapters_per_day_limit": null,
+    "one_chapter_per_independent_request": true,
+    "stable_trigger_retry_deduplication": true,
+    "same_day_three_chapters_test": "passed",
+    "legacy_xs1_active_compatibility": "passed"
   }
 }
