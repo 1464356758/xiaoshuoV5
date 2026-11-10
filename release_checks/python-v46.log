@@ -217,6 +217,6 @@ test_two_committed_long_opening_studies_can_be_selected_with_measured_scope (tes
 test_all_registered_evidence_and_actual_packet_reach_frozen_synthetic_chapter (test_xsku_real.RealLibraryIntegration.test_all_registered_evidence_and_actual_packet_reach_frozen_synthetic_chapter) ... ok
 
 ----------------------------------------------------------------------
-Ran 217 tests in 34.923s
+Ran 217 tests in 35.796s
 
 OK

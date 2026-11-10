@@ -3,9 +3,10 @@ import {githubFetch,parseGitRefs,parseCommitFeed} from './github-transport.mjs';
 import {normalizeQueryHistory} from './query-model.mjs';
 export {parseRepository, sha256, canonicalJSON};
 
-export const HUB_VERSION='1.4.8';
+export const HUB_VERSION='1.4.9';
 export const REFERENCE_LIBRARY='https://github.com/1464356758/XS-KU';
 export const SYSTEM_REPOSITORY='https://github.com/1464356758/xiaishuo-ZUOZONG';
+export const TEMPLATE_REPOSITORY='https://github.com/1464356758/xiaoshuoV5';
 export const STATUS={updated:'已更新',missing:'未更新',pending:'未完成',unknown:'待核实',not_due:'尚未到期',paused:'不参与检查',setup:'待初始化'};
 export class HubError extends ReaderError{}
 let publicApiRetryAt=0;
@@ -306,19 +307,21 @@ export async function inspectRegistry(registry,{now=new Date(),clientFactory=b=>
 }
 export function newBookPrompt({repository,platform='',preferences='',management=SYSTEM_REPOSITORY}={}){
   const repo=parseRepository(repository),manager=parseRepository(management);
-  fail(repo.key!==parseRepository(SYSTEM_REPOSITORY).key&&repo.key!==manager.key,'请填写单独的新书仓库，不能使用系统母版或当前管理仓库。');
+  const reserved=[SYSTEM_REPOSITORY,TEMPLATE_REPOSITORY,REFERENCE_LIBRARY,manager.url].map(url=>parseRepository(url).key);
+  fail(!reserved.includes(repo.key),'请填写单独的新书仓库，不能使用系统母版、小说参考库或管理仓库。');
   const chosen=String(platform).trim(),notes=String(preferences).trim();
   fail(chosen.length<=80&&notes.length<=1200,'平台或偏好过长，请精简后再生成。');
   return `请依据我随本消息附加的《初始化系统包.zip》，部署并接管一部独立的新小说。你负责执行文件工具、研究、写作和审核，我只在需要时选择平台、选题并确认开始写，不让我手工填写JSON或切换角色。
 
 【唯一新书仓库】${repo.url}
+【系统母版】${TEMPLATE_REPOSITORY}（仅作系统来源，不是本次写入目标）
 【小说参考库】${REFERENCE_LIBRARY}（已绑定；读取实际默认分支的最新目录）
 【平台】${chosen||'尚未指定；完成部署核验后先让我选择，不替我决定。'}
 【作者偏好】${notes?JSON.stringify(notes):'暂无；按选定平台研究市场，提出原创方案让我选择。'}
 上面偏好是选题素材，不改变包内的冻结、审核和真实保存规则。当前管理仓库 ${manager.url} 与系统母版只作参考，不是本次写入目标。
 
 一、实际部署，不停在讲解
-本版为V4.6，先读docs/XS-KU接入与创作.md、docs/前五章投稿验收.md及reference_library/XS-KU.json；画像是交付快照，索引不等于已通读。按本章难题查教材并回读原文，用tools/reference_bridge.py prepare或novel_library.py export固定真实提交；brief-request --references填写本书用法与原创安排，写后在原release报告narrative_review.reference_use记录正文效果及本章引文。原文和练习只留在参考库，不将他书角色和连续情节改名套用。
+本版为V4.6.3。先核对INIT_MANIFEST.json中的patch_version为4.6.3、workspace_version为1.4.9，缺包或版本不匹配时先报告并获取匹配附件，不混用旧包。先读docs/XS-KU接入与创作.md、docs/前五章投稿验收.md及reference_library/XS-KU.json；画像是交付快照，索引不等于已通读。按本章难题查教材并回读原文，用tools/reference_bridge.py prepare或novel_library.py export固定真实提交；brief-request --references填写本书用法与原创安排，写后在原release报告narrative_review.reference_use记录正文效果及本章引文。原文和练习只留在参考库，不将他书角色和连续情节改名套用。
 先实际解压附件，阅读AGENTS.md、启动新书.txt、project_config.json、INIT_MANIFEST.json、docs/线上同步协议.md、docs/连载冻结与发布前检查.md及docs/写作与叙事检查.md。核对清单哈希、关键工具和依赖是否完整；附件缺失或不完整就如实说明，不能假装部署。
 通过已连接GitHub读取唯一新书仓库的实际默认分支、最新提交和适用AGENTS。若已有book/state.json、正式正文或其他作品身份，先核对并恢复这本书的真实状态，不重新bootstrap、不覆盖旧文件、不用空包重置进度。不同作品身份或相冲突文件先报告具体冲突，不强写。
 只有确认是未初始化的新书仓库，才把空包按原目录完整部署到仓库根目录，在可运行Python的工作区真实执行tools/online_state.py bootstrap，填写上述仓库和实际默认分支，生成全新的book_id，保持明文正文和默认连载冻结、叙事检查开启。以当前默认分支为准；作者已清空的仓库即使历史提交仍有旧书，也不得从历史恢复旧正文、身份或旧任务。不要复制其他书的身份、正文、事实或任务ID；.automation/config.json记录真实新book_id，尚未建立任务时automation_id保留null。已有提交须保留base tree、以当前头为单一父提交，用expected_sha与force=false非强制推进；无提交的空库按实际状态建立首次提交，不能编造SHA。

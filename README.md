@@ -1,4 +1,4 @@
-# 小说系统 V4.6.2 · 每章6000汉字与前五章强化版
+# 小说系统 V4.6.3 · 每章6000汉字与前五章强化版
 
 本次系统升级已完成：默认绑定XS-KU，打通真实教材检索、原文版本、写前任务书、写后效果检查和冻结。可复现源码在[system_templates/v4.6](system_templates/v4.6/README.md)，接管状态见[SYSTEM_STATUS.md](SYSTEM_STATUS.md)，验证记录在[release_checks/V4.6.json](release_checks/V4.6.json)。
 
