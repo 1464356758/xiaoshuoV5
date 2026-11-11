@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-12",
+  "kernel_tests": "10 passed",
+  "integration": "V6 / XS1 legacy reading, body and record hashes, manual/scheduled prompts, matching ZIP routes passed",
+  "package": "fresh extraction and manifest verified",
+  "browser": "new book repository and platform inputs generated V6 command; manual default and scheduled time toggle observed in preview",
+  "browser_limits": "static preview has no GitHub relay; production authenticated UI was not exercised",
+  "prose_sample_han": 5554,
+  "sample_status": "not adopted, same-context review only",
+  "init_sha256": "a4a60b53b1431a37de5fc0920f7e16773d5b5ce11e51688f9727fe2b6c4d16b4",
+  "root_novel": "no change",
+  "XS1": "no change",
+  "reference_library": "read only, latest head f978c6d81eabe84267debcbd7499c89d4c9abc2c",
+  "quality_limits": "no real-reader blind review or signing result"
+}

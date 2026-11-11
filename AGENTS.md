@@ -35,6 +35,6 @@
 
 当前网页是公开仓库阅读器，没有GPT API钥匙，也不自动在后台写小说。网页显示的是已提交进度，默认每60秒刷新，手动可刷新。持续创作在实际授权的GPT任务中执行。
 
-## V4.6系统维护入口
+## 系统维护入口
 
-本轮系统版本在system_templates/v4.6，不覆盖本仓库旧小说工作区。继续系统升级任务时先读SYSTEM_STATUS.md与system_templates/AGENTS.md；写作状态仍由book/state.json决定，不能将系统完成误当成新增小说章节。
+新书推荐版本在system_templates/v6，V4.6保留给旧书和工作台兼容层；不覆盖本仓库旧小说工作区。继续系统任务先读SYSTEM_STATUS.md与system_templates/AGENTS.md。写作状态仍由对应作品book/state.json决定，不能将系统完成误当成新增章节。

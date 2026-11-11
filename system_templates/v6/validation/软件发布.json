@@ -1,0 +1,20 @@
+{
+  "source_commit": "c243b27edbd2ede7a15c65c571037ba6e69be630",
+  "deployment": {
+    "id": "appgdep_6af4ca97882c81918b542d928613335b",
+    "project_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2",
+    "title": "小说工作台 · 个人管理与代发",
+    "version_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_12fca4b794848191b84ad1b5f9376932",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://novel-workspace-v44.qq1464356758.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6adf1e4d5adc8191ba57f57fd4bbeda2",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-11-11T20:05:56.453806+00:00"
+  },
+  "audience": "existing owner-only custom access preserved",
+  "note": "Native result confirms deployment; authenticated production UI not exercised"
+}
