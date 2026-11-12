@@ -8,6 +8,7 @@ from pathlib import Path
 import shutil
 import tempfile
 import zipfile
+from novel import VERSION, PACKAGE_FILES
 
 ROOT = Path(__file__).resolve().parent
 LEGACY = ROOT.parent / "v4.6"
@@ -20,17 +21,21 @@ def sha(data):
 def archive(files, output):
     with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as z:
         for name, data in sorted(files.items()):
-            info = zipfile.ZipInfo(name, (2026, 11, 12, 0, 0, 0))
+            info = zipfile.ZipInfo(name, (2026, 11, 13, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             z.writestr(info, data)
 
 
 def frontend(dist):
+    if dist.exists():
+        if not (dist.parent / ".v6-build").exists():
+            raise ValueError("输出目录已有web且没有本构建器标记，请改用空输出目录")
+        shutil.rmtree(dist)
     shutil.copytree(LEGACY / "web/dist", dist, dirs_exist_ok=True)
     for name in ["prompts.mjs", "v6-reader.mjs"]:
         shutil.copyfile(ROOT / "web" / name, dist / name)
     p = dist / "hub-core.mjs"
-    s = p.read_text().replace("HUB_VERSION='1.4.10'", "HUB_VERSION='2.0.0'")
+    s = p.read_text().replace("HUB_VERSION='1.4.10'", "HUB_VERSION='2.1.0'")
     s = "import {startPrompt,continuePrompt} from './prompts.mjs';\nimport {validateV6State,verifyV6Chapter,inspectV6} from './v6-reader.mjs';\n" + s
     start, end = s.index("export function newBookPrompt("), s.index("export function checkerPrompt(")
     s = s[:start] + """export function newBookPrompt({repository,platform='',preferences='',management=SYSTEM_REPOSITORY}={}){
@@ -45,9 +50,9 @@ export function repairPrompt(entry){return continuePrompt(entry)+'\\n优先检�
 """ + s[end:]
     s = s.replace("const state=raw.data;fail(", "const state=raw.data;validateV6State(state,manifest);fail(")
     s = s.replace("const file=await client.readFile(chapter.text_path,book.snapshot.commit);", "await verifyV6Chapter(client,book,chapter);const file=await client.readFile(chapter.text_path,book.snapshot.commit);")
-    s = s.replace("const day=dayInShanghai(now);\n    const file=", "if(book.state.schema==='novel-v6')return {...result,...await inspectV6(client,book)};\n    const day=dayInShanghai(now);\n    const file=")
+    s = s.replace("const day=dayInShanghai(now);\n    const file=", "if(book.state.schema==='novel-v6')return {...result,...await inspectV6(client,book,{now})};\n    const day=dayInShanghai(now);\n    const file=")
     s = s.replace("const active=await client.optionalJSON('book/daily/active.json',base.commit);", """if(book.state.schema==='novel-v6'){
-      const v=await inspectV6(client,book);return {...base,...v,status:v.status==='completed'?(dayInShanghai(v.frozen_at)===date?'updated':'missing'):v.status};
+      const v=await inspectV6(client,book,{now});return {...base,...v,status:v.status==='completed'?(dayInShanghai(v.frozen_at)===date?'updated':'missing'):v.status};
     }
     const active=await client.optionalJSON('book/daily/active.json',base.commit);""")
     p.write_text(s)
@@ -62,8 +67,8 @@ export function repairPrompt(entry){return continuePrompt(entry)+'\\n优先检�
     s = s.replace("完整日更指令", "完整续写指令").replace("》日更指令", "》续写指令")
     p.write_text(s)
     p = dist / "index.html"
-    s = p.read_text().replace("工作台 1.4.10 · 写作内核 V4.6", "工作台 2.0 · 新书内核 V6")
-    s = s.replace("日更指令", "续写指令").replace("V4.6.4", "V6.0")
+    s = p.read_text().replace("工作台 1.4.10 · 写作内核 V4.6", "工作台 2.1 · 新书内核 V6.1")
+    s = s.replace("日更指令", "续写指令").replace("V4.6.4", "V6.1")
     s = s.replace("选择小说，生成续写指令", "选择小说，接着写下一章")
     s = s.replace('<label>每天执行时间（北京时间）<input id="writingTime"', '<label>执行方式<select id="writingMode"><option value="manual">现在续写一章</option><option value="scheduled">设置每日任务</option></select></label><label>每日任务时间（北京时间）<input disabled id="writingTime"')
     s = s.replace("复制到本书 GPT 聊天，更新已有每日任务。指令已分开本次配置和长期执行规则；每轮按仓库最新状态推进。", "默认现在续写，同一天不限章数。只有选择“设置每日任务”才生成定时配置；实际写作在本书 GPT 聊天执行。")
@@ -78,10 +83,15 @@ export function repairPrompt(entry){return continuePrompt(entry)+'\\n优先检�
 
 
 def build(out):
+    if out == ROOT or out.is_relative_to(ROOT) or ROOT.is_relative_to(out):
+        raise ValueError("交付输出应位于系统源码目录之外")
     out.mkdir(parents=True, exist_ok=True)
-    files = {n: (ROOT / n).read_bytes() for n in ["AGENTS.md", "WORKFLOW.md", "README.md", "novel.py", "templates/plan.md"]}
+    if (out / "web").exists() and not (out / ".v6-build").exists():
+        raise ValueError("输出目录已有web，请使用空目录")
+    (out / ".v6-build").touch()
+    files = {n: (ROOT / n).read_bytes() for n in sorted(PACKAGE_FILES - {"启动新书.txt"})}
     files["启动新书.txt"] = "请先读取AGENTS.md和WORKFLOW.md。作者只需提供独立新书仓库；部署后选平台、选题，说开始写。".encode()
-    files["INIT_MANIFEST.json"] = (json.dumps({"version": "6.0.0", "engine": "novel-v6", "files": {n: sha(v) for n, v in files.items()}}, ensure_ascii=False, indent=2) + "\n").encode()
+    files["INIT_MANIFEST.json"] = (json.dumps({"version": VERSION, "engine": "novel-v6", "files": {n: sha(v) for n, v in files.items()}}, ensure_ascii=False, indent=2) + "\n").encode()
     init = out / "初始化系统包.zip"
     archive(files, init)
     dist = frontend(out / "web")
@@ -123,13 +133,25 @@ export default {async fetch(request){
 """
     worker = relay + "\nconst ASSETS=" + json.dumps(assets, ensure_ascii=False, separators=(",", ":")) + ";\nconst DOWNLOADS=" + json.dumps(table, separators=(",", ":")) + ";\n" + wrapper
     (out / "worker.mjs").write_text(worker)
-    report = {"version": "6.0.0", "init_sha256": sha(init.read_bytes()), "init_bytes": init.stat().st_size, "kernel_lines": len((ROOT / "novel.py").read_text().splitlines()), "ui_version": "2.0.0", "legacy_ui_source": "system_templates/v4.6/web", "note": "旧版UI与参考库协议复用；写作内核从零编写，不导入旧工作锁"}
+    report = {"version": VERSION, "init_sha256": sha(init.read_bytes()), "init_bytes": init.stat().st_size, "kernel_lines": len((ROOT / "novel.py").read_text().splitlines()), "ui_version": "2.1.0", "legacy_ui_source": "system_templates/v4.6/web", "note": "旧版UI与参考库协议复用；写作内核从零编写，不导入旧工作锁"}
     (out / "BUILD.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
     bundle = {"初始化系统包.zip": init.read_bytes(), "构建信息.json": (out / "BUILD.json").read_bytes()}
     for folder in ["research", "validation"]:
-        for p in sorted((ROOT / folder).glob("*")):
+        for p in sorted((ROOT / folder).rglob("*")):
             if p.is_file():
-                bundle[folder + "/" + p.name] = p.read_bytes()
+                bundle[folder + "/" + p.relative_to(ROOT / folder).as_posix()] = p.read_bytes()
+    sample_root = ROOT / "validation/opening-five"
+    if (sample_root / "样稿清单.json").exists():
+        sample = json.loads((sample_root / "样稿清单.json").read_text())
+        paragraphs = ["V6.1 连续五章独立样稿｜未采用\n\n本文件是系统验证与编辑练习，不替换XS1冻结章；没有平台签约或真人盲评结果。\n"]
+        for c in sample["chapters"]:
+            body = (sample_root / f"CH{c['chapter']:03}.txt").read_bytes()
+            if sha(body) != c["sha256"]:
+                raise ValueError("样稿发生变更，请先更新真实清单")
+            paragraphs.append(f"第{c['chapter']}章 {c['title']}\n\n{body.decode().strip()}\n")
+        combined = "\n\n".join(paragraphs).encode()
+        (out / "V6.1_连续五章样稿_未采用.txt").write_bytes(combined)
+        bundle["V6.1_连续五章样稿_未采用.txt"] = combined
     bundle["使用说明.md"] = ("# 小说主V6重建版\n\n新书使用内含初始化系统包.zip；现有旧书继续原系统，不覆盖安装。\n\n工作台：https://novel-workspace-v44.qq1464356758.chatgpt.site/\n\n源码与复现： https://github.com/1464356758/xiaoshuoV5/tree/main/system_templates/v6\n\n从系统仓库运行python3 system_templates/v6/build_release.py --out 输出目录可重建。工作台界面兼容源仍在v4.6/web，写作核心为新编写的novel.py。\n\nresearch为调研取舍，validation为实际试稿和验证；试稿没有替换XS1冻结章，也未经过平台签约审核。\n").encode()
     archive(bundle, out / "小说主V6_重建版.zip")
     return report

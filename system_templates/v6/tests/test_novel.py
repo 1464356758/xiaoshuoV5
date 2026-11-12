@@ -10,7 +10,7 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from novel import Book, Problem, digest, han
+from novel import Book, Problem, digest, han, encoded, VERSION, SCHEMA
 
 
 class JournalTests(unittest.TestCase):
@@ -99,7 +99,7 @@ class JournalTests(unittest.TestCase):
 
     def test_crash_after_state_write_is_idempotent(self):
         t = self.ready()
-        with patch.object(self.b, "index", side_effect=OSError("synthetic index crash")), self.assertRaises(OSError):
+        with patch.object(self.b, "_index", side_effect=OSError("synthetic index crash")), self.assertRaises(OSError):
             self.freeze(t)
         self.assertEqual(self.b.verify()["chapters"], 1)
         self.assertEqual(self.freeze(t)["status"], "already_frozen")
@@ -126,6 +126,98 @@ class JournalTests(unittest.TestCase):
         child.stdin.close()
         child.stdout.close()
         self.assertEqual(self.b.begin("synthetic-lock-test")["status"], "new")
+
+    def test_empty_package_manifest_rejected(self):
+        self.b.atomic('INIT_MANIFEST.json', encoded({'version':VERSION,'engine':SCHEMA,'files':{}}))
+        with self.assertRaises(Problem):
+            self.b.package_check()
+
+    def test_pending_target_must_match_next_chapter(self):
+        t = self.ready()
+        t['number'] = 9
+        self.b.atomic('book/work/CH001/task.json', encoded(t))
+        with self.assertRaises(Problem):
+            self.b.begin('another-synthetic-request')
+
+    def test_missing_memory_attachment_rejected(self):
+        c = self.freeze(self.ready())
+        r = self.b.json('book/' + c['record_path'])
+        r['attachments'].pop('memory')
+        path = self.b.object(encoded(r), 'json')
+        s = self.b.state()
+        s['chapters']['1'].update(record_path=path.removeprefix('book/'), record_sha256=digest(encoded(r)))
+        self.b.atomic('book/state.json', encoded(s))
+        with self.assertRaises(Problem):
+            self.b.verify()
+
+    def test_orphan_draft_blocks_new_identity(self):
+        self.ready()
+        self.b.path('book/state.json').unlink()
+        with self.assertRaises(Problem):
+            self.b.init('https://github.com/example/synthetic-novel')
+
+    def test_index_uses_one_state_snapshot(self):
+        before = self.b.state_hash()
+        verify = self.b.verify
+        def intervening_write(*args, **kwargs):
+            result = verify(*args, **kwargs)
+            s = self.b.state()
+            s['title'] = '另一快照'
+            self.b.atomic('book/state.json', encoded(s))
+            return result
+        with patch.object(self.b, 'verify', side_effect=intervening_write):
+            index = self.b.index()
+        self.assertEqual(index['source']['state_sha256'], before)
+
+    def test_context_uses_one_state_snapshot(self):
+        before = self.b.state_hash()
+        verify = self.b.verify
+        def intervening_write(*args, **kwargs):
+            result = verify(*args, **kwargs)
+            s = self.b.state()
+            s['title'] = '另一快照'
+            self.b.atomic('book/state.json', encoded(s))
+            return result
+        with patch.object(self.b, 'verify', side_effect=intervening_write):
+            context = self.b.context()
+        self.assertEqual(context['state_sha256'], before)
+
+    def test_parallel_freeze_and_retry_adopt_once(self):
+        t = self.ready()
+        args = [sys.executable, str(ROOT/'novel.py'), '--root', self.tmp.name, 'freeze', '--expect', t['base_state_sha256'], '--request', t['request_id'], '--title', '合成并发章']
+        jobs = [subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True) for _ in range(2)]
+        results = [(job, job.communicate(timeout=15)) for job in jobs]
+        self.assertTrue(any(job.returncode == 0 for job, _ in results))
+        for job, (out, err) in results:
+            if job.returncode == 0:
+                self.assertIn(json.loads(out)['status'], {'frozen','already_frozen'})
+            else:
+                self.assertIn('另一个保存操作正在执行', err)
+        self.assertEqual(self.b.verify()['chapters'], 1)
+        self.assertEqual(self.freeze(t)['status'], 'already_frozen')
+
+    def test_complete_150_chapters_without_rewriting_prefix(self):
+        first = None
+        for n in range(1, 151):
+            t = self.ready(f'synthetic-long-run-{n:04}')
+            c = self.freeze(t)
+            if first is None:
+                first = (c['text_path'], self.b.read('book/'+c['text_path']))
+        self.assertEqual(self.b.verify()['chapters'], 150)
+        self.assertEqual(self.b.read('book/'+first[0]), first[1])
+        self.assertEqual(self.b.json('online/index.json')['task']['phase'], 'COMPLETE')
+        with self.assertRaises(Problem):
+            self.b.begin('synthetic-chapter-overflow')
+
+    def test_malformed_assessment_never_advances_state(self):
+        t = self.ready()
+        name = 'book/work/CH001/assessment.json'
+        a = self.b.json(name)
+        a['schema'] = 'corrupted-assessment'
+        self.b.atomic(name, encoded(a))
+        with self.assertRaises(Problem):
+            self.freeze(t)
+        self.assertEqual(self.b.state()['revision'], 0)
 
 
 if __name__ == "__main__":

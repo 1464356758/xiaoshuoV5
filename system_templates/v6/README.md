@@ -1,4 +1,4 @@
-# 小说主 V6.0
+# 小说主 V6.1
 
 从零编写的小说工作核心：一条创作流程、一个Python命令行、一个正式状态。当前GPT负责写作和编辑，程序只负责记录与文件完整性。没有模型API、常驻服务、每日章数上限或自动签约承诺。
 
@@ -8,7 +8,7 @@
 
 本包只用于空的新书仓库，不覆盖旧书。旧书仍用其原流程和冻结正文；工作台同时读取两种版本。
 
-执行者先读AGENTS.md、WORKFLOW.md。`python3 novel.py --help`查看命令；只有Python标准库，要求Python3.10+、Linux工作环境（操作系统文件锁）。作者的手机无需安装Python。
+执行者先读AGENTS.md、WORKFLOW.md，首次开书另读CRAFT.md。`python3 novel.py --help`查看命令；只有Python标准库，要求Python3.10+、Linux工作环境（操作系统文件锁）。作者的手机无需安装Python。
 
 系统源码位于系统母版的system_templates/v6。research记录本次调研，validation保存独立试稿与实测；它们不是任何旧小说的正式新章节。软件端沿用管理清单、阅读和代发界面，V6核心不导入旧版的工作锁和审核工具。
 
