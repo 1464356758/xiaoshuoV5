@@ -1,20 +1,13 @@
 {
-  "source_commit": "6aa5eeffa28dbd3ff4e35c59a66e86a82d2575a7",
-  "deployment": {
-    "id": "appgdep_6af64a58a2888191a3d14223d098ccd6",
-    "project_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2",
-    "title": "小说工作台 · 个人管理与代发",
-    "version_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_e2bbe116d398819197cc943e2068f95e",
-    "type": "publish",
-    "status": "succeeded",
-    "url": "https://novel-workspace-v44.qq1464356758.chatgpt.site",
-    "has_mcp": false,
-    "screenshot_asset_pointer": null,
-    "provider_deployment_id": "site---6adf1e4d5adc8191ba57f57fd4bbeda2",
-    "failure_message": null,
-    "env_set_revision": 0,
-    "updated_at": "2026-11-12T23:23:16.295871+00:00"
-  },
-  "audience": "existing owner-only custom access preserved",
-  "verification": "native successful deployment; Worker routes and matching ZIP tested; authenticated production UI not exercised"
+  "project_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2",
+  "source_commit": "0b388436096d690be5ab3f2c097a83543b5dea34",
+  "deployment_id": "appgdep_6af77baa525081919421c255b66b0f21",
+  "version_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_7c1c50eea4cc819194fcfece374b8528",
+  "status": "succeeded",
+  "url": "https://novel-workspace-v44.qq1464356758.chatgpt.site",
+  "updated_at": "2026-11-13T21:05:57.493442+00:00",
+  "workspace_version": "2.1.1",
+  "engine_version": "6.2.0",
+  "scope": "Worker路由、续写/开书指令与匹配初始化包下载；访问范围沿用owner-only",
+  "limits": "未执行生产站登录后的完整用户操作；未创建调度或调用模型API"
 }

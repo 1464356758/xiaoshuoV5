@@ -1,0 +1,48 @@
+{
+  "status": "noncanonical_demonstration",
+  "reviewer": "same-context-model",
+  "baseline": "validation/opening-five",
+  "total_han": 28680,
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "今天请许知夏",
+      "han": 5675,
+      "sha256": "14a5347bec386ad1c38cce4ecd6f4b05c4427b8e2b4d68782c1192ab1e5e1831",
+      "baseline_sha256": "59e5adab26a93afba13acb6a4e395657573248dbddd32ff4453f42ab1a1861d8",
+      "changed": true
+    },
+    {
+      "chapter": 2,
+      "title": "她不是来添麻烦的",
+      "han": 5556,
+      "sha256": "7e423a642ffd876058eefd7470abab4928223faf21650ca340b05e10e8a27017",
+      "baseline_sha256": "7e423a642ffd876058eefd7470abab4928223faf21650ca340b05e10e8a27017",
+      "changed": false
+    },
+    {
+      "chapter": 3,
+      "title": "先问她愿不愿意",
+      "han": 5694,
+      "sha256": "2835adb83d00b4c911d50f0eeb66472a211daec8a5c34b0b38bc0ba36fa1f8bd",
+      "baseline_sha256": "5fb8311504905796231d0126ccf3ed0b9cad2d5368e2133d5994588fa51056f6",
+      "changed": true
+    },
+    {
+      "chapter": 4,
+      "title": "名字要写在这里",
+      "han": 6135,
+      "sha256": "57b03cb6a4fd0a6f1afbf74336bdbfed138054f1bbe9c82dc4163a36f43fc09d",
+      "baseline_sha256": "52107cc345ce545aa88490d9f8d9c756bff8a4fc514f4ec3fbe200a3d625867d",
+      "changed": true
+    },
+    {
+      "chapter": 5,
+      "title": "我看得见你",
+      "han": 5620,
+      "sha256": "e75783e9de624d56a385023acb329f6686f3aa2a6bc2f3bdd3ca619b29d77b3b",
+      "baseline_sha256": "4fb6a76922f6986a9518c40e1ff449c75586d1a74f271673032b10a6009ae39c",
+      "changed": true
+    }
+  ]
+}

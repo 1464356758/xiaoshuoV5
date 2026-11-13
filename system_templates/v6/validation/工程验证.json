@@ -1,18 +1,38 @@
 {
-  "date": "2026-11-13",
-  "version": "6.1.0",
-  "kernel_lines": 391,
-  "core_and_package_tests": "21 passed",
-  "synthetic_long_run": "150 temporary synthetic chapters; one adoption per request, no daily cap, prefix preserved, completion reached; not literary validation",
-  "regressions": "seven failures reproduced before fixes: snapshot/context mismatch, snapshot/index mismatch, empty package manifest, missing memory attachment, orphan draft identity reset, wrong pending target, malformed assessment adopting before refusal",
-  "integration": "V6 / XS1 legacy reading, pinned prose and record, all memory/plan/review snapshots, empty task vs saved draft, manual/scheduled prompts and ZIP route consistency",
-  "opening_five_han": 27878,
-  "sample_status": "noncanonical demonstration; not XS1 adopted chapters",
-  "reviewer": "same-context-model",
-  "quality_goal": 95,
-  "quality_goal_status": "not independently validated; no artificial 95-point release gate",
-  "root_novel": "unchanged",
-  "XS1": "unchanged",
-  "XS-KU": "read-only; original 2026-11-12 reference scope retained, no new whole-library reading claim",
-  "production_limit": "native deployment result will confirm publication; authenticated UI not exercised"
+  "version": "6.2.0",
+  "date": "2026-11-14",
+  "core_and_package_regression": {
+    "command": "python3 -m unittest discover -s system_templates/v6/tests -v",
+    "status": "passed",
+    "tests": 21,
+    "duration_seconds": 81.512,
+    "engine_sha256": "322d9e36cdd6577136c6d4946ebf33cc73fa0d5385ba1e38919377a14b0e2bb3",
+    "builder_sha256": "55a417631b4848e57545bf0969c99ca53391a6949177f38ae1bb0fc89a485d4a",
+    "note": "150章使用临时合成数据，只验证保存控制"
+  },
+  "samples": {
+    "status": "manifest_checked",
+    "baseline_han": 27878,
+    "candidate_han": 28680,
+    "candidate_chapter_han": [
+      5675,
+      5556,
+      5694,
+      6135,
+      5620
+    ],
+    "baseline_unchanged": true,
+    "reviewer": "same-context-model"
+  },
+  "workspace": {
+    "version": "2.1.1",
+    "worker_routes": "passed",
+    "matching_init_zip": "passed",
+    "authenticated_production_flow": "not_exercised"
+  },
+  "limits": [
+    "无真人盲评或目标平台编辑反馈",
+    "没有真实投稿、签约或收入结果",
+    "新稿是已知旧问题后的定向修订"
+  ]
 }
