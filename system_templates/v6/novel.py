@@ -11,7 +11,7 @@ import re
 import tempfile
 import uuid
 
-VERSION = "6.2.0"
+VERSION = "6.2.1"
 SCHEMA = "novel-v6"
 PACKAGE_FILES = {"AGENTS.md", "WORKFLOW.md", "CRAFT.md", "README.md", "THIRD_PARTY_NOTICES.md", "novel.py", "templates/plan.md", "启动新书.txt"}
 
@@ -33,6 +33,12 @@ def encoded(value):
     return (json.dumps(value, ensure_ascii=False, sort_keys=True, indent=2) + "\n").encode()
 
 
+def document(raw, name):
+    value = json.loads(raw)
+    require(isinstance(value, dict), name + "应为JSON对象，请恢复正确文件；未自动重置")
+    return value
+
+
 def utc():
     return dt.datetime.now(dt.timezone.utc).isoformat()
 
@@ -43,9 +49,33 @@ def han(text):
 
 
 def repo_url(value):
+    require(isinstance(value, str), "仓库链接无效")
+    value = value.strip().rstrip("/")
+    value = value[:-4] if value.lower().endswith(".git") else value
     require(bool(re.fullmatch(r"https://github\.com/[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", value)), "仓库链接应为GitHub仓库首页")
+    require(all(x not in {".", ".."} for x in value.split("/")[-2:]), "仓库链接无效")
     require(value.lower().rstrip("/").split("/")[-1] not in {"xiaoshuov5", "xs-ku", "xs-gl", "xiaishuo-zuozong"}, "系统、参考库与管理仓库不能作为新书目标")
     return value
+
+
+def branch_name(value):
+    require(isinstance(value, str) and 0 < len(value) <= 200
+            and bool(re.fullmatch(r"[A-Za-z0-9_][A-Za-z0-9_./-]*", value))
+            and value != "HEAD" and ".." not in value and "//" not in value and not value.endswith(("/", "."))
+            and all(not p.startswith(".") and not p.endswith(".lock") for p in value.split("/")), "分支名称无效，请使用仓库实际默认分支")
+    return value
+
+
+def validate_materials(files):
+    try:
+        texts = {key: data.decode("utf-8") for key, data in files.items()}
+    except UnicodeDecodeError as e:
+        raise Problem("正文、编辑意见、记忆和计划必须为有效UTF-8") from e
+    require(all(text.replace("\ufeff", "").strip() for text in texts.values()), "正文、编辑意见、章后记忆和计划都应有真实内容")
+    require(len(texts["review"]) <= 3000, "编辑意见过长：只保留具体问题、修改和遗留风险")
+    n = han(texts["text"])
+    require(5500 <= n <= 6500, f"正文{n}汉字，目标5500—6500")
+    return n
 
 
 class Book:
@@ -64,7 +94,7 @@ class Book:
         return self.path(name).read_bytes()
 
     def json(self, name):
-        return json.loads(self.read(name))
+        return document(self.read(name), name)
 
     def atomic(self, name, data):
         p = self.path(name)
@@ -109,13 +139,17 @@ class Book:
 
     def snapshot(self):
         raw = self.read("book/state.json")
-        s = json.loads(raw)
+        s = document(raw, "book/state.json")
         require(s.get("schema") == SCHEMA, "这是旧版或其他作品，不能用V6覆盖初始化")
         require(type(s.get("revision")) is int and 0 <= s["revision"] <= 2000 and isinstance(s.get("chapters"), dict)
                 and set(s["chapters"]) == {str(n) for n in range(1, s["revision"] + 1)}, "状态版本与章序不符")
         require(type(s.get("target_chapters")) is int and 1 <= s["target_chapters"] <= 2000
                 and s["revision"] <= s["target_chapters"] and s.get("chapter_han") == [5500, 6500], "目标配置无效")
-        require(bool(re.fullmatch(r"[a-f0-9-]{36}", s.get("book_id", ""))), "作品身份无效")
+        require(isinstance(s.get("book_id"), str) and bool(re.fullmatch(r"[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}", s["book_id"])), "作品身份无效")
+        require(isinstance(s.get("title"), str) and len(s["title"]) <= 300
+                and isinstance(s.get("platform"), str) and len(s["platform"]) <= 80, "书名或平台配置无效")
+        repo_url(s.get("repository_url"))
+        branch_name(s.get("branch"))
         return s, digest(raw)
 
     def state(self):
@@ -125,13 +159,14 @@ class Book:
         return digest(self.read("book/state.json"))
 
     def init(self, repository, branch="main", title="", platform=""):
+        repository, branch = repo_url(repository), branch_name(branch)
+        require(isinstance(title, str) and len(title) <= 300 and isinstance(platform, str) and len(platform) <= 80, "书名或平台配置无效")
         with self.lock():
-            require(bool(branch.strip()) and not any(x in branch for x in ["..", "\\", "@{"]), "分支名称无效")
             require(not any(self.path(p).exists() for p in ["book/state.json", "project_config.json", "vault"]), "已有作品或旧系统，请接续原书；不要覆盖初始化")
             require(not any(p.is_file() for p in self.root.glob("book/**/*")), "检测到书稿、草稿或计划，不能建立另一部作品身份")
             s = {"schema": SCHEMA, "version": VERSION, "book_id": str(uuid.uuid4()),
-                 "repository_url": repo_url(repository), "branch": branch, "title": title,
-                 "platform": platform, "target_chapters": 150, "chapter_han": [5500, 6500],
+                 "repository_url": repository, "branch": branch, "title": title.strip(),
+                 "platform": platform.strip(), "target_chapters": 150, "chapter_han": [5500, 6500],
                  "revision": 0, "chapters": {}, "updated_at": utc()}
             self.atomic("book/state.json", encoded(s))
             self.atomic(".gitignore", b".novel.lock\n__pycache__/\n*.pyc\n") if not (self.root / ".gitignore").exists() else None
@@ -139,6 +174,8 @@ class Book:
             return s
 
     def configure(self, title, platform):
+        require(isinstance(title, str) and 0 < len(title.strip()) <= 300
+                and isinstance(platform, str) and 0 < len(platform.strip()) <= 80, "请先选定有效平台与书名")
         with self.lock():
             s = self.state()
             require(not s["chapters"], "已有冻结章的身份不再用configure修改")
@@ -168,6 +205,7 @@ class Book:
             self.verify(s)
             for c in s["chapters"].values():
                 if c["request_id"] == request_id:
+                    self._index()
                     return {"status": "already_frozen", "chapter": c["number"], "request_id": request_id}
             require(s["title"] and s["platform"], "先完成选题与平台选择")
             require(s["revision"] < s["target_chapters"], "已达计划章数；先由作者调整全书目标")
@@ -176,6 +214,7 @@ class Book:
                 require(old["base_state_sha256"] == baseline, "未完成稿与正式状态不匹配，请核对变更；未自动丢弃草稿")
                 return {"status": "resume", **old}
             number = s["revision"] + 1
+            require(not any(p.is_file() for p in self.path(self.work_path(number)).glob("**/*")), "发现没有匹配任务的草稿文件，请先核对并恢复原任务；未给旧稿绑定新请求")
             task = {"book_id": s["book_id"], "number": number, "request_id": request_id,
                     "base_state_sha256": baseline, "created_at": utc()}
             self.atomic(self.work_path(number) + "/task.json", encoded(task))
@@ -193,19 +232,20 @@ class Book:
         with self.lock():
             require(decision in {"ready", "revise"}, "编辑结论无效")
             s, task, work = self.current(expected)
-            files = {key: self.read(name) for key, name in {
-                "text": work + "/draft.txt", "review": work + "/editorial.md",
-                "memory": work + "/memory.md", "plan": "book/plan.md"}.items()}
-            require(all(value.strip() for value in files.values()), "正文、编辑意见、章后记忆和计划都应有真实内容")
-            require(len(files["review"].decode()) <= 3000, "编辑意见过长：只保留具体问题、修改和遗留风险")
-            n = han(files["text"].decode())
-            require(s["chapter_han"][0] <= n <= s["chapter_han"][1], f"正文{n}汉字，目标5500—6500")
+            files = self.materials(work)
             review = {"schema": "novel-v6-assessment", "chapter": task["number"],
                       "decision": decision, "reviewer": "same-context-model",
                       "note": "编辑判断不等于平台签约或独立读者评价",
                       "hashes": {k: digest(v) for k, v in files.items()}, "assessed_at": utc()}
             self.atomic(work + "/assessment.json", encoded(review))
             return review
+
+    def materials(self, work):
+        files = {key: self.read(name) for key, name in {
+            "text": work + "/draft.txt", "review": work + "/editorial.md",
+            "memory": work + "/memory.md", "plan": "book/plan.md"}.items()}
+        validate_materials(files)
+        return files
 
     def object(self, data, suffix):
         name = f"book/objects/{digest(data)}.{suffix}"
@@ -228,7 +268,7 @@ class Book:
             assessment = self.json(work + "/assessment.json")
             require(assessment.get("schema") == "novel-v6-assessment" and assessment.get("reviewer") == "same-context-model"
                     and assessment["decision"] == "ready" and assessment["chapter"] == task["number"], "编辑记录无效或尚未建议定稿")
-            files = {k: self.read(p) for k, p in {"text": work + "/draft.txt", "review": work + "/editorial.md", "memory": work + "/memory.md", "plan": "book/plan.md"}.items()}
+            files = self.materials(work)
             require(assessment["hashes"] == {k: digest(v) for k, v in files.items()}, "审稿后正文、计划或记忆有变，请重新审读再定稿")
             number, now = task["number"], utc()
             body_hash = digest(files["text"])
@@ -268,24 +308,29 @@ class Book:
             body = self.read("book/" + c["text_path"])
             raw = self.read("book/" + c["record_path"])
             require(digest(body) == c["text_sha256"] and digest(raw) == c["record_sha256"], f"第{n}章冻结正文或记录被改动")
-            r = json.loads(raw)
+            r = document(raw, f"第{n}章冻结记录")
             require(r["schema"] == "novel-v6-chapter" and r["book_id"] == s["book_id"]
                     and r["number"] == n and r["request_id"] == c["request_id"]
                     and r["text_path"] == "book/" + c["text_path"]
                     and r["text_sha256"] == c["text_sha256"]
-                    and r["title"] == c["title"] and r["han_count"] == c["han_count"] == han(body.decode())
+                    and r["title"] == c["title"] and r["han_count"] == c["han_count"]
                     and r["frozen_at"] == c["frozen_at"]
                     and r["previous_record_sha256"] == previous, f"第{n}章冻结绑定或历史链不符")
+            require(r["assessment_path"] == f"book/objects/{r['assessment_sha256']}.json", "审读依据必须引用不可变快照")
             a_raw = self.read(r["assessment_path"])
             require(digest(a_raw) == r["assessment_sha256"], "审读记录被改动")
-            a = json.loads(a_raw)
+            a = document(a_raw, f"第{n}章审读记录")
             require(a["schema"] == "novel-v6-assessment" and a.get("reviewer") == "same-context-model"
                     and a["decision"] == "ready" and a["chapter"] == n and a["hashes"] == r["hashes"]
                     and r["hashes"]["text"] == digest(body), "正文与实际审读版本不符")
             require(set(r["attachments"]) == {"review", "memory", "plan"}
                     and set(r["hashes"]) == {"text", "review", "memory", "plan"}, "冻结记录缺少正文、编辑意见、记忆或计划绑定")
+            files = {"text": body}
             for key, name in r["attachments"].items():
-                require(name == f"book/objects/{r['hashes'][key]}.md" and digest(self.read(name)) == r["hashes"][key], "章后记忆或计划快照被改动")
+                data = self.read(name)
+                require(name == f"book/objects/{r['hashes'][key]}.md" and digest(data) == r["hashes"][key], "章后记忆或计划快照被改动")
+                files[key] = data
+            require(validate_materials(files) == c["han_count"], "冻结字数与实际正文不符")
             previous = c["record_sha256"]
         return {"status": "integrity_ok", "chapters": s["revision"], "book_id": s["book_id"],
                 "scope": "文件完整性；文学质量由editorial.md说明"}

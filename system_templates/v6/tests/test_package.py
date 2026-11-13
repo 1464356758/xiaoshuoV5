@@ -2,6 +2,7 @@ import hashlib
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 from pathlib import Path
 
@@ -36,6 +37,18 @@ class PackageTests(unittest.TestCase):
             keep=out/'web/user.txt';keep.write_text('keep')
             with self.assertRaises(ValueError):build(out)
             self.assertEqual(keep.read_text(),'keep')
+
+    def test_changed_legacy_decoder_stops_release_instead_of_silently_skipping_fix(self):
+        original=Path.read_text
+        def changed(path,*args,**kwargs):
+            value=original(path,*args,**kwargs)
+            if path.name=='hub-core.mjs':
+                value=value.replace("new TextDecoder('utf-8',{fatal:true})","new TextDecoder('utf-8')")
+            return value
+        with tempfile.TemporaryDirectory(prefix='v6-adapter-guard-') as tmp:
+            with patch.object(Path,'read_text',changed):
+                with self.assertRaisesRegex(ValueError,'兼容接口已变化'):
+                    build(Path(tmp)/'release')
 
 
 if __name__=='__main__':unittest.main()

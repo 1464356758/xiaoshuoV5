@@ -1,14 +1,14 @@
 {
-  "version": "6.2.0",
+  "version": "6.2.1",
   "date": "2026-11-14",
   "core_and_package_regression": {
     "command": "python3 -m unittest discover -s system_templates/v6/tests -v",
     "status": "passed",
-    "tests": 21,
-    "duration_seconds": 81.512,
-    "engine_sha256": "322d9e36cdd6577136c6d4946ebf33cc73fa0d5385ba1e38919377a14b0e2bb3",
-    "builder_sha256": "55a417631b4848e57545bf0969c99ca53391a6949177f38ae1bb0fc89a485d4a",
-    "note": "150章使用临时合成数据，只验证保存控制"
+    "tests": 37,
+    "duration_seconds": 89.065,
+    "engine_sha256": "6a043af821ebecea336e633e9ce224a312c267c6fba9d26c30bc3243d2a3ea49",
+    "builder_sha256": "0864a72fcd2657259b1e620924e3d3b07838d9e9c38b526d8efa6cbd8543d758",
+    "note": "37项包含新增16项回归；150章为临时合成数据。离线CLI+本地bare Git演练不冒充真实GitHub开书。"
   },
   "samples": {
     "status": "manifest_checked",
@@ -25,14 +25,26 @@
     "reviewer": "same-context-model"
   },
   "workspace": {
-    "version": "2.1.1",
+    "version": "2.1.2",
     "worker_routes": "passed",
     "matching_init_zip": "passed",
-    "authenticated_production_flow": "not_exercised"
+    "authenticated_production_flow": "not_exercised",
+    "preview_controls": "new_book_reserved_target_and_prompt_generation; manual_schedule_toggle",
+    "legacy_book_readback": {
+      "status": "passed",
+      "snapshot": "4fcb03494232fb27f6ce56a590ababc00c06109c",
+      "book_id": "d9169807-b382-402b-b7d0-8e9c84d46670",
+      "chapters": 1,
+      "han": 5933,
+      "scope": "实际缓存XS1冻结章经生成的V6阅读器与离线HTTP读取；未改变原仓库"
+    }
   },
   "limits": [
     "无真人盲评或目标平台编辑反馈",
     "没有真实投稿、签约或收入结果",
-    "新稿是已知旧问题后的定向修订"
+    "新稿是已知旧问题后的定向修订",
+    "完全空的GitHub仓库首提交按官方接口补齐指令，未另建真实新书仓库实测",
+    "受管预览仅测试前端交互，未加载生产GitHub relay",
+    "未测试中国大陆网络可达性"
   ]
 }

@@ -1,13 +1,14 @@
 const TEMPLATE='https://github.com/1464356758/xiaoshuoV5';
 const LIBRARY='https://github.com/1464356758/XS-KU';
-export function startPrompt(repo,platform,preferences){return `请用随附的《初始化系统包.zip》V6.2，从空仓库部署一部新小说。你负责文件、研究、写作、编辑与保存，我只选平台、选题和确认开始。
+export function writingTimeValid(value,scheduled){return !scheduled||typeof value==='string'&&/^([01]\d|2[0-3]):[0-5]\d$/.test(value);}
+export function startPrompt(repo,platform,preferences){return `请用随附的《初始化系统包.zip》V6.2.1，从空仓库部署一部新小说。你负责文件、研究、写作、编辑与保存，我只选平台、选题和确认开始。
 唯一小说仓库：${repo}
 系统来源：${TEMPLATE}/tree/main/system_templates/v6（只读参考）
 小说参考库：${LIBRARY}（读取实际默认分支与当前目录）
 平台：${platform||'尚未指定，先让我选平台'}
 作者偏好：${JSON.stringify(preferences||'暂无')}
 
-解压后读AGENTS.md、WORKFLOW.md、CRAFT.md，运行python3 novel.py package-check；核对INIT_MANIFEST.json的version为6.2.0。读取目标仓库实际默认分支与最新HEAD。已有作品就恢复它的原有状态，禁止覆盖部署或迁移；只有空新书仓库才执行novel.py init并生成新身份，实际部署后提交与回读。
+解压后读AGENTS.md、WORKFLOW.md、CRAFT.md，运行python3 novel.py package-check；核对INIT_MANIFEST.json的version为6.2.1。读取目标仓库实际默认分支与最新HEAD。已有作品就恢复它的原有状态，禁止覆盖部署或迁移；只有空新书仓库才执行novel.py init并生成新身份，实际部署后提交与回读。
 选定平台后核查当前官方规则与近期榜单，给5—8个原创选题，停在等我选择。选题已定就建立book/plan.md，包含角色世界、全书阶段路线、前五章和近期安排；用configure设置身份。收到“开始写”才写首章，以后“下一章”直接完成一章。
 每章约6000汉字（5500—6500），默认150章。前五章先整体设计，每章给不同体验并逐章累计审读；人物要有欲望、误判与选择，不能章章重复报价、确认、收款、交接。带问题实际读XS-KU原文，学习选择、反应、情绪兑现和承接，记录真实范围，不照搬连续情节。
 把实际精读的发现压成带来源、适用条件、失败边界和原创迁移的短方法卡，留在plan里；写前按当前难题取用。主要人物用两场不同交锋检验欲望与声线，写后按表达、用笔、故事定位最严重的问题，凭正文证据返修，不为凑项打高分。
