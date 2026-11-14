@@ -1,0 +1,47 @@
+test_shipped_package_checkpoint_conflict_resume_freeze_and_readback (test_cli_flow.CliFlowTests.test_shipped_package_checkpoint_conflict_resume_freeze_and_readback) ... ok
+test_exact_utf8_bom_and_crlf_survive_reading (test_frontend.FrontendTests.test_exact_utf8_bom_and_crlf_survive_reading) ... ok
+test_index_title_must_match_formal_state (test_frontend.FrontendTests.test_index_title_must_match_formal_state) ... ok
+test_manager_repository_is_not_a_new_book_target (test_frontend.FrontendTests.test_manager_repository_is_not_a_new_book_target) ... ok
+test_manual_continuation_does_not_need_a_schedule_time (test_frontend.FrontendTests.test_manual_continuation_does_not_need_a_schedule_time) ... ok
+test_orphan_draft_is_not_reported_as_completed (test_frontend.FrontendTests.test_orphan_draft_is_not_reported_as_completed) ... ok
+test_reading_old_chapter_checks_real_memory_file (test_frontend.FrontendTests.test_reading_old_chapter_checks_real_memory_file) ... ok
+test_today_update_survives_starting_next_draft (test_frontend.FrontendTests.test_today_update_survives_starting_next_draft) ... ok
+test_complete_150_chapters_without_rewriting_prefix (test_novel.JournalTests.test_complete_150_chapters_without_rewriting_prefix) ... ok
+test_context_uses_one_state_snapshot (test_novel.JournalTests.test_context_uses_one_state_snapshot) ... ok
+test_crash_after_state_write_is_idempotent (test_novel.JournalTests.test_crash_after_state_write_is_idempotent) ... ok
+test_crash_before_state_write_adopts_nothing (test_novel.JournalTests.test_crash_before_state_write_adopts_nothing) ... ok
+test_empty_package_manifest_rejected (test_novel.JournalTests.test_empty_package_manifest_rejected) ... ok
+test_frozen_prose_memory_and_history_are_checked (test_novel.JournalTests.test_frozen_prose_memory_and_history_are_checked) ... ok
+test_index_uses_one_state_snapshot (test_novel.JournalTests.test_index_uses_one_state_snapshot) ... ok
+test_malformed_assessment_never_advances_state (test_novel.JournalTests.test_malformed_assessment_never_advances_state) ... ok
+test_missing_memory_attachment_rejected (test_novel.JournalTests.test_missing_memory_attachment_rejected) ... ok
+test_no_overwrite_and_path_escape (test_novel.JournalTests.test_no_overwrite_and_path_escape) ... ok
+test_orphan_draft_blocks_new_identity (test_novel.JournalTests.test_orphan_draft_blocks_new_identity) ... ok
+test_os_lock_releases_after_process_exit (test_novel.JournalTests.test_os_lock_releases_after_process_exit) ... ok
+test_parallel_freeze_and_retry_adopt_once (test_novel.JournalTests.test_parallel_freeze_and_retry_adopt_once) ... ok
+test_pending_target_must_match_next_chapter (test_novel.JournalTests.test_pending_target_must_match_next_chapter) ... ok
+test_resume_preserves_content_and_request (test_novel.JournalTests.test_resume_preserves_content_and_request) ... ok
+test_review_tied_to_all_four_inputs (test_novel.JournalTests.test_review_tied_to_all_four_inputs) ... ok
+test_revise_and_short_prose_do_not_freeze (test_novel.JournalTests.test_revise_and_short_prose_do_not_freeze) ... ok
+test_revision_conflict_keeps_original (test_novel.JournalTests.test_revision_conflict_keeps_original) ... ok
+test_same_day_three_chapters_and_retry (test_novel.JournalTests.test_same_day_three_chapters_and_retry) ... ok
+test_changed_legacy_decoder_stops_release_instead_of_silently_skipping_fix (test_package.PackageTests.test_changed_legacy_decoder_stops_release_instead_of_silently_skipping_fix) ... ok
+test_clean_repeatable_build_and_real_package_check (test_package.PackageTests.test_clean_repeatable_build_and_real_package_check) ... ok
+test_source_and_unknown_web_directory_are_protected (test_package.PackageTests.test_source_and_unknown_web_directory_are_protected) ... ok
+test_cross_chapter_and_intra_draft_locations_are_real (test_prose_check.ProseCheckTests.test_cross_chapter_and_intra_draft_locations_are_real) ... ok
+test_limit_preserves_total_and_all_matches_remain_advisory (test_prose_check.ProseCheckTests.test_limit_preserves_total_and_all_matches_remain_advisory) ... ok
+test_missing_task_and_invalid_utf8_do_not_modify_or_rebind_work (test_prose_check.ProseCheckTests.test_missing_task_and_invalid_utf8_do_not_modify_or_rebind_work) ... ok
+test_short_dialogue_is_not_flagged_and_zero_is_not_a_quality_pass (test_prose_check.ProseCheckTests.test_short_dialogue_is_not_flagged_and_zero_is_not_a_quality_pass) ... ok
+test_tampered_frozen_body_is_never_used_as_a_clean_reference (test_prose_check.ProseCheckTests.test_tampered_frozen_body_is_never_used_as_a_clean_reference) ... ok
+test_assessment_must_remain_an_immutable_object (test_release.ReleaseTests.test_assessment_must_remain_an_immutable_object) ... ok
+test_begin_retry_repairs_index_after_adoption_crash (test_release.ReleaseTests.test_begin_retry_repairs_index_after_adoption_crash) ... ok
+test_invalid_json_shape_is_a_readable_cli_error (test_release.ReleaseTests.test_invalid_json_shape_is_a_readable_cli_error) ... ok
+test_invalid_reviewed_materials_never_advance_state (test_release.ReleaseTests.test_invalid_reviewed_materials_never_advance_state) ... ok
+test_orphan_work_is_not_rebound_to_a_new_request (test_release.ReleaseTests.test_orphan_work_is_not_rebound_to_a_new_request) ... ok
+test_repository_suffix_cannot_bypass_protected_targets (test_release.ReleaseTests.test_repository_suffix_cannot_bypass_protected_targets) ... ok
+test_setup_rejects_unusable_branch_before_creating_state (test_release.ReleaseTests.test_setup_rejects_unusable_branch_before_creating_state) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 64.472s
+
+OK

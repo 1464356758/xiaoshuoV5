@@ -10,6 +10,7 @@ import zipfile
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 from build_release import build
+from novel import VERSION
 
 
 class CliFlowTests(unittest.TestCase):
@@ -36,7 +37,7 @@ class CliFlowTests(unittest.TestCase):
             run(root,'git','init','--bare','--initial-branch=serial/main',str(remote))
             run(a,'git','init','--initial-branch=serial/main');identity(a)
             run(a,'git','remote','add','origin',str(remote))
-            self.assertEqual(cli(a,'package-check')['version'],'6.2.1')
+            self.assertEqual(cli(a,'package-check')['version'],VERSION)
             cli(a,'init','--repository','https://github.com/example/synthetic-rehearsal','--branch','serial/main')
             cli(a,'configure','--title','临时合成作品','--platform','测试')
             (a/'book/plan.md').write_text('临时合成计划，非正式小说。\n')
@@ -56,6 +57,11 @@ class CliFlowTests(unittest.TestCase):
             (work/'draft.txt').write_text('合成测试正文。\n'*1000)
             (work/'editorial.md').write_text('临时合成审读；没有文学验证。')
             (work/'memory.md').write_text('第一章临时合成记忆。')
+            before=(a/'book/state.json').read_bytes()
+            repeats=json.loads(run(a,sys.executable,'tools/prose_check.py').stdout)
+            self.assertEqual(repeats['status'],'candidates_only')
+            self.assertEqual((repeats['chapter'],repeats['draft_han']),(1,6000))
+            self.assertEqual((a/'book/state.json').read_bytes(),before)
             cli(a,'assess','--expect',task['base_state_sha256'],'--decision','ready')
             frozen=cli(a,'freeze','--expect',task['base_state_sha256'],'--request',task['request_id'],'--title','合成第一章')
             self.assertEqual(frozen['status'],'frozen')

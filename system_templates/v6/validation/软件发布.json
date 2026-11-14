@@ -1,13 +1,13 @@
 {
   "project_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2",
-  "version_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_a59c06193df481918ef7ef99e4653aa9",
+  "version_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_dcdd2b6b74c081919966071b123cc22c",
   "status": "succeeded",
   "url": "https://novel-workspace-v44.qq1464356758.chatgpt.site",
-  "updated_at": "2026-11-13T22:01:48.146721+00:00",
-  "deployment_id": "appgdep_6af788c208008191ad80e4fb2d73e7e9",
-  "source_commit": "8e19e5b832ace19099004af8bd2c86622914a174",
-  "workspace_version": "2.1.2",
-  "engine_version": "6.2.1",
-  "scope": "Worker路由与匹配初始化包；新书入口和即时/定时切换在受管预览实际点击；原访问范围保留",
-  "limits": "预览未接入生产GitHub relay；生产站登录后的完整操作及大陆网络未验证"
+  "updated_at": "2026-11-14T13:14:12.657402+00:00",
+  "deployment_id": "appgdep_6af85e97eab48191809e133a14d3382c",
+  "source_commit": "6a3737cb58f0539c2bb1fd6042fa5a26a4c25b93",
+  "workspace_version": "2.2.0",
+  "engine_version": "6.3.0",
+  "scope": "原工作台更新指令和匹配初始化包；Worker路由、包清单及只读工具入口核验",
+  "limits": "本轮未重复浏览器交互测试；生产登录后完整操作与大陆网络未验证；原访问范围保留"
 }

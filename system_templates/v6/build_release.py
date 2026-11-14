@@ -12,6 +12,7 @@ from novel import VERSION, PACKAGE_FILES, han
 
 ROOT = Path(__file__).resolve().parent
 LEGACY = ROOT.parent / "v4.6"
+UI_VERSION = "2.2.0"
 
 
 def sha(data):
@@ -41,7 +42,7 @@ def frontend(dist):
     for name in ["prompts.mjs", "v6-reader.mjs"]:
         shutil.copyfile(ROOT / "web" / name, dist / name)
     p = dist / "hub-core.mjs"
-    s = replace_required(p.read_text(), "HUB_VERSION='1.4.10'", "HUB_VERSION='2.1.2'")
+    s = replace_required(p.read_text(), "HUB_VERSION='1.4.10'", f"HUB_VERSION='{UI_VERSION}'")
     s = replace_required(s, r"new TextDecoder('utf-8',{fatal:true}).decode(bytes).replace(/\r\n?/g,'\n')", "new TextDecoder('utf-8',{fatal:true,ignoreBOM:true}).decode(bytes)")
     s = "import {startPrompt,continuePrompt} from './prompts.mjs';\nimport {validateV6State,verifyV6Chapter,verifyV6Text,inspectV6,v6UpdateStatus} from './v6-reader.mjs';\n" + s
     start, end = s.index("export function newBookPrompt("), s.index("export function checkerPrompt(")
@@ -78,8 +79,8 @@ export function repairPrompt(entry){return continuePrompt(entry)+'\\n优先检�
     s = s.replace("已登记固定反馈对话。后续复用同一个任务，任务绑定以 GPT 实际显示为准。", "已登记本书反馈对话，可打开查看执行结果。")
     p.write_text(s)
     p = dist / "index.html"
-    s = p.read_text().replace("工作台 1.4.10 · 写作内核 V4.6", "工作台 2.1.2 · 新书内核 V6.2.1")
-    s = s.replace("日更指令", "续写指令").replace("V4.6.4", "V6.2.1")
+    s = p.read_text().replace("工作台 1.4.10 · 写作内核 V4.6", f"工作台 {UI_VERSION} · 新书内核 V{VERSION}")
+    s = s.replace("日更指令", "续写指令").replace("V4.6.4", "V" + VERSION)
     s = s.replace("选择小说，生成续写指令", "选择小说，接着写下一章")
     s = s.replace('<label>每天执行时间（北京时间）<input id="writingTime"', '<label>执行方式<select id="writingMode"><option value="manual">现在续写一章</option><option value="scheduled">设置每日任务</option></select></label><label>每日任务时间（北京时间）<input disabled id="writingTime"')
     s = s.replace("复制到本书 GPT 聊天，更新已有每日任务。指令已分开本次配置和长期执行规则；每轮按仓库最新状态推进。", "默认现在续写，同一天不限章数。只有选择“设置每日任务”才生成定时配置；实际写作在本书 GPT 聊天执行。")
@@ -151,7 +152,7 @@ export default {async fetch(request){
 """
     worker = relay + "\nconst ASSETS=" + json.dumps(assets, ensure_ascii=False, separators=(",", ":")) + ";\nconst DOWNLOADS=" + json.dumps(table, separators=(",", ":")) + ";\n" + wrapper
     (out / "worker.mjs").write_text(worker)
-    report = {"version": VERSION, "init_sha256": sha(init.read_bytes()), "init_bytes": init.stat().st_size, "kernel_lines": len((ROOT / "novel.py").read_text().splitlines()), "ui_version": "2.1.2", "legacy_ui_source": "system_templates/v4.6/web", "note": "旧版UI与参考库协议复用；写作内核从零编写，不导入旧工作锁"}
+    report = {"version": VERSION, "init_sha256": sha(init.read_bytes()), "init_bytes": init.stat().st_size, "kernel_lines": len((ROOT / "novel.py").read_text().splitlines()), "ui_version": UI_VERSION, "legacy_ui_source": "system_templates/v4.6/web", "note": "旧版UI与参考库协议复用；写作内核从零编写，不导入旧工作锁"}
     (out / "BUILD.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
     bundle = {"初始化系统包.zip": init.read_bytes(), "构建信息.json": (out / "BUILD.json").read_bytes()}
     for folder in ["research", "validation"]:

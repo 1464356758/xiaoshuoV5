@@ -1,14 +1,14 @@
 {
-  "version": "6.2.1",
+  "version": "6.3.0",
   "date": "2026-11-14",
   "core_and_package_regression": {
     "command": "python3 -m unittest discover -s system_templates/v6/tests -v",
     "status": "passed",
-    "tests": 37,
-    "duration_seconds": 89.065,
-    "engine_sha256": "6a043af821ebecea336e633e9ce224a312c267c6fba9d26c30bc3243d2a3ea49",
-    "builder_sha256": "0864a72fcd2657259b1e620924e3d3b07838d9e9c38b526d8efa6cbd8543d758",
-    "note": "37项包含新增16项回归；150章为临时合成数据。离线CLI+本地bare Git演练不冒充真实GitHub开书。"
+    "tests": 42,
+    "duration_seconds": 64.472,
+    "engine_sha256": "49f1138703fc47fa566981c675e8b06b01db5de06325e4cacb69d3f1929401df",
+    "builder_sha256": "c94e5f862fba50a6675baf0a9de4125202d61f550bf866082b858a88ef683edb",
+    "note": "V6.2.1原37项与新增5项只读重复定位回归；150章为合成工程测试。随后单独追加并通过实际ZIP内工具CLI调用，0.673秒。"
   },
   "samples": {
     "status": "manifest_checked",
@@ -25,11 +25,11 @@
     "reviewer": "same-context-model"
   },
   "workspace": {
-    "version": "2.1.2",
+    "version": "2.2.0",
     "worker_routes": "passed",
     "matching_init_zip": "passed",
     "authenticated_production_flow": "not_exercised",
-    "preview_controls": "new_book_reserved_target_and_prompt_generation; manual_schedule_toggle",
+    "preview_controls": "本轮无布局变更，未重复浏览器交互；上轮2.1.2预览结果保留为历史证据",
     "legacy_book_readback": {
       "status": "passed",
       "snapshot": "4fcb03494232fb27f6ce56a590ababc00c06109c",
@@ -46,5 +46,17 @@
     "完全空的GitHub仓库首提交按官方接口补齐指令，未另建真实新书仓库实测",
     "受管预览仅测试前端交互，未加载生产GitHub relay",
     "未测试中国大陆网络可达性"
-  ]
+  ],
+  "new_prose_tool": {
+    "tests": 5,
+    "status": "passed",
+    "read_only": "all novel file hashes unchanged before/after each check",
+    "semantics": "literal sentence candidates only; no similarity, plot or AI-rate claims"
+  },
+  "literary_validation": {
+    "type": "same-context-directed-examples",
+    "examples": 2,
+    "file": "V6.3_诊断示例_非正式正文.md",
+    "limits": "非盲评，非连续五章，未写入正式小说，未投稿"
+  }
 }

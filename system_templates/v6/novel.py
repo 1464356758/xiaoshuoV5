@@ -11,9 +11,9 @@ import re
 import tempfile
 import uuid
 
-VERSION = "6.2.1"
+VERSION = "6.3.0"
 SCHEMA = "novel-v6"
-PACKAGE_FILES = {"AGENTS.md", "WORKFLOW.md", "CRAFT.md", "README.md", "THIRD_PARTY_NOTICES.md", "novel.py", "templates/plan.md", "启动新书.txt"}
+PACKAGE_FILES = {"AGENTS.md", "WORKFLOW.md", "CRAFT.md", "README.md", "THIRD_PARTY_NOTICES.md", "novel.py", "templates/plan.md", "tools/prose_check.py", "启动新书.txt"}
 
 
 class Problem(ValueError):
