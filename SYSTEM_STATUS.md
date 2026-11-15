@@ -8,7 +8,7 @@
 - 原初始化包SHA256：3070d3fbd0d97359ac2257bc957456ea8ed61d79e0c26b92026142b9049b3f38；原完整包SHA256：06911a96e4ad5f72b0cbbbda36382c18dff4147d0b4c46127be5772cca87c615。原Library文件不替换，A首页、指令和默认下载资源保持原内容。
 - A仍用WORKFLOW/CRAFT/novel.py和book/state主状态，原42项工程验证与两份未采用五章稿不变。原工作台2.2.0、新书引擎6.3.0不升版。
 
-## B / CN-GPT对照版1.0：独立新增
+## B / CN-GPT对照版1.0.1：已接管并修复
 
 - 源码system_templates/cn_gpt，上游为PenglongHuang/chinese-novelist-skill，master固定507d41567925eab520ad459db08fda83813e8051。22份运行文件（SKILL、LICENSE、references、原脚本）逐字节保留于vendor/chinese-novelist，哈希在UPSTREAM.json；CNOCTAVE不混入。
 - 保留上游Phase0—4、三层定位、逐章清单A—D、chinese-novelist作品目录、00人物、01大纲、02计划、03文风、99摘要和逐章Markdown。写作唯一主状态是02-写作计划.json，不是A版状态机。
@@ -26,3 +26,9 @@ A入口：https://novel-workspace-v44.qq1464356758.chatgpt.site/
 B入口：https://novel-workspace-v44.qq1464356758.chatgpt.site/cn.html
 
 系统验证仅说明运行与保存范围。未新建真实B小说仓库现场写书，未验证大陆网络或生产登录后全部操作；文学与签约表现待实际创作及平台反馈。
+
+## 2026-11-15本轮实际接管
+
+已读取当前两套初始化包、A完整包、双系统说明、工作台站点资料、GitHub默认分支、固定上游原文与站点绑定。B1.0.1修复摘要冻结前缀漏检和不合格候选无法登记返修的缺口，26项临时合成工程测试通过；上游22文件、A源码树与两包哈希保持不变。下载与入口由既有站点同步；实际部署记录以system_templates/cn_gpt/validation/软件发布.json为准。
+
+本轮不写新书，不改现有小说或XS-KU；后续等待作者提供独立新小说仓库、平台或下一指令。文学与签约仍需实际稿件和投稿反馈。

@@ -5,12 +5,15 @@ test_body_range_excludes_notes_and_bad_title_is_rejected (test_cn_project.Projec
 test_crash_before_plan_adoption_does_not_create_a_formal_chapter (test_cn_project.ProjectTests.test_crash_before_plan_adoption_does_not_create_a_formal_chapter) ... ok
 test_edit_after_review_and_wrong_baseline_never_adopt (test_cn_project.ProjectTests.test_edit_after_review_and_wrong_baseline_never_adopt) ... ok
 test_incomplete_materials_and_fake_ready_cannot_bypass_validation (test_cn_project.ProjectTests.test_incomplete_materials_and_fake_ready_cannot_bypass_validation) ... ok
+test_missing_current_summary_can_be_returned_for_revision (test_cn_project.ProjectTests.test_missing_current_summary_can_be_returned_for_revision) ... ok
 test_missing_plan_is_not_rebuilt_from_existing_chapters (test_cn_project.ProjectTests.test_missing_plan_is_not_rebuilt_from_existing_chapters) ... ok
 test_original_architecture_and_derived_reader_view (test_cn_project.ProjectTests.test_original_architecture_and_derived_reader_view) ... ok
 test_orphan_markdown_cannot_be_claimed_with_a_different_title (test_cn_project.ProjectTests.test_orphan_markdown_cannot_be_claimed_with_a_different_title) ... ok
 test_prior_summary_is_append_only_and_retry_limit_is_real (test_cn_project.ProjectTests.test_prior_summary_is_append_only_and_retry_limit_is_real) ... ok
 test_same_day_requests_resume_then_next_and_retries_are_idempotent (test_cn_project.ProjectTests.test_same_day_requests_resume_then_next_and_retries_are_idempotent) ... ok
+test_short_draft_revision_is_counted_and_cannot_be_adopted (test_cn_project.ProjectTests.test_short_draft_revision_is_counted_and_cannot_be_adopted) ... ok
 test_state_adopted_before_view_failure_retries_repair_projection (test_cn_project.ProjectTests.test_state_adopted_before_view_failure_retries_repair_projection) ... ok
+test_verify_and_begin_reject_changed_frozen_summary_before_new_work (test_cn_project.ProjectTests.test_verify_and_begin_reject_changed_frozen_summary_before_new_work) ... ok
 test_bom_crlf_body_is_verified_without_normalization (test_release.FrontendTests.test_bom_crlf_body_is_verified_without_normalization) ... ok
 test_changed_plan_cannot_be_hidden_behind_old_index (test_release.FrontendTests.test_changed_plan_cannot_be_hidden_behind_old_index) ... ok
 test_exported_text_tampering_is_rejected (test_release.FrontendTests.test_exported_text_tampering_is_rejected) ... ok
@@ -23,6 +26,6 @@ test_repeatable_package_contains_original_architecture_without_book_identity (te
 test_source_and_unowned_output_are_not_overwritten (test_release.PackageTests.test_source_and_unowned_output_are_not_overwritten) ... ok
 
 ----------------------------------------------------------------------
-Ran 23 tests in 84.355s
+Ran 26 tests in 89.496s
 
 OK

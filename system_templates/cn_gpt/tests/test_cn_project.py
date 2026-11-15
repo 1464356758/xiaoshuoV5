@@ -153,6 +153,42 @@ class ProjectTests(unittest.TestCase):
         with self.assertRaisesRegex(Problem, '3轮'):
             self.book.assess(self.book.snapshot()[2], 'revise')
 
+    def test_verify_and_begin_reject_changed_frozen_summary_before_new_work(self):
+        self.finish()
+        summary = self.path + '/99-章节摘要.md'
+        original = self.book.read(summary)
+        self.book.write(summary, original.replace('临时合成事件'.encode(), '错误改写历史'.encode()))
+        with self.assertRaisesRegex(Problem, '摘要不能回改'):
+            self.book.verify()
+        with self.assertRaisesRegex(Problem, '摘要不能回改'):
+            self.book.begin('synthetic-summary-request-0002', '第二章')
+        self.assertEqual(self.book.snapshot()[1]['chapters'][1]['status'], 'pending')
+        self.book.write(summary, original + '\n## 待续说明\n只追加当前候选的记录。\n'.encode())
+        self.assertEqual(self.book.verify()['chapters'], 1)
+
+    def test_short_draft_revision_is_counted_and_cannot_be_adopted(self):
+        b = self.prepare()
+        original = self.book.read(b['file_path'])
+        self.book.write(b['file_path'], original.replace(('丁' * 6000).encode(), ('丁' * 5000).encode()))
+        a = self.book.assess(b['plan_sha256'], 'revise')
+        self.assertEqual(self.book.snapshot()[1]['chapters'][0]['retryCount'], 1)
+        self.assertEqual(self.book.assess(a['planSha256'], 'revise'), a)
+        with self.assertRaisesRegex(Problem, '5500—6500'):
+            self.book.assess(a['planSha256'], 'ready')
+        with self.assertRaisesRegex(Problem, '5500—6500'):
+            self.book.adopt(a['planSha256'], b['request_id'])
+        self.book.write(b['file_path'], original)
+        self.book.assess(a['planSha256'], 'ready')
+        self.assertEqual(self.book.adopt(a['planSha256'], b['request_id'])['han'], 6000)
+
+    def test_missing_current_summary_can_be_returned_for_revision(self):
+        b = self.prepare()
+        self.book.write(self.path + '/99-章节摘要.md', '尚未完成本章摘要。\n'.encode())
+        a = self.book.assess(b['plan_sha256'], 'revise')
+        self.assertEqual(self.book.snapshot()[1]['chapters'][0]['retryCount'], 1)
+        with self.assertRaisesRegex(Problem, '摘要缺少'):
+            self.book.assess(a['planSha256'], 'ready')
+
     def test_150_chapters_keep_original_prefix_and_only_finish_at_the_end(self):
         m, p, _ = self.book.snapshot()
         first = p['chapters'][0]

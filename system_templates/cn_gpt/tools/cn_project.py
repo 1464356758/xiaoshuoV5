@@ -11,7 +11,7 @@ import re
 import tempfile
 import uuid
 
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 ENGINE = 'cn-novelist-gpt'
 UPSTREAM = '507d41567925eab520ad459db08fda83813e8051'
 PLAN = '02-写作计划.json'
@@ -242,6 +242,10 @@ class Project:
             need(r['attachments']['markdown']['sha256'] == c['markdownSha256']
                  and r['attachments']['text']['sha256'] == c['textSha256'], '原稿不可变副本与正式章不符')
             previous = c['recordSha256']
+        if previous is not None:
+            frozen_summary = self.read(r['attachments']['99-章节摘要.md']['path'])
+            need(self.read(m['projectPath'] + '/99-章节摘要.md').startswith(frozen_summary),
+                 '已完成章摘要不能回改；请从冻结快照恢复原前缀')
         return {'status': 'integrity_ok', 'chapters': len(requests), 'plan_sha256': baseline, 'book_id': m['bookId']}
 
     def context(self):
@@ -282,16 +286,18 @@ class Project:
         need(c and c['status'] in {'in_progress', 'failed'}, '先begin接续当前目标')
         return m, p, c
 
-    def materials(self, m, c):
+    def materials(self, m, c, require_complete=True):
         path = m['projectPath']; markdown = self.read(path + '/' + c['filePath'])
         need(markdown.decode().startswith(f"# 第{c['chapterNumber']:02}章：{c['title']}\n"), '章节Markdown标题与计划不符')
         files = {'markdown': markdown, 'text': body(markdown.decode('utf-8'))}
         files.update({n: self.read(path + '/' + n) for n in DOCS})
         files['editorial'] = self.read(path + f"/98-编辑意见/第{c['chapterNumber']:02}章.md")
-        need(all(v.decode('utf-8').replace('\ufeff', '').strip() and b'<!-- CN_PENDING -->' not in v for v in files.values()), '正文或规划/审读材料尚未完成')
-        need(5500 <= han(files['text'].decode()) <= 6500, '正文应为5500—6500汉字，概要和备注不计入')
+        need(files['editorial'].decode('utf-8').strip() and b'<!-- CN_PENDING -->' not in files['editorial'], '请先记录本轮实际审读问题')
         need(len(files['editorial'].decode()) <= 3000, '编辑意见只保留具体问题、修改与风险')
-        need(bool(re.search(r'^## 第0*' + str(c['chapterNumber']) + r'章(?:[：:\s]|$)', files['99-章节摘要.md'].decode(), re.M)), '章节摘要缺少当前章记录')
+        if require_complete:
+            need(all(v.decode('utf-8').replace('\ufeff', '').strip() and b'<!-- CN_PENDING -->' not in v for v in files.values()), '正文或规划/审读材料尚未完成')
+            need(5500 <= han(files['text'].decode()) <= 6500, '正文应为5500—6500汉字，概要和备注不计入')
+            need(bool(re.search(r'^## 第0*' + str(c['chapterNumber']) + r'章(?:[：:\s]|$)', files['99-章节摘要.md'].decode(), re.M)), '章节摘要缺少当前章记录')
         if c['chapterNumber'] > 1:
             prior = self.snapshot()[1]['chapters'][c['chapterNumber'] - 2]
             record = self.data(prior['recordPath'])
@@ -302,7 +308,8 @@ class Project:
     def assess(self, expected, decision):
         need(decision in {'ready', 'revise'}, '审读结论无效')
         with self.lock():
-            self.verify(); m, p, c = self.current(expected); files = self.materials(m, c)
+            self.verify(); m, p, c = self.current(expected)
+            files = self.materials(m, c, require_complete=decision == 'ready')
             hashes = {k: sha(v) for k, v in files.items()}; path = m['projectPath'] + f"/98-编辑意见/第{c['chapterNumber']:02}章.assessment.json"
             if self.path(path).exists():
                 old = self.data(path)

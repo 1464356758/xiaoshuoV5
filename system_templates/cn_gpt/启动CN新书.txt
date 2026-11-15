@@ -3,7 +3,7 @@
 【平台】未选，由我选择
 【偏好】暂无
 
-使用B/CN-GPT上游架构，engine=cn-novelist-gpt。先读AGENTS.md、GPT_WORKFLOW.md和UPSTREAM_CHANGES.md，运行python3 tools/cn_project.py package-check，再读取目标仓库实际默认分支、HEAD和目录。包版本1.0.0，源项目固定507d41567925eab520ad459db08fda83813e8051。
+使用B/CN-GPT上游架构，engine=cn-novelist-gpt。先读AGENTS.md、GPT_WORKFLOW.md和UPSTREAM_CHANGES.md，运行python3 tools/cn_project.py package-check，再读取目标仓库实际默认分支、HEAD和目录。包版本1.0.1，源项目固定507d41567925eab520ad459db08fda83813e8051。
 
 没有作品的新仓库才部署；已有B书恢复它，已有其他系统或书稿禁止覆盖或迁移。三层定位、人物/大纲/文风规划、逐章A—D清单与自动校验均按包内vendor/chinese-novelist原项目流程，通过GPT_WORKFLOW适配执行，不加载A版novel.py或CRAFT替代。
 

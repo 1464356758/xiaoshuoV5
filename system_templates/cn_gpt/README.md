@@ -1,4 +1,4 @@
-# B / CN-GPT 对照版 1.0
+# B / CN-GPT 对照版 1.0.1
 
 这是PenglongHuang/chinese-novelist-skill的GPT与GitHub适配版。保留原项目阶段、逐章清单、指南和文件结构；原文放在vendor/chinese-novelist，固定版本与每文件哈希在UPSTREAM.json。
 
