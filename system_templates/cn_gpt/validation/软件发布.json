@@ -1,18 +1,49 @@
 {
   "project_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2",
-  "version_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_f662cc3236788191a88950933ccbb443",
+  "version_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_d04cb4aa58f88191a9197a4dffbb8def",
   "status": "succeeded",
   "url": "https://novel-workspace-v44.qq1464356758.chatgpt.site",
-  "updated_at": "2026-11-15T01:19:43.433946+00:00",
-  "deployment_id": "appgdep_6af908a4e1188191b5abc06ac7a2429b",
-  "source_commit": "96c64bc29d4d05674ee42234a74a99a281d141f4",
+  "updated_at": "2026-11-15T11:34:39.869811+00:00",
+  "deployment_id": "appgdep_6af998cc14108191b4187eb41e44918e",
+  "source_commit": "078612b3c373b5212b0849941d2558a8438cd4a7",
+  "site_source": {
+    "provider": "cloudflare_artifact",
+    "repository": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2",
+    "branch": "main",
+    "entry": "worker/index.js",
+    "manifest": ".openai/hosting.json"
+  },
+  "system_source_commit": "d4293015a1859d2e03260b6727402f7f3a6fe2a4",
   "b_entry": "/cn.html",
   "a_engine_version": "6.3.0",
-  "b_engine_version": "1.0.0",
-  "b_initial_sha256": "59d8f10495823f92037e49d90eb0b328836e5fa564fa6695f1c07ee470709584",
+  "b_engine_version": "1.0.1",
+  "b_initial_sha256": "061bbafb580ba1e45f4e60edee985df6f33f0695cb3d69801c7da7262c5af9fe",
   "a_initial_sha256": "3070d3fbd0d97359ac2257bc957456ea8ed61d79e0c26b92026142b9049b3f38",
-  "scope": "A原入口与下载保留；B独立页面、原架构初始化包与读取模块发布",
-  "browser": "已实际检查预览交互；生产B入口显示Sign in required，未进行登录",
+  "scope": "B1.0.1摘要保护和返修记录修复；A源码、入口和两包字节保持不变",
+  "checks": {
+    "engineering_tests": 26,
+    "package_checks": "passed",
+    "site_artifact_checks": "passed",
+    "preview_interactions": "passed",
+    "source_fixed_commit_readback": "passed"
+  },
   "access": "保留原owner-only权限",
-  "limits": "生产登录后的完整流程、真实小说写作/投稿与大陆网络未验证"
+  "limits": [
+    "生产浏览器仍需ChatGPT登录，本轮未进行登录后完整交互",
+    "大陆网络未验证",
+    "未在真实小说仓库试写或投稿，工程通过不代表文学质量或签约"
+  ],
+  "deliverables": {
+    "b_initial": {
+      "library_file_id": "libfile_e431631077c08191898a267a21ebc092",
+      "version": 1,
+      "file_id": "file_000000001d7081f58fd40bdcce299f02"
+    },
+    "dual_guide": {
+      "library_file_id": "libfile_1019042b83208191812f37e59b6f0982",
+      "version": 1,
+      "file_id": "file_00000000338c8212b43d2bf1dacafd47"
+    },
+    "a_files": "unchanged"
+  }
 }
