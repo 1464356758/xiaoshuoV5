@@ -1,0 +1,8 @@
+{
+  "label": "A / 小说主 V6.3.0",
+  "source_commit": "6a9f966f1b852fd1b66c9921bb184e0ef207b715",
+  "source_tree": "2f5f96df01bafa325e948ca5e6f2844104b5eee9",
+  "initial_package_sha256": "3070d3fbd0d97359ac2257bc957456ea8ed61d79e0c26b92026142b9049b3f38",
+  "complete_package_sha256": "06911a96e4ad5f72b0cbbbda36382c18dff4147d0b4c46127be5772cca87c615",
+  "policy": "preserve; not modified by B adapter"
+}

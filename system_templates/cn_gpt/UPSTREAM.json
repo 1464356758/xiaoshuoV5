@@ -1,0 +1,95 @@
+{
+  "repository": "https://github.com/PenglongHuang/chinese-novelist-skill",
+  "branch": "master",
+  "commit": "507d41567925eab520ad459db08fda83813e8051",
+  "files": {
+    "LICENSE": {
+      "git_blob_sha": "2f6b7e59b8c5af624617520313285dcfe0b47c28",
+      "sha256": "27315737dd6b5dd75d99eb148fa32fc3cafdeb1e51ea0b8b6242e88acf9a2117"
+    },
+    "SKILL.md": {
+      "git_blob_sha": "d1e6b0317132a0eadafbd2c0f23c7addc0dfaeec",
+      "sha256": "64629a252f85a540ef4b5e522b5d964e8bf05614a88c358d8b44d4e115cb246b"
+    },
+    "references/flows/chapter-checklist.md": {
+      "git_blob_sha": "76a74043c6b2287974c5961fb2de31385a6e3ecd",
+      "sha256": "c5302aae87edff43a8f1e925e4221036c05954a6ff8b837f321d9942cfb1549f"
+    },
+    "references/flows/phase0-initialization.md": {
+      "git_blob_sha": "628ef9efab11a908cd446a43228eb3d24bbedabf",
+      "sha256": "7a1ae1f789fea4b69087e687b02fbd406f0d2a52fc0cd520e3c69e4972da7537"
+    },
+    "references/flows/phase1-layer1-core.md": {
+      "git_blob_sha": "bcd20f2a1fc2dd11201d3a64f8e6638de324a96c",
+      "sha256": "9233beaca8b95476ce413a4062eb7609e566399c2b58864c434a76ba9f39f21b"
+    },
+    "references/flows/phase1-layer2-customize.md": {
+      "git_blob_sha": "81a3358e01ed307f1a08ad99f614df7eac18dab2",
+      "sha256": "4263ef88d5394e0e865db304b823cf196d42008b419748f105c13dcc9abaa019"
+    },
+    "references/flows/phase1-layer3-title.md": {
+      "git_blob_sha": "432001afc241dd87afc66ba919b870ec6c3aa838",
+      "sha256": "65dcdd64097ece915bc72c3311057daf448de00d1d5b8ab4328d0ede31c46352"
+    },
+    "references/flows/phase2-planning.md": {
+      "git_blob_sha": "82578e96342cd49e050b7a3182de86b09c8ef45f",
+      "sha256": "b1275732bcd8c5236c692382feffda7664f1092f86950679cc50d32d2607c0cf"
+    },
+    "references/flows/phase3-writing.md": {
+      "git_blob_sha": "aff2d5fc9e858c7d4a1a0d32d9a75836b9a97472",
+      "sha256": "57a011ba337d0ff55dd0cec505d42efa1c31fa3c79d1678bdd3eff71cf916459"
+    },
+    "references/flows/phase4-validation.md": {
+      "git_blob_sha": "2d1ea40c069fee67fa090437e68411bb4a9b5524",
+      "sha256": "746555248e097a851dcfe8aa82db7b9ce3e369f2c105d7be15bfd2cae50ca08f"
+    },
+    "references/flows/shared-infrastructure.md": {
+      "git_blob_sha": "8522919303f06fb545e2352c98b714a7eab45ebd",
+      "sha256": "14d93e695e4834b56448f87e91934c9631682414ff98db9a5b5792efe96bd038"
+    },
+    "references/guides/chapter-guide.md": {
+      "git_blob_sha": "e3fd45060b3e037955285b4bf862ed8b32caf825",
+      "sha256": "65f5685cb5f4da709660196cf9605801b1083e11684b6a46771d064aa74012dd"
+    },
+    "references/guides/chapter-template.md": {
+      "git_blob_sha": "a84ab620ca2d814442e3f47c3e758b39c863b0a6",
+      "sha256": "9cbf08f8d9b85955f805403fe8ba3781dcce7396b2eb3e368f9378de136311d7"
+    },
+    "references/guides/character-building.md": {
+      "git_blob_sha": "6a23dad40b803160e43828f66a017b85e7964239",
+      "sha256": "036cd662bd806083825d739ae4777b94fbd0f56a77a04df1bc2f8b75e3ab3bf1"
+    },
+    "references/guides/character-template.md": {
+      "git_blob_sha": "62ac37c7e338ed9a00d35206310ea758f2d54541",
+      "sha256": "8802145d52a6bcd1012dda9eb3aa815d0dba1cceb601584267fb4cf3cb1dc03c"
+    },
+    "references/guides/content-expansion.md": {
+      "git_blob_sha": "a726244ca2166d1a770d6c00e3c9124bf5ead2b7",
+      "sha256": "86547e33c2a16ffab1cecc138dcb23b97b731f0f173b52e1c96e811058b65eab"
+    },
+    "references/guides/dialogue-writing.md": {
+      "git_blob_sha": "a89a1b2ca752f8da807cdc99d2c788ca1052633d",
+      "sha256": "8c3b5952cc3e88f4a7b6251fdb5dd0b4a16c2143efe0bb652b8f01fc13e6b3c7"
+    },
+    "references/guides/hook-techniques.md": {
+      "git_blob_sha": "f1438b5bad484e4d46e173719b638f8ced7000ce",
+      "sha256": "9b22e6be0da9e589b83d6c3e367da2288d22e22cd6fbf80dfcefee3a706a43bc"
+    },
+    "references/guides/outline-template.md": {
+      "git_blob_sha": "75c3054d03b92ad9686539ee54eb877df116b83d",
+      "sha256": "90c1b0d0d1b215c9766ddce283aa9f8ed7aaee13a02eac507d51b3ec9cae7f37"
+    },
+    "references/guides/plot-structures.md": {
+      "git_blob_sha": "0fa803cfe650c1e8fbc5a09677c63df93d02df0c",
+      "sha256": "13958bf17c875509509eb308bae30aeed451ac2ad85b9f669e96a97f70df4814"
+    },
+    "references/guides/title-guide.md": {
+      "git_blob_sha": "fb0db1620258d37ccf60857b3e66b4083d846bda",
+      "sha256": "8a14c896cf4b65e7f0c615435327788de2fd37423efad5643180a0c0811b6189"
+    },
+    "scripts/check_chapter_wordcount.mjs": {
+      "git_blob_sha": "af49278e44c56d6344fbc8d7e19802649a76ee9c",
+      "sha256": "4aed2a0b9cb24f8e2ac585834c1b1b86c01954bb337fb169bc96bdf4cff0f543"
+    }
+  }
+}

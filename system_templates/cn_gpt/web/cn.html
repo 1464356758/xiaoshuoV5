@@ -1,0 +1,10 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>B · CN-GPT 小说工作台</title><link rel="stylesheet" href="./cn.css"></head><body>
+<main><header><a href="./">← A版工作台</a><span class="badge">独立对照方案 B</span><h1>CN-GPT 小说工作台</h1><p>沿用 chinese-novelist 的规划与逐章流程，使用当前GPT写作，GitHub保存。</p></header>
+<section><h2>一本新书，一个仓库</h2><label for="repo">小说 GitHub 仓库链接</label><input id="repo" type="url" autocomplete="off" placeholder="https://github.com/用户名/小说仓库">
+<div class="grid"><div><label for="platform">平台（可留空）</label><input id="platform" maxlength="80" placeholder="未选，先让我选择"></div><div><label for="mode">本次操作</label><select id="mode"><option value="new">部署一部新书</option><option value="continue">继续B版下一章</option></select></div></div>
+<label for="preferences">题材与偏好（可留空）</label><textarea id="preferences" rows="3" maxlength="1200" placeholder="已有选择会直接复用，不重复问答"></textarea>
+<div class="actions"><button id="generate">生成指令</button><button id="copyPrompt" disabled>复制指令</button><a class="button secondary" href="./downloads/cn-novel-init.zip" download>下载B版初始化包</a></div>
+<p class="hint">新建GPT工作聊天，附加B版初始化包并发送指令。以后在本书聊天说“下一章”。每章约6000字，同天不限章数。</p>
+<label for="prompt">发给GPT的完整指令</label><textarea id="prompt" rows="12" readonly placeholder="填写仓库后生成"></textarea><p id="promptStatus" role="status"></p></section>
+<section><h2>查看B版正式章节</h2><p>读取上述仓库，核对原写作计划、Markdown和冻结快照后显示正文。</p><div class="actions"><button id="load" class="secondary">读取B版小说</button><select id="chapters" aria-label="选择正式章节" disabled><option>尚未读取</option></select><button id="copyBody" disabled>复制正文</button></div><p id="readStatus" role="status"></p><textarea id="body" rows="18" readonly aria-label="已核验正文" placeholder="未采用的草稿不会显示为正式章节"></textarea></section>
+<footer>CN-GPT 1.0 · 原项目结构 · 每次完成一章<br>本页生成指令和读取文件；写作在GPT聊天执行，模型由当前对话选择。</footer></main><script type="module" src="./cn-app.mjs"></script></body></html>

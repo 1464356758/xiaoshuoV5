@@ -1,0 +1,18 @@
+{
+  "project_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2",
+  "version_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_f662cc3236788191a88950933ccbb443",
+  "status": "succeeded",
+  "url": "https://novel-workspace-v44.qq1464356758.chatgpt.site",
+  "updated_at": "2026-11-15T01:19:43.433946+00:00",
+  "deployment_id": "appgdep_6af908a4e1188191b5abc06ac7a2429b",
+  "source_commit": "96c64bc29d4d05674ee42234a74a99a281d141f4",
+  "b_entry": "/cn.html",
+  "a_engine_version": "6.3.0",
+  "b_engine_version": "1.0.0",
+  "b_initial_sha256": "59d8f10495823f92037e49d90eb0b328836e5fa564fa6695f1c07ee470709584",
+  "a_initial_sha256": "3070d3fbd0d97359ac2257bc957456ea8ed61d79e0c26b92026142b9049b3f38",
+  "scope": "A原入口与下载保留；B独立页面、原架构初始化包与读取模块发布",
+  "browser": "已实际检查预览交互；生产B入口显示Sign in required，未进行登录",
+  "access": "保留原owner-only权限",
+  "limits": "生产登录后的完整流程、真实小说写作/投稿与大陆网络未验证"
+}

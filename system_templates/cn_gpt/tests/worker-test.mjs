@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {pathToFileURL} from 'node:url';
+const root=process.argv[2],{default:worker}=await import(pathToFileURL(root+'/worker.mjs'));
+const request=p=>worker.fetch(new Request('https://synthetic.invalid'+p));
+const sha=x=>createHash('sha256').update(x).digest('hex');
+const html=await(await request('/')).text();assert.ok(html.includes('工作台 2.2.0'));assert.ok(html.includes('新书内核 V6.3.0'));
+assert.equal(sha(Buffer.from(await(await request('/downloads/novel-init.zip')).arrayBuffer())),'3070d3fbd0d97359ac2257bc957456ea8ed61d79e0c26b92026142b9049b3f38');
+for(const path of ['/cn.html','/cn-app.mjs','/cn-prompts.mjs','/cn-loader.mjs','/cn.css','/reader.html'])assert.equal((await request(path)).status,200,path);
+assert.match(await(await request('/cn.html')).text(),/独立对照方案 B/);
+const download=await request('/downloads/cn-novel-init.zip');
+const bytes=Buffer.from(await download.arrayBuffer());assert.equal(sha(bytes),sha(await readFile(root+'/初始化系统包_CN-GPT_对照版.zip')));assert.equal(download.headers.get('X-Content-SHA256'),sha(bytes));
+assert.equal((await request('/nonexistent')).status,404);
+console.log('A入口与包保持不变；B独立路由与匹配下载：PASS');
