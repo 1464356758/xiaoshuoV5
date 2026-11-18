@@ -12,7 +12,7 @@ import tempfile
 import uuid
 from tools import opening
 
-VERSION = "7.0.0"
+VERSION = "7.0.1"
 SCHEMA = "novel-v6"
 EDITION = "novel-a7"
 PACKAGE_FILES = {"AGENTS.md", "WORKFLOW.md", "CRAFT.md", "README.md", "THIRD_PARTY_NOTICES.md",
@@ -79,6 +79,7 @@ def validate_materials(files):
     require(len(texts["review"]) <= 3000, "编辑意见过长：只保留具体问题、修改和遗留风险")
     n = han(texts["text"])
     require(5500 <= n <= 6500, f"正文{n}汉字，目标5500—6500")
+    opening.check_repeated_text(texts["text"])
     return n
 
 

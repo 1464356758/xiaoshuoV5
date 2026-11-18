@@ -1,4 +1,5 @@
 """A7 opening workshop. Facts come from text bytes; editorial judgments remain attributed."""
+from collections import Counter
 import hashlib
 import html
 import json
@@ -26,6 +27,18 @@ def as_json(value):
 def nonempty(value, label):
     check(isinstance(value, str) and bool(value.strip()), label + "缺少内容")
     return value.strip()
+
+
+def check_repeated_text(text):
+    """Reject only substantial verbatim padding. Short refrains remain an editorial choice."""
+    letters = re.sub(r"[^\u3400-\u4dbf\u4e00-\u9fff\U00020000-\U000323af]", "", text)
+    width = 16
+    total = len(letters) - width + 1
+    if total < 100:
+        return
+    counts = Counter(letters[i:i + width] for i in range(total))
+    repeated = sum(count for count in counts.values() if count >= 4)
+    check(repeated * 2 < total, "大段逐字循环填充，请恢复实际场景再审读")
 
 
 def text_units(raw, encoding):
@@ -80,6 +93,8 @@ def seal(book, args, han):
               and len({r["path"] for r in rows}) >= 2, "需要两部独立参考原作的实际阅读记录")
         texts = [book.read(f"book/opening/{name}.txt").decode("utf-8") for name in ["a","b"]]
         check(all(han(t) >= 120 for t in texts), "请把两种开法各写成一段可读的场景")
+        for text in texts:
+            check_repeated_text(text)
         compact = [re.sub(r"[\W_]+", "", t) for t in texts]
         check(compact[0] != compact[1], "两份试写是相同正文")
         choice = nonempty(book.read("book/opening/choice.md").decode(), "试写取舍")
@@ -168,6 +183,32 @@ def anchored(entry, text, label):
     quote = nonempty(entry.get("quote"), label + "原句")
     nonempty(entry.get("why"), label + "判断")
     check(4 <= len(quote) <= 120 and quote in text, label + "短引不在对应的实际正文中")
+    return quote
+
+
+def window_reading(window, pages):
+    check(isinstance(window, dict), "请重读首章或送审窗口内已经写出的正文")
+    available = dict(pages)
+    spans = {}
+    for key, label in [("promise", "读者产生期待的位置"), ("delivery", "读者看到结果的位置")]:
+        entry = window.get(key)
+        check(isinstance(entry, dict) and type(entry.get("chapter")) is int
+              and entry["chapter"] in available, label + "缺少窗口内的原文章号")
+        chapter = entry["chapter"]
+        text = available[chapter]
+        quote = anchored(entry, text, label)
+        offset = text.index(quote)
+        check(text.find(quote, offset + 1) < 0, label + "在同章有多处，请补上下文定位")
+        spans[key] = ((chapter, offset), (chapter, offset + len(quote)))
+    order = window.get("order", "setup_first")
+    check(order in ("setup_first", "result_first"), "请选择顺叙或先见结果再揭起因")
+    first, second = ("promise", "delivery") if order == "setup_first" else ("delivery", "promise")
+    check(spans[first][1] <= spans[second][0], "两处证据重叠或与所报呈现顺序不符")
+    effect = nonempty(window.get("effect"), "已发生结果的正文原段")
+    delivery = window["delivery"]
+    check(len(effect) <= 600 and delivery["quote"].strip() in effect
+          and effect in available[delivery["chapter"]],
+          "结果原段须在同一可见章节逐字出现，并含结果短引；推断请写在 why")
 
 
 def reading(book, state, number, body, evidence, opening, han):
@@ -185,17 +226,9 @@ def reading(book, state, number, body, evidence, opening, han):
         item = state["chapters"][str(number-1)]
         prev = book.read("book/" + item["text_path"]).decode()
         anchored(evidence.get("previous"), prev, "上一章留下的后果与本章差别")
-    if crossing:
+    if number == 1 or crossing:
         pages = first_pages(book, state, number, body, opening["window_han"], han)
-        available = dict(pages)
-        window = evidence.get("window")
-        check(isinstance(window, dict), "请重读实际送审窗口")
-        for key, label in [("promise","窗口内的困境或欲望"), ("delivery","窗口内的首次兑现")]:
-            entry = window.get(key)
-            check(isinstance(entry, dict) and type(entry.get("chapter")) is int
-                  and entry["chapter"] in available, label + "缺少窗口内的原文章号")
-            anchored(entry, available[entry["chapter"]], label)
-        check(window["promise"]["quote"] != window["delivery"]["quote"], "分别指出引发期待与实际兑现的位置")
+        window_reading(evidence.get("window"), pages)
 
 
 def add_arguments(sub):

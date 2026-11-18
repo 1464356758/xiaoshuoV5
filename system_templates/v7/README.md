@@ -1,4 +1,4 @@
-# 小说主 A 系统 V7.0
+# 小说主 A 系统 V7.0.1
 
 在一个 GPT 工作聊天中附上本包和一本新书的独立 GitHub 仓库。作者选平台、选题，然后说“开始写”。后续每说一次“下一章”完成一章，允许同日多章。新聊天恢复时仍用这本书的仓库。手机上无需安装软件。
 
@@ -8,4 +8,4 @@
 
 执行者读 AGENTS.md 和 WORKFLOW.md。CRAFT.md 与《读稿示范》给出做选择和改戏的例子。程序需 Linux 与 Python 3.10 或更新版本，仅用标准库。启动指令见《启动新书.txt》。
 
-源码位于系统母版的 system_templates/v7。A7 使用原 A 系列阅读格式，作品身份另有 edition=novel-a7 与 version=7.0.0。V6.3 和 CN-GPT 的既有作品从各书自己的版本接续。
+源码位于系统母版的 system_templates/v7。A7 使用原 A 系列阅读格式，作品身份另有 edition=novel-a7 与 version=7.0.1。V6.3 和 CN-GPT 的既有作品从各书自己的版本接续。

@@ -12,6 +12,7 @@ import zipfile
 SOURCE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SOURCE))
 from build_release import build
+from fixtures_opening import AT_THE_STAGE, AT_THE_TABLE, transport_text
 
 
 def sha(raw):
@@ -57,14 +58,14 @@ class Release(unittest.TestCase):
         return self.command("sample",*opts,"--commit","c"*40,"--source-path",f"合成{i}.txt",
                             "--family",f"group{i}","--lesson","选择带来实际后果","--limit","用于临时测试")
 
-    def prepare_opening(self):
+    def prepare_opening(self, window=10000):
         self.source(1)
         self.source(2)
         path = self.root / "book/opening"
-        for key,char in (("a","甲"),("b","乙")):
-            (path / f"{key}.txt").write_text((char+"合成试写场面。")*35)
-        (path / "choice.md").write_text("合成测试选择第一份，因它首先交代人物具体的取舍。")
-        return self.command("audition","--pick","a","--window",10000,"--author-started","--basis","合成窗口")
+        (path / "a.txt").write_text(AT_THE_STAGE)
+        (path / "b.txt").write_text(AT_THE_TABLE)
+        (path / "choice.md").write_text("保留开正门的版本。退喜钱有眼前的代价，老头自己拿到领班的牌；翻曲谱的版本只有以后会找出答案的许诺。")
+        return self.command("audition","--pick","b","--window",window,"--author-started","--basis","合成窗口")
 
     def start(self,n):
         result = self.command("begin","--request",f"synthetic-{n}")
@@ -74,7 +75,7 @@ class Release(unittest.TestCase):
         h = "零一二三四五六七八九"[n]
         early = "第"+h+"次有人把来信递到了她的手里。"
         late = "第"+h+"次邮车停下她终于收到了回信。"
-        draft = early + "\n\n" + ("春" * 2800) + "窗台上还放着那只杯子。" + ("秋"*2850) + "\n" +late
+        draft = early + "\n\n" + transport_text(n,2800) + "窗台上还放着那只杯子。" + transport_text(n,2850) + "\n" + late
         (w / "draft.txt").write_text(draft)
         (w / "editorial.md").write_text("合成测试的同一上下文编辑说明。")
         (w / "memory.md").write_text("合成测试的当章事实。")
@@ -83,12 +84,16 @@ class Release(unittest.TestCase):
                 "payoff":{"quote":late,"why":"合成结果"},"next":"合成的后继疑问"}
         if n==1:
             read["front"] = {"quote":early,"why":"第一场已有困境"}
+            read["window"] = {"promise":{"chapter":1,"quote":early,"why":"定位用"},
+                              "delivery":{"chapter":1,"quote":late,"why":"定位用"},
+                              "effect":late}
         else:
             prev = "零一二三四五六七八九"[n-1]
             read["previous"] = {"quote":"第"+prev+"次邮车停下她终于收到了回信","why":"上一结果促成这章的选择"}
         if n==2:
             read["window"] = {"promise":{"chapter":1,"quote":"第一次有人把来信递到了她的手里","why":"困境可见"},
-                              "delivery":{"chapter":2,"quote":early,"why":"合成兑现"}}
+                              "delivery":{"chapter":2,"quote":early,"why":"合成兑现"},
+                              "effect":early}
         save_json(w/"reading.json",read)
         return read
 
@@ -160,6 +165,90 @@ class Release(unittest.TestCase):
         old=self.root/"book"/c["text_path"];old.write_bytes(old.read_bytes()+b"!")
         self.command("verify",ok=False)
         self.command("begin","--request","synthetic-3",ok=False)
+
+    def test_padding_blocked_in_opening_and_chapter(self):
+        self.prepare_opening()
+        options = self.root / "book/opening"
+        (options / "b.txt").write_text("他走进码头等船。"*40)
+        self.assertIn("循环填充", self.command("audition","--pick","a","--window",10000,
+            "--author-started","--basis","工程测试",ok=False))
+        (options / "b.txt").write_text(AT_THE_TABLE)
+        w,base = self.start(1)
+        self.materials(1,w)
+        line = "她把卷宗放回架子上，按顺序检查了门卫记下的每一个名字。她又走回自己的座位，把杯子挪到了左手边。"
+        for filler in ["春"*2800 + "秋"*2850, "".join(f"抽屉{n}号。{line}" for n in range(150))[:6750]]:
+            (w/"draft.txt").write_text(filler)
+            self.assertIn("循环填充",self.command("assess","--expect",base,"--decision","ready",ok=False))
+            self.assertEqual(self.command("status")["state"]["revision"],0)
+        self.materials(1,w)
+        body = w/"draft.txt"
+        body.write_text(body.read_text() + ("开饭喽。"*6))
+        self.freeze(1,w,base)
+
+    def test_first_chapter_pair_and_nonlinear_order(self):
+        self.prepare_opening()
+        w,base = self.start(1)
+        r = self.materials(1,w)
+        pair = r.pop("window")
+        save_json(w/"reading.json",r)
+        self.assertIn("重读首章",self.command("assess","--expect",base,"--decision","ready",ok=False))
+        def trial(p,d,order,ok):
+            r["window"] = {"promise":p,"delivery":d,"order":order,"effect":d["quote"]}
+            save_json(w/"reading.json",r)
+            return self.command("assess","--expect",base,"--decision","ready",ok=ok)
+        first, last = pair["promise"], pair["delivery"]
+        r["window"] = {**pair, "effect":"她已经接下了领班的铜牌。"}
+        save_json(w/"reading.json",r)
+        self.assertIn("结果原段须",self.command("assess","--expect",base,"--decision","ready",ok=False))
+        self.assertIn("重叠",trial(first,{**first,"quote":first["quote"][2:-1]},"setup_first",False))
+        self.assertIn("顺序",trial(last,first,"setup_first",False))
+        body=w/"draft.txt"
+        original=body.read_text()
+        body.write_text(original + first["quote"])
+        self.assertIn("有多处",trial(first,last,"setup_first",False))
+        # In a flashback the consequence is shown first, the earlier cause is revealed at the end.
+        body.write_text(original.removeprefix(first["quote"]).removesuffix(last["quote"]))
+        body.write_text(last["quote"] + body.read_text() + first["quote"])
+        r["front"] = last
+        trial(first,last,"result_first",True)
+        self.freeze(1,w,base)
+
+    def test_first_chapter_window_ends_mid_chapter(self):
+        self.prepare_opening(window=1200)
+        w,base = self.start(1)
+        r = self.materials(1,w)
+        self.assertIn("短引不在", self.command("assess","--expect",base,"--decision","ready",ok=False))
+        moment = "她把车门合上，孩子已经坐在司机旁边。"
+        body = w/"draft.txt"
+        body.write_text(body.read_text().replace("\n\n","\n\n"+moment,1))
+        r["window"]["delivery"]["quote"] = moment
+        r["window"]["effect"] = moment
+        save_json(w/"reading.json",r)
+        self.freeze(1,w,base)
+
+    def test_editor_returns_scene_and_preserves_accepted_revision(self):
+        self.prepare_opening()
+        w,base = self.start(1)
+        r = self.materials(1,w)
+        body = w/"draft.txt"
+        tail = body.read_text()
+        body.write_text(AT_THE_STAGE + "\n\n" + tail)
+        (w/"editorial.md").write_text("末段只说会去翻谱。铜牌还在死人手里，退定钱这件难事尚未发生，退修。")
+        self.assertEqual(self.command("assess","--expect",base,"--decision","revise")["decision"],"revise")
+        self.assertEqual(self.command("status")["state"]["revision"],0)
+        body.write_text(AT_THE_TABLE + "\n\n" + tail)
+        promise = "师父却躺在棺材里，不肯松开领班的铜牌"
+        payoff = "老头用收了半辈子碗的手，稳稳托住它。"
+        r.update(front={"quote":promise,"why":"徒弟已收喜钱，谁接班还没定。"},
+                 payoff={"quote":payoff,"why":"老头当众得到领班资格。"},
+                 friction={"quote":"等了半天，没人走。","why":"停顿留给老头第一次认出别人是在叫他。"},
+                 next="明日的主家肯让收碗的人领班吗？")
+        r["window"]={"promise":{**r["front"],"chapter":1},"delivery":{**r["payoff"],"chapter":1},
+                     "effect":"敲到第七下，棺材里抛出了一面铜牌。老头用收了半辈子碗的手，稳稳托住它。"}
+        (w/"editorial.md").write_text("读到收碗人给首席让路，才看见地位确实换了。喜钱已经交回师兄，赵家是否再雇这班人仍有风险。")
+        save_json(w/"reading.json",r)
+        item = self.freeze(1,w,base)
+        self.assertEqual(item["text_sha256"],sha(body.read_bytes()))
 
     def test_five_chapters_and_remote_readback(self):
         def git(*args, cwd=None):

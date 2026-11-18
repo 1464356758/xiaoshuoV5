@@ -40,6 +40,8 @@ def install(checkout, archive, revision):
             if home.count(old) != 1:
                 raise ValueError("需要核对原 A 下载位置")
             home = home.replace(old,'<p><a class="text-link" href="./a7.html">使用 A 系统 V7.0 开新书 ↗</a></p>'+old)
+        home = home.replace("A 版 V7.0 开书与下载", "A 版 V7.0.1 开书与下载")
+        home = home.replace("A 系统 V7.0 开新书", "A 系统 V7.0.1 开新书")
         assets["/index.html"] = [kind,home]
         kind, prompts = assets["/prompts.mjs"]
         original = "如果state.schema是novel-v6"

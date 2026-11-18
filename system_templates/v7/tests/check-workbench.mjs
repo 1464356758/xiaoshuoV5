@@ -22,14 +22,18 @@ assert.match(head.headers.get('Content-Disposition'),/V7\.0.zip/);
 assert.equal(await head.text(),'');
 assert.equal(hash,release.a7_init_package_sha256);
 const contents = spawnSync('python3',['-c',
-  "import io,sys,zipfile,json,hashlib;z=zipfile.ZipFile(io.BytesIO(sys.stdin.buffer.read()));m=json.loads(z.read('INIT_MANIFEST.json'));assert m['edition']=='novel-a7' and m['version']=='7.0.0';assert all(hashlib.sha256(z.read(k)).hexdigest()==v for k,v in m['files'].items())"
+  "import io,sys,zipfile,json,hashlib;z=zipfile.ZipFile(io.BytesIO(sys.stdin.buffer.read()));m=json.loads(z.read('INIT_MANIFEST.json'));assert m['edition']=='novel-a7' and m['version']=='7.0.1';assert all(hashlib.sha256(z.read(k)).hexdigest()==v for k,v in m['files'].items())"
 ],{input:bytes});
 assert.equal(contents.status,0,contents.stderr.toString());
 const script = await (await request('/a7.mjs')).text();
 const {promptFor} = await import('data:text/javascript;base64,'+Buffer.from(script).toString('base64'));
 const demo='https://github.com/example-fiction/test';
 assert.match(promptFor(demo,'new'),/初始化系统包_A版_V7.0.zip/);
+assert.match(promptFor(demo,'new'),/7\.0\.1/);
+assert.match(page,/A 系统 V7\.0\.1/);
+assert.match(home,/A 版 V7\.0\.1 开书与下载/);
 assert.match(promptFor(demo,'resume'),/novel-a7/);
+assert.doesNotMatch(promptFor(demo,'resume'),/version=7\.0/);
 for (const bad of ['https://github.com/1464356758/XS-KU','https://github.com/1464356758/xiaoshuoV5','https://example.com/fake/book']) {
   assert.throws(()=>promptFor(bad,'new'));
 }
