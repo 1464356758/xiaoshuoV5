@@ -1,17 +1,36 @@
 {
   "edition": "novel-a7",
-  "version": "7.0.0",
-  "system_source_commit": "958ee32473a73b6797a5dbc82c77a277bf801915",
+  "version": "7.0.1",
+  "system_source_commit": "594c55338ee7e71440f4ae677408d7ea01dbf1bc",
   "package_path": "system_templates/v7/releases/novel-a7.zip",
-  "package_sha256": "2b630807dc79b3a95c24014b4d952521749e54b1ea2d20cbb16d8bfb3c3d9821",
-  "package_bytes": 31608,
+  "package_sha256": "0fe9d5f1e706ce52cd4810cc6c6798eaafd5aa626d53a5599c57d1f06bbd7f6a",
+  "package_bytes": 35261,
   "package_files": 12,
-  "site_source_commit": "ab7f84a6af997c93a12c491bf361a5eddf59b243",
+  "site_source_commit": "39d9e43c588834f46a5145296fe0775b249bbded",
   "site_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2",
-  "site_version": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_6dfff8b128bc8191b8ae8e5a9ff54c33",
-  "deployment_id": "appgdep_6afd74b979848191a4c0365f532b89a1",
+  "site_version": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_8720a612d5708191878a7828260ab1e1",
+  "deployment_id": "appgdep_6afdc1cc1af88191b97300382ccc77d7",
   "publication_status": "succeeded",
   "entry_url": "https://novel-workspace-v44.qq1464356758.chatgpt.site/a7.html",
   "download_route": "/downloads/a7-novel-init.zip",
-  "tested": "ZIP、新书初始化、实读片段、试写、送审截点、合成六章、Git 回读、Worker 下载字节与旧版兼容。A7 的真实投稿结果待取得。"
+  "tested": "同一组十个对照输入，新版拦截七个可判定问题。原文在场而审稿人曲解，仍需正文判断。九组工程检查、六章临时 Git 回读、固定系统提交重建 ZIP、个人端下载字节与旧版兼容检查通过。真实投稿结果待取得。",
+  "history": [
+    {
+      "edition": "novel-a7",
+      "version": "7.0.0",
+      "system_source_commit": "958ee32473a73b6797a5dbc82c77a277bf801915",
+      "package_path": "system_templates/v7/releases/novel-a7.zip",
+      "package_sha256": "2b630807dc79b3a95c24014b4d952521749e54b1ea2d20cbb16d8bfb3c3d9821",
+      "package_bytes": 31608,
+      "package_files": 12,
+      "site_source_commit": "ab7f84a6af997c93a12c491bf361a5eddf59b243",
+      "site_id": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2",
+      "site_version": "appgprj_6adf1e4d5adc8191ba57f57fd4bbeda2~appgver_6dfff8b128bc8191b8ae8e5a9ff54c33",
+      "deployment_id": "appgdep_6afd74b979848191a4c0365f532b89a1",
+      "publication_status": "succeeded",
+      "entry_url": "https://novel-workspace-v44.qq1464356758.chatgpt.site/a7.html",
+      "download_route": "/downloads/a7-novel-init.zip",
+      "tested": "ZIP、新书初始化、实读片段、试写、送审截点、合成六章、Git 回读、Worker 下载字节与旧版兼容。A7 的真实投稿结果待取得。"
+    }
+  ]
 }
