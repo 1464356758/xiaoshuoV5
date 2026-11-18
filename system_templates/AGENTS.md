@@ -5,3 +5,5 @@
 v6为从零编写的新书核心，先读其AGENTS.md和WORKFLOW.md；v4.6为旧版保留区及独立工作台兼容源。测试使用临时合成小说；validation下的独立试稿不是正式章，不把它登记到任何小说状态。XS-KU按当前默认分支查库，记录实际读取范围；不要把目录当全库已读。旧版book与在途任务不随系统重建迁移。
 
 cn_gpt为独立B版，按PenglongHuang/chinese-novelist-skill固定版本架构运行，通过GPT_WORKFLOW做GPT和GitHub适配。不能用v6的novel.py或CRAFT替代B流程，也不能把B覆盖安装到已有A书。其02-写作计划.json是唯一主状态，派生book/state仅供阅读。A/V6.3目录和原包在本轮保持原字节与版本；B只新增独立网页路由与包下载，不修改A默认入口。
+
+自 2026-11-18，作者选择 A7 开新书时使用 v7。实际 edition=novel-a7 且 version=7.0.0 的作品按 v7 规程；既有 A6.3 及 CN-GPT 作品按各自原版本接续。

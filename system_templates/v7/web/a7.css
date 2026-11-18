@@ -1,0 +1,7 @@
+:root {color:#292923;background:#f6f4ec;font:16px/1.65 "Noto Sans CJK SC",system-ui,sans-serif}
+* {box-sizing:border-box} body {margin:0} main {width:min(100% - 2rem,39rem);margin:2.5rem auto 5rem}
+nav a {color:#545b4a} h1 {margin:1.4rem 0 .45rem;font:600 clamp(2.2rem,7vw,3.7rem)/1.15 Georgia,"Songti SC",serif}
+p {margin:.8rem 0 1.4rem} .download,button {border:1px solid #3a483f;border-radius:.5rem;padding:.65rem 1.05rem;font:inherit;cursor:pointer}
+.download {display:inline-block;color:white;background:#344c3f;text-decoration:none} form,section {margin:1.6rem 0 1rem;padding:1.15rem 1.35rem;background:#fffefa;border:1px solid #d3d3c3;border-radius:.7rem}
+label {display:block;font-weight:650;margin:.3rem 0} input,select,textarea {width:100%;font:inherit;padding:.55rem .65rem;border:1px solid #afa99a;border-radius:.35rem;margin:0 0 .85rem;background:white;color:inherit}
+button {color:#253529;background:#f2f5ed} :focus-visible {outline:3px solid #51785c;outline-offset:2px} textarea {resize:vertical} #status {margin:.4rem 0;color:#443a29}

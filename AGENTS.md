@@ -38,3 +38,5 @@
 ## 系统维护入口
 
 现有A版V6.3在system_templates/v6，本次保留不动；独立B版CN-GPT在system_templates/cn_gpt，只有作者明确选B才使用其上游架构与初始化包。V4.6保留给旧书和工作台兼容层，不覆盖本仓库旧小说工作区。继续系统任务先读SYSTEM_STATUS.md与system_templates/AGENTS.md。各书按自己的引擎识别主状态：A/V4读取book/state.json；B读取cn-project.json指定的02-写作计划.json，book/state只是派生阅读视图。不能将系统完成误当成新增章节。
+
+新书选择 A7 时使用 system_templates/v7。已建书先核验 edition 与 version，再按其原有写作流程接续。
